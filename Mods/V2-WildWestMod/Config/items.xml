@@ -103,10 +103,18 @@
 	<!-- 0.2 reduction across all classes where appropriate - Crispy is a little more due to turkey neck -->	
 	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Range']/@value">1.45</set> <!-- Default 1.65 -->
 	<set xpath="/items/item[@name='meleeHandZombie01']/property[@class='Action0']/property[@name='Range']/@value">1.4</set> <!-- Default 1.6 and 02 is already 1.3 -->
+	<set xpath="/items/item[@name='meleeHandZombieShort']/property[@class='Action0']/property[@name='Range']/@value">1.35</set>
+	<set xpath="/items/item[@name='meleeHandZombieShortFeral']/property[@class='Action0']/property[@name='Range']/@value">1.35</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='Range']/@value">1.35</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='Range']/@value">1.35</set>
 	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='Range']/@value">1.55</set> <!-- Default 1.75 -->
 	<set xpath="/items/item[@name='meleeHandzombieMutated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set> <!-- Default 1.7 -->
 	<set xpath="/items/item[@name='meleeHandzombieMutatedFeral']/property[@class='Action0']/property[@name='Range']/@value">1.5</set> <!-- Default 1.7 -->
 	<set xpath="/items/item[@name='meleeHandzombieMutatedRadiated']/property[@class='Action0']/property[@name='Range']/@value">1.5</set> <!-- Default 1.7 -->
+	<set xpath="/items/item[@name='meleeHandzombieMutatedCharged']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+	<set xpath="/items/item[@name='meleeHandzombieMutatedInfernal']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>    
+	<set xpath="/items/item[@name='meleeHandZombiePlagueSpitter']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
+	<set xpath="/items/item[@name='meleeHandZombieFrostclaw']/property[@class='Action0']/property[@name='Range']/@value">1.5</set>
 	<!-- Weapons and Tools -->
 	<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@name='Meshfile']/@value">#@modfolder:Resources/bradshotgun.unity3d?bradshotgun.prefab</set> 
 	
@@ -363,6 +371,11 @@
 	<set xpath="/items/item[@name='drugHerbalAntibiotics']/property[@name='Stacknumber']/@value">100</set><!-- 10 default -->
 	<set xpath="/items/item[@name='drugAntibiotics']/property[@name='Stacknumber']/@value">100</set><!-- 10 default -->
 	<set xpath="/items/item[@name='drugRecog']/property[@name='Stacknumber']/@value">100</set><!-- 10 default -->
+	<!-- *** HAZARD_REDUCERS -->
+	<set xpath="/items/item[@name='foodBurntSmoothie']/property[@name='Stacknumber']/@value">250</set><!-- 10 default -->
+	<set xpath="/items/item[@name='foodOasisSmoothie']/property[@name='Stacknumber']/@value">250</set><!-- 10 default -->	
+	<set xpath="/items/item[@name='foodFrostbiteSmoothie']/property[@name='Stacknumber']/@value">250</set><!-- 10 default -->	
+	<set xpath="/items/item[@name='foodAtomicSmoothie']/property[@name='Stacknumber']/@value">250</set><!-- 10 default -->
 	<!-- *** Candy -->
 	<set xpath="/items/item[@name='drugAtomJunkies']/property[@name='Stacknumber']/@value">100</set><!-- 10 default -->
 	<!-- *** Food -->	
@@ -524,7 +537,7 @@
 <item name="drinkCanMegaCrush">
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="waterMegaCrush"/>
-	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/masonJarGoldenRodTeaPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Weight" value="10"/>
@@ -910,13 +923,12 @@
 		<property name="Class" value="Ranged"/>
 		<property name="Magazine_items" value="ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmGreenCrystal"/>
 		<property name="Sound_start" value="44magnum_fire"/>
-		<property name="Sound_loop" value="44magnum_fire"/>
+		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value="44magnum_reload"/>
 		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="gunfire_magnum"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_magnum_fpv"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol_magnum"/>
 		<property name="ScopeOffset" value="-.00062,.1408,.02"/> <!-- Test from default -->
 		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
         	<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
@@ -1015,8 +1027,7 @@
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value="44magnum_reload"/>
 		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="gunfire_magnum"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_magnum_fpv"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol_magnum"/>
 		<property name="ScopeOffset" value="-.00062,.1408,.02"/>
 		<property name="SideOffset" value="0,0,0"/>
 		<property name="BarrelOffset" value="0,0,0"/>
@@ -1115,13 +1126,11 @@
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="gunfire_desertvulture"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_desertvulture_fpv"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-	        <property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
-	        <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
-	        <property name="triggerEffectShootDualsense" value="PistolShoot"/>
-	        <property name="triggerEffectShootXbox" value="PistolShoot"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol_desertvulture"/>
+		<property name="triggerEffectTriggerPullDualsense" value="PistolTrigger"/>
+		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+		<property name="triggerEffectShootDualsense" value="PistolShoot"/>
+		<property name="triggerEffectShootXbox" value="PistolShoot"/>
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Zoom"/>
@@ -1374,7 +1383,7 @@
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value="m60_reload"/>
 		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="gunfire_junkturret_fpv"/>
+		<property name="Particles_muzzle_fire" value="gunfire_junkturret"/>
 		<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi"/> -->
 		<!-- <property name="DamageBonus.head" value="3"/>
 		<property name="DamageBonus.wood" value="2.5"/>
@@ -1472,7 +1481,7 @@
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value="m60_reload"/>
 		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="gunfire_junkturret_fpv"/>
+		<property name="Particles_muzzle_fire" value="gunfire_junkturret"/>
 		<!-- <property name="Particles_muzzle_smoke" value="nozzlesmokeuzi"/> -->
 		<!-- <property name="DamageBonus.head" value="3"/>
 		<property name="DamageBonus.wood" value="2.5"/>
@@ -1669,13 +1678,11 @@
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value=""/>
 		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="gunfire_lever"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_lever_fpv"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
-                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
-                <property name="triggerEffectTriggerShootDualsense" value="RifleShoot"/>
-                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+		<property name="Particles_muzzle_fire" value="gunfire_rifle_lever"/>
+		<property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+		<property name="triggerEffectTriggerShootDualsense" value="RifleShoot"/>
+		<property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Zoom"/>
@@ -1683,8 +1690,8 @@
 		<property name="Zoom_max_in" value="55"/>
 		<property name="SightsCameraOffset" value="0,0.015,0"/>
 		<!-- <property name="ScopeCameraOffset" value="0,.0262,-.05"/> -->
-                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
-                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		<property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+		<property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
 	</property>
 	<effect_group name="gunRifleT2LeverActionRifleWinchester">
 		<passive_effect name="MaxRange" operation="base_set" value="150" tags="perkDeadEye"/>
@@ -1775,13 +1782,11 @@
 		<property name="Sound_empty" value="dryfire"/>
 		<property name="Sound_reload" value=""/>
 		<property name="AutoReload" value="false"/>
-		<property name="Particles_muzzle_fire" value="gunfire_lever"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_lever_fpv"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
-                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
-                <property name="triggerEffectTriggerShootDualsense" value="RifleShoot"/>
-                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+		<property name="Particles_muzzle_fire" value="gunfire_rifle_lever"/>
+		<property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+		<property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+		<property name="triggerEffectTriggerShootDualsense" value="RifleShoot"/>
+		<property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Zoom"/>
@@ -1789,8 +1794,8 @@
 		<property name="Zoom_max_in" value="55"/>
 		<property name="SightsCameraOffset" value="0,0.015,0"/>
 		<!-- <property name="ScopeCameraOffset" value="0,.0262,-.05"/> -->
-                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
-                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		<property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+		<property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
 	</property>
 	<effect_group name="gunRifleT2LeverActionRifleLegendaryTribeWinchester">
 		<passive_effect name="MaxRange" operation="base_set" value="160" tags="perkDeadEye"/> <!-- default 150 -->
@@ -2231,16 +2236,12 @@
 				<property name="Class" value="Ranged"/>
 				<property name="Delay" value=".150"/>
 				<property name="Magazine_items" value="ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP"/>
-				<property name="Sound_start" value="pipe_smg_fire"/>
-				<property name="Sound_loop" value="pipe_smg_fire"/>
-				<property name="Sound_empty" value="dryfire"/>
-				<property name="Sound_reload" value="ak47_reload"/>
-				<property name="Sound_end" value="ak47_fire_end"/>
-				<property name="Particles_muzzle_fire" value="gunfire_AK47"/>
-				<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
-				<property name="Particles_muzzle_fire_fpv" value="gunfire_AK47_fpv"/>
-				<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
-				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			<property name="Sound_start" value="ak47_fire"/>
+			<property name="Sound_loop" value="ak47_fire"/>
+			<property name="Sound_empty" value="dryfire"/>
+			<property name="Sound_reload" value="ak47_reload"/>
+			<property name="Sound_end" value="ak47_fire_end"/>
+			<property name="Particles_muzzle_fire" value="gunfire_MG_AK47"/>
 			</property>
 			<property class="Action1">
 				<property name="Class" value="Zoom"/>
@@ -2427,7 +2428,7 @@
 	<property name="DisplayType" value="foodCureInfection"/>
 	<property name="CustomIcon" value="foodWildWestAcornFlour"/>
 	<property name="DescriptionKey" value="foodWildWestAcornFlourDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="500"/> <!-- STK resource -->
@@ -2464,7 +2465,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFoodWater"/>
 	<property name="CustomIcon" value="foodWildWestAcornHardtack"/>
 	<property name="DescriptionKey" value="foodWildWestAcornHardtackDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="500"/> <!-- STK food -->
@@ -2500,7 +2501,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFood"/>
 	<property name="CustomIcon" value="foodWildWestBaconAndEggsAndAcornHardtack"/>
 	<property name="DescriptionKey" value="foodWildWestBaconAndEggsAndAcornHardtackDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPlatePrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -2535,7 +2536,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFoodWater"/>
 	<property name="CustomIcon" value="foodWildWestPineConeJam"/>
 	<property name="DescriptionKey" value="foodWildWestPineConeJamDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/masonJarRedTeaPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="EconomicValue" value="80"/>
@@ -2569,7 +2570,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFood"/>
 	<property name="CustomIcon" value="foodWildWestPineConeJamPancakes"/>
 	<property name="DescriptionKey" value="foodWildWestPineConeJamPancakesDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -2602,7 +2603,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodWater"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -2632,7 +2633,7 @@
 
 <item name="resourceCatfish"> <!-- scrap material -->
 	<property name="HoldType" value="45"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<!--<property name="HoldType" value="2"/>
 	<property name="Meshfile" value="#Other/Items?Crafting/femur.fbx"/>-->
@@ -2649,7 +2650,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodCureInfectionAndFoodWater"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="1000"/> <!-- STK food -->
@@ -2685,7 +2686,7 @@
 	<property name="Tags" value="food,medical,medicalSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodCureInfectionAndFood"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPlatePrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mplants"/>
 	<property name="Stacknumber" value="250"/> <!-- STK resource -->
@@ -2721,7 +2722,7 @@
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="foodWater"/>
 	<property name="DescriptionKey" value="foodBoarMilkDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/masonJarWaterPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -2751,7 +2752,7 @@
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodCureInfectionAndFood"/>
 	<property name="DescriptionKey" value="foodShamBreadPuddingDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -2786,7 +2787,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodWaterNegative"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK resource -->
@@ -2817,7 +2818,7 @@
 	<property name="HoldType" value="31"/>
 	<!-- <property name="DisplayType" value="food"/> -->
 	<property name="DisplayType" value="foodWaterNegative"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -2847,7 +2848,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodWater"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -2881,7 +2882,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFoodWater"/>
 	<property name="CustomIcon" value="foodTallmanBradJerky"/>
 	<property name="DescriptionKey" value="foodTallmanBradJerkyDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="EconomicValue" value="80"/>
@@ -2913,7 +2914,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodWater"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -2946,7 +2947,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFoodWater"/>
 	<property name="CustomIcon" value="foodSuperHoneyPopcorn"/>
 	<property name="DescriptionKey" value="foodSuperHoneyPopcornDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="EconomicValue" value="80"/>
@@ -2980,7 +2981,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFoodWater"/>
 	<property name="CustomIcon" value="foodSuperCornSuperSupper"/>
 	<property name="DescriptionKey" value="foodSuperCornSuperSupperDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="EconomicValue" value="160"/>
@@ -3015,7 +3016,7 @@
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="drinkYuccaJuiceCooler"/>
 	<property name="CustomIcon" value="drinkYuccaJuiceCooler"/>	
-	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/masonJarYuccaJuicePrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="250"/> <!-- STK drink -->
@@ -3058,7 +3059,7 @@
 	<property name="DisplayType" value="foodWater"/>
 	<property name="CustomIcon" value="foodWildWestTinCanTucker"/>
 	<property name="DescriptionKey" value="foodWildWestTinCanTuckerDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3158,7 +3159,7 @@
 	<property name="HoldType" value="31"/>
 	<property name="CustomIcon" value="honeycomb"/>
 	<property name="DisplayType" value="foodCureInfection"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="2500"/> <!-- STK food -->
@@ -3221,7 +3222,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFood"/>
 	<property name="CustomIcon" value="bread2"/>
 	<property name="DescriptionKey" value="foodHoneyBreadDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3255,7 +3256,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFood"/>
 	<property name="CustomIcon" value="oakpie"/>
 	<property name="DescriptionKey" value="foodHoneyPumpkinPieDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3285,7 +3286,7 @@
 <item name="drinkHoneyBeer">
 	<property name="Tags" value="drinks,foodSkill"/>
 	<property name="HoldType" value="3"/>
-	<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/masonJarBeerPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mglass"/>
 	<!-- <property name="Weight" value="10"/> -->
@@ -3363,7 +3364,7 @@
 	<property name="DisplayType" value="food"/>
 	<property name="CustomIcon" value="eggquiche"/>
 	<property name="DescriptionKey" value="foodEggQuicheDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3394,7 +3395,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFood"/>
 	<property name="CustomIcon" value="eggsandwich"/>
 	<property name="DescriptionKey" value="foodEggSandwichDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3429,7 +3430,7 @@
 	<property name="DisplayType" value="foodWater"/>
 	<property name="CustomIcon" value="foodChickenStew"/>
 	<property name="DescriptionKey" value="foodChickenStewDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3461,7 +3462,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3494,7 +3495,7 @@
 	<property name="DisplayType" value="foodCureInfectionAndFoodWater"/>
 	<property name="CustomIcon" value="foodChickSticks"/>
 	<property name="DescriptionKey" value="foodChickSticksDesc"/>	
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3586,7 +3587,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodWaterNegative"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
@@ -3616,7 +3617,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodRaw"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceCrop"/>
 	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
@@ -3645,7 +3646,7 @@
 	<property name="Tags" value="food,foodSkill,fitness"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodRaw"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MfoodRawMeat"/>
 	<property name="Stacknumber" value="1000"/> <!-- STK food -->
@@ -3678,7 +3679,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodWater"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mplants"/>
 	<property name="Stacknumber" value="250"/> <!-- STK resource -->
@@ -3722,7 +3723,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodWater"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mplants"/>
 	<property name="Stacknumber" value="250"/> <!-- STK resource -->
@@ -3765,7 +3766,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="foodWater"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/foodPotPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -3831,7 +3832,7 @@
 	<property name="Tags" value="food,foodSkill,fitness,farmerFoodBonus"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
-	<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+	<property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
 	<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Morganic"/>
 	<property name="Stacknumber" value="250"/> <!-- STK food -->
@@ -4352,7 +4353,7 @@
 	</item>
 
 	<item name="ammoProjectileZombieFeralGunslinger">
-		<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/> <!-- Feral Gunslinger -->	
+		<property name="Meshfile" value="@:Entities/Electrical/steel_dartPrefab.prefab"/> <!-- Feral Gunslinger -->	
 		<!-- property name="Meshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/ -->
 		<property name="Material" value="Morganic"/>
 		<property name="CreativeMode" value="None"/>
@@ -4428,7 +4429,7 @@
 	</item>
 
 	<item name="ammoProjectileZombieRadiatedGunslinger">
-		<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/> <!-- Radiated Gunslinger -->
+		<property name="Meshfile" value="@:Entities/Electrical/steel_dartPrefab.prefab"/> <!-- Radiated Gunslinger -->
 		<property name="Material" value="Morganic"/>
 		<property name="CreativeMode" value="None"/>
 		<property class="Action1">
@@ -4503,7 +4504,7 @@
 	</item>
 
 	<item name="ammoProjectilezombieBusinessManRadiatedGunslinger">
-		<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/> <!-- Radiated Gunslinger -->	
+		<property name="Meshfile" value="@:Entities/Electrical/steel_dartPrefab.prefab"/> <!-- Radiated Gunslinger -->	
 		<!-- property name="Meshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/ -->
 		<property name="Material" value="Morganic"/>
 		<property name="CreativeMode" value="None"/>
