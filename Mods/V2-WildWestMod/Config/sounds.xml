@@ -175,7 +175,7 @@
 
 <SoundDataNode name="vwheel_bounce"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<Noise ID="0" noise="1" time="0" muffled_when_crouched="0.65"/>
-	<AudioClip ClipName="Sounds/Step/crawlerstepsand2"/>
+	<AudioClip ClipName="@:Sounds/Step/crawlerstepsand2.wav"/>
 	<MaxVoices value="0"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 
@@ -259,7 +259,7 @@
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
 	
 	<SoundDataNode name="Grinexplodewarning"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
-	<AudioClip ClipName="Sounds/Weapons/Thrown/Pipebomb/light_pipebomb"/> <!-- #@modfolder:Resources/GrinSounds.unity3d?EvilLaugh1 -->
+	<AudioClip ClipName="@:Sounds/Weapons/Thrown/Pipebomb/light_pipebomb.wav"/> <!-- #@modfolder:Resources/GrinSounds.unity3d?EvilLaugh1 -->
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh2"/>
 <!--	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh3"/> removed echo laugh -->
 	<Priority name="3"/>
