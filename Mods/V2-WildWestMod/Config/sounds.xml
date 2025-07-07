@@ -16,7 +16,7 @@
   <append xpath="/Sounds">
 
 <!-- New Pump Shotgun Model -->  
-	<SoundDataNode name="oakfire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<SoundDataNode name="oakfire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
     <Noise ID="0" noise="81" time="2" muffled_when_crouched="0.8" heat_map_strength="1.0" heat_map_time="180"/>
     <AudioClip ClipName="#@modfolder:Resources/bradshotgun.unity3d?oakfire"/>
     <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
@@ -24,7 +24,7 @@
 <!-- Gatling Gun - Thank you to Snufkin for base inspiration -->
 
 		<SoundDataNode name="GatlingWindup">
-			<AudioSource name="Sounds/AudioSource_Reloads"/>
+			<AudioSource name="@:Sounds/Prefabs/AudioSource_Reloads.prefab"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="Sounds/Weapons/weapon_jam1"/>
 			<AudioClip ClipName="Sounds/Weapons/weapon_jam2"/>
@@ -41,7 +41,7 @@
 		
  <!-- Gatling Turret -->
  
- 	<SoundDataNode name="westturret_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+ 	<SoundDataNode name="westturret_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
 	<Noise ID="0" noise="54" time="2" heat_map_strength="0.65" heat_map_time="180"/>
 	<AudioClip ClipName="#@modfolder:Resources/GatlingOak.unity3d?Submachine"/>
 	<AudioClip ClipName="#@modfolder:Resources/GatlingOak.unity3d?Submachine"/>
@@ -52,7 +52,7 @@
 <!-- Oakraven's Bee Hives -->
   
   <SoundDataNode name="BeeHiveOpen">
-  <AudioSource name="Sounds/AudioSource_VO" />
+  <AudioSource name="@:Sounds/Prefabs/AudioSource_VO.prefab" />
   <Noise ID="3" range="3" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
    <AudioClip ClipName="#@modfolder:Resources/BeeHivesV1.unity3d?zBeeSound2" />
    <LocalCrouchVolumeScale name="1.0" />
@@ -65,7 +65,7 @@
 <!-- Oakraven's Chicken Coops -->
 
   <SoundDataNode name="Chicken6Sounds">
-  <AudioSource name="Sounds/AudioSource_VO" />
+  <AudioSource name="@:Sounds/Prefabs/AudioSource_VO.prefab" />
   <Noise ID="3" range="3" volume="25" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
    <AudioClip ClipName="#@modfolder:Resources/ChickenCoops.unity3d?Chicken1" />
    <LocalCrouchVolumeScale name="1.0" />
@@ -77,43 +77,43 @@
   
 <!-- Steam Horse -->
 
-<SoundDataNode name="Train_horn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+<SoundDataNode name="Train_horn"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<Noise ID="4" noise="60" time="3" heat_map_strength="0.2" heat_map_time="90"/>
 	<AudioClip ClipName="#@modfolder:Resources/Steamsounds.unity3d?TrainSteamWhistle"/>
 	<AudioClip ClipName="#@modfolder:Resources/Steamsounds.unity3d?TrainSteamWhistle"/>
 	<AudioClip ClipName="#@modfolder:Resources/Steamsounds.unity3d?TrainSteamWhistle"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxEntities name="6"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 	
-<SoundDataNode name="Train_idle_lp"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="Train_idle_lp"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/Steamsounds.unity3d?TrainWaiting" Loop="true"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-<SoundDataNode name="Train_max_speed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="Train_max_speed_lp"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/Steamsounds.unity3d?SteamTrainChug Away" Loop="true"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
 		
-<SoundDataNode name="Train_accel1"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="Train_accel1"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
 	<AudioClip ClipName="#@modfolder:Resources/Steamsounds.unity3d?SteamTrainChug Away"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
  
 <!-- Balloons -->
  
-<SoundDataNode name="oakidl"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="oakidl"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/A21NewBalloons.unity3d?oakidl" Loop="true"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-<SoundDataNode name="oakraven"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="oakraven"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/A21NewBalloons.unity3d?oakraven" Loop="true"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
 
 
-<SoundDataNode name="oakstop"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="oakstop"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/A21NewBalloons.unity3d?oakstop"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>	
 
-<SoundDataNode name="oakstart"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="oakstart"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/A21NewBalloons.unity3d?oakstart"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
@@ -121,12 +121,12 @@
 
 <!-- Horsey -->
 
-<SoundDataNode name="horse_gallop"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="horse_gallop"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/WWMHorsey.unity3d?HorseGallop" Loop="true"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
 </SoundDataNode>
 
-	<SoundDataNode name="horseHorn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+	<SoundDataNode name="horseHorn"> <AudioSource name="@:Sounds/Prefabs/AudioSource_SmallHorn.prefab"/>
 	<Noise ID="4" noise="60" time="3" heat_map_strength="0.2" heat_map_time="90"/>
 	<AudioClip ClipName="#@modfolder:Resources/WWMHorsey.unity3d?neigh"/>
 	<AudioClip ClipName="#@modfolder:Resources/WWMHorsey.unity3d?snort"/>
@@ -134,14 +134,14 @@
 	</SoundDataNode>
 	
 		<!-- Horse Idle Snort -->
-<SoundDataNode name="horseIdle"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="horseIdle"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/HorseIdal.unity3d?HorseIdal" Loop="true"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
 </SoundDataNode>
 
 <!-- Dinkey Donkey -->
 
-  <SoundDataNode name="DinkyDonkey"> <AudioSource name="Sounds/AudioSource_Impact_Large"/>
+  <SoundDataNode name="DinkyDonkey"> <AudioSource name="@:Sounds/Prefabs/AudioSource_VO.prefab"/>
 	<Noise ID="1" noise="7" time="1.3"/>
 	<AudioClip ClipName="#@modfolder:Resources/DinkyDonkey.unity3d?donkey"/>
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
@@ -149,23 +149,23 @@
 
 <!-- Oak Melee Pots and Pans -->
  
-<SoundDataNode name="pan_swinglight"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
+<SoundDataNode name="pan_swinglight"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Melee.prefab"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="#@modfolder:Resources/pan.unity3d?Bongo"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 	
-<SoundDataNode name="pan_swingheavy_ladle"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
+<SoundDataNode name="pan_swingheavy_ladle"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Melee.prefab"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
   <AudioClip ClipName="#@modfolder:Resources/pan.unity3d?Bongo2"/>
 	<LowestPitch name="1.1"/>
 	<HighestPitch name="1.35"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 	
-<SoundDataNode name="pan_swingheavy_pan"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
+<SoundDataNode name="pan_swingheavy_pan"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Melee.prefab"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
   <AudioClip ClipName="#@modfolder:Resources/pan.unity3d?Bongo2"/>
 	<LowestPitch name="0.9"/>
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 	
-<SoundDataNode name="pan_swingheavy_skillet"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
+<SoundDataNode name="pan_swingheavy_skillet"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Melee.prefab"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
   <AudioClip ClipName="#@modfolder:Resources/pan.unity3d?Bongo2"/>
 	<LowestPitch name="0.8"/>
 	<HighestPitch name="0.95"/>
@@ -173,7 +173,7 @@
 
 <!-- TMB Horse Clang removal -->
 
-<SoundDataNode name="vwheel_bounce"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+<SoundDataNode name="vwheel_bounce"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
 	<Noise ID="0" noise="1" time="0" muffled_when_crouched="0.65"/>
 	<AudioClip ClipName="Sounds/Step/crawlerstepsand2"/>
 	<MaxVoices value="0"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
@@ -181,7 +181,7 @@
 
 <!-- Scorpion Sounds -->
 
-<SoundDataNode name="ScorpionStrike"> <AudioSource name="Sounds/AudioSource_Creatures100Meter"/>
+<SoundDataNode name="ScorpionStrike"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/AnimalsOak.unity3d?Strike"/>
 	<Channel name="Mouth"/>
@@ -191,7 +191,7 @@
 	<HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/> </SoundDataNode>	
 
-<SoundDataNode name="ScorpionGoreBurst"> <AudioSource name="Sounds/AudioSource_Creatures100Meter"/>
+<SoundDataNode name="ScorpionGoreBurst"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/AnimalsOak.unity3d?GoreBurst"/>
 	<Channel name="Mouth"/>
@@ -203,7 +203,7 @@
 
 <!-- Bat Sounds -->
 	
-<SoundDataNode name="BatAttack"> <AudioSource name="Sounds/AudioSource_Creatures100Meter"/>
+<SoundDataNode name="BatAttack"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/AnimalsOak.unity3d?BatAttack"/>
 	<Channel name="Mouth"/>
@@ -213,7 +213,7 @@
 	<HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/> </SoundDataNode>	
 
-<SoundDataNode name="BatsChittering"> <AudioSource name="Sounds/AudioSource_Creatures100Meter"/>
+<SoundDataNode name="BatsChittering"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/AnimalsOak.unity3d?BatsChittering"/>
 	<Channel name="Mouth"/>
@@ -225,7 +225,7 @@
 
 <!-- ##### New Entities2 ##### -->
 
-    <SoundDataNode name="Grinroam"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+    <SoundDataNode name="Grinroam"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh1"/>
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh2"/>
 <!--	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh3"/> removed echo laugh -->
@@ -236,7 +236,7 @@
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 	
-	<SoundDataNode name="Grinalert"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+	<SoundDataNode name="Grinalert"> <AudioSource name="@:Sounds/Prefabs/AudioSource_CreatureSenseAlert.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh1"/>
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh2"/>
 <!--	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh3"/> removed echo laugh -->
@@ -247,7 +247,7 @@
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 	
-	<SoundDataNode name="Grinpain"> <AudioSource name="Sounds/AudioSource_Pain"/>
+	<SoundDataNode name="Grinpain"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?MalePain1"/>
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?MalePain2"/>
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?MalePain3"/>
@@ -258,7 +258,7 @@
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
 	
-	<SoundDataNode name="Grinexplodewarning"> <AudioSource name="Sounds/AudioSource_Pain"/>
+	<SoundDataNode name="Grinexplodewarning"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<AudioClip ClipName="Sounds/Weapons/Thrown/Pipebomb/light_pipebomb"/> <!-- #@modfolder:Resources/GrinSounds.unity3d?EvilLaugh1 -->
 	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh2"/>
 <!--	<AudioClip ClipName="#@modfolder:Resources/GrinSounds.unity3d?EvilLaugh3"/> removed echo laugh -->
@@ -270,7 +270,7 @@
 
                <!-- Horse -->
 
-<SoundDataNode name="Horseroam"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+<SoundDataNode name="Horseroam"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/HorseKiller.unity3d?HorseStallionram2"/>
 	<AudioClip ClipName="#@modfolder:Resources/HorseKiller.unity3d?HorseWhinnyRam"/>
 	<Channel name="Mouth"/>
@@ -280,7 +280,7 @@
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 
-<SoundDataNode name="Horsealert"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+<SoundDataNode name="Horsealert"> <AudioSource name="@:Sounds/Prefabs/AudioSource_CreatureSenseAlert.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/HorseKiller.unity3d?HorseWhineysens"/>
 	<Channel name="Mouth"/>
 	<Priority name="4"/>
@@ -289,7 +289,7 @@
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 
-<SoundDataNode name="Horseattack"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+<SoundDataNode name="Horseattack"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/HorseKiller.unity3d?HorseAttackScream"/>
 	<Channel name="Mouth"/>
@@ -297,7 +297,7 @@
 	<maxVoicesPerEntity value="1"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/> </SoundDataNode>
 
-<SoundDataNode name="Horsesense"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+<SoundDataNode name="Horsesense"> <AudioSource name="@:Sounds/Prefabs/AudioSource_CreatureSenseAlert.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/HorseKiller.unity3d?HorseWhineysens"/>
 	<Channel name="Mouth"/>
@@ -306,7 +306,7 @@
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/> </SoundDataNode>
 
 <!-- Screaper Pet -->
-    <SoundDataNode name="Petroam"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+    <SoundDataNode name="Petroam"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/Rat3.unity3d?RagePetroam"/>
 	<AudioClip ClipName="#@modfolder:Resources/Rat3.unity3d?RagePetroam2"/>
 	<Channel name="Mouth"/>
@@ -316,7 +316,7 @@
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 	
-	<SoundDataNode name="Petalert"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+	<SoundDataNode name="Petalert"> <AudioSource name="@:Sounds/Prefabs/AudioSource_CreatureSenseAlert.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/Rat3.unity3d?SoundAlertPet"/>
 	<AudioClip ClipName="#@modfolder:Resources/Rat3.unity3d?SoundAlertPet2"/>
 	<Channel name="Mouth"/>
@@ -326,7 +326,7 @@
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> </SoundDataNode>
 	
-	<SoundDataNode name="Petpain"> <AudioSource name="Sounds/AudioSource_Pain"/>
+	<SoundDataNode name="Petpain"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<AudioClip ClipName="#@modfolder:Resources/Rat3.unity3d?Petpain"/>
 	<AudioClip ClipName="#@modfolder:Resources/Rat3.unity3d?Petpain2"/>
 	<Channel name="Mouth"/>
@@ -336,7 +336,7 @@
 	<HighestPitch name="1.05"/>
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1.111"/> </SoundDataNode>
 	
-	<SoundDataNode name="PetAttack"> <AudioSource name="Sounds/AudioSource_Creatures100Meter"/>
+	<SoundDataNode name="PetAttack"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Creatures.prefab"/>
 	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="#@modfolder:Resources/Rat3.unity3d?PetAttack"/>
 	<Channel name="Mouth"/>
