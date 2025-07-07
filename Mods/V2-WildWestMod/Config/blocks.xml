@@ -22,7 +22,7 @@
 
 <!-- 01 -->
 	<remove xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/property[@name='ParticleOnDeath']"/>
-	<set xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/property[@name='Model']/@value">Entities/OutdoorDecor/wildWestWagonPrefab</set>
+	<set xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/property[@name='Model']/@value">@:Entities/OutdoorDecor/wildWestWagonPrefab.prefab</set>
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/drop[@name='resourceHeadlight']/@count">0</set>
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/drop[@name='resourceScrapIron']/@count">40,80</set> <!-- Default 10,20 -->
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/property[@class='Explosion']/property[@name='ParticleIndex']/@value">13</set> <!-- Default 4 -->
@@ -37,7 +37,7 @@
 		<drop event="Harvest" name="resourceOil" count="1" prob="0.3" tag="allHarvest"/>		
 	</append>
 <!-- 02 -->
-	<set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/property[@name='Model']/@value">Entities/OutdoorDecor/wildWestWagonPrefab</set>
+	<set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/property[@name='Model']/@value">@:Entities/OutdoorDecor/wildWestWagonPrefab.prefab</set>
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/drop[@name='smallEngine']/@count">0</set>
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/drop[@name='carBattery']/@count">0</set>	
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/drop[@name='resourceRadiator']/@count">0</set>
@@ -56,7 +56,7 @@
 		<drop event="Harvest" name="resourceOil" count="1" prob="0.3" tag="allHarvest"/>		
 	</append>
 <!-- 03 -->
-	<set xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/property[@name='Model']/@value">Entities/OutdoorDecor/wildWestWagonPrefab</set>	
+	<set xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/property[@name='Model']/@value">@:Entities/OutdoorDecor/wildWestWagonPrefab.prefab</set>	
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/drop[@name='ammoGasCan']/@count">25,50</set>
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/drop[@name='resourceHeadlight']/@count">0</set>
 	<set xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/drop[@name='resourceScrapIron']/@count">48,80</set> <!-- Default 12,20 -->
@@ -99,8 +99,8 @@
 	<set xpath="/blocks/block[@name='cntShippingCrateMoPowerElectronics']/property[@name='Model']/@value">@:Entities/LootContainers/shippingCratePrefab.prefab</set>
 	<set xpath="/blocks/block[@name='cntShippingCrateCarParts']/property[@name='Model']/@value">@:Entities/LootContainers/shippingCratePrefab.prefab</set>
 <!-- Hub Caps that are not explosive and tires to Wagon Wheels -->
-	<set xpath="/blocks/block[@name='decoCarTireSmallFlat']/property[@name='Model']/@value">Entities/OutdoorDecor/wildWestWagonWheelFrontPrefab</set>
-	<set xpath="/blocks/block[@name='hubcapNoMine']/property[@name='Model']/@value">Entities/OutdoorDecor/wildWestWagonWheelFrontPrefab</set>
+	<set xpath="/blocks/block[@name='decoCarTireSmallFlat']/property[@name='Model']/@value">@:Entities/OutdoorDecor/wildWestWagonWheelFrontPrefab.prefab</set>
+	<set xpath="/blocks/block[@name='hubcapNoMine']/property[@name='Model']/@value">@:Entities/OutdoorDecor/wildWestWagonWheelFrontPrefab.prefab</set>
 <!-- Weapons and T4/5 Loot -->
     <set xpath="/blocks/block[@name='cntHardenedChestSecure']/property[@name='Model']/@value">@:Entities/LootContainers/tier3LootChestPrefab.prefab</set>
     <set xpath="/blocks/block[@name='cntHardenedChestInsecure']/property[@name='Model']/@value">@:Entities/LootContainers/tier3LootChestPrefab.prefab</set>
@@ -265,9 +265,9 @@
 	<set xpath="/blocks/block[@name='cntCoffeeMaker']/property[@name='ModelOffset']/@value">0,0.5,0</set>
     <set xpath="/blocks/block[@name='cntCoffeeMakerCommercial']/property[@name='Model']/@value">#@modfolder:Resources/coffeegrinder.unity3d?CoffeeGrinder2</set>
 	<set xpath="/blocks/block[@name='cntCoffeeMakerCommercial']/property[@name='ModelOffset']/@value">0,0.5,0</set>
-    <set xpath="/blocks/block[@name='questGeneratorSmall']/property[@name='Model']/@value">Entities/Furniture/woodBurningStovePrefab</set>
-    <set xpath="/blocks/block[@name='generatorbank']/property[@name='Model']/@value">Entities/Furniture/woodBurningStovePrefab</set>
-    <set xpath="/blocks/block[@name='cntCollapsedGeneratorbank']/property[@name='Model']/@value">Entities/Furniture/woodBurningStovePrefab</set>	
+    <set xpath="/blocks/block[@name='questGeneratorSmall']/property[@name='Model']/@value">@:Entities/Furniture/woodBurningStovePrefab.prefab</set>
+    <set xpath="/blocks/block[@name='generatorbank']/property[@name='Model']/@value">@:Entities/Furniture/woodBurningStovePrefab.prefab</set>
+    <set xpath="/blocks/block[@name='cntCollapsedGeneratorbank']/property[@name='Model']/@value">@:Entities/Furniture/woodBurningStovePrefab.prefab</set>	
 <!-- Quest Marker -->
 	<set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/rally_pointStar.unity3d?rally_pointStar</set>
 <!-- Wild West Coffins -->	
@@ -1139,7 +1139,7 @@
 	<property name="MaxDamage" value="250"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Furniture/woodBurningStovePrefab"/>
+	<property name="Model" value="@:Entities/Furniture/woodBurningStovePrefab.prefab"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="IsTerrainDecoration" value="true"/>
@@ -1655,7 +1655,7 @@
 		<property name="GndAlign" value="1"/>
 		<property name="PlantGrowing.FertileLevel" value="0"/>
 		<property name="PlantGrowing.LightLevelGrow" value="0"/>
-		<property name="PlantGrowing.GrowthRate" value="180"/> <!-- 3 days for 60 minute days - Domestic coops take precendent over nests -->
+		<property name="PlantGrowing.GrowthRate" value="360"/> <!-- 6 days for 60 minute days - Domestic coops take precendent over nests -->
 		<property name="PlantGrowing.IsRandom" value="false"/>
 		<property name="PlantGrowing.LightLevelStay" value="0"/>
 		<property name="PlantGrowing.Next" value="cntBirdnest"/>
@@ -2263,7 +2263,7 @@
 
 	<block name="looseLogTrap100_TMB">
 		<property name="Extends" value="looseBoardsTrapBlock1x1" param1="CustomIcon,Path"/>
-		<property name="Model" value="Pole1m"/>
+		<property name="Model" value="@:Shapes/Pole1m.fbx"/>
 		<property name="TriggerDelay" value="0.001"/>
 		<property name="SortOrder2" value="0735"/>
 		<property name="Texture" value="21,21,116,116,116,116"/>
@@ -2474,7 +2474,7 @@
 <block name="laundryPileLongSailUnder">
 	<property name="Extends" value="laundryPileTall"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Industrial/laundryPileLongPrefab"/>
+	<property name="Model" value="@:Entities/Industrial/laundryPileLongPrefab.prefab"/>
 	<property name="ModelOffset" value="0,-0.15,0"/>
 	<property name="CustomIcon" value="laundryPileLong"/>	
 </block>
@@ -2482,7 +2482,7 @@
 <block name="laundryPileLongSailOver">
 	<property name="Extends" value="laundryPileTall"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Industrial/laundryPileLongPrefab"/>
+	<property name="Model" value="@:Entities/Industrial/laundryPileLongPrefab.prefab"/>
 	<property name="ModelOffset" value="0,0.05,0"/>
 	<property name="CustomIcon" value="laundryPileLong"/>	
 </block>
@@ -2518,7 +2518,7 @@
 	<property name="Class" value="Loot"/>
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
-	<property name="Model" value="counter_sink_hole_round"/>
+	<property name="Model" value="@:Shapes/counter_sink_hole_round.fbx"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="IsDecoration" value="true"/>
 	<property name="Material" value="Mmetal"/>
@@ -3885,7 +3885,7 @@
 	<!-- Visual -->
 	<property name="Material" value="Msteel"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Doors/jailDoor/jailDoorPrefab"/>
+	<property name="Model" value="@:Entities/Doors/jailDoor/jailDoorPrefab.prefab"/>
 	<property name="ModelOffset" value="0,0,0"/>
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
@@ -3986,7 +3986,7 @@
 	<!-- Visual -->
 	<property name="Material" value="Msteel"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Doors/jailDoorDouble/jailDoorDoublePrefab"/>
+	<property name="Model" value="@:Entities/Doors/jailDoorDouble/jailDoorDoublePrefab.prefab"/>
 	<property name="ModelOffset" value="0,0,0"/>
 	<property name="MultiBlockDim" value="2,2,1"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
