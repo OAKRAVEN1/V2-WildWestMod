@@ -16,7 +16,7 @@
   <append xpath="/Sounds">
 
 <!-- New Pump Shotgun Model -->  
-	<SoundDataNode name="oakfire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<SoundDataNode name="oakfire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
     <Noise ID="0" noise="81" time="2" muffled_when_crouched="0.8" heat_map_strength="1.0" heat_map_time="180"/>
     <AudioClip ClipName="#@modfolder:Resources/bradshotgun.unity3d?oakfire"/>
     <LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
@@ -41,7 +41,7 @@
 		
  <!-- Gatling Turret -->
  
- 	<SoundDataNode name="westturret_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+ 	<SoundDataNode name="westturret_fire"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
 	<Noise ID="0" noise="54" time="2" heat_map_strength="0.65" heat_map_time="180"/>
 	<AudioClip ClipName="#@modfolder:Resources/GatlingOak.unity3d?Submachine"/>
 	<AudioClip ClipName="#@modfolder:Resources/GatlingOak.unity3d?Submachine"/>
