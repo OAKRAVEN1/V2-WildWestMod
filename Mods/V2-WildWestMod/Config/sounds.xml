@@ -1,8 +1,8 @@
 <wildwestmod>
 
 <!-- Timed Dynamite -->
-<set xpath="/Sounds/SoundDataNode[@name='charge_keypress']/AudioClip/@ClipName">Sounds/Weapons/weapon_jam1</set>
-<set xpath="/Sounds/SoundDataNode[@name='charge_keypress_armed']/AudioClip/@ClipName">Sounds/Weapons/weapon_jam2</set>
+<set xpath="/Sounds/SoundDataNode[@name='charge_keypress']/AudioClip/@ClipName">@:Sounds/Weapons/weapon_jam1.wav</set>
+<set xpath="/Sounds/SoundDataNode[@name='charge_keypress_armed']/AudioClip/@ClipName">@:Sounds/Weapons/weapon_jam2.wav</set>
 <set xpath="/Sounds/SoundDataNode[@name='Supply_Crate_Plane_lp']/AudioClip/@ClipName">#@modfolder:Resources/Steamsounds.unity3d?SteamTrainChug Away</set>
 
 <!-- TMB Horse clang removal -->
@@ -11,7 +11,7 @@
 
 <!-- Horse Turbo sound removal -->
 
-<set xpath="/Sounds/SoundDataNode[@name='vehicle_turbo']/AudioClip/@ClipName">Sounds/Misc/silencefiller</set>
+<set xpath="/Sounds/SoundDataNode[@name='vehicle_turbo']/AudioClip/@ClipName">@:Sounds/Misc/silencefiller.wav</set>
 
   <append xpath="/Sounds">
 
