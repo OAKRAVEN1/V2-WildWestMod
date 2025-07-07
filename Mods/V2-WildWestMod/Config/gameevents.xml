@@ -4,7 +4,7 @@
 	
 	<append xpath="/gameevents/action_sequence[@name='game_first_spawn']">	
 		<action class="AddQuest">
-			<property name="phase" value="1" />
+			<property name="phase" value="3" />
 			<property name="quest" value="quest_whiteRiverCitizen0" />
 		</action>
 	</append>

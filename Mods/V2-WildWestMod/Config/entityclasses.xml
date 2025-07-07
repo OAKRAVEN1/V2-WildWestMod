@@ -54,7 +54,7 @@
 		</effect_group>
 	</append>
 
-    <set xpath="/entity_classes/entity_class[contains(@name,'playerMale')]/property[contains(@name,'ItemsOnEnterGame.GameModeSurvival')]/@value">WildWestStarterKit</set>	
+    <set xpath="/entity_classes/entity_class[contains(@name,'playerMale')]/property[contains(@name,'ItemsOnEnterGame.GameModeSurvival')]/@value">WildWestStarterKit,noteDuke01</set>	
 	<set xpath="/entity_classes/entity_class[contains(@name,'playerMale')]/property[contains(@name,'ItemsOnEnterGame.GameModeSurvivalSP')]/@value">WildWestStarterKit</set>	
 	<set xpath="/entity_classes/entity_class[contains(@name,'playerMale')]/property[contains(@name,'ItemsOnEnterGame.GameModeSurvivalMP')]/@value">WildWestStarterKit</set>
 
