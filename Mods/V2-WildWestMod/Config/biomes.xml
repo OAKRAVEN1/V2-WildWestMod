@@ -16,6 +16,12 @@
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- Removing plastic trash from Burnt Forest -->
 	<remove xpath="//biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='cntTrashPile01']"/>
+	<append xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/decorations">
+			<decoration type="block" blockname="bluerock22" prob="0.0002" rotatemax="7"/>
+			<decoration type="block" blockname="bluerock33" prob="0.0002" rotatemax="7"/>
+			<decoration type="block" blockname="lightblueRock" prob="0.0002" rotatemax="7"/>
+			<decoration type="block" blockname="greenrock" prob="0.0002" rotatemax="7"/>			
+	</append>
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- **** Desert: Main Biome -->
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
@@ -26,7 +32,9 @@
 	</append>	
 	<append xpath="/worldgeneration/biomes/biome[@name='desert']/decorations">
 			<decoration type="block" blockname="BeeStumpBees" prob="0.0001" rotatemax="7"/>
-			<decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/>			
+			<decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/>
+			<decoration type="prefab" name="deco_wildwest_prospector_dig_01_TMB"  onslopes="false" prob=".005" rotatemax="3"/>
+			<decoration type="prefab" name="deco_wildwest_prospector_dig_02_TMB"  onslopes="false" prob=".002" rotatemax="3"/>			
 	</append>
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- **** Wasteland: Main Biome -->
@@ -46,7 +54,18 @@
 	<remove xpath="//biome[@name='wasteland']/decorations/decoration[@blockname='cinderBlocks03']"/>
 	<remove xpath="//biome[@name='wasteland']/decorations/decoration[@blockname='mineHubcap']"/>
 	<remove xpath="//biome[@name='wasteland']/decorations/decoration[@blockname='mineCandyTin']"/>
-	<remove xpath="//biome[@name='wasteland']/decorations/decoration[@blockname='hubcapNoMine']"/>	
+	<remove xpath="//biome[@name='wasteland']/decorations/decoration[@blockname='hubcapNoMine']"/>
+	<append xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations">
+			<decoration type="block" blockname="emberPileDeco1" prob="0.00025" rotatemax="7"/>
+			<decoration type="block" blockname="emberPileDeco2" prob="0.00025" rotatemax="7"/>
+			<decoration type="block" blockname="emberPileDeco3" prob="0.0025" rotatemax="7"/>
+			<decoration type="block" blockname="emberPileDeco4" prob="0.0025" rotatemax="7"/>
+			<decoration type="block" blockname="rubblePileWoodBurntLarge" prob=".00125" rotatemax="7"/>
+			<decoration type="block" blockname="rubblePileWoodBurntSmall" prob=".00075" rotatemax="7"/>
+			<decoration type="prefab" name="deco_wildwest_smokeriser3000" prob=".003" rotatemax="3"/>
+			<decoration type="prefab" name="deco_wasteland_tradersmoke_white" prob=".003" rotatemax="3"/>
+			<decoration type="prefab" name="deco_wasteland_tradersmoke_black" prob=".0035" rotatemax="3"/>			
+	</append>	
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- ***** Street Parameters -->
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
