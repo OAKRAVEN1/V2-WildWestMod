@@ -1712,7 +1712,7 @@
 	<property name="HasRagdoll" value="true"/>
 	<property name="PhysicsBody" value="vulture"/>
 	<property name="Mass" value="70"/>
-	<property name="Prefab" value="/Entities/Animals/Vulture/animalBirdVulturePrefab"/>
+	<property name="Prefab" value="@:Entities/Animals/Vulture/animalBirdVulturePrefab.prefab"/>
 	<property name="SizeScale" value="1.65"/>
 
 	<!-- Gameplay  -->
@@ -1936,7 +1936,7 @@
 	<entity_class name="animalZombieWastelandCraterBear" extends="animalZombieBear">
 	<property name="Tags" value="entity,animal,zombie,hostile,bear"/>
 
-	<property name="Prefab" value="/Entities/Animals/Bear/animalBearZombiePrefab"/>
+	<property name="Prefab" value="@:Entities/Animals/Bear/animalBearZombiePrefab.prefab"/>
 	<property name="AIFeralSense" value="1.2"/>
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="DestroyArea"/>
@@ -1977,17 +1977,18 @@
 </entity_class>
 
 		<!-- CUSTOM Zombie Feral Chicken -->
-
+		
 		<entity_class name="animalZombieFeralChicken" extends="animalTemplateHostile">
 			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,animal,chicken,perkAT01,perkAT02,perkAT03"/>
+			<property name="Tags" value="entity,animal,hostile,zombie,chicken,perkAT01,perkAT02,perkAT03"/>
 			<property name="ExperienceGain" value="1000"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_chicken"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_chicken"/>
 			<property name="AvatarController" value="AvatarAnimalController"/>
-			<property name="SizeScale" value="0.9"/>	
-			<property name="Prefab" value="/Entities/Animals/Bird/animalBirdChickenPrefab"/>	
-			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SizeScale" value="2.0"/>	
+			<property name="Prefab" value="@:Entities/Animals/Bird/animalBirdChickenPrefab.prefab"/>
+			<property name="PrefabCombined" value="true"/>			
 			<property name="Parent" value="Animals"/>
 			<property name="Faction" value="animals"/>
 			<property name="PhysicsBody" value="chicken"/>
@@ -1995,20 +1996,21 @@
 			<property name="Weight" value="30"/>
 			<property name="SoundHurt" value="chickenpain"/>
 			<property name="SoundDeath" value="chickendeath"/>
+			<property name="SoundStepType" value="animallightstep"/>
 			<property name="SwimOffset" value="2"/>
-			<property name="HasRagdoll" value="false"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
 			<property name="HasDeathAnim" value="false"/>
 			<property name="CanBigHead" value="false" />
 			<property name="CanClimbLadders" value="true"/>
 	
 			<property name="HandItem" value="meleeHandanimalZombieFeralChicken"/>
 	
-	
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=5"/>	
 			<property name="AITask-3" value="Leap"/>
 			<property name="AITask-4" value="Territorial"/>
-			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,15"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityNPC,0"/>
 			<property name="AITask-6" value="ApproachSpot"/>
 			<property name="AITask-7" value="Look"/>
 			<property name="AITask-8" value="Wander"/>
@@ -2016,14 +2018,17 @@
 			<property name="AITask-9" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,24,12"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,24,12,EntityNPC,0,0"/>
 			<property name="AITarget-4" value=""/>
 	
 			<property name="CanClimbVertical" value="true"/>
 			<property name="JumpMaxDistance" value="4, 12"/>
+	
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="100"/>
+			<property name="SightLightThreshold" value="-2,-2"/>
 
 			<!-- Gameplay -->
-			<property name="MoveSpeedPanic" value="1.3"/>
 			<property name="ExperienceGain" value="800"/>
 			<property name="DeadBodyHitPoints" value="200"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
@@ -2031,9 +2036,10 @@
 			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="10"/>
 			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="5,10" tag="butcherHarvest"/>
 			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<drop event="Harvest" name="foodEgg" tag="butcherHarvest" count="1,4"/>
+			<drop event="Harvest" name="foodEgg" tag="butcherHarvest" count="1,2"/>
 			<drop event="Harvest" name="foodEgg" tag="allToolsHarvest" count="1,2"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
@@ -2042,7 +2048,7 @@
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 			</effect_group>
 
-			<property name="NavObject" value="animaltracking_chicken" />
+			<property name="NavObject" value="animaltracking_hostile" />
 		</entity_class>
 		
 		<!-- CUSTOM Bison -->
@@ -2359,7 +2365,9 @@
 	
 	<entity_class name="zombieFemaleBigFatBarker" extends="zombieFemaleFatFeral"> <!-- Radiated Conversion -->
 		<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
-		<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZBigMamaRadiated.prefab"/>
+		<property name="Mesh" value="@:Entities/Zombies/BigMama/ZBigMamaRadiated.prefab"/>
+		<property name="AltMats" value="@:Entities/Zombies/BigMama/Materials/HD_BigMomma_Radiated2.mat,@:Entities/Zombies/BigMama/Materials/HD_BigMomma_Radiated3.mat"/>
+		<property name="MatColor" value="radiated"/>
 		<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 		<!-- Gameplay zombieFemaleFatRadiated -->
@@ -2426,8 +2434,8 @@
 		<!-- Radiated Gunslinger Wight -->	
 	<entity_class name="zombieWightRadiatedGunslinger" extends="zombieWightFeralGunslinger">
 		<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
-		<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZWightRadiated.prefab"/>
-		<property name="ReplaceMaterial1" value="@:Entities/Zombies/Zombies/Materials/rad_eye.mat"/>
+		<property name="Mesh" value="@:Entities/Zombies/Wight/ZWightRadiated.prefab"/>
+		<property name="MatColor" value="radiated"/>
 		<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 		<property name="Class" value="EntityZombieCop"/> <!-- Required to activate melee audio for gunfire -->
 		<property name="ExplodeHealthThreshold" value="0"/>
@@ -2479,8 +2487,9 @@
 	<property name="HideInSpawnMenu" value="false"/>
 	<property name="Tags" value="entity,zombie,walker,feral"/>
 	<!-- <property name="Buffs" value="buffLegendaryBoss"/> -->
-	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZSuitFeral.prefab"/>
-	<property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_SuitZ2.mat,@:Entities/Zombies/Zombies/Materials/HD_SuitZ3.mat"/>
+	<property name="Mesh" value="@:Entities/Zombies/Suit/ZSuitFeral.prefab"/>
+	<property name="AltMats" value="@:Entities/Zombies/Suit/Materials/HD_SuitZ2.mat,@:Entities/Zombies/Suit/Materials/HD_SuitZ3.mat"/>
+	<property name="MatColor" value=""/>
 	<property name="Class" value="EntityZombieCop"/> <!-- Required to activate melee audio for gunfire -->
 	<property name="ExplodeHealthThreshold" value="0"/>
 
@@ -2570,7 +2579,7 @@
 		<entity_class name="zombieSpiderFeralFireGlider" extends="zombieSpiderFeral">
 			<property name="Tags" value="entity,zombie,walker,feral,radiated,hostile,vulture"/>
 			<property name="Class" value="EntityVulture"/>
-			<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZSpiderFeral.prefab"/>
+			<property name="Mesh" value="@:Entities/Zombies/Spider/ZSpiderFeral.prefab"/>
 			<property name="Mass" value="50"/>
 			<property name="MoveSpeed" value=".7"/>
 			<property name="MoveSpeedAggro" value="2, 2"/>
@@ -3016,8 +3025,8 @@
 <entity_class name="zombieSkateboarderUndertakerRadiated" extends="zombieSkateboarderRadiated">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
-	<property name="Mesh" value="@:Entities/Zombies/Prefabs/ZThugFeral.prefab"/>
-	<property name="AltMats" value="@:Entities/Zombies/Zombies/Materials/HD_Thug2.mat,@:Entities/Zombies/Zombies/Materials/HD_Thug3.mat"/>
+	<property name="Mesh" value="@:Entities/Zombies/Thug/ZThugFeral.prefab"/>
+	<property name="AltMats" value="@:Entities/Zombies/Thug/Materials/HD_Thug2.mat,@:Entities/Zombies/Thug/Materials/HD_Thug3.mat"/>
 	<property name="Class" value="EntityZombieCop"/> <!-- Required to activate melee audio for gunfire -->
 	<property name="SizeScale" value="1.5"/>
 
