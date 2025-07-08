@@ -1,7 +1,7 @@
 <wildwestmod>
 
 	<set xpath="/quests/@max_quest_tier">6</set>
-	<set xpath="/quests/@quests_per_tier">7</set>
+	<set xpath="/quests/@quests_per_tier">8</set>
 	<!--set xpath="/quests/@quests_per_tier">1</set--> <!-- For Testing Quest Progression -->
 
 <set xpath="/quests">
@@ -121,7 +121,7 @@
 		</objective>
 		
 		<action type="TrackChallenge">
-			<property name="challenge" value="craftlandclaim" />
+			<property name="challenge" value="craftlandclaim"/>
 			<property name="on_complete" value="true"/>
 			<property name="delay" value="1"/>
 		</action>
@@ -130,7 +130,7 @@
 		<reward type="Item" id="meleeToolShovelT0StoneShovel" ischosen="true" value="1"/>
 	</quest>
 	
-<!-- *** CHALLENGES_PAGE_01 -->
+<!-- *** PAGE_01_BASIC_CHALLENGE_REWARDS -->
 	<quest id="challengegroup_reward_homesteading">
 		<property name="name_key" value="homesteading_name" param1="name"/>
 		<property name="subtitle_key" value="homesteading_subtitle" param1="subtitle"/>
@@ -140,7 +140,7 @@
 		<property name="category_key" value="challenge"/>
 		<property name="add_to_tier_complete" value="false"/>
 		<property name="difficulty_tier" value="0" param1="difficulty"/>
-		<property name="allow_remove" value="false" />
+		<property name="allow_remove" value="false"/>
 		<property name="reward_choices_count" value="5"/>
 
 		<property name="completiontype" value="TurnIn"/>
@@ -181,9 +181,9 @@
 	</quest>
 
 	<quest id="challengegroup_reward_crafting" template="challengegroup_reward_homesteading">
-		<variable name="name_key" value="crafting_name"/>
-		<variable name="subtitle_key" value="crafting_subtitle"/>
-		<variable name="description_key" value="crafting_desc"/>
+		<variable name="name" value="crafting_name"/>
+		<variable name="subtitle" value="crafting_subtitle"/>
+		<variable name="description" value="crafting_desc"/>
 		<property name="completion_key" value="crafting_completion"/>
 		
 		<reward type="Exp" value="1000"/>
@@ -225,7 +225,7 @@
 		<reward type="LootItem" id="perkBooks" ischosen="true" value="1"/>
 	</quest>
 
-<!-- *** CHALLENGES_PAGE_02 -->
+<!-- *** PAGE_02_ADVANCED_CHALLENGE_REWARDS -->
 	<quest id="challengegroup_reward_gatherer" template="challengegroup_reward_homesteading">
 		<variable name="name" value="gatherer_name"/>
 		<variable name="subtitle" value="gatherer_subtitle"/>
@@ -617,7 +617,67 @@
 		<reward type="Item" id="questRewardLegendarySteelToolsCraftingBundle" ischosen="true" isfixed="true" value="1"/>
 	</quest>
 
-<!-- *** CHALLENGES_PAGE_03 -->
+<!-- *** PAGE_03_BIOMES_CHALLENGE_REWARDS -->
+
+	<quest id="challengegroup_reward_burnt" template="challengegroup_reward_homesteading">
+		<variable name="name" value="xuiBurntForest"/>
+		<variable name="subtitle" value="xuiBurntForest"/>
+		<variable name="description" value="burnt_desc"/>
+		<variable name="completion" value="burnt_completion"/>
+
+		<reward type="Exp" value="10000"/>
+		<reward type="Item" id="biomeBadge1" ischosen="true" value="1"/>
+
+		<reward type="ShowMessageWindow">
+			<property name="title" value="reward_biome_badge_01_title"/>
+			<property name="message" value="reward_biome_badge_01_description"/>
+		</reward>
+	</quest>
+
+	<quest id="challengegroup_reward_desert" template="challengegroup_reward_homesteading">
+		<variable name="name" value="xuiDesert"/>
+		<variable name="subtitle" value="xuiDesert"/>
+		<variable name="description" value="desert_desc"/>
+		<variable name="completion" value="desert_completion"/>
+
+		<reward type="Exp" value="25000"/>
+		<reward type="Item" id="biomeBadge2" ischosen="true" value="1"/>
+
+		<reward type="ShowMessageWindow">
+			<property name="title" value="reward_biome_badge_02_title"/>
+			<property name="message" value="reward_biome_badge_02_description"/>
+		</reward>
+	</quest>
+
+	<quest id="challengegroup_reward_snow" template="challengegroup_reward_homesteading">
+		<variable name="name" value="xuiSnow"/>
+		<variable name="subtitle" value="xuiSnow"/>
+		<variable name="description" value="snow_desc"/>
+		<variable name="completion" value="snow_completion"/>
+
+		<reward type="Exp" value="50000"/>
+		<reward type="Item" id="biomeBadge3" ischosen="true" value="1"/>
+
+		<reward type="ShowMessageWindow">
+			<property name="title" value="reward_biome_badge_03_title"/>
+			<property name="message" value="reward_biome_badge_03_description"/>
+		</reward>
+	</quest>
+
+	<quest id="challengegroup_reward_wasteland" template="challengegroup_reward_homesteading">
+		<variable name="name" value="xuiWasteland"/>
+		<variable name="subtitle" value="xuiWasteland"/>
+		<variable name="description" value="wasteland_desc"/>
+		<variable name="completion" value="wasteland_completion"/>
+
+		<reward type="Exp" value="100000"/>
+		<reward type="Item" id="biomeBadge4" ischosen="true" value="1"/>
+
+		<reward type="ShowMessageWindow">
+			<property name="title" value="reward_biome_badge_04_title"/>
+			<property name="message" value="reward_biome_badge_04_description"/>
+		</reward>		   
+	</quest>
 
 		<!-- TWITCH_CHALLENGES_HERE -->
 
@@ -710,6 +770,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerFetch"/>
 		</objective>
 
 		<objective type="FetchFromContainer">
@@ -882,6 +943,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerClear"/>
 		</objective>
 
 		<objective type="ClearSleepers">
@@ -1054,6 +1116,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerInfestation"/>
 		</objective>
 
 		<objective type="ClearSleepers">
@@ -1216,6 +1279,7 @@
 			<property name="nav_object" value="rally"/>
 			<property name="allowed_start_hour" value="22"/>
 			<property name="allowed_end_hour" value="1"/>
+			<property name="rally_marker_type" value="questRallyMarkerRestorePower"/>
 		</objective>
 
 		<objective type="ClearSleepers">
@@ -1329,6 +1393,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerFetchClear"/>
 		</objective>
 
 		<objective type="ClearSleepers">
@@ -1467,7 +1532,6 @@
 		<property name="completion_key" value="quest_buried_supplies_completion"/>
 		<property name="shareable" value="false"/>
 		<property name="reward_choices_count" value="5"/>
-		<property name="reset_trader_quests" value="true"/>
 		<property name="single_quest" value="true"/>
 		<property name="always_allow" value="true"/>
 		<property name="unique_key" value="introquest"/>
@@ -1484,6 +1548,7 @@
 			<property name="start_mode" value="Create"/>
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerBuriedSupplies"/>
 			
 			<property name="activate_event" value="quest_treasure_replace_road"/>
 		</objective>
@@ -1537,8 +1602,8 @@
 		<!-- </action> -->
 		
 		<action type="SetCVar">
-			<property name="cvar" value="IntroComplete" />
-			<property name="value" value="1" />
+			<property name="cvar" value="IntroComplete"/>
+			<property name="value" value="1"/>
 			<property name="on_complete" value="true"/>
 		</action>
 
@@ -1564,7 +1629,7 @@
 		<property name="completiontype" value="TurnIn"/>
 		<property name="completion_key" value="quest_buried_supplies_completion"/>
 		<property name="shareable" value="true"/>
-		<property name="reward_choices_count" value="4"/>
+		<property name="reward_choices_count" value="5"/>
 
 		<objective type="RandomGotoNPC" phase="1">
 			<property name="completion_distance" value="20"/>
@@ -1576,6 +1641,7 @@
 			<property name="start_mode" value="Create"/>
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerBuriedSupplies"/>
 			
 			<property name="activate_event" value="quest_treasure_replace_road"/>
 		</objective>
@@ -1712,6 +1778,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerClear"/>
 		</objective>
 
 		<objective type="ClearSleepers">
@@ -1779,6 +1846,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerInfestation"/>
 		</objective>
 
 		<objective type="ClearSleepers">
@@ -1842,6 +1910,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerFetch"/>
 		</objective>
 
 		<objective type="FetchFromContainer">
@@ -1908,6 +1977,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerFetchClear"/>
 		</objective>
 
 		<objective type="ClearSleepers">
@@ -1983,6 +2053,7 @@
 		<objective type="RallyPoint">
 			<property name="phase" value="2"/>
 			<property name="nav_object" value="rally"/>
+			<property name="rally_marker_type" value="questRallyMarkerInfestation"/>
 		</objective>
 
 		<objective type="ClearSleepers">
@@ -2122,6 +2193,7 @@
 			<property name="nav_object" value="rally"/>
 			<property name="allowed_start_hour" value="22"/>
 			<property name="allowed_end_hour" value="1"/>
+			<property name="rally_marker_type" value="questRallyMarkerRestorePower"/>
 
 			<property name="complete_event" value="quest_poi_lights_off"/>
 		</objective>
@@ -2244,6 +2316,7 @@
 		<property name="offer_key" value="quest_next_trader_offer"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
+		<property name="quest_hints" value="quest_next_trader_hint1"/>
 
 		<property name="completiontype" value="TurnIn"/>
 		<property name="completion_key" value="quest_next_trader_completion"/>
@@ -2254,8 +2327,8 @@
 		<property name="quest_type" value="special"/>
 
 		<objective type="Goto" value="5" phase="1">
-			<property name="location_tag" value="TraderJen" param1="trader_tag" />
-			<property name="location_name" value="trader_JenWW_arramus" />
+			<property name="location_tag" value="TraderJen" param1="trader_tag"/>
+			<property name="location_name" value="trader_JenWW_arramus"/>
 			<property name="nav_object" value="go_to_trader"/>
 			<property name="biome_filter_type" value="AnyBiome" param1="biome_filter_type"/>
 		</objective>
@@ -2293,6 +2366,7 @@
 		<property name="offer_key" value="quest_next_trader_offer"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
+		<property name="quest_hints" value="quest_next_trader_hint1"/>
 
 		<property name="completiontype" value="TurnIn"/>
 		<property name="completion_key" value="quest_next_trader_completion"/>
@@ -2303,7 +2377,7 @@
 		<property name="quest_type" value="special"/>
 
 		<objective type="Goto" value="5" phase="1">
-			<property name="location_tag" value="TraderBob" param1="trader_tag" />
+			<property name="location_tag" value="TraderBob" param1="trader_tag"/>
 			<property name="location_name" value="trader_bobWW" />
 			<property name="nav_object" value="go_to_trader"/>
 			<property name="biome_filter_type" value="AnyBiome" param1="biome_filter_type"/>
@@ -2342,6 +2416,7 @@
 		<property name="offer_key" value="quest_next_trader_offer"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
+		<property name="quest_hints" value="quest_next_trader_hint1"/>
 
 		<property name="completiontype" value="TurnIn"/>
 		<property name="completion_key" value="quest_next_trader_completion"/>
@@ -2352,8 +2427,8 @@
 		<property name="quest_type" value="special"/>
 
 		<objective type="Goto" value="5" phase="1">
-			<property name="location_tag" value="TraderHugh" param1="trader_tag" />
-			<property name="location_name" value="trader_hugh" />
+			<property name="location_tag" value="TraderHugh" param1="trader_tag"/>
+			<property name="location_name" value="trader_hugh"/>
 			<property name="nav_object" value="go_to_trader"/>
 			<property name="biome_filter_type" value="AnyBiome" param1="biome_filter_type"/>
 		</objective>
@@ -2391,6 +2466,7 @@
 		<property name="offer_key" value="quest_next_trader_offer"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
+		<property name="quest_hints" value="quest_next_trader_hint1"/>
 
 		<property name="completiontype" value="TurnIn"/>
 		<property name="completion_key" value="quest_next_trader_completion"/>
@@ -2401,8 +2477,8 @@
 		<property name="quest_type" value="special"/>
 
 		<objective type="Goto" value="5" phase="1">
-			<property name="location_tag" value="TraderJoel" param1="trader_tag" />
-			<property name="location_name" value="trader_joel" />
+			<property name="location_tag" value="TraderJoel" param1="trader_tag"/>
+			<property name="location_name" value="trader_joel"/>
 			<property name="nav_object" value="go_to_trader"/>
 			<property name="biome_filter_type" value="AnyBiome" param1="biome_filter_type"/>
 		</objective>
@@ -2440,14 +2516,15 @@
 		<property name="offer_key" value="quest_next_trader_offer"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
+		<property name="quest_hints" value="quest_next_trader_hint1"/>
 
 		<property name="completiontype" value="TurnIn"/>
 		<property name="return_to_quest_giver" value="false"/>
 		<property name="quest_type" value="special"/>
 
 		<objective type="Goto" value="5" phase="1">
-			<property name="location_tag" value="TraderJen" param1="trader_tag" />
-			<property name="location_name" value="trader_JenWW_arramus" />
+			<property name="location_tag" value="TraderJen" param1="trader_tag"/>
+			<property name="location_name" value="trader_JenWW_arramus"/>
 			<property name="nav_object" value="go_to_trader"/>
 			<property name="biome_filter_type" value="AnyBiome" param1="biome_filter_type"/>
 		</objective>
@@ -2828,9 +2905,9 @@
 	<property name="difficulty" value="easy"/>
 	<property name="shareable" value="false"/>
 		
-			<objective type="EntityKill" id="SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="25"/>
+			<objective type="EntityKill" id="zombieWWMZombies,SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="25"/>
 
-	<reward type="Item" id="casinoCoin" value="1000"/>
+	<reward type="Exp" value="2500"/>
 	<reward type="Quest" id="quest_eliminatezombies50">
 			<property name="chainquest" value="false"/>
 	</reward>	
@@ -2848,7 +2925,7 @@
 	<property name="difficulty" value="easy"/>
 	<property name="shareable" value="false"/>
 		
-			<objective type="EntityKill" id="SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="50"/>
+			<objective type="EntityKill" id="zombieWWMZombies,SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="50"/>
 	
 	<reward type="Exp" value="5000"/>
 	<reward type="Quest" id="quest_eliminatezombies75">
@@ -2868,9 +2945,9 @@
 	<property name="difficulty" value="easy"/>
 	<property name="shareable" value="false"/>
 		
-			<objective type="EntityKill" id="SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="75"/>
+			<objective type="EntityKill" id="zombieWWMZombies,SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="75"/>
 	
-	<reward type="Item" id="casinoCoin" value="3000"/>
+	<reward type="Exp" value="7500"/>
 	<reward type="Quest" id="quest_eliminatezombies100">
 			<property name="chainquest" value="false"/>
 	</reward>	
@@ -2888,7 +2965,7 @@
 	<property name="difficulty" value="easy"/>
 	<property name="shareable" value="false"/>
 		
-			<objective type="EntityKill" id="SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="100"/>
+			<objective type="EntityKill" id="zombieWWMZombies,SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="100"/>
 	
 	<reward type="Exp" value="10000"/>
 	<reward type="Quest" id="quest_eliminatezombies250">
@@ -2908,9 +2985,9 @@
 	<property name="difficulty" value="easy"/>
 	<property name="shareable" value="false"/>
 		
-			<objective type="EntityKill" id="SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="250"/>
+			<objective type="EntityKill" id="zombieWWMZombies,SnowWendigo,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieBurnt,zombieBurntFeral,zombieBurntRadiated,zombieBusinessMan,zombieBusinessManFeral,zombieBusinessManRadiated,zombieBusinessManRadiatedGunslinger,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieDemolition,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatHawaiianRadiated,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieFemaleFatBarker,zombieFemaleBigFatBarker,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieLumberjack,zombieLumberjackFeral,zombieLumberjackRadiated,zombieLumberjackRadiatedAxe,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombiePartyGirl,zombiePartyGirlFeral,zombiePartyGirlRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieMolotovSoldierFeral,zombieGrinBomb,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderFeralFireGlider,zombieSteve,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieSteveCrawlerRadiated,zombieSteveFeral,zombieSteveRadiated,zombieTomClark,zombieTomClarkFeral,zombieTomClarkRadiated,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieUtilityWorkerRadiated,zombieWight,zombieWightFeral,zombieWightRadiated,zombieWightFeralGunslinger,zombieWightRadiatedGunslinger,zombieYo,zombieYoFeral,zombieYoRadiated" value="250"/>
 	
-	<reward type="SkillPoints" value="2" chainreward="false"/>	
+	<reward type="SkillPoints" value="3" chainreward="false"/>	
 	<reward type="Quest" id="quest_eliminatezombies25">
 			<property name="chainquest" value="false"/>
 	</reward>	
@@ -2936,8 +3013,7 @@
 			<objective type="EntityKill" id="animalCoyote" value="1"/>
 			<objective type="EntityKill" id="animalBoar" value="1"/>			
 		
-	<reward type="Exp" value="2000"/>
-	<reward type="Item" id="casinoCoin" value="750"/>
+	<reward type="Exp" value="2500"/>
 	<reward type="Quest" id="quest_eliminateanimals02">
 			<property name="chainquest" value="false"/>
 	</reward>
@@ -2961,8 +3037,7 @@
 			<objective type="EntityKill" id="animalBear" value="1"/>
 			<objective type="EntityKill" id="animalMountainLion" value="1"/>			
 		
-	<reward type="Exp" value="3000"/>
-	<reward type="Item" id="casinoCoin" value="1500"/>
+	<reward type="Exp" value="4000"/>
 	<reward type="Quest" id="quest_eliminateanimals03">
 			<property name="chainquest" value="false"/>
 	</reward>
@@ -2986,8 +3061,7 @@
 			<objective type="EntityKill" id="animalDesertHare" value="1"/>
 			<objective type="EntityKill" id="animalStag" value="1"/>			
 		
-	<reward type="Exp" value="4500"/>
-	<reward type="Item" id="casinoCoin" value="3000"/>
+	<reward type="Exp" value="6500"/>
 	<reward type="Quest" id="quest_eliminateanimals04">
 			<property name="chainquest" value="false"/>
 	</reward>
@@ -3011,9 +3085,8 @@
 			<objective type="EntityKill" id="animalDireWolf" value="1"/>
 			<objective type="EntityKill" id="animalBossGrace" value="1"/>			
 		
-	<reward type="Exp" value="6000"/>
-	<reward type="Item" id="casinoCoin" value="5000"/>
-	<reward type="SkillPoints" value="2" chainreward="false"/>
+	<reward type="Exp" value="10000"/>
+	<reward type="SkillPoints" value="3" chainreward="false"/>
 	<reward type="Quest" id="quest_eliminateanimals01">
 				<property name="chainquest" value="false"/>
 	</reward>
@@ -3021,10 +3094,10 @@
 	
 	<!-- Adds the "Crispy Family" Horde Quest -->
 	<quest id="challenge_eliminatecrispyfamily">
-	<property name="offer_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 1 Skill, 10000 XP, and 5000 Liberty Coins for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />       
+	<property name="offer_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill, 10000 XP, and 5000 Liberty Coins for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />       
     <property name="name_key" value="Crispy Family and Friends" />
 	<property name="subtitle_key" value="Crispy Family and Friends" />
-	<property name="description_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 1 Skill, 10000 XP, and 5000 Liberty Coins for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />
+	<property name="description_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill, 10000 XP, and 5000 Liberty Coins for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />
 	<property name="icon" value="ui_game_symbol_crispy"/>
 	<property name="repeatable" value="true"/>
 	<property name="add_to_tier_complete" value="false"/>
@@ -3035,8 +3108,7 @@
 			<objective type="EntityKill" id="guppyVultureBurnt,guppyMommaVultureBurnt,guppyRadiatedMommaVultureBurnt,guppyRadiatedFireMommaVultureBurnt,zombieTheRat,zombieTheRatFeral,zombieTheRatRadiated" value="200"/>
 		
 	<reward type="Exp" value="10000"/>
-	<reward type="Item" id="casinoCoin" value="5000"/>	
-	<reward type="SkillPoints" value="1" chainreward="false"/>	
+	<reward type="SkillPoints" value="2" chainreward="false"/>	
 	<reward type="Quest" id="challenge_eliminatecrispyfamily">
 			<property name="chainquest" value="false"/>
 	</reward>	
@@ -3057,9 +3129,9 @@
 	<quest_list id="trader_rekt_quests">
 		<!-- Tier 1 -->
 		<quest id="intro_buried_supplies" end="0"/>
-		<quest id="tier1_clear" />
-		<quest id="tier1_fetch" />
-		<quest id="tier1_buried_supplies" />
+		<quest id="tier1_clear"/>
+		<quest id="tier1_fetch"/>
+		<quest id="tier1_buried_supplies"/>
 		<!-- <quest id="tier1_defense"/> -->
 
 		<!-- Tier 2 -->
@@ -3105,9 +3177,9 @@
 	<quest_list id="trader_jen_quests">
 		<!-- Tier 1 -->
 		<quest id="intro_buried_supplies" end="0"/>
-		<quest id="tier1_clear" />
-		<quest id="tier1_fetch" />
-		<quest id="tier1_buried_supplies" />
+		<quest id="tier1_clear"/>
+		<quest id="tier1_fetch"/>
+		<quest id="tier1_buried_supplies"/>
 		<!-- <quest id="tier1_defense"/> -->
 
 		<!-- Tier 2 -->
@@ -3153,9 +3225,9 @@
 	<quest_list id="trader_bob_quests">
 		<!-- Tier 1 -->
 		<quest id="intro_buried_supplies" end="0"/>
-		<quest id="tier1_clear" />
-		<quest id="tier1_fetch" />
-		<quest id="tier1_buried_supplies" />
+		<quest id="tier1_clear"/>
+		<quest id="tier1_fetch"/>
+		<quest id="tier1_buried_supplies"/>
 		<!-- <quest id="tier1_defense"/> -->
 
 		<!-- Tier 2 -->
@@ -3201,9 +3273,9 @@
 	<quest_list id="trader_hugh_quests">
 		<!-- Tier 1 -->
 		<quest id="intro_buried_supplies" end="0"/>
-		<quest id="tier1_clear" />
-		<quest id="tier1_fetch" />
-		<quest id="tier1_buried_supplies" />
+		<quest id="tier1_clear"/>
+		<quest id="tier1_fetch"/>
+		<quest id="tier1_buried_supplies"/>
 		<!-- <quest id="tier1_defense"/> -->
 
 		<!-- Tier 2 -->
@@ -3249,9 +3321,9 @@
 	<quest_list id="trader_joel_quests">
 		<!-- Tier 1 -->
 		<quest id="intro_buried_supplies" end="0"/>
-		<quest id="tier1_clear" />
-		<quest id="tier1_fetch" />
-		<quest id="tier1_buried_supplies" />
+		<quest id="tier1_clear"/>
+		<quest id="tier1_fetch"/>
+		<quest id="tier1_buried_supplies"/>
 		<!-- <quest id="tier1_defense"/> -->
 
 		<!-- Tier 2 -->

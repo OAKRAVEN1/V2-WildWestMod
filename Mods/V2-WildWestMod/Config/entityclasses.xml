@@ -3270,6 +3270,13 @@
 			<property name="NavObject" value="Horse" />
 			<property name="Buffs" value="buffHorseMovement"/>	
 		</entity_class>
+		
+<!-- Fake Entities for Entity Elimination Quest for Localization of 'Zombies' as first pick -->
+
+		<!-- *** ZOMBIE_ZOMBIES -->
+<entity_class name="zombieWWMZombies" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="None"/>
+</entity_class>
 	  
 </append>
 
