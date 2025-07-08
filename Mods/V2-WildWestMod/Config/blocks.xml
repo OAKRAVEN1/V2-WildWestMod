@@ -269,7 +269,7 @@
     <set xpath="/blocks/block[@name='generatorbank']/property[@name='Model']/@value">@:Entities/Furniture/woodBurningStovePrefab.prefab</set>
     <set xpath="/blocks/block[@name='cntCollapsedGeneratorbank']/property[@name='Model']/@value">@:Entities/Furniture/woodBurningStovePrefab.prefab</set>	
 <!-- Quest Marker -->
-	<set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/rally_pointStar.unity3d?rally_pointStar</set>
+	<!--set xpath="/blocks/block[@name='questRallyMarker']/property[@name='Model']/@value">#@modfolder:Resources/rally_pointStar.unity3d?rally_pointStar</set-->
 <!-- Wild West Coffins -->	
 	<set xpath="/blocks/block[@name='cntCoffinWildWestClosed']/property[@name='Model']/@value">#@modfolder:Resources/NewCoffins.unity3d?coffinWildWestNew</set>
 	<set xpath="/blocks/block[@name='cntCoffinWildWestCracked']/property[@name='Model']/@value">#@modfolder:Resources/NewCoffins.unity3d?coffinWildWestCrackedNew</set>
