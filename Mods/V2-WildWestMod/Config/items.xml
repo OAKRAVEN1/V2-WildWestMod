@@ -1,8 +1,10 @@
 <wildwestmod>
 
 	<!-- Vanilla Tweaks and Toggles -->
-	<!-- Perk Penetrator for 44AP with Perk Deadeye Hookup  -->
+	<!-- remove UnlockedBy from Electrician match progression deletion -->
+	<remove xpath="/items/item/property[@name='UnlockedBy'][@value='craftingElectrician']" />	
 	
+	<!-- Perk Penetrator for 44AP with Perk Deadeye Hookup  -->	
 	<append xpath="/items/item[@name='ammo44MagnumBulletBall']/effect_group/passive_effect[@name='EntityDamage']/@tags">,perkDeadEye</append>
 	<append xpath="/items/item[@name='ammo44MagnumBulletBall']/effect_group/passive_effect[@name='EntityPenetrationCount']/@tags">,perkDeadEye</append>
 	<append xpath="/items/item[@name='ammo44MagnumBulletHP']/effect_group/passive_effect[@name='EntityDamage']/@tags">,perkDeadEye</append>

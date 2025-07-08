@@ -1,7 +1,11 @@
 ﻿<wildwestmod>
 
-<!-- remove tfp electric fence post -->
+<!-- remove UnlockedBy from Electrician and Traps to match progression deletion -->
+	<remove xpath="/blocks/block/property[@name='UnlockedBy'][@value='craftingElectrician']" />
+	<remove xpath="/blocks/block/property[@name='UnlockedBy'][@value='craftingTraps']" />
 
+
+<!-- remove tfp electric fence post -->
 	<remove xpath="/blocks/block[@name='electricfencepost']" />
 	
 	<!-- Pickup time -->
@@ -301,8 +305,8 @@
 		<property name="Group" value="Building,advBuilding,Decor/Miscellaneous"/>
 	</append>
 <!-- Switch and Wire Relay -->
-	<remove xpath="/blocks/block[@name='switch']/property[@name='UnlockedBy']"/>
-	<remove xpath="/blocks/block[@name='electricwirerelay']/property[@name='UnlockedBy']"/>
+	<!--remove xpath="/blocks/block[@name='switch']/property[@name='UnlockedBy']"/>
+	<remove xpath="/blocks/block[@name='electricwirerelay']/property[@name='UnlockedBy']"/-->
 	
 	<!-- Apples for the Wild West due to Zero Rotten Trash Plastic Bags -->
 	
