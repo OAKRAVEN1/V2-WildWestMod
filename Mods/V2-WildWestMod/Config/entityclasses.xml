@@ -2720,7 +2720,7 @@
 			</effect_group>  
         </entity_class>
 		
-		<entity_class name="guppyRadiatedMommaVultureBurnt" extends="zombieWightRadiated">
+		<entity_class name="guppyRadiatedMommaVultureBurnt" extends="zombieTemplateMale">
             <property name="UserSpawnType" value="Menu"/>    
             <property name="SizeScale" value="1"/> 
 			<property name="Tags" value="entity,animal,zombie,hostile,vulture,UMA2,feral,radiated"/>
@@ -2745,7 +2745,12 @@
 			<property name="SoundSense" value="Animals/Vulture/vulturesense"/>
 			<property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>	
 			<property name="AIFeralSense" value=".1"/> <!-- 1.6 -->
-			<property name="WalkType" value="7"/>			
+			<property name="WalkType" value="7"/>
+
+			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+			<property name="ExperienceGain" value="2000"/><!-- XP Fit Radiated -->
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>			
 		
             <property name="MaxViewAngle" value="360"/>
 			<property name="LookAtAngle" value="0"/>
@@ -2770,7 +2775,7 @@
 			</effect_group>  
         </entity_class>
 		
-		<entity_class name="guppyRadiatedFireMommaVultureBurnt" extends="zombieWightRadiated">
+		<entity_class name="guppyRadiatedFireMommaVultureBurnt" extends="zombieTemplateMale">
             <property name="UserSpawnType" value="Menu"/>   
             <property name="SizeScale" value="1.1"/> 
 			<property name="Tags" value="entity,animal,zombie,hostile,vulture,UMA2,feral,radiated"/>
@@ -2795,7 +2800,13 @@
 			<property name="SoundSense" value="Animals/Vulture/vulturesense"/>
 			<property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>	
 			<property name="AIFeralSense" value=".1"/> <!-- 1.6 -->
-			<property name="WalkType" value="7"/>			
+			<property name="WalkType" value="7"/>
+
+			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+			<property name="ExperienceGain" value="2000"/><!-- XP Fit Radiated -->
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+			
    <property name="AITask" value="
     BreakBlock|
     ApproachDistraction|
