@@ -3,47 +3,53 @@
 <remove xpath="/entity_classes/entity_class[@name='zombieMaleHazmat']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieMaleHazmatFeral']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieMaleHazmatRadiated']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieMaleHazmatCharged']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieMaleHazmatInfernal']"/>
 
 <remove xpath="/entity_classes/entity_class[@name='zombieSoldier']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieSoldierFeral']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']"/>
+<!--remove xpath="/entity_classes/entity_class[@name='zombieSoldierCharged']"/-->
+<remove xpath="/entity_classes/entity_class[@name='zombieSoldierInfernal']"/>
 
 <remove xpath="/entity_classes/entity_class[@name='zombieFatCop']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']"/>
+<!--remove xpath="/entity_classes/entity_class[@name='zombieFatCopCharged']"/-->
+<remove xpath="/entity_classes/entity_class[@name='zombieFatCopInfernal']"/>
 
 <remove xpath="/entity_classes/entity_class[@name='zombieMutated']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieMutatedFeral']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieMutatedRadiated']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieMutatedCharged']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieMutatedInfernal']"/>
 
 <remove xpath="/entity_classes/entity_class[@name='zombieBiker']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieBikerFeral']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']"/>
+<!--remove xpath="/entity_classes/entity_class[@name='zombieBikerCharged']"/-->
+<remove xpath="/entity_classes/entity_class[@name='zombieBikerInfernal']"/>
 
 <remove xpath="/entity_classes/entity_class[@name='zombieScreamer']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieScreamerFeral']"/>
 <remove xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieScreamerCharged']"/>
+<!--remove xpath="/entity_classes/entity_class[@name='zombieScreamerInfernal']"/-->
 
-	<!-- Remove Demolition and Readd to removed extends and hat issue -->
-	<remove xpath="/entity_classes/entity_class[@name='zombieDemolition']"/>
+<!-- Remove Demolition and Readd to removed extends and hat issue -->
+<remove xpath="/entity_classes/entity_class[@name='zombieDemolition']"/>
 
-	<!-- Remove utility worker -->
-	<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorker']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerRadiated']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerCharged']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerInfernal']"/>
 
-	<!-- Remove utility worker feral -->
-	<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerFeral']"/>
-
-	<!-- Remove utility worker radiated-->
-	<remove xpath="/entity_classes/entity_class[@name='zombieUtilityWorkerRadiated']"/>
-
-	<!-- Remove Nurse -->
-	<remove xpath="/entity_classes/entity_class[@name='zombieNurse']"/>
-
-	<!-- Remove Nurse feral -->
-	<remove xpath="/entity_classes/entity_class[@name='zombieNurseFeral']"/>
-
-	<!-- Remove Nurse radiated-->
-	<remove xpath="/entity_classes/entity_class[@name='zombieNurseRadiated']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieNurse']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieNurseFeral']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieNurseRadiated']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieNurseCharged']"/>
+<!--remove xpath="/entity_classes/entity_class[@name='zombieNurseInfernal']"/-->
 
 	<!-- Horse - Zilox and Darkstardragon -->
 
@@ -86,8 +92,10 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieMoeHat2WildWestDeco"/>
 	</append>
 
-	<append xpath="/entity_classes/entity_class[@name='zombieBusinessMan']/effect_group">
+	<append xpath="/entity_classes/entity_class[@name='zombieBusinessMan']">
+		<effect_group name="Base Effects">
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieBusinessManHat3WildWestDeco"/>
+		</effect_group>
 	</append>
 	
 	<append xpath="/entity_classes/entity_class[@name='zombieYo']/effect_group">
@@ -180,6 +188,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse2"/>
+	<!--property name="MatColor" value="radiated"/-->
 	<!--<property name="ParticleOnSpawn" value="@:ParticleEffects/RadiatedParticlesOnMesh.prefab" param1="SetShapeToMesh0"/>-->
 
 	<!-- Gameplay zombieScreamerRadiated -->
@@ -194,6 +203,22 @@
 		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="2.5"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_SCREAMER_CHARGED -->
+<entity_class name="zombieScreamerCharged" extends="zombieScreamerRadiated">
+	<!--property name="MatColor" value="charged"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse2"/>
+	<property name="ExperienceGain" value="1400"/><!-- XP Slim Charged -->
+	<property name="HandItem" value="meleeHandZombieCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Charged -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthScreamerCharged"/>
 	</effect_group>
 </entity_class>
 
@@ -250,6 +275,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/OaksCowboyBiker.unity3d?OaksCowboyBikerRad"/>
+	<!--property name="MatColor" value="radiated"/-->
 
 	<!-- Gameplay zombieBikerRadiated -->
 	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
@@ -266,6 +292,22 @@
 	</effect_group>
 </entity_class>
 
+		<!-- *** ZOMBIE_BIKER_INFERNAL -->
+<entity_class name="zombieBikerInfernal" extends="zombieBikerRadiated">
+	<property name="Mesh" value="#@modfolder:Resources/OaksCowboyBiker.unity3d?OaksCowboyBikerRad"/>
+	<!--property name="MatColor" value="infernal"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="ExperienceGain" value="1600"/><!-- XP Sturdy Infernal -->
+	<property name="HandItem" value="meleeHandZombieInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Infernal -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthSturdyInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+	</effect_group>
+</entity_class>
 
 <!-- Regular Spider -->	
 
@@ -511,6 +553,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,zombieCop"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?SheriffOakRad"/>
+	<!--property name="MatColor" value="radiated"/-->
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 	<!-- Gameplay zombieFatCopRadiated -->
@@ -530,6 +573,25 @@
 
 	<property name="Explosion.BlockDamage" value="750"/>
 	<property name="Explosion.EntityDamage" value="250"/>
+</entity_class>
+
+		<!-- *** ZOMBIE_FAT_COP_INFERNAL -->
+<entity_class name="zombieFatCopInfernal" extends="zombieFatCopRadiated">
+	<!--property name="MatColor" value="infernal"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,infernal,zombieCop"/>
+	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?SheriffOakRad"/>
+	<property name="ExperienceGain" value="1600"/><!-- XP Strong Infernal -->
+	<property name="PainResistPerHit" value="3, .5, .5"/><!-- normal, at low health, health% -->
+	<property name="Explosion.BlockDamage" value="1000"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Infernal -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthStrongInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+	</effect_group>
+  
 </entity_class>
 
 <!-- Re-add mutant -->
@@ -601,6 +663,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantrad"/>
+	<!--property name="MatColor" value="radiated"/-->
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 	<!-- Gameplay zombieMutatedRadiated -->
@@ -616,6 +679,39 @@
 		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="2.5"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_MUTATED_CHARGED -->
+<entity_class name="zombieMutatedCharged" extends="zombieMutatedRadiated">
+	<!--property name="MatColor" value="charged"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantrad"/>
+	<property name="ExperienceGain" value="1700"/><!-- XP Sturdy Charged -->
+	<property name="HandItem" value="meleeHandzombieMutatedCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Charged -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthSturdyCharged"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_MUTATED_INFERNAL -->
+<entity_class name="zombieMutatedInfernal" extends="zombieMutatedRadiated">
+	<!--property name="MatColor" value="infernal"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantrad"/>
+	<property name="ExperienceGain" value="1900"/><!-- XP Sturdy Infernal -->
+	<property name="HandItem" value="meleeHandzombieMutatedInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Infernal -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthSturdyInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
 	</effect_group>
 </entity_class>
 
@@ -705,6 +801,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated,zombieSoldier"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinKillerRadiated"/>
+	<!--property name="MatColor" value="radiated"/-->
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 	<!-- Gameplay zombieSoldierRadiated -->
@@ -719,6 +816,23 @@
 		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="6"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_SOLDIER_INFERNAL -->
+<entity_class name="zombieSoldierInfernal" extends="zombieSoldierRadiated">
+	<!--property name="MatColor" value="infernal"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinKillerRadiated"/>
+	<property name="ExperienceGain" value="1600"/><!-- XP Fit Infernal -->
+	<property name="HandItem" value="meleeHandZombieInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Infernal -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthFitInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
 	</effect_group>
 </entity_class>
 
@@ -791,6 +905,7 @@
 	        <property name="UserSpawnType" value="Menu"/>
 	        <property name="Tags" value="entity,zombie,walker"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatRadiated"/>
+			<!--property name="MatColor" value="radiated"/-->
 			<property name="SoundRandom" value="zombie_hazmat_roam"/>
 			<property name="SoundAlert" value="zombie_hazmat_alert"/>
 			<property name="SoundAttack" value="zombie_hazmat_attack"/>
@@ -823,6 +938,39 @@
  
  </effect_group>
       </entity_class> 
+	  
+		<!-- *** ZOMBIE_HAZMAT_CHARGED -->
+<entity_class name="zombieMaleHazmatCharged" extends="zombieMaleHazmatRadiated">
+	<!--property name="MatColor" value="charged"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatRadiated"/>
+	<property name="ExperienceGain" value="1400"/><!-- XP Normal Charged -->
+	<property name="HandItem" value="meleeHandZombieCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Charged -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthNormalCharged"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_HAZMAT_INFERNAL -->
+<entity_class name="zombieMaleHazmatInfernal" extends="zombieMaleHazmatRadiated">
+	<!--property name="MatColor" value="infernal"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatRadiated"/>
+	<property name="ExperienceGain" value="1600"/><!-- XP Normal Infernal -->
+	<property name="HandItem" value="meleeHandZombieInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Infernal -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthNormalInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+	</effect_group>
+</entity_class>
 
 
 <!-- Zombie Grin Base Model-extended from (not used in game)-->
@@ -1317,6 +1465,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak3"/>
+	<!--property name="MatColor" value="radiated"/-->
 
 	<!-- Gameplay zombieUtilityWorkerRadiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -1328,7 +1477,40 @@
 		<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->
 		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 	</effect_group>
-</entity_class>	
+</entity_class>
+
+		<!-- *** ZOMBIE_UTILITY_WORKER_CHARGED -->
+<entity_class name="zombieUtilityWorkerCharged" extends="zombieUtilityWorkerRadiated">
+	<!--property name="MatColor" value="charged"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak3"/>
+	<property name="ExperienceGain" value="1400"/><!-- XP Utility Worker Charged -->
+	<property name="HandItem" value="meleeHandZombieCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Charged -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthUtilityWorkerCharged"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_UTILITY_WORKER_INFERNAL -->
+<entity_class name="zombieUtilityWorkerInfernal" extends="zombieUtilityWorkerRadiated">
+	<!--property name="MatColor" value="infernal"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak3"/>
+	<property name="ExperienceGain" value="1600"/><!-- XP Utility Worker Infernal -->
+	<property name="HandItem" value="meleeHandZombieInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Infernal -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthUtilityWorkerInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+	</effect_group>
+</entity_class>
 
 
 <!-- Michaela (replaces Nurse) -->
@@ -1384,6 +1566,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?Nurse3"/>
+	<!--property name="MatColor" value="radiated"/-->
 
 	<!-- Gameplay michaelaRadiated -->
 	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
@@ -1395,7 +1578,23 @@
 		<passive_effect name="HealthChangeOT" operation="base_set" value="1.4"/> <!-- Boss regen, 1% -->
 		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 	</effect_group>
-</entity_class>	
+</entity_class>
+
+		<!-- *** ZOMBIE_NURSE_CHARGED -->
+<entity_class name="zombieNurseCharged" extends="zombieNurseRadiated">
+	<!--property name="MatColor" value="charged"/-->
+	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?Nurse3"/>
+	<property name="ExperienceGain" value="1400"/><!-- XP Slim Charged -->
+	<property name="HandItem" value="meleeHandZombieCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Charged -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthSlimCharged"/>
+	</effect_group>
+</entity_class>
 
 <!-- Wild West Steam Spitter -->
 	
