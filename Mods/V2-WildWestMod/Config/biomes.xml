@@ -2,11 +2,32 @@
 
 	<!-- COSMETIC CHANGES -->
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<!-- **** Pine Forest: Main Biome -->
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- *** Pine Forest: Sub Biome: Ring of smaller plants around dense large trees -->
+	<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.014, 0, .46']/decorations">
+			<decoration type="block" blockname="BeeStumpBees" prob="0.00025" rotatemax="7"/>			
+	</append>	
+	<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']/decorations">
+			<decoration type="block" blockname="BeeStumpBees" prob="0.0002" rotatemax="7"/>			
+	</append>
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- **** Burnt Forest: Main Biome -->
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- Removing plastic trash from Burnt Forest -->
 	<remove xpath="//biome[@name='burnt_forest']/subbiome/decorations/decoration[@blockname='cntTrashPile01']"/>
-
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<!-- **** Desert: Main Biome -->
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- *** Desert: Sub Biome: Large Clustered Cactus and Desert Shrub -->
+	<append xpath="/worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.02, 0, .3']/decorations">
+			<decoration type="block" blockname="BeeStumpBees" prob="0.00025" rotatemax="7"/>
+			<decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/>			
+	</append>	
+	<append xpath="/worldgeneration/biomes/biome[@name='desert']/decorations">
+			<decoration type="block" blockname="BeeStumpBees" prob="0.0001" rotatemax="7"/>
+			<decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/>			
+	</append>
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- **** Wasteland: Main Biome -->
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
