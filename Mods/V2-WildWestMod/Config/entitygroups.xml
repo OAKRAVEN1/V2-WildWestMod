@@ -1,14 +1,62 @@
 <wildwestmod>
 
 <!-- *** BIOME_GROUPS -->
+	<!-- *** BIOME_ALL_ZOMBIES_GROUP -->
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add" >
+		zombieSpiderFeralFireGlider, .05
+		zombieSkateboarderUndertakerRadiated, .05
+	</csv>
+
 	<!-- *** BIOME_ZOMBIES_NIGHT_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .1
 		zombieSkateboarderUndertakerRadiated, .085
 	</csv>
+	
+<!-- *** BIOME_ZOMBIES_BURNT_FOREST_GROUP -->
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForest']/text()" delim="\n" op="add" >
+		zombieTheRat, .1
+		zombieSpiderFeralFireGlider, .1
+		zombieTheRatFeral, .075
+		zombieTheRatRadiated, .05
+		animalHorseKiller, .05
+		zombieSkateboarderUndertakerRadiated, .0175
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForestNight']/text()" delim="\n" op="add" >
+		zombieTheRat, .1
+		zombieSpiderFeralFireGlider, .1
+		zombieTheRatFeral, .075
+		zombieTheRatRadiated, .05
+		animalHorseKiller, .05
+		zombieSkateboarderUndertakerRadiated, .0175		
+	</csv>
+	
+<!-- *** BIOME_ZOMBIES_DESERT_GROUP -->
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesert']/text()" delim="\n" op="add" >
+		zombieSpiderFeralFireGlider, .1
+		zombieSkateboarderUndertakerRadiated, .1
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']/text()" delim="\n" op="add" >
+		zombieSpiderFeralFireGlider, .15
+		zombieSkateboarderUndertakerRadiated, .15
+	</csv>
+	
+<!-- *** BIOME_ZOMBIES_SNOW_GROUP -->
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnow']/text()" delim="\n" op="add" >
+		zombieSpiderFeralFireGlider, .1
+		zombieSkateboarderUndertakerRadiated, .1
+	</csv>
+	
+<!-- *** BIOME_ZOMBIES_SNOW_GROUP_NIGHT -->
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']/text()" delim="\n" op="add" >
+		zombieSpiderFeralFireGlider, .15
+		zombieSkateboarderUndertakerRadiated, .15
+	</csv>
 
 <!-- *** BIOME_ZOMBIES_WASTELAND_GROUP -->
-	<set xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+	<set xpath="/entitygroups/entitygroup[@name='ZombiesAllWasteland']">
 		zombieBurntRadiated
 		zombieWightFeral, 1.5
 		zombieWightRadiated
@@ -63,16 +111,22 @@
 		zombieSkateboarderUndertakerRadiated, .5
 	</set>
 	
-	<!-- *** BIOME_ZOMBIES_BURNT_FOREST_GROUP -->
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForest']/text()" delim="\n" op="add" >
-		zombieTheRat, .1
-		zombieTheRatFeral, .075
-		zombieTheRatRadiated, .05
-		animalHorseKiller, .05
-		zombieSkateboarderUndertakerRadiated, .0175		
+<!-- *** INTEGRATION FOR ANIMALS -->
+
+<!-- *** FOREST ANIMALS -->	
+	<csv xpath="/entitygroups/entitygroup[@name='WildGameForest']/text()" delim="\n" op="add" >
+		animalBoar, 3
+		animalStag, 4
+		animalDoe, 5
+		animalBear, 1
+		animalWolf, 1
+		animalDireWolf, .05	
 	</csv>
 	
-<!-- *** INTEGRATION FOR ANIMALS -->
+<!-- *** FOREST ANIMALS NIGHT -->
+	<csv xpath="/entitygroups/entitygroup[@name='WildGameForestNight']/text()" delim="\n" op="add" >
+		animalSmallBat, 25	
+	</csv>
 
 	<!-- *** BURNT_FOREST -->
 		<!-- *** ENEMY_ANIMAL_BURNT_FOREST_ANY -->
@@ -123,29 +177,20 @@
 	
 <!-- *** WASTELAND ANIMALS -->
 	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/text()" delim="\n" op="add" >
-		animalZombieWastelandCraterBear, 15
+		animalZombieWastelandCraterBear, 20
+		animalBossGrace, 15
+		animalZombieLargeVulture, 10
+		animalZombieFeralChicken, 10
+		animalHorseKiller, 10		
+	</csv>
+	
+	<!-- *** ENEMY_ANIMAL_WASTELAND_NIGHT -->	
+	<csv xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWastelandNight']/text()" delim="\n" op="add" >
+		animalZombieWastelandCraterBear, 20
 		animalBossGrace, 15
 		animalZombieLargeVulture, 10
 		animalZombieFeralChicken, 10
 		animalHorseKiller, 10
-		animalDireWolf, 5		
-	</csv>
-	
-<!-- *** FOREST ANIMALS -->
-	
-	<csv xpath="/entitygroups/entitygroup[@name='WildGameForest']/text()" delim="\n" op="add" >
-		animalBoar, 3
-		animalStag, 4
-		animalDoe, 5
-		animalBear, 1
-		animalWolf, 1
-		animalDireWolf, .05	
-	</csv>
-	
-<!-- *** FOREST ANIMALS NIGHT -->
-
-	<csv xpath="/entitygroups/entitygroup[@name='WildGameForestNight']/text()" delim="\n" op="add" >
-		animalSmallBat, 25	
 	</csv>
 	
 	<!-- Custom Groups -->
