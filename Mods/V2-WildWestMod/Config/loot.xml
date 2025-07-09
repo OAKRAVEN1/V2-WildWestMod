@@ -2870,6 +2870,7 @@
 <!-- *** T1_Armor_Mods -->
 <lootgroup name="modArmorT1">
 	<item name="modArmorHelmetLight"/>
+	<item name="modArmorCowboyRunners"/> <!-- Wild West Mod -->
 	<!-- <item name="modArmorInsulatedLiner"/> -->
 	<!-- <item name="modArmorCoolingMesh"/> -->
 	<item name="modArmorPlatingBasic"/>
@@ -2892,6 +2893,7 @@
 	<item name="modArmorBandolier"/>
 	<item name="modArmorTripleStoragePocket"/>
 	<item name="modArmorAdvancedMuffledConnectors"/>
+	<item name="modArmorPlatingCrystalReinforced"/> <!-- Wild West Mod -->
 </lootgroup>
 
 <!-- *** Mods_Scaled -->
@@ -3507,6 +3509,7 @@
 	<item name="modArmorBandolierSchematic"/>
 	<item name="modArmorDoubleStoragePocketSchematic"/>
 	<item name="modArmorHelmetLightSchematic"/>
+	<item name="modArmorCowboyRunnersSchematic"/> <!-- Wild West Mod -->
 	<!--item name="modFuelTankSmallSchematic"/-->
 	<item name="modGunBipodSchematic"/>
 	<item name="modGunBowArrowRestSchematic"/>
@@ -3545,6 +3548,7 @@
 	<item name="modGunSoundSuppressorSilencerSchematic"/>
 	<!--item name="modGunTriggerGroupAutomaticSchematic"/-->
 	<item name="modMeleeClubMetalSpikesSchematic"/>
+	<item name="modArmorPlatingCrystalReinforcedSchematic"/> <!-- Wild West Mod -->
 	<!--item name="modRoboticDroneCargoModSchematic" loot_prob_template="med"/-->
 	<!--item name="modRoboticDroneMedicModSchematic" loot_prob_template="med"/-->
 	<!--item name="modRoboticDroneHeadlampModSchematic" loot_prob_template="med"/-->

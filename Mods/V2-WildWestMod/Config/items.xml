@@ -2162,6 +2162,33 @@
 			<property name="CraftingIngredientTime" value=".2"/>
 		</item>
 		
+<!-- Running Shoes High Performance Mod -->
+
+		<item name="modArmorCowboyRunnersSchematic">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="apparelRunningShoesRegular"/>
+			<property name="CustomIconTint" value="110,38,14"/>
+			<property name="Unlocks" value="modArmorCowboyRunners"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorCowboyRunners" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		
+<!-- Black Crystal Armor Mod -->
+
+		<item name="modArmorPlatingCrystalReinforcedSchematic">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="modArmorPlatingCrystalReinforced"/>
+			<property name="Unlocks" value="modArmorPlatingCrystalReinforced"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorPlatingCrystalReinforced" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+			</effect_group>
+		</item>
+		
 <!-- Antler Bow Handle Grip Mod Schematic -->
 
 		<item name="modGunBowArrowHandleGripSchematic">

@@ -4676,21 +4676,30 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	
 <!-- Desert Hare Hat Mod -->	
 
-		<recipe name="modArmorDesertHareHelmetPelt" count="1" craft_area="workbench">
+		<!--recipe name="modArmorDesertHareHelmetPelt" count="1" craft_area="workbench">
 			<ingredient name="resourceDesertHarePelt" count="1"/>
 			<ingredient name="foodRawMeat" count="20"/>
 			<ingredient name="resourceCloth" count="5"/>		
 			<ingredient name="resourceBone" count="5"/>
 			<ingredient name="resourceScrapPolymers" count="5"/>		
-		</recipe>
+		</recipe-->
 		
 <!-- Snow Hare Shoe Warmer -->	
 
-		<recipe name="modArmorSnowHareShoeWarmer" count="1" craft_area="workbench">
+		<!--recipe name="modArmorSnowHareShoeWarmer" count="1" craft_area="workbench">
 			<ingredient name="resourceSnowHarePelt" count="1"/>
 			<ingredient name="resourceSewingKit" count="1"/>
 			<ingredient name="resourceLeather" count="2"/>
 			<ingredient name="resourceCloth" count="20"/>			
+		</recipe-->
+		
+<!-- Cowboy Runners Mod -->	
+		
+		<recipe name="modArmorCowboyRunners" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceSnowHarePelt" count="1"/>
+			<ingredient name="resourceDesertHarePelt" count="1"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+			<ingredient name="resourceCloth" count="10"/>			
 		</recipe>
 		
 <!-- Wild West Oakraven Knives -->
@@ -5352,7 +5361,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	
 <!-- Black Crystal Armor Mod -->
 
-<recipe name="modArmorPlatingReinforced" count="1" craft_area="workbench" tags="learnable">
+<recipe name="modArmorPlatingCrystalReinforced" count="1" craft_area="workbench" tags="learnable">
 	<ingredient name="resourceLeather" count="4"/>
 	<ingredient name="resourceGlue" count="4"/>
 	<ingredient name="resourceBlackCrystal" count="10"/>

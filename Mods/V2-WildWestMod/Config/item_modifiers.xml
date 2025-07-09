@@ -128,61 +128,22 @@
 
 <append xpath="/item_modifiers">
 
-<!-- Cowboy Boots Mod -->
+<!-- Running Shoes High Performance Mod -->
 
-  <item_modifier name="modArmorCowboyBoots" installable_tags="armorFeet" modifier_tags="rare" blocked_tags="noMods,clothing" type="attachment">
+  <item_modifier name="modArmorCowboyRunners" installable_tags="armorFeet" modifier_tags="rare" blocked_tags="noMods" type="attachment">
 		<property name="Extends" value="modGeneralMaster"/>
-		<property name="CustomIcon" value="apparelCowboyBoots"/>
-		<property name="TraderStageTemplate" value="modsTier1"/>
+		<property name="UnlockedBy" value="modArmorCowboyRunnersSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier1"/>		
+		<property name="CustomIcon" value="apparelRunningShoesRegular"/>
+		<property name="CustomIconTint" value="110,38,14"/>
 		<property name="EconomicValue" value="440"/>
-		<property name="DisplayType" value="clothing"/>
-		<item_property_overrides name="*">
-			<property name="UMA.Mesh" value="boot02"/>
-			<property name="UMA.Overlay0" value="boot02"/>
-		</item_property_overrides>
+		<property name="DisplayType" value="modArmorSpeedWWM"/>
 
 		<effect_group tiered="false">
-		<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
-		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
-		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/><display_value name="dRunSpeed" value=".1"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+		<display_value name="dRunSpeed" value=".1"/>
 		</effect_group>
-	</item_modifier>
-
-<!-- Desert Hare Hat Mod -->
-
-	<item_modifier name="modArmorDesertHareHelmetPelt" installable_tags="head" modifier_tags="dye" blocked_tags="noMods,clothing" type="attachment">
-        <property name="CustomIcon" value="sleeperRabbitAnimal"/>
-		<property name="DescriptionKey" value="modArmorDesertHareHelmetPeltDesc"/>		
-        <property name="Stacknumber" value="1"/>
-            <property name="Group" value="Mods"/>
-			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="EconomicValue" value="50"/>
-            <effect_group tiered="false">
-                <triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="Entities/Animals/Rabbit/RABBIT" parent_transform="Head" local_offset="0,0.1,0.075" local_rotation="0,0,0">
-                    <requirement name="!IsFPV"/>
-                </triggered_effect>
-                <triggered_effect trigger="onSelfEquipStart" action="RemovePrefabFromEntity" prefab="Entities/Animals/Rabbit/RABBIT">
-                    <requirement name="IsFPV"/>
-                </triggered_effect>
-                <triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="Entities/Animals/Rabbit/RABBIT"/>
-            </effect_group>
-            <effect_group tiered="false">
-            <passive_effect name="HypothermalResist" operation="base_add" value="15.0"/> <!-- Skull Cap 10.5,13.2 -->
-            <passive_effect name="HyperthermalResist" operation="base_add" value="5.0"/> <!-- Skull Cap 1.5,2.5 -->
-        </effect_group>
-	</item_modifier>
-	
-<!-- Snow Hare Shoe Warmer Mod -->
-	
-	<item_modifier name="modArmorSnowHareShoeWarmer" installable_tags="armorFeet" modifier_tags="thermal" blocked_tags="noMods" type="attachment">
-		<property name="Extends" value="modGeneralMaster"/>
-		<property name="DisplayType" value="modTempResist"/>
-        <property name="CustomIcon" value="modArmorSnowHareShoeWarmer"/>
-
-		<effect_group tiered="false">
-			<passive_effect name="HypothermalResist" operation="base_add" value="10"/>
-		</effect_group>
-	</item_modifier>		
+	</item_modifier>	
 
 <!-- Bow Handle -->
 
@@ -214,16 +175,15 @@
 	</item_modifier>
 
 <!-- Black Crystal Armor Mod -->
- 	<item_modifier name="modArmorPlatingReinforced" installable_tags="armor" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
+ 	<item_modifier name="modArmorPlatingCrystalReinforced" installable_tags="armor" modifier_tags="resistance" blocked_tags="noMods" type="attachment">
 		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 		<property name="UnlockedBy" value="modArmorPlatingReinforcedSchematic"/>
-		<property name="TraderStageTemplate" value="modsTier2"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
 		<property name="DisplayType" value="modArmor"/>
-		<property name="DescriptionKey" value="modArmorPlatingReinforcedDesc"/>
+		<property name="DescriptionKey" value="modArmorPlatingCrystalReinforcedDesc"/>
 		
 		<effect_group tiered="false">
 			<passive_effect name="PhysicalDamageResist" operation="base_add" value="3"/>
-			<passive_effect name="NoiseMultiplier" operation="perc_add" value="-.05"/><display_value name="dNoiseMultiplier" value="-.05"/>
 			<passive_effect name="ElementalDamageResist" operation="base_add" value="2" tags="heat,electrical"/>
 		</effect_group>
 	</item_modifier>

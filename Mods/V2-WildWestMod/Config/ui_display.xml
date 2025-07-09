@@ -89,6 +89,12 @@
 			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist" display_leading_plus="true"/>
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
+		
+		<!-- Mods -->
+		
+		<item_display_info display_type="modArmorSpeedWWM" display_group="modAttire" >
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
 	
 	</append>
 	

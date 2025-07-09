@@ -425,6 +425,7 @@
 			<item name="modArmorBandolier"/>
 			<item name="modArmorTripleStoragePocket"/>
 			<item name="modArmorAdvancedMuffledConnectors"/>
+			<item name="modArmorPlatingCrystalReinforced"/>
 		</trader_item_group>
 		
 		<trader_item_group name="groupModsAll">
@@ -696,6 +697,7 @@
 			<item name="modArmorStoragePocketSchematic"/>
 			<item name="modArmorDoubleStoragePocketSchematic"/>
 			<item name="modArmorMuffledConnectorsSchematic"/>
+			<item name="modArmorCowboyRunnersSchematic"/>
 			<item name="modGunBarrelExtenderSchematic"/>
 			<item name="modGunMuzzleBrakeSchematic"/>
 			<!--item name="modGunFlashlightSchematic"/-->
