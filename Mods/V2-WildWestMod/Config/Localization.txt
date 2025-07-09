@@ -1277,6 +1277,9 @@ cluckingbellsTrapOn,blocks,Block,,,Chuckwagon Dinner Bell,,,,,,,,,,,,,
 cluckingbellsTrapOnDesc,blocks,Block,,,"Place the Chuckwagon Dinner Bell on a flat surface and strike it repeatedly to announce that dinner has been served. A Screamer Scout will pick up the scent, and invite her friends to the feast. The more you hit it, the more will appear. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing.",,,,,,,,,,,,,
 LogWallsVariantHelper,blocks,block,,,Large Wood Walls,,,,,,,,,,,,,
 
+cntIronWWMDropBox,blocks,Block,,,Wild West Drop Box,,,,,,,,,,,,,
+cntIronWWMDropBoxDesc,blocks,Block,,,"A box that will auto-sort items placed inside it to nearby containers with matching items. Transfer starts when you exit the box. Cannot be upgraded. Destroyed if broken.\n\nRepair with Forged Iron.",,,,,,,,,,,,,
+
 fogLightGrey,blocks,Block,,,Fog (Light Grey),,,,,,,,,,,,,
 fogLightGreyDesc,blocks,Block,,,"This is a light grey decorative fog block. Responds well to lighting.",,,,,,,,,,,,,
 fogDarkGrey,blocks,Block,,,Fog (Dark Grey),,,,,,,,,,,,,

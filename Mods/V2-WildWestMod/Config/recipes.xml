@@ -5663,6 +5663,14 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceMechanicalParts" count="15"/>
 </recipe>
 
+	<!-- 0-Score Drop Box -->	
+    <recipe name="cntIronWWMDropBox" count="1">
+      <ingredient name="resourceForgedIron" count="10"/>
+      <ingredient name="resourceNail" count="10"/>
+      <ingredient name="resourceMechanicalParts" count="5"/>
+      <ingredient name="resourceElectricParts" count="5"/>
+    </recipe>
+
 <!-- Standardized order for mod ingredients -->
 	<!-- resourceCloth -->
 	<!-- resourceScrapIron -->
