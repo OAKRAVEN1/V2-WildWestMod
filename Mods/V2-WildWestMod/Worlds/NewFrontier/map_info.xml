@@ -5,7 +5,7 @@
   <property name="Modes" value="Survival,SurvivalSP,SurvivalMP,Creative" />
   <property name="FixedWaterLevel" value="false" />
   <property name="RandomGeneratedWorld" value="true" />
-  <property name="GameVersion" value="V.1.0.309" />
+  <property name="GameVersion" value="V.2.0.295" />
   <property name="Generation.Seed" value="WWM6K18" />
   <property name="Generation.Towns" value="Many" />
   <property name="Generation.Wilderness" value="Default" />
