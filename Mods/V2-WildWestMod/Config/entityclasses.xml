@@ -210,7 +210,7 @@
 <entity_class name="zombieScreamerCharged" extends="zombieScreamerRadiated">
 	<!--property name="MatColor" value="charged"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
-	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse2"/>
+	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?MeduseBlue"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Slim Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
 	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
@@ -686,7 +686,7 @@
 <entity_class name="zombieMutatedCharged" extends="zombieMutatedRadiated">
 	<!--property name="MatColor" value="charged"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
-	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantrad"/>
+	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantBlue"/>
 	<property name="ExperienceGain" value="1700"/><!-- XP Sturdy Charged -->
 	<property name="HandItem" value="meleeHandzombieMutatedCharged"/>
 	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
@@ -702,7 +702,7 @@
 <entity_class name="zombieMutatedInfernal" extends="zombieMutatedRadiated">
 	<!--property name="MatColor" value="infernal"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
-	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantrad"/>
+	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantOrenge"/>
 	<property name="ExperienceGain" value="1900"/><!-- XP Sturdy Infernal -->
 	<property name="HandItem" value="meleeHandzombieMutatedInfernal"/>
 	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
@@ -1584,7 +1584,7 @@
 <entity_class name="zombieNurseCharged" extends="zombieNurseRadiated">
 	<!--property name="MatColor" value="charged"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
-	<property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?Nurse3"/>
+	<property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?NurseBlue"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Slim Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
 	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
