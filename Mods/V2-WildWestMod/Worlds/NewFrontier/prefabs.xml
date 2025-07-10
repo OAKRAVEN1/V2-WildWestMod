@@ -1664,7 +1664,6 @@
   <decoration type="model" name="wildwest_docks_01" position="2671,18,-1242" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_stonecave_01_arramus" position="-2180,33,-2541" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_venom_mine_TMB" position="-2068,33,-2461" rotation="2" y_is_groundlevel="true" />
-  <decoration type="model" name="trader_hugh" position="447,61,-2121" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="trader_hugh" position="-1013,37,2247" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_bandit_settlement_arramus" position="-873,61,-805" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_market_01_arramus" position="-2050,90,-2211" rotation="3" y_is_groundlevel="true" />
@@ -1690,7 +1689,6 @@
   <decoration type="model" name="trader_travelling_tmb" position="2327,36,-2337" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="trader_travelling_tmb" position="2658,37,1248" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="trader_travelling_tmb" position="-2328,37,1288" rotation="2" y_is_groundlevel="true" />
-  <decoration type="model" name="trader_travelling_tmb" position="-704,37,-29" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_wildernessgroup_02_Medusa_TMB_arramus" position="1073,37,-949" rotation="2" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_wildernessgroup_02_Medusa_TMB_arramus" position="-576,37,-993" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_farm_10" position="-950,36,-1932" rotation="2" y_is_groundlevel="true" />
@@ -1937,7 +1935,6 @@
   <decoration type="model" name="wildwest_smallcabin_02_TMB_arramus" position="-2062,136,-1783" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_unknownactivity_TMB" position="-1972,91,-2129" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="trader_JenWW_arramus" position="1543,37,898" rotation="1" y_is_groundlevel="true" />
-  <decoration type="model" name="trader_joel" position="-2011,37,-933" rotation="2" y_is_groundlevel="true" />
   <decoration type="model" name="trader_JenWW_arramus" position="-793,37,962" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_mixstrip_01_arramus" position="1532,37,-554" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_spectabcem_01_arramus" position="1682,37,-262" rotation="3" y_is_groundlevel="true" />
@@ -2080,4 +2077,7 @@
   <decoration type="model" name="wildwest_watertower" position="1637,37,-920" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_loveshack_hotel_01" position="1726,37,1658" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_loveshack_hotel_01" position="-2079,37,647" rotation="2" y_is_groundlevel="true" />
+  <decoration type="model" name="trader_JenWW_arramus" position="447,61,-2121" rotation="0" y_is_groundlevel="true" />
+  <decoration type="model" name="trader_JenWW_arramus" position="-2011,37,-933" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="trader_bobWW" position="-714,37,-38" rotation="1" y_is_groundlevel="true" />
 </prefabs>

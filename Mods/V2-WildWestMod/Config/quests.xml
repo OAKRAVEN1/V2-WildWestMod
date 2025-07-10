@@ -2313,7 +2313,7 @@
 
 		<property name="unique_key" value="traderquest"/>
 
-		<property name="offer_key" value="quest_next_trader_offer"/>
+		<property name="offer_key" value="quest_next_trader_burnt"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
 		<property name="quest_hints" value="quest_next_trader_hint1"/>
@@ -2363,7 +2363,7 @@
 
 		<property name="unique_key" value="traderquest"/>
 
-		<property name="offer_key" value="quest_next_trader_offer"/>
+		<property name="offer_key" value="quest_next_trader_desert"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
 		<property name="quest_hints" value="quest_next_trader_hint1"/>
@@ -2413,7 +2413,7 @@
 
 		<property name="unique_key" value="traderquest"/>
 
-		<property name="offer_key" value="quest_next_trader_offer"/>
+		<property name="offer_key" value="quest_next_trader_snow"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
 		<property name="quest_hints" value="quest_next_trader_hint1"/>
@@ -2463,7 +2463,7 @@
 
 		<property name="unique_key" value="traderquest"/>
 
-		<property name="offer_key" value="quest_next_trader_offer"/>
+		<property name="offer_key" value="quest_next_trader_wasteland"/>
 		<property name="statement_key" value="quest_next_trader_statement"/>
 		<property name="response_key" value="quest_next_trader_response"/>
 		<property name="quest_hints" value="quest_next_trader_hint1"/>

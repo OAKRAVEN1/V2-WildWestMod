@@ -71,7 +71,7 @@
 		zombieTheRat, 2
 		zombieTheRatFeral, .8
 		zombieBusinessManRadiatedGunslinger, .8
-		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManChargedGunslinger, .5
 		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe, .8
 		zombieLumberjackInfernalAxe, .25
@@ -100,7 +100,7 @@
 		zombieSoldierRadiated
 		zombieTheRat, 3
 		zombieBusinessManRadiatedGunslinger, .8
-		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManChargedGunslinger, .5
 		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe, .8
 		zombieLumberjackInfernalAxe, .25
@@ -272,7 +272,7 @@
 		zombieTheRat, .8
 		zombieTheRatFeral
 		zombieBusinessManRadiatedGunslinger
-		zombieBusinessManChardgedGunslinger, .25
+		zombieBusinessManChargedGunslinger, .25
 		zombieBusinessManInfernalGunslinger, .1
 		zombieLumberjackRadiatedAxe
 		zombieLumberjackInfernalAxe, .1
@@ -304,7 +304,7 @@
 		zombieTheRat, .5
 		zombieTheRatFeral
 		zombieBusinessManRadiatedGunslinger
-		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManChargedGunslinger, .5
 		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe
 		zombieLumberjackInfernalAxe, .25
@@ -336,7 +336,7 @@
 		zombieTheRat, .5
 		zombieTheRatFeral
 		zombieBusinessManRadiatedGunslinger
-		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManChargedGunslinger, .5
 		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe
 		zombieLumberjackInfernalAxe, .25
@@ -368,7 +368,7 @@
 		zombieTheRat, .5
 		zombieTheRatFeral
 		zombieBusinessManRadiatedGunslinger
-		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManChargedGunslinger, .5
 		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe
 		zombieLumberjackInfernalAxe, .25
@@ -571,31 +571,31 @@
 
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'ZombieGhostTownGroupGS') and contains (text(), 'zombieFemaleFatRadiated') and not ( contains(text(), 'zombieFemaleFatRadiated, 0'))]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .25
-		zombieBusinessManChardgedGunslinger, .1
+		zombieBusinessManChargedGunslinger, .1
 		zombieBusinessManInfernalGunslinger, .05
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS') and contains (text(), 'zombieFemaleFatRadiated')]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .9
-		zombieBusinessManChardgedGunslinger, .4
+		zombieBusinessManChargedGunslinger, .4
 		zombieBusinessManInfernalGunslinger, .25
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'badassHordeStageGS') and contains (text(), 'zombieFemaleFatRadiated')]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .9
-		zombieBusinessManChardgedGunslinger, .4
+		zombieBusinessManChargedGunslinger, .4
 		zombieBusinessManInfernalGunslinger, .25
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'badassOnlyHordeStageGS') and contains (text(), 'zombieFemaleFatRadiated')]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .9
-		zombieBusinessManChardgedGunslinger, .4
+		zombieBusinessManChargedGunslinger, .4
 		zombieBusinessManInfernalGunslinger, .25
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'scoutHordeStageGS') and contains (text(), 'zombieFemaleFatRadiated')]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .9
-		zombieBusinessManChardgedGunslinger, .4
+		zombieBusinessManChargedGunslinger, .4
 		zombieBusinessManInfernalGunslinger, .25
 	</csv>
 
@@ -645,7 +645,7 @@
 		zombieBusinessManRadiatedGunslinger, .35		
 	</csv>
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS') and contains (text(), 'zombieMoeInfernal')]/text()" delim="\n" op="add">
-		zombieBusinessManChardgedGunslinger, .25
+		zombieBusinessManChargedGunslinger, .25
 		zombieBusinessManInfernalGunslinger, .15		
 	</csv>
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS') and contains (text(), 'zombieLumberjackRadiated')]/text()" delim="\n" op="add">
@@ -714,7 +714,7 @@
 		zombieMaleHazmatRadiated, .1
 		zombieMutatedRadiated, .05
 		zombieBusinessManRadiatedGunslinger, .05
-		zombieBusinessManChardgedGunslinger, .025
+		zombieBusinessManChargedGunslinger, .025
 		zombieBusinessManInfernalGunslinger, .015
 		zombieMolotovSoldierFeral, .05
 		zombieSpiderFeralFireGlider, .05
@@ -753,7 +753,7 @@
 		zombieMaleHazmatRadiated, .15
 		zombieMutatedRadiated, .15
 		zombieBusinessManRadiatedGunslinger, .05
-		zombieBusinessManChardgedGunslinger, .025
+		zombieBusinessManChargedGunslinger, .025
 		zombieBusinessManInfernalGunslinger, .015
 		zombieMolotovSoldierFeral, .05
 		zombieSpiderFeralFireGlider, .05
@@ -783,7 +783,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -810,7 +810,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -838,7 +838,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -864,7 +864,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -893,7 +893,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -922,7 +922,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -951,7 +951,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -980,7 +980,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1009,7 +1009,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1038,7 +1038,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1067,7 +1067,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1096,7 +1096,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1125,7 +1125,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1154,7 +1154,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1183,7 +1183,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1212,7 +1212,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1241,7 +1241,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1270,7 +1270,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1299,7 +1299,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1328,7 +1328,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1357,7 +1357,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1386,7 +1386,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1412,7 +1412,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1438,7 +1438,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1464,7 +1464,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1490,7 +1490,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
@@ -1516,7 +1516,7 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
-		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManChargedGunslinger, .05
 		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
