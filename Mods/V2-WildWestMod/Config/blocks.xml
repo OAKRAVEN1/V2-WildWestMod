@@ -2443,7 +2443,7 @@
 		<drop event="Harvest" name="resourceSilverNugget" prob=".02" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceGoldNugget" prob=".014" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 	</block>
-
+	
 	<block name="BarberShopChair">
 	<property name="Material" value="Mleather"/>
     <property name="CustomIcon" value="BarberShopChair" />	
@@ -2454,7 +2454,7 @@
 	<property name="Model" value="#@modfolder:Resources/chairs.unity3d?BarberShopChair"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="FuelValue" value="90"/>
-	<property name="DescriptionKey" value=""/>
+	<property name="DescriptionKey" value="BarberShopChairDesc"/>
 	<property class="RepairItems">
 		<property name="resourceLeather" value="8"/>
 		<property name="resourceMechanicalParts" value="4"/>
@@ -2464,16 +2464,30 @@
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,2" tag="salvageHarvest"/>
 	<drop event="Destroy" name="resourceLeather" count="1,2"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5,15"/>
-	<property name="EconomicValue" value="65"/>
+	<property name="EconomicValue" value="15"/>
 	<property name="FilterTags" value="MC_building,SC_decor,SC_industrial,SC_commercial,SC_residential"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
 	</block>
-
+	
 	<block name="Rockingchair">
-	<property name="Extends" value="BarberShopChair"/>
+	<property name="Material" value="Mwood_weak"/>
     <property name="CustomIcon" value="Rockingchair" />	
+	<property name="Stacknumber" value="10"/>
+	<property name="Weight" value="40"/>
 	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
 	<property name="Model" value="#@modfolder:Resources/chairs.unity3d?Rockingchair"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="FuelValue" value="90"/>
+	<property name="DescriptionKey" value="RockingchairDesc"/>
+	<property class="RepairItems">
+		<property name="resourceWood" value="10"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Destroy" name="resourceWood" count="1,2" tag="salvageHarvest"/>
+	<property name="EconomicValue" value="10"/>
+	<property name="FilterTags" value="MC_building,SC_decor,SC_industrial,SC_commercial,SC_residential"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
 	</block>
 	
 <!-- arramus' Custom Blocks / Offset Blocks -->	
