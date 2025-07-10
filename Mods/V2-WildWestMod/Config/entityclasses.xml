@@ -2411,6 +2411,7 @@
 		<property name="JumpMaxDistance" value="4.6, 5"/>
 		<property name="HandItem" value="meleeHandZombieFeralGunslinger"/>
 		<property name="ExperienceGain" value="950"/><!-- XP  Feral Wight Gunslinger -->
+		<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
 		<property name="LootDropProb" value="1"/> <!-- Feral Wight Gunslinger -->
 		
     <property name="AITask" value="
@@ -2426,7 +2427,7 @@
 		<effect_group name="Base Effects">
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieWightFeralGunslingerDeco"/>		
 			<!--<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>-->
-			<passive_effect name="HealthMax" operation="base_set" value="527"/> <!-- Feral Wight Gunslinger -->
+			<passive_effect name="HealthMax" operation="base_set" value="1200"/> <!-- Feral Wight Gunslinger -->
 			<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 		</effect_group>
 	</entity_class>
@@ -2460,7 +2461,7 @@
 		<property name="MoveSpeedAggro" value="0.65, 1.5"/> <!-- fit, Radiated Wight Gunslinger -->
 		<property name="JumpMaxDistance" value="4.6, 5"/>
 		<property name="HandItem" value="meleeHandZombieRadiatedGunslinger"/>
-		<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>		
+		<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>		
 		<property name="LootDropProb" value="1"/> <!-- Radiated Wight Gunslinger -->		
 		
     <property name="AITask" value="
@@ -2475,12 +2476,45 @@
 
 		<effect_group name="Base Effects">
 		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieWightFeralGunslingerDeco"/>		
-		<passive_effect name="HealthMax" operation="base_set" value="950"/> <!-- Radiated Wight Gunslinger -->
+		<passive_effect name="HealthMax" operation="base_set" value="2200"/> <!-- Radiated Wight Gunslinger -->
 		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="6"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 		</effect_group>
 	</entity_class>
+	
+		<!-- *** ZOMBIE_WIGHT_CHARGED -->
+<entity_class name="zombieWightChargedGunslinger" extends="zombieWightRadiatedGunslinger">
+	<property name="MatColor" value="charged"/>
+	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="ExperienceGain" value="2200"/><!-- XP Fit Charged -->
+	<property name="HandItem" value="meleeHandZombieCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>		
+	<property name="LootDropProb" value="1"/> <!-- Radiated Wight Gunslinger -->
+
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieWightFeralGunslingerDeco"/>
+		<passive_effect name="HealthMax" operation="base_set" value="^healthWightCharged"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_WIGHT_INFERNAL -->
+<entity_class name="zombieWightInfernalGunslinger" extends="zombieWightRadiatedGunslinger">
+	<property name="MatColor" value="infernal"/>
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="ExperienceGain" value="2400"/><!-- XP Fit Infernal -->
+	<property name="HandItem" value="meleeHandZombieInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>		
+	<property name="LootDropProb" value="1"/> <!-- Radiated Wight Gunslinger -->
+
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieWightFeralGunslingerDeco"/>
+		<passive_effect name="HealthMax" operation="base_set" value="^healthWightInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+	</effect_group>
+</entity_class>
 	
 		<!-- Business Bandit - Monsignor -->	
 <entity_class name="zombieBusinessManRadiatedGunslinger" extends="zombieBusinessManRadiated">
@@ -2521,6 +2555,37 @@
 	</effect_group>
 </entity_class>
 
+		<!-- *** ZOMBIE_BUSINESSMAN_CHARGED -->
+<entity_class name="zombieBusinessManChargedGunslinger" extends="zombieBusinessManRadiatedGunslinger">
+	<property name="MatColor" value="charged"/>
+	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="ExperienceGain" value="1400"/><!-- XP Businessman Charged -->
+	<property name="HandItem" value="meleeHandZombieCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".25"/> <!-- Charged -->
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthBusinessManCharged"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_BUSINESSMAN_INFERNAL -->
+<entity_class name="zombieBusinessManInfernalGunslinger" extends="zombieBusinessManRadiatedGunslinger">
+	<property name="MatColor" value="infernal"/>
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="ExperienceGain" value="1600"/><!-- XP Businessman Infernal -->
+	<property name="HandItem" value="meleeHandZombieInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".25"/> <!-- Infernal -->
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthBusinessManInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+	</effect_group>
+</entity_class>
+
 		<!-- Texas Red -->
 <entity_class name="zombieLumberjackRadiatedAxe" extends="zombieLumberjackFeral">
 	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
@@ -2539,6 +2604,22 @@
 		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="9"/>
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_LUMBERJACK_INFERNAL -->
+<entity_class name="zombieLumberjackInfernalAxe" extends="zombieLumberjackRadiatedAxe">
+	<property name="MatColor" value="infernal"/>
+	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="ExperienceGain" value="1600"/><!-- XP Strong Infernal -->
+	<property name="HandItem" value="meleeHandZombieInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value=".25"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthStrongInfernal"/>
+		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
 	</effect_group>
 </entity_class>
 

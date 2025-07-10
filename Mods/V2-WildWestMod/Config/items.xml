@@ -4738,7 +4738,7 @@
 			<property name="CustomIcon" value="eliminateferalgunslingerwight"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
-				<property name="QuestGiven" value="challenge_eliminateferalgunslingerwight"/>
+				<property name="QuestGiven" value="quest_eliminateferalgunslingerwight"/>
 			</property>
 		</item>
 		
@@ -4749,7 +4749,29 @@
 			<property name="CustomIcon" value="eliminateradiatedgunslingerwight"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
-				<property name="QuestGiven" value="challenge_eliminateradiatedgunslingerwight"/>
+				<property name="QuestGiven" value="quest_eliminateradiatedgunslingerwight"/>
+			</property>
+		</item>
+		
+		<!-- Adds the "Charged Gunslinger Wight" note -->
+		<item name="qc_eliminatechargedgunslingerwight">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="DescriptionKey" value="qc_eliminatechargedgunslingerwightDesc"/>
+			<property name="CustomIcon" value="eliminatechargedgunslingerwight"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_eliminatechargedgunslingerwight"/>
+			</property>
+		</item>
+		
+		<!-- Adds the "Infested Gunslinger Wight" note -->
+		<item name="qc_eliminateinfernalgunslingerwight">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="DescriptionKey" value="qc_eliminateinfernalgunslingerwightDesc"/>
+			<property name="CustomIcon" value="eliminateinfernalgunslingerwight"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_eliminateinfernalgunslingerwight"/>
 			</property>
 		</item>
 		
@@ -5130,8 +5152,8 @@
 				<property name="Delay" value="0"/>
 				<property name="Use_time" value="0"/>
 				<property name="Sound_start" value="open_supply_crate"/>
-				<property name="Create_item" value="meleeWpnBladeT1HuntingKnife,meleeToolSalvageT1Wrench,armorRangerHelmet,foodWildWestPineConeJam,foodTallmanBradJerky,foodBlueberryPemmican,medicalFirstAidBandage,drinkJarBoiledWater,qc_eliminateanimals,qc_eliminatecrispyfamily,qc_eliminatezombies,qc_chuckwagondinnerbell01,vehicleWWMDinkyDonkeyPlaceable"/>
-				<property name="Create_item_count" value="2-3,1-2,1-2,2,2,2,2,3,1,1,1,1,1"/>
+				<property name="Create_item" value="meleeWpnBladeT1HuntingKnife,meleeToolSalvageT1Wrench,armorRangerHelmet,foodWildWestPineConeJam,foodTallmanBradJerky,foodBlueberryPemmican,medicalFirstAidBandage,drinkJarBoiledWater,qc_eliminateanimals,qc_eliminatecrispyfamily,qc_eliminatezombies,qc_chuckwagondinnerbell01,vehicleWWMDinkyDonkeyPlaceable,qc_eliminateferalgunslingerwight,qc_eliminateradiatedgunslingerwight,qc_eliminatechargedgunslingerwight,qc_eliminateinfernalgunslingerwight"/>
+				<property name="Create_item_count" value="2-3,1-2,1-2,2,2,2,2,3,1,1,1,1,1,1,1,1,1"/>
 			</property>
 		</item>
 		

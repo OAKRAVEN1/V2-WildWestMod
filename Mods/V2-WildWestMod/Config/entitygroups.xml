@@ -20,7 +20,8 @@
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
 		animalHorseKiller, .05
-		zombieSkateboarderUndertakerRadiated, .0175
+		zombieSkateboarderUndertakerRadiated, .025
+		zombieWightFeralGunslinger, .025
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForestNight']/text()" delim="\n" op="add" >
@@ -29,30 +30,35 @@
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
 		animalHorseKiller, .05
-		zombieSkateboarderUndertakerRadiated, .0175		
+		zombieSkateboarderUndertakerRadiated, .025
+		zombieWightFeralGunslinger, .025	
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_DESERT_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesert']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .1
 		zombieSkateboarderUndertakerRadiated, .1
+		zombieWightRadiatedGunslinger, .05
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .15
 		zombieSkateboarderUndertakerRadiated, .15
+		zombieWightRadiatedGunslinger, .075
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_SNOW_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnow']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .1
 		zombieSkateboarderUndertakerRadiated, .1
+		zombieWightChargedGunslinger, .05
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_SNOW_GROUP_NIGHT -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .15
 		zombieSkateboarderUndertakerRadiated, .15
+		zombieWightChargedGunslinger, .075
 	</csv>
 
 <!-- *** BIOME_ZOMBIES_WASTELAND_GROUP -->
@@ -65,13 +71,14 @@
 		zombieTheRat, 2
 		zombieTheRatFeral, .8
 		zombieBusinessManRadiatedGunslinger, .8
+		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe, .8
+		zombieLumberjackInfernalAxe, .25
 		zombieMutatedFeral, 1.5
 		zombieMutatedRadiated
 		zombieTheRatRadiated, .6
 		zombieSpiderRadiated
-		zombieWightFeralGunslinger, .8
-		zombieWightRadiatedGunslinger, .5
 		zombieFemaleFatBarker, .8		
 		zombieFemaleBigFatBarker, .5
 		guppyVultureBurnt, 1.2
@@ -81,6 +88,7 @@
 		guppyRadiatedFireMommaVultureBurnt, .5
 		zombieSpiderFeralFireGlider, .5
 		zombieSkateboarderUndertakerRadiated, .5
+		zombieWightInfernalGunslinger, .5
 	</set>
 	
 <!-- *** BIOME_ZOMBIES_WASTELAND_NIGHT_GROUP -->
@@ -92,14 +100,15 @@
 		zombieSoldierRadiated
 		zombieTheRat, 3
 		zombieBusinessManRadiatedGunslinger, .8
+		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe, .8
+		zombieLumberjackInfernalAxe, .25
 		zombieTheRatFeral, .8
 		zombieMutatedFeral, 1.5
 		zombieMutatedRadiated
 		zombieTheRatRadiated, .6
 		zombieSpiderRadiated
-		zombieWightFeralGunslinger, 1.5
-		zombieWightRadiatedGunslinger, 1
 		zombieFemaleFatBarker, 1.5		
 		zombieFemaleBigFatBarker, 1
 		guppyVultureBurnt, 1.2
@@ -109,6 +118,7 @@
 		guppyRadiatedFireMommaVultureBurnt, .5
 		zombieSpiderFeralFireGlider, .5
 		zombieSkateboarderUndertakerRadiated, .5
+		zombieWightInfernalGunslinger, .5
 	</set>
 	
 <!-- *** INTEGRATION FOR ANIMALS -->
@@ -238,8 +248,6 @@
 		zombieMutatedRadiated
 		zombieTheRatRadiated
 		zombieSpiderRadiated
-		zombieWightFeralGunslinger
-		zombieWightRadiatedGunslinger
 		zombieFemaleFatBarker		
 		zombieFemaleBigFatBarker
 		guppyVultureBurnt
@@ -264,13 +272,14 @@
 		zombieTheRat, .8
 		zombieTheRatFeral
 		zombieBusinessManRadiatedGunslinger
+		zombieBusinessManChardgedGunslinger, .25
+		zombieBusinessManInfernalGunslinger, .1
+		zombieLumberjackRadiatedAxe
+		zombieLumberjackInfernalAxe, .1
 		zombieMutatedFeral, .8
 		zombieMutatedRadiated
 		zombieTheRatRadiated
 		zombieSpiderRadiated
-		zombieWightFeralGunslinger
-		zombieWightRadiatedGunslinger
-		zombieLumberjackRadiatedAxe
 		zombieFemaleFatBarker		
 		zombieFemaleBigFatBarker
 		guppyVultureBurnt, .8
@@ -295,13 +304,14 @@
 		zombieTheRat, .5
 		zombieTheRatFeral
 		zombieBusinessManRadiatedGunslinger
+		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe
+		zombieLumberjackInfernalAxe, .25
 		zombieMutatedFeral, .5
 		zombieMutatedRadiated
 		zombieTheRatRadiated
 		zombieSpiderRadiated
-		zombieWightFeralGunslinger
-		zombieWightRadiatedGunslinger
 		zombieFemaleFatBarker		
 		zombieFemaleBigFatBarker
 		guppyVultureBurnt, .5
@@ -326,13 +336,14 @@
 		zombieTheRat, .5
 		zombieTheRatFeral
 		zombieBusinessManRadiatedGunslinger
+		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManInfernalGunslinger, .25
+		zombieLumberjackRadiatedAxe
+		zombieLumberjackInfernalAxe, .25
 		zombieMutatedFeral, .5
 		zombieMutatedRadiated
 		zombieTheRatRadiated
 		zombieSpiderRadiated
-		zombieWightFeralGunslinger
-		zombieWightRadiatedGunslinger
-		zombieLumberjackRadiatedAxe
 		zombieFemaleFatBarker		
 		zombieFemaleBigFatBarker
 		guppyVultureBurnt, .5
@@ -357,13 +368,14 @@
 		zombieTheRat, .5
 		zombieTheRatFeral
 		zombieBusinessManRadiatedGunslinger
+		zombieBusinessManChardgedGunslinger, .5
+		zombieBusinessManInfernalGunslinger, .25
 		zombieLumberjackRadiatedAxe
+		zombieLumberjackInfernalAxe, .25
 		zombieMutatedFeral, .5
 		zombieMutatedRadiated
 		zombieTheRatRadiated
 		zombieSpiderRadiated
-		zombieWightFeralGunslinger
-		zombieWightRadiatedGunslinger
 		zombieFemaleFatBarker		
 		zombieFemaleBigFatBarker
 		guppyVultureBurnt, .5
@@ -559,44 +571,59 @@
 
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'ZombieGhostTownGroupGS') and contains (text(), 'zombieFemaleFatRadiated') and not ( contains(text(), 'zombieFemaleFatRadiated, 0'))]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .25
+		zombieBusinessManChardgedGunslinger, .1
+		zombieBusinessManInfernalGunslinger, .05
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS') and contains (text(), 'zombieFemaleFatRadiated')]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .9
+		zombieBusinessManChardgedGunslinger, .4
+		zombieBusinessManInfernalGunslinger, .25
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'badassHordeStageGS') and contains (text(), 'zombieFemaleFatRadiated')]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .9
+		zombieBusinessManChardgedGunslinger, .4
+		zombieBusinessManInfernalGunslinger, .25
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'badassOnlyHordeStageGS') and contains (text(), 'zombieFemaleFatRadiated')]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .9
+		zombieBusinessManChardgedGunslinger, .4
+		zombieBusinessManInfernalGunslinger, .25
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'scoutHordeStageGS') and contains (text(), 'zombieFemaleFatRadiated')]/text()" delim="\n" op="add">
 		zombieBusinessManRadiatedGunslinger, .9
+		zombieBusinessManChardgedGunslinger, .4
+		zombieBusinessManInfernalGunslinger, .25
 	</csv>
 
 <!-- Steel Axe Lumberjack -->
 
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'zombieLumberjackGroupGS') and contains (text(), 'zombieLumberjackRadiated')]/text()" delim="\n" op="add">
 		zombieLumberjackRadiatedAxe, .25
+		zombieLumberjackInfernalAxe, .1
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStageGS') and contains (text(), 'zombieLumberjackRadiated')]/text()" delim="\n" op="add">
 		zombieLumberjackRadiatedAxe, .9
+		zombieLumberjackInfernalAxe, .25
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'badassHordeStageGS') and contains (text(), 'zombieLumberjackRadiated')]/text()" delim="\n" op="add">
 		zombieLumberjackRadiatedAxe, .9
+		zombieLumberjackInfernalAxe, .25
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'badassOnlyHordeStageGS') and contains (text(), 'zombieLumberjackRadiated')]/text()" delim="\n" op="add">
 		zombieLumberjackRadiatedAxe, .9
+		zombieLumberjackInfernalAxe, .25
 	</csv>
 
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'scoutHordeStageGS') and contains (text(), 'zombieLumberjackRadiated')]/text()" delim="\n" op="add">
 		zombieLumberjackRadiatedAxe, .9
+		zombieLumberjackInfernalAxe, .25
 	</csv>
 	
 <!-- *** SCOUT_HORDE_STAGES -->	
@@ -614,21 +641,16 @@
     </csv> <!-- GS 164 -->
 	
 <!-- *** FERAL_HORDE_STAGES -->
-	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS') and contains (text(), 'zombieMoe')]/text()" delim="\n" op="add">
-		zombieBurnt, .5
-		zombieMutated, .5
-	</csv>	
-	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS') and contains (text(), 'zombieMoeFeral')]/text()" delim="\n" op="add">
-		zombieBurntFeral, .35
-		zombieMutatedFeral, .35
-	</csv>	
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS') and contains (text(), 'zombieMoeRadiated')]/text()" delim="\n" op="add">
-		zombieBurntRadiated, .2
-		zombieMutatedRadiated, .2
-		zombieBusinessManRadiatedGunslinger, .35 
+		zombieBusinessManRadiatedGunslinger, .35		
+	</csv>
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS') and contains (text(), 'zombieMoeInfernal')]/text()" delim="\n" op="add">
+		zombieBusinessManChardgedGunslinger, .25
+		zombieBusinessManInfernalGunslinger, .15		
 	</csv>
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS') and contains (text(), 'zombieLumberjackRadiated')]/text()" delim="\n" op="add">
 		zombieLumberjackRadiatedAxe, .35
+		zombieLumberjackInfernalAxe, .15
 	</csv>
 	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS') and contains (text(), 'zombieDemolition')]/text()" delim="\n" op="add">
 		guppyVultureBurnt, .45
@@ -692,6 +714,8 @@
 		zombieMaleHazmatRadiated, .1
 		zombieMutatedRadiated, .05
 		zombieBusinessManRadiatedGunslinger, .05
+		zombieBusinessManChardgedGunslinger, .025
+		zombieBusinessManInfernalGunslinger, .015
 		zombieMolotovSoldierFeral, .05
 		zombieSpiderFeralFireGlider, .05
 		zombieSkateboarderUndertakerRadiated, .05
@@ -729,6 +753,8 @@
 		zombieMaleHazmatRadiated, .15
 		zombieMutatedRadiated, .15
 		zombieBusinessManRadiatedGunslinger, .05
+		zombieBusinessManChardgedGunslinger, .025
+		zombieBusinessManInfernalGunslinger, .015
 		zombieMolotovSoldierFeral, .05
 		zombieSpiderFeralFireGlider, .05
 		zombieSkateboarderUndertakerRadiated, .05
@@ -757,6 +783,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>  
@@ -782,6 +810,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>  
@@ -808,6 +838,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set> 
@@ -832,6 +864,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -859,6 +893,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -886,6 +922,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -913,6 +951,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -940,6 +980,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -967,6 +1009,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -994,6 +1038,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1021,6 +1067,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1048,6 +1096,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1075,6 +1125,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1102,6 +1154,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1129,6 +1183,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1156,6 +1212,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1183,6 +1241,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1210,6 +1270,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1237,6 +1299,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1264,6 +1328,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1291,6 +1357,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1318,6 +1386,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1342,6 +1412,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1366,6 +1438,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1390,6 +1464,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1414,6 +1490,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
@@ -1438,6 +1516,8 @@
 		zombieMolotovSoldierFeral, .15
 		zombieSpiderFeralFireGlider, .15
 		zombieBusinessManRadiatedGunslinger, .15
+		zombieBusinessManChardgedGunslinger, .05
+		zombieBusinessManInfernalGunslinger, .025
 		zombieSkateboarderUndertakerRadiated, .15
 		zombieGrinBomb, .1
 	</set>
