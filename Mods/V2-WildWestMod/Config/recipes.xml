@@ -5708,6 +5708,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceMechanicalParts" count="15"/>
 </recipe>
 
+<recipe name="resourceClayLumpBundle" count="1" craft_time="10" craft_exp_gain="0" tags="learnable,packMuleCrafting">
+	<ingredient name="resourceClayLump" count="6000"/>
+</recipe>
+
 	<!-- 0-Score Drop Box -->	
     <recipe name="cntIronWWMDropBox" count="1">
       <ingredient name="resourceForgedIron" count="10"/>

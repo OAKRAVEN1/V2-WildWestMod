@@ -5,26 +5,27 @@
 	  
 Features Include:
 - Unique Hand Crafted World by Tallman Brad
-- Exclusive Wild West POIs by Community Creators
-- Custom Weapons and Tools by Oakraven
+- Exclusive Wild West POIs by Medusa, arramus, chaz916, and other creators
+- Custom Weapons, Tools, and props by Oakraven
 - Custom Entities by Oakraven
-- Rideable Horses by Oakraven
+- Rideable Horses by Oakraven, with assets from Tallman Brad and Medusa
 - Custom Vehicles by Oakraven
-- Immersive Quests
+- Immersive expansion Quests
 - Custom Traps for Defense and Fishing by Oakraven
-- Challenging Dynamic Weather
-- Decorative Spawning Loot Opportunities
+- Rolled back time relevant icons, descriptions, and features
+- Decorative Spawning Loot Opportunities (Treasure)
 - Sustainable Farming and Animal Husbandry by Oakraven
+- Custom Horde Night additions and waves, including Guppy's crispies
 - and a great deal more...
 	  </Description>
-        <Version>1.0</Version>
+        <Version>2.0</Version>
 		<RSS/>
         <Excludes></Excludes>
         <ReleaseNotes></ReleaseNotes>
         <Discord>https://discord.gg/vc2XmnNWB8</Discord>
         <Donate>https://www.paypal.com/paypalme/tallmanbradgameplay</Donate>
         <DownloadMode>Clone</DownloadMode>
-      <Downloads><Download>https://github.com/OAKRAVEN1/-V2-WildWestMod</Download></Downloads>      
+      <Downloads><Download>https://github.com/OAKRAVEN1/V2-WildWestMod</Download></Downloads>    
     </Server>
   </ServerGroup>
 </Servers>
