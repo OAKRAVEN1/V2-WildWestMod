@@ -2077,7 +2077,7 @@
   <decoration type="model" name="wildwest_watertower" position="1637,37,-920" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_loveshack_hotel_01" position="1726,37,1658" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_loveshack_hotel_01" position="-2079,37,647" rotation="2" y_is_groundlevel="true" />
-  <decoration type="model" name="trader_JenWW_arramus" position="447,61,-2121" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="trader_JenWW_arramus" position="-2011,37,-933" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="trader_bobWW" position="-714,37,-38" rotation="1" y_is_groundlevel="true" />
+  <decoration type="model" name="trader_bobWW" position="447,61,-2121" rotation="3" y_is_groundlevel="true" />
 </prefabs>
