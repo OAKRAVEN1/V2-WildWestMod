@@ -1346,7 +1346,7 @@ qc_homestead01Desc,items,Quest - Challenge,,,"The Homestead Challenge is an opti
 qc_fort01,items,Quest - Challenge,,,"Fort Challenge",,,,,,,,,,,,,
 qc_fort01Desc,items,Quest - Challenge,,,"The Fort Challenge is an optional quest. It introduces players to some of the horde night base features in the Wild West Mod, as part of a 2 part multi-stage quest. First lay a 25 block foundation, then expand with another 25 blocks. Leave room for expansion. Finally, fortify with defences. Follow the instructions to complete required tasks. Pick up some XP and completion rewards along the way.",,,,,,,,,,,,,
 qc_chuckwagondinnerbell01,items,Quest - Challenge,,,"Chuckwagon Dinner Bell Challenge",,,,,,,,,,,,,
-qc_chuckwagondinnerbell01Desc,items,Quest - Challenge,,,"The Chuckwagon Dinner Bell Challenge is an optional quest. Craft, and place the Chuckwagon Dinner Bell on a flat surface. Stike it to activate it and announce that dinner has been served. A Screamer Scout will pick up the scent, and invite her friends to the feast. The more you hit it, the more will appear. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing. Receive 2 Skill Points for eliminating 200 Screamer Scouts. This quest continually loops.",,,,,,,,,,,,,
+qc_chuckwagondinnerbell01Desc,items,Quest - Challenge,,,"The Chuckwagon Dinner Bell Challenge is an optional quest. Craft, and place the Chuckwagon Dinner Bell on a flat surface. Stike it to activate it and announce that dinner has been served. A Screamer Scout will pick up the scent, and invite her friends to the feast. The more you hit it, the more will appear. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing. Receive 2 Skill Points and 10,000 XP for eliminating 200 Screamer Scouts. This quest continually loops.",,,,,,,,,,,,,
 
 qc_tier5_bartertrade01,items,Quest - Challenge,,,"Mining Challenge",,,,,,,,,,,,,
 qc_tier5_bartertrade01Desc,items,Quest - Challenge,,,"The Mining Challenge is an optional quest. Get your pickaxe and mine for precious metals, crystals, and minerals. There will be other tasks along the way.",,,,,,,,,,,,,
@@ -1358,7 +1358,7 @@ quest_bartertrade_statement,Quest,Quest Info,,,Bring back the required barter an
 quest_bartertrade_response,Quest,Quest Info,,,Barter and Trade,,,,,,,,,,,,,
 
 qc_eliminatecrispyfamily,items,Quest - Challenge,,,"Contract: Eliminate Crispy",,,,,,,,,,,,,
-qc_eliminatecrispyfamilyDesc,items,Quest - Challenge,,,"A contract issued by the Wild West New Frontier Settlement. Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 1 Skill, 10000 XP, and 5000 Liberty Coins for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated. Only accept if you can commit to this never ending challenge.",,,,,,,,,,,,,
+qc_eliminatecrispyfamilyDesc,items,Quest - Challenge,,,"A contract issued by the Wild West New Frontier Settlement. Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill and 10,000 XP for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated. Only accept if you can commit to this never ending challenge.",,,,,,,,,,,,,
 
 loadingTipWildWestTomahawk,UI,Loading Screen,x,,"The Tomahawk is a multi purpose tool, and can be used as a weapon when needed. It can upgrade, repair, butcher, mine, and attack.",,,,,,,,,,,,,
 loadingTipWildWestTomahawk_title,UI,Loading Screen,x,,Tomahawk,,,,,,,,,,,,,

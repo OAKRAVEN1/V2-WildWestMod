@@ -2873,7 +2873,7 @@
 	
 	<!-- Adds the "Zombie Looping" Bounty Quest -->
 	<quest id="quest_chuckwagondinnerbell02">
-	<property name="offer_key" value="Accept this Quest to begin the Chuckwagon Dinner Bell Challenge. Craft a Chuckwagon Dinner Bell and place it on a flat surface. Strike it to announce that dinner has been served. A Screamer Scout will hear the sound, pick up the scent, and invite her friends to the feast. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing. Receive 2 Skill Points for eliminating 200 Screamer Scouts. This quest continually loops." />       
+	<property name="offer_key" value="Accept this Quest to begin the Chuckwagon Dinner Bell Challenge. Craft a Chuckwagon Dinner Bell and place it on a flat surface. Strike it to announce that dinner has been served. A Screamer Scout will hear the sound, pick up the scent, and invite her friends to the feast. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing. Receive 2 Skill Points and 10,000 XP for eliminating 200 Screamer Scouts. This quest continually loops." />       
     <property name="name_key" value="Screamer Scouts" />
 	<property name="subtitle_key" value="Screamer Scouts" />
 	<property name="description_key" value="Craft a Chuckwagon Dinner Bell and place it on a flat surface. Strike it to announce that dinner has been served. A Screamer Scout will hear the sound, pick up the scent, and invite her friends to the feast. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing." />
@@ -2885,7 +2885,7 @@
 		
 			<objective type="EntityKill" id="zombieScreamer,zombieScreamerFeral,zombieScreamerRadiated,zombieScreamerCharged" value="200"/>
 
-	<reward type="Exp" value="5000"/>
+	<reward type="Exp" value="10000"/>
 	<reward type="SkillPoints" value="2" chainreward="false"/>
 	<reward type="Quest" id="quest_chuckwagondinnerbell02">
 			<property name="chainquest" value="false"/>
