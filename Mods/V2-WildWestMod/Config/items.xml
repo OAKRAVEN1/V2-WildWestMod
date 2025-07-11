@@ -5139,7 +5139,7 @@
 			<property name="Extends" value="vehicleMinibikePlaceable"/>	
 			<property name="Tags" value="vehicle,vengine,canHaveCosmetic"/>
 			<property name="Meshfile" value="#@modfolder:Resources/DinkyDonkey.unity3d?DinkyDonkey.prefab"/>
-			<property name="EconomicValue" value="30000"/>
+			<property name="EconomicValue" value="25000"/>
 			<property name="TraderStageTemplate" value="vehicleTier3"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleWWMDinkyRacingDonkey"/>
@@ -5148,7 +5148,7 @@
 			<effect_group name="vehicleMedievalHorseT3Placeable" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="7000"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
 			</effect_group>
 		</item>
 
