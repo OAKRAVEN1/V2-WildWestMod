@@ -2080,4 +2080,6 @@
   <decoration type="model" name="trader_JenWW_arramus" position="-2011,37,-933" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="trader_bobWW" position="-714,37,-38" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="trader_bobWW" position="447,61,-2121" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="trader_hugh" position="851,38,2082" rotation="1" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_remnant_business_03" position="888,38,2154" rotation="3" y_is_groundlevel="true" />
 </prefabs>
