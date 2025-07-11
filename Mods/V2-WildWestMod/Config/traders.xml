@@ -1017,6 +1017,7 @@
 			<!--item name="vehicleMotorcycleHandlebars"/-->
 			<!--item name="vehicleMotorcyclePlaceable"/-->
 			<item name="vehicleWWMHorseT3Placeable"/>
+			<item name="vehicleWWMDinkyRacingDonkeyPlaceable"/>
 		<!-- *** 4x4 -->
 			<!--item name="vehicle4x4TruckChassis"/-->
 			<!--item name="vehicle4x4TruckAccessories"/-->

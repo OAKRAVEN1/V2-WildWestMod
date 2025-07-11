@@ -581,6 +581,8 @@ vehicleBalloon4PlaceableDesc,vehicles,vehicle,,,"Up, up, and away! Top up with k
 
 vehicleWWMDinkyDonkey,vehicles,vehicle,,,Wild West Dinky Donkey (T0),,,,,,,,,,,,,
 vehicleWWMDinkyDonkeyPlaceable,vehicles,item,,,Wild West Dinky Donkey (T0),,,,,,,,,,,,,
+vehicleWWMDinkyRacingDonkey,vehicles,vehicle,,,Wild West Dinky Racing Donkey (T3),,,,,,,,,,,,,
+vehicleWWMDinkyRacingDonkeyPlaceable,vehicles,item,,,Wild West Dinky Racing Donkey (T3),,,,,,,,,,,,,
 vehicleWWMHorseT1,vehicles,vehicle,,,Wild West Horse (T1),,,,,,,,,,,,,
 vehicleWWMHorseT1Placeable,vehicles,item,,,Wild West Horse (T1),,,,,,,,,,,,,
 vehicleWWMHorseT2,vehicles,vehicle,,,Wild West Horse (T2),,,,,,,,,,,,,
