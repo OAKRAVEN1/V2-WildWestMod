@@ -823,7 +823,7 @@
 <entity_class name="zombieSoldierInfernal" extends="zombieSoldierRadiated">
 	<!--property name="MatColor" value="infernal"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
-	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinKillerRadiated"/>
+	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinInfernal"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Fit Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
 	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
@@ -943,7 +943,7 @@
 <entity_class name="zombieMaleHazmatCharged" extends="zombieMaleHazmatRadiated">
 	<!--property name="MatColor" value="charged"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
-	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatRadiated"/>
+	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatCharged"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Normal Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
 	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
@@ -959,7 +959,7 @@
 <entity_class name="zombieMaleHazmatInfernal" extends="zombieMaleHazmatRadiated">
 	<!--property name="MatColor" value="infernal"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
-	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatRadiated"/>
+	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatInfernal"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Normal Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
 	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
