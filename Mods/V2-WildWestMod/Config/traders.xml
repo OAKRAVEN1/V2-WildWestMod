@@ -965,6 +965,8 @@
 			<item name="meleeToolShovelT2SteelShovel" quality="1,5"/>
 			<!--item name="meleeToolPickT3Auger" quality="1,5"/-->
 			<item name="meleeToolAxeT2SteelAxe" quality="1,5"/>
+			<item name="meleeToolPickT3BlueCrystalSteelPickaxe" quality="1,5"/>
+			<item name="meleeToolPickT3GreenCrystalSteelPickaxe" quality="1,5"/>
 			<!--item name="meleeToolAxeT3Chainsaw" quality="1,5"/-->
 			<!--item name="meleeToolRepairT3Nailgun"/-->
 			<item name="meleeToolSalvageT2Ratchet" quality="1,5"/>

@@ -239,7 +239,7 @@
 
 <crafting_skills complete_sound="ui_mag_read_set">
 		<!-- *** HARVESTING_TOOL_SKILLS -->
-	<crafting_skill name="craftingHarvestingTools" max_level="60" parent="attCrafting" name_key="craftingHarvestingToolsName" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_tool">
+	<crafting_skill name="craftingHarvestingTools" max_level="80" parent="attCrafting" name_key="craftingHarvestingToolsName" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_tool">
 
 		<display_entry icon="meleeToolRepairT0StoneAxe" name_key="harvestToolsStone" has_quality="true" unlock_level="1,2,4,6,8,10" >
 			<unlock_entry item="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel,meleeToolRepairT2Tomahawk1,meleeToolRepairT2Tomahawk2" unlock_tier="1"/>
@@ -250,19 +250,24 @@
 		<display_entry icon="meleeToolPickT2SteelPickaxe" name_key="harvestToolsSteel" has_quality="true" unlock_level="26,32,39,46,53,60" >
 			<unlock_entry item="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe" unlock_tier="1"/>
 		</display_entry>
+		<display_entry icon="meleeToolPickT3BlueCrystalSteelPickaxe" name_key="harvestToolsCrystalSteel" has_quality="true" unlock_level="41,48,56,64,72,80" >
+			<unlock_entry item="meleeToolPickT3BlueCrystalSteelPickaxe,meleeToolPickT3GreenCrystalSteelPickaxe" unlock_tier="1"/>
+		</display_entry>
 		<!--display_entry icon="meleeToolPickT3Auger" name_key="harvestToolsMechanical" has_quality="true" unlock_level="61,68,76,84,92,100" >
 			<unlock_entry item="meleeToolPickT3Auger,meleeToolAxeT3Chainsaw" unlock_tier="1"/>
 		</display_entry-->
 
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,60" value="1" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel,meleeToolRepairT2Tomahawk1,meleeToolRepairT2Tomahawk2"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,60" value="1" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,60" value="1" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,80" value="1" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel,meleeToolRepairT2Tomahawk1,meleeToolRepairT2Tomahawk2"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,80" value="1" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,80" value="1" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="41,80" value="1" tags="meleeToolPickT3BlueCrystalSteelPickaxe,meleeToolPickT3GreenCrystalSteelPickaxe"/>
 			<!--passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="meleeToolPickT3Auger,meleeToolAxeT3Chainsaw"/-->
 
-			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,60" value="1,2,3,4,5,5" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel,meleeToolRepairT2Tomahawk1,meleeToolRepairT2Tomahawk2"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,60" value="1,2,3,4,5,5" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,60" value="1,2,3,4,5,5" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,80" value="1,2,3,4,5,5" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel,meleeToolRepairT2Tomahawk1,meleeToolRepairT2Tomahawk2"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,80" value="1,2,3,4,5,5" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="32,39,46,53,60,80" value="1,2,3,4,5,5" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="48,56,64,72,80" value="1,2,3,4,5" tags="meleeToolPickT3BlueCrystalSteelPickaxe,meleeToolPickT3GreenCrystalSteelPickaxe"/>
 			<!--passive_effect name="CraftingTier" operation="base_add" level="68,76,84,92,100" value="1,2,3,4,5" tags="meleeToolPickT3Auger,meleeToolAxeT3Chainsaw"/-->
 		</effect_group>
 	</crafting_skill>
@@ -1902,12 +1907,12 @@
 
 			<!-- Increase the chance to find harvesting tools crafting skill magazines with each perk rank up to crafting skill 100 -->
 			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="harvestingToolsCSM">
-				<requirement name="ProgressionLevel" progression_name="craftingHarvestingTools" operation="LT" value="60"/>
+				<requirement name="ProgressionLevel" progression_name="craftingHarvestingTools" operation="LT" value="80"/>
 			</passive_effect>
 
 			<!-- Once harvesting tools crafting skill reaches 100, set the probability bonus of finding harvesting tool crafting skill magazines to 0 -->
 			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="harvestingToolsCSM">
-				<requirement name="ProgressionLevel" progression_name="craftingHarvestingTools" operation="Equals" value="60"/>
+				<requirement name="ProgressionLevel" progression_name="craftingHarvestingTools" operation="Equals" value="80"/>
 			</passive_effect>
 
 			<!-- Increase the chance to find Art of Mining books until each book is read -->

@@ -294,7 +294,7 @@
 
 		<!-- *** ZOMBIE_BIKER_INFERNAL -->
 <entity_class name="zombieBikerInfernal" extends="zombieBikerRadiated">
-	<property name="Mesh" value="#@modfolder:Resources/OaksCowboyBiker.unity3d?OaksCowboyBikerRad"/>
+	<property name="Mesh" value="#@modfolder:Resources/OaksCowboyBiker.unity3d?OaksCowboyBikerOrenge"/>
 	<!--property name="MatColor" value="infernal"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Sturdy Infernal -->
@@ -579,7 +579,7 @@
 <entity_class name="zombieFatCopInfernal" extends="zombieFatCopRadiated">
 	<!--property name="MatColor" value="infernal"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,infernal,zombieCop"/>
-	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?SheriffOakRad"/>
+	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?SheriffOakBlue"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Strong Infernal -->
 	<property name="PainResistPerHit" value="3, .5, .5"/><!-- normal, at low health, health% -->
 	<property name="Explosion.BlockDamage" value="1000"/>

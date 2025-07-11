@@ -4813,6 +4813,31 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	</effect_group>
 </recipe>
 
+<!-- Wild West Oakraven Crystal Pickaxes -->
+
+<recipe name="meleeToolPickT3BlueCrystalSteelPickaxe" count="1" craft_area="workbench" tags="learnable,craftingHarvestingTools,workbenchCrafting"><!-- perkMiner69r -->
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+	<ingredient name="resourceForgedSteel" count="10"/>
+	<ingredient name="resourceWood" count="10"/>
+	<ingredient name="resourceBlueCrystal" count="1"/>
+	<ingredient name="resourceLegendaryParts" count="0"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="meleeToolAllSteelParts,resourceForgedSteel,resourceWood,resourceBlueCrystal"/>
+		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+<recipe name="meleeToolPickT3GreenCrystalSteelPickaxe" count="1" craft_area="workbench" tags="learnable,craftingHarvestingTools,workbenchCrafting"><!-- perkMiner69r -->
+	<ingredient name="meleeToolAllSteelParts" count="1"/>
+	<ingredient name="resourceForgedSteel" count="10"/>
+	<ingredient name="resourceWood" count="10"/>
+	<ingredient name="resourceGreenCrystal" count="1"/>
+	<ingredient name="resourceLegendaryParts" count="0"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="meleeToolAllSteelParts,resourceForgedSteel,resourceWood,resourceGreenCrystal"/>
+		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
 		
 <!-- Wild West Scrap Spitter -->
 		

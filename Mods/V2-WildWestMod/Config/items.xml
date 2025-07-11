@@ -140,7 +140,10 @@
 	<set xpath="/items/item[@name='gunBowT1IronCrossbow']/property[@class='Action0']/property[@name='AutoReload']/@value">true</set>
 	<set xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='Meshfile']/@value">#@modfolder:Resources/newfireaxe.unity3d?newfireaxe</set><!-- Replacing Fire Axe for older variant -->
 	<remove xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='TintColor']"/>
-
+	<remove xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='TintColor']"/>
+	<set xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='Meshfile']/@value">#@modfolder:Resources/picks.unity3d?pickaxeIronX</set> 
+	<set xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/property[@name='Meshfile']/@value">#@modfolder:Resources/picks.unity3d?pickaxePlane</set>
+	
     <!-- Machete replace -->
     <set xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Meshfile']/@value">#@modfolder:Resources/WestKnifes.unity3d?Knife3</set><!-- Replacing Fire Axe for older variant -->
 	<remove xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='TintColor']"/>
@@ -569,6 +572,222 @@
 	<effect_group tiered="false">
 		<requirement name="HasBuff" buff="buffIsOnFire"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<!-- Wild West Oakraven Crystal Pickaxes --> <!-- +10% Gains across appropriate features for T2 Steel Pickaxe -->
+
+<item name="meleeToolPickT3BlueCrystalSteelPickaxe">
+	<property name="Extends" value="meleeToolPickT1IronPickaxe"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="4"/>
+	<property name="Meshfile" value="#@modfolder:Resources/picks.unity3d?pickaxeBlack"/>
+	<property name="Weight" value="1"/>
+	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="EconomicValue" value="1210"/> <!-- Default 1100 -->
+	<property name="TraderStageTemplate" value="baseTier3"/><!-- meleeToolPickT2SteelPickaxe -->
+	<property name="Material" value="MmeleeToolAllSteel"/>
+	<property name="UnlockedBy" value="craftingHarvestingTools"/><!-- meleeToolSteelSetSchematic, -->
+	<property name="Group" value="Tools/Traps"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	
+	<property class="Action0">
+		<property name="GrazeStart" value=".5"/>
+		<property name="GrazeEnd" value=".6"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property name="UseGrazingHits" value="true"/>
+	</property>
+	<property class="Action1">
+		<property name="UsePowerAttackAnimation" value="true"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".4"/>
+		<property name="GrazeEnd" value=".48"/>
+		<property name="SwingDegrees" value="110"/>
+		<property name="SwingAngle" value="90"/>
+	</property>
+	<effect_group name="meleeToolPickT2SteelPickaxe">
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkMiner69r"/> <!-- Default 55 -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="23.8" tags="primary"/> <!-- Default 26.4 -->
+		<passive_effect name="DegradationMax" operation="base_set" value="1100,2200" tier="1,6" tags="perkMiner69r"/> <!-- Default 1000,2000 -->
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="25.5" tags="perkMiner69r"/> <!-- Default 23.2 -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="94" tags="perkMiner69r,miningTool"/> <!-- tier bonus --> <!-- Default 85 -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="PlayerExpGain" operation="perc_add" value="-.1" tags="Harvesting"/>
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.08,.08" tier="1,6" tags="perkMiner69r"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> --> <!-- random APM -->
+		<!-- <passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> --> <!-- random StamLoss -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.6" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="terrGravel"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/> -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="47.4" tags="secondary"/> <!-- Default 52.7 -->
+	</effect_group>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted"/>
+			<requirement name="!HasBuff" buff="buffLegCast"/>
+			<requirement name="!HasBuff" buff="buffArmSplinted"/>
+			<requirement name="!HasBuff" buff="buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$minerHealing,$minerNatHealing,$minerCheck"/>
+
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted"/>
+			<requirement name="!HasBuff" buff="buffLegCast"/>
+			<requirement name="!HasBuff" buff="buffArmSplinted"/>
+			<requirement name="!HasBuff" buff="buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="meleeToolPickT3GreenCrystalSteelPickaxe">
+	<property name="Extends" value="meleeToolPickT1IronPickaxe"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="4"/>
+	<property name="Meshfile" value="#@modfolder:Resources/picks.unity3d?pickaxeGreen"/>
+	<property name="Weight" value="1"/>
+	<property name="ScrapTimeOverride" value="10.0"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="EconomicValue" value="1210"/> <!-- Default 1100 -->
+	<property name="TraderStageTemplate" value="baseTier3"/><!-- meleeToolPickT2SteelPickaxe -->
+	<property name="Material" value="MmeleeToolAllSteel"/>
+	<property name="UnlockedBy" value="craftingHarvestingTools"/><!-- meleeToolSteelSetSchematic, -->
+	<property name="Group" value="Tools/Traps"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	
+	<property class="Action0">
+		<property name="GrazeStart" value=".5"/>
+		<property name="GrazeEnd" value=".6"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property name="UseGrazingHits" value="true"/>
+	</property>
+	<property class="Action1">
+		<property name="UsePowerAttackAnimation" value="true"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".4"/>
+		<property name="GrazeEnd" value=".48"/>
+		<property name="SwingDegrees" value="110"/>
+		<property name="SwingAngle" value="90"/>
+	</property>
+	<effect_group name="meleeToolPickT2SteelPickaxe">
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkMiner69r"/> <!-- Default 55 -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="23.8" tags="primary"/> <!-- Default 26.4 -->
+		<passive_effect name="DegradationMax" operation="base_set" value="1100,2200" tier="1,6" tags="perkMiner69r"/> <!-- Default 1000,2000 -->
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+		<passive_effect name="ModSlots" operation="base_set" value="3,3,3,4,4,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="25.5" tags="perkMiner69r"/> <!-- Default 23.2 -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="base_set" value="94" tags="perkMiner69r,miningTool"/> <!-- tier bonus --> <!-- Default 85 -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="PlayerExpGain" operation="perc_add" value="-.1" tags="Harvesting"/>
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.08,.08" tier="1,6" tags="perkMiner69r"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> --> <!-- random APM -->
+		<!-- <passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> --> <!-- random StamLoss -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.6" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="terrGravel"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/> -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="47.4" tags="secondary"/> <!-- Default 52.7 -->
+	</effect_group>
+
+	<effect_group>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted"/>
+			<requirement name="!HasBuff" buff="buffLegCast"/>
+			<requirement name="!HasBuff" buff="buffArmSplinted"/>
+			<requirement name="!HasBuff" buff="buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveCVar" cvar="$minerHealing,$minerNatHealing,$minerCheck"/>
+
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerNatHealing" operation="set" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+			<requirement name="!HasBuff" buff="buffLegSplinted"/>
+			<requirement name="!HasBuff" buff="buffLegCast"/>
+			<requirement name="!HasBuff" buff="buffArmSplinted"/>
+			<requirement name="!HasBuff" buff="buffArmCast"/>
+		</triggered_effect>
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerHealing" operation="set" value=".5">
+			<requirement name="ProgressionLevel" progression_name="perkStrengthMastery" operation="GTE" value="1"/>
+		</triggered_effect>
+		<!-- Reduce treatedAbrasionCounter when holding mining tools -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$treatedAbrasionCounter" operation="multiply" value="@$minerHealing">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+			</triggered_effect>
+		<!-- Set a check flag when holding -->
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$minerCheck" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="$minerHealing" operation="GT" value="0"/>
+				<requirement name="CVarCompare" cvar="$minerCheck" operation="LTE" value="0"/>
+			</triggered_effect>
 	</effect_group>
 </item>
 

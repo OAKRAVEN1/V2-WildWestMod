@@ -3875,6 +3875,8 @@
 	<item name="meleeToolSalvageT2Ratchet"/> <!-- Wild West Mod -->
 	<item name="meleeToolRepairT2Tomahawk1"/> <!-- Wild West Mod -->
 	<item name="meleeToolRepairT2Tomahawk2"/> <!-- Wild West Mod -->
+	<item name="meleeToolPickT3BlueCrystalSteelPickaxe"/> <!-- Wild West Mod -->
+	<item name="meleeToolPickT3GreenCrystalSteelPickaxe"/> <!-- Wild West Mod -->
 </lootgroup>
 
 <!-- *** Tool_Loot_Scaled -->
@@ -4244,7 +4246,9 @@
 	<item name="meleeToolAxeT2SteelAxe"/> <!-- Wild West Mod -->
 	<item name="meleeToolSalvageT2Ratchet"/> <!-- Wild West Mod -->
 	<item name="meleeToolRepairT2Tomahawk1"/> <!-- Wild West Mod -->
-	<item name="meleeToolRepairT2Tomahawk2"/> <!-- Wild West Mod -->															 
+	<item name="meleeToolRepairT2Tomahawk2"/> <!-- Wild West Mod -->
+	<item name="meleeToolPickT3BlueCrystalSteelPickaxe"/> <!-- Wild West Mod -->
+	<item name="meleeToolPickT3GreenCrystalSteelPickaxe"/> <!-- Wild West Mod -->	
 </lootgroup>
 
 <lootgroup name="groupQuestTools">
@@ -8117,6 +8121,8 @@
 	<item name="meleeToolAxeT2SteelAxe"/>
 	<item name="meleeToolPickT2SteelPickaxe"/>
 	<item name="meleeToolShovelT2SteelShovel"/>
+	<item name="meleeToolPickT3BlueCrystalSteelPickaxe"/> <!-- Wild West Mod -->
+	<item name="meleeToolPickT3GreenCrystalSteelPickaxe"/> <!-- Wild West Mod -->
 	<!--item name="meleeToolAxeT3Chainsaw"/-->
 	<!--item name="meleeToolPickT3Auger"/-->
 	<!--item name="meleeToolRepairT3Nailgun"/-->
