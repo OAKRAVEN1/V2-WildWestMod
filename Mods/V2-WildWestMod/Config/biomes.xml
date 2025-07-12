@@ -7,7 +7,15 @@
 		<!-- *** Pine Forest: Sub Biome: Ring of smaller plants around dense large trees -->
 	<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.014, 0, .46']/decorations">
 			<decoration type="block" blockname="BeeStumpBees" prob="0.00025" rotatemax="7"/>			
-	</append>	
+	</append>
+	<!-- *** Pine Forest: Sub Biome: Clustered Flowers and Boulders -->
+	<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.0095, 0, .21']/decorations">
+			<decoration type="block" blockname="plantedBlueberry3Harvest" prob="0.025" rotatemax="7"/>
+			<decoration type="block" blockname="plantedPotato3Harvest" prob="0.02" rotatemax="7"/>
+			<decoration type="block" blockname="plantedHop3Harvest" prob="0.02" rotatemax="7"/>
+			<decoration type="block" blockname="plantedPumpkin3Harvest" prob="0.02" rotatemax="7"/>
+			<decoration type="block" blockname="plantedMushroom3Harvest" prob="0.02" rotatemax="7"/>
+	</append>
 	<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']/decorations">
 			<decoration type="block" blockname="BeeStumpBees" prob="0.0002" rotatemax="7"/>			
 	</append>
@@ -28,7 +36,12 @@
 		<!-- *** Desert: Sub Biome: Large Clustered Cactus and Desert Shrub -->
 	<append xpath="/worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.02, 0, .3']/decorations">
 			<decoration type="block" blockname="BeeStumpBees" prob="0.00025" rotatemax="7"/>
-			<decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/>			
+			<decoration type="block" blockname="treeStump" prob=".00025" rotatemax="7"/>			
+	</append>
+	<!-- *** Desert: Sub Biome: Ring of Smaller Clustered Cactus and Desert Shrub -->
+	<append xpath="/worldgeneration/biomes/biome[@name='desert']/subbiome[@noise='.02, 0, .45']/decorations">
+			<decoration type="block" blockname="plantedCorn3Harvest" prob="0.0005" rotatemax="7"/>
+			<decoration type="block" blockname="plantedGraceCorn3Harvest" prob="0.0002" rotatemax="7"/>
 	</append>	
 	<append xpath="/worldgeneration/biomes/biome[@name='desert']/decorations">
 			<decoration type="block" blockname="BeeStumpBees" prob="0.0001" rotatemax="7"/>
@@ -65,7 +78,12 @@
 			<decoration type="prefab" name="deco_wildwest_smokeriser3000" prob=".003" rotatemax="3"/>
 			<decoration type="prefab" name="deco_wasteland_tradersmoke_white" prob=".003" rotatemax="3"/>
 			<decoration type="prefab" name="deco_wasteland_tradersmoke_black" prob=".0035" rotatemax="3"/>			
-	</append>	
+	</append>
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<!-- **** Underwater: Main Biome -->
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<remove xpath="//biome[@name='underwater']/decorations/decoration[@blockname='cinderBlocks01']"/>
+	<remove xpath="//biome[@name='underwater']/decorations/decoration[@blockname='hubcapNoMine']"/>	
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- ***** Street Parameters -->
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->	
@@ -73,5 +91,8 @@
 	<remove xpath="/worldgeneration/pois/poi[@name='Road Gravel']/blockontop[@blockname='cntStreetRandomLootHelper']"/>	
 	<!-- Setting more vehicles to appear on gravel paths -->
 	<set xpath="//poi[@name='Road Gravel']/blockontop[@blockname='carsRandomHelper']/@prob">0.002</set>
+	<append xpath="/worldgeneration/pois/poi[@name='Road Gravel']">
+		<blockontop blockname="plantedCottonHarvestRandomHelper" prob="0.0075"/>
+	</append>
 	
 </wildwestmod>
