@@ -3094,10 +3094,10 @@
 	
 	<!-- Adds the "Crispy Family" Horde Quest -->
 	<quest id="challenge_eliminatecrispyfamily">
-	<property name="offer_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill and 10000 XP for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />       
+	<property name="offer_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill and 10,000 XP for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />       
     <property name="name_key" value="Crispy Family and Friends" />
 	<property name="subtitle_key" value="Crispy Family and Friends" />
-	<property name="description_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill and 10000 XP for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />
+	<property name="description_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill and 10,000 XP for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />
 	<property name="icon" value="ui_game_symbol_crispy"/>
 	<property name="repeatable" value="true"/>
 	<property name="add_to_tier_complete" value="false"/>

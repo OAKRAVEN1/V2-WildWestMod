@@ -4396,12 +4396,14 @@
 	<item name="medicalFirstAidKit" count="1" loot_prob_template="QuestT1Prob"/>
 	
 	<!--item name="drugAntibiotics" count="1" loot_prob_template="QuestT2Prob"/-->
+	<item name="drugHerbalAntibiotics" count="1" loot_prob_template="QuestT2Prob"/> <!-- WWM -->
 	<item name="drugSteroids" count="1" loot_prob_template="QuestT2Prob"/>
 	<item name="drugRecog" count="1" loot_prob_template="QuestT2Prob"/>
 	<item name="drugFortBites" count="1" loot_prob_template="QuestT2Prob"/>
 	<item name="toolBeaker" count="1" loot_prob_template="QuestT2Prob"/>
 	
-	<item name="drugAntibiotics" count="1" loot_prob_template="QuestT3Prob"/>
+	<!--item name="drugAntibiotics" count="1" loot_prob_template="QuestT3Prob"/-->
+	<item name="drugHerbalAntibiotics" count="1" loot_prob_template="QuestT3Prob"/> <!-- WWM -->
 	<item name="drugSteroids" count="1" loot_prob_template="QuestT3Prob"/>
 	<item name="drugRecog" count="1" loot_prob_template="QuestT3Prob"/>
 	<item name="drugFortBites" count="1" loot_prob_template="QuestT3Prob"/>
@@ -7446,11 +7448,11 @@
 	<item group="groupFoodUncommon" loot_prob_template="low"/>
 	<item name="armorParts" count="1,2" loot_prob_template="low"/>
 	<item name="resourceDuctTape" count="1,4" loot_prob_template="low"/>
-	<item name="gunHandgunT1PistolParts" count="1,2" loot_prob_template="low"/>
+	<!--item name="gunHandgunT1PistolParts" count="1,2" loot_prob_template="low"/-->
 	<item name="gunRifleT1HuntingRifleParts" count="1,2" loot_prob_template="low"/>
 	<item name="gunShotgunT1DoubleBarrelParts" count="1,2" loot_prob_template="low"/>
-	<item name="gunMGT1AK47Parts" count="1,2" loot_prob_template="low"/>
-	<item name="gunExplosivesT3RocketLauncherParts" count="1,2" loot_prob_template="low"/>
+	<!--item name="gunMGT1AK47Parts" count="1,2" loot_prob_template="low"/-->
+	<!--item name="gunExplosivesT3RocketLauncherParts" count="1,2" loot_prob_template="low"/-->
 </lootgroup>
 
 <lootgroup name="groupZpackSoldier02">
@@ -7488,11 +7490,11 @@
 	<item group="groupDrinksUncommon" loot_prob_template="low"/>
 	<item group="groupFoodUncommon" loot_prob_template="low"/>
 	<item name="armorParts" count="1,2" loot_prob_template="low"/>
-	<item name="gunHandgunT1PistolParts" count="1,2" loot_prob_template="low"/>
+	<!--item name="gunHandgunT1PistolParts" count="1,2" loot_prob_template="low"/-->
 	<item name="gunRifleT1HuntingRifleParts" count="1,2" loot_prob_template="low"/>
 	<item name="gunShotgunT1DoubleBarrelParts" count="1,2" loot_prob_template="low"/>
-	<item name="gunMGT1AK47Parts" count="1,2" loot_prob_template="low"/>
-	<item name="gunExplosivesT3RocketLauncherParts" count="1,2" loot_prob_template="low"/>
+	<!--item name="gunMGT1AK47Parts" count="1,2" loot_prob_template="low"/-->
+	<!--item name="gunExplosivesT3RocketLauncherParts" count="1,2" loot_prob_template="low"/-->
 </lootgroup>
 
 <lootgroup name="groupZpackThug02">
@@ -10491,7 +10493,7 @@
 </lootcontainer>
 
 <!-- beer cooler -->
-<lootcontainer name="beerCooler" count="1,2" size="6,5" sound_open="UseActions/coolermini_open" sound_close="UseActions/coolermini_close" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
+<lootcontainer name="beerCooler" count="1,2" size="6,5" sound_open="UseActions/coolermini_open" sound_close="UseActions/coolermini_close" loot_quality_template="qualBaseTemplate">
 	<item group="groupBeerCooler"/>
 </lootcontainer> <!-- Upgraded from 6,3 since these are player rewards and functional -->
 

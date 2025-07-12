@@ -1623,7 +1623,7 @@
 		 <property name="GndAlign" value="1"/>
 	     <property name="PlantGrowing.FertileLevel" value="0"/>
 		 <property name="PlantGrowing.LightLevelGrow" value="0"/>
-		 <property name="PlantGrowing.GrowthRate" value="2"/>  <!-- stump respawn rate in real time minutes (2 for testing)	-->
+		 <property name="PlantGrowing.GrowthRate" value="120"/>  <!-- stump respawn rate in real time minutes (2 for testing)	-->
 		 <property name="PlantGrowing.IsRandom" value="false"/>
 		 <property name="PlantGrowing.LightLevelStay" value="0"/>
 	     <property name="PlantGrowing.Next" value="BeeStumpBees"/>
@@ -1642,7 +1642,7 @@
 	     <property name="Model" value="#@modfolder:Resources/BeeHivesV1.unity3d?BeeStumpspawner"/>
 	     <property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
-			<property name="PlantGrowing.GrowthRate" value="2"/>  <!-- stump respawn rate in real time minutes (2 for testing)	-->
+			<property name="PlantGrowing.GrowthRate" value="120"/>  <!-- stump respawn rate in real time minutes (2 for testing)	-->
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 	     <property name="PlantGrowing.Next" value="BeeStumpBees"/>

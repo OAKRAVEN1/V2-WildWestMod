@@ -5712,6 +5712,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceClayLump" count="6000"/>
 </recipe>
 
+	<recipe name="resourceSeasonedWoodLogs" count="1">
+		<ingredient name="resourceWood" count="30"/>
+	</recipe>
+
 	<!-- 0-Score Drop Box -->	
     <recipe name="cntIronWWMDropBox" count="1">
       <ingredient name="resourceForgedIron" count="10"/>

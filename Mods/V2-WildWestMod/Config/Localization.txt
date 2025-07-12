@@ -556,6 +556,8 @@ resourceSnowHarePeltDesc,items,item,,,"This pelt can be used as part of a recipe
 animalWildWestSnowBear,entityclasses,Entity,,,Snow Bear,,,,,,,,,,,,,
 resourceCatfish,items,item,,,Catfish,,,,,,,,,,,,,
 resourceCatfishDesc,items,item,,,"Catch a Catfish from a Fish Trap.",,,,,,,,,,,,,
+resourceSeasonedWoodLogs,items,Item,,,Wood Logs (Seasoned),,,,,,,,,,,,,
+resourceSeasonedWoodLogsDesc,items,Item,,,"Seasoned Wood Logs have a longer burn time than regular Wood Logs.",,,,,,,,,,,,,
 vehiclePlaceableGroupDesc,vehicles,item,,,"Horses are obtained from the trader and increase in performace abilities with higher tiers.\n\nThe Steam Horse, and other mechanical vehicles are craftable at a workbench.",,,,,,,,,,,,,
 vehicleSteamVelocipede,entityclasses,Entity,,,Steam Velocipede,,,,,,,,,,,,,
 vehicleSteamVelocipedePlaceable,vehicles,vehicle,,,Steam Velocipede,,,,,,,,,,,,,
