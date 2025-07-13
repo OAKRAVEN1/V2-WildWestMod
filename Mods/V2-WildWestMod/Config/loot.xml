@@ -7149,7 +7149,7 @@
 
 <lootgroup name="groupPassNGas03">
 	<item group="vehiclePartsTiered" loot_prob_template="medLow"/>
-	<item group="vehicleModSchematics" loot_prob_template="medLow"/>
+	<item group="vehicleModSchematics" loot_prob_template="med"/> <!-- WWM - Default is medLow -->
 	<item group="groupRareToolsTiered" loot_prob_template="veryLow"/>
 	<item name="harvestingToolsSkillMagazine" loot_prob_template="high"/>
 	<item name="repairToolsSkillMagazine" loot_prob_template="high"/>
