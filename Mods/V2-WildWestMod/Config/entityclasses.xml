@@ -69,15 +69,15 @@
 		<set xpath="/entity_classes/entity_class[@name='sc_General']/property[@name='Mesh']/@value">#@modfolder:Resources/WWMsupplycrate.unity3d?SupplyCrateEntityPrefab</set>
 
 	<!-- Wild West Loot Bags -->		
-	<set xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
-	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
-	<set xpath="/entity_classes/entity_class[@name='DroppedVehicleContainer']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
-	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
-	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerNurse']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
-	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerLab']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
-	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerUtility']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
-	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerSoldier']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
-	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerThug']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='DroppedVehicleContainer']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerNurse']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerLab']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerUtility']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerSoldier']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerThug']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
 	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerStrong']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackBluePrefabNew</set>
 	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerBoss']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackRedPrefabNew</set>
 	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainerTwitch']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackRedPrefabNew</set>
