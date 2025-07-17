@@ -1740,7 +1740,7 @@
 
 		<effect_group>
 			<!-- Increase the backpack slots available before incumbrance starts -->
-			<passive_effect name="CarryCapacity" operation="base_add" level="1,2,3,4,5" value="3,6,10,14,18"/>
+			<passive_effect name="CarryCapacity" operation="base_add" level="1,2,3,4,5" value="4,8,12,16,20"/> <!-- Default 3,6,10,14,18 -->
 
 			<!-- Increase crafting time of items crafting in the backpack -->
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-.1,-.2,-.3,-.4,-.5" tags="packMuleCrafting"/>
