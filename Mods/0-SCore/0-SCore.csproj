@@ -109,6 +109,7 @@
     <Compile Include="Features\FireV2\Scripts\FireHandler.cs" />
     <Compile Include="Features\FireV2\Scripts\FireManager.cs" />
     <Compile Include="Features\FireV2\Scripts\FireNetworkManager.cs" />
+    <Compile Include="Features\FireV2\Scripts\FireParticleOptimizer.cs" />
     <Compile Include="Features\FireV2\Scripts\Interfaces\IFireHandler.cs" />
     <Compile Include="Features\FireV2\Scripts\Interfaces\IFireNetworkManager.cs" />
     <Compile Include="Features\FireV2\Scripts\Interfaces\ILightManager.cs" />
@@ -307,6 +308,7 @@
     <Compile Include="Harmony\XUIC\XUiC_ItemStack_SlotTags.cs" />
     <Compile Include="Harmony\XUIC\XUiC_LootWindowGroupOnOpen.cs" />
     <Compile Include="Harmony\XUIC\XUiC_TargetBar.cs" />
+    <Compile Include="Harmony\ZombieFeatures\AIDirectorChunkEventComponentScout.cs" />
     <Compile Include="Harmony\ZombieFeatures\EntityFlyingEAITasks.cs" />
     <Compile Include="Harmony\ZombieFeatures\HeadshotOnly.cs" />
     <Compile Include="Harmony\ZombieFeatures\InertEntity.cs" />

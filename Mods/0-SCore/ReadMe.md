@@ -32,6 +32,42 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 
 [ Change Log ]
+Version: 2.1.4.1248
+
+	[ AIDirector Scout Chance ]
+        - Configurable Scout Spawns: We've introduced a new patch to the AIDirectorChunkEventComponent that allows for precise adjustment of the scout zombie spawn chance.
+        - Vanilla Behavior: In the base game, there is typically a 20% chance to spawn a scout when all other conditions for a spawn event are met.
+        - Previous Versions: In earlier versions of this mod, there was no percentage check; if all other conditions were valid, a scout would always spawn.
+
+        New Control: You can now customize this probability via the ScoutSpawnChance setting under AdvancedZombieFeatures.
+        ```xml
+        <property class="AdvancedZombieFeatures">
+            <!-- -1 disables this patch, reverting to default game behavior. -->
+            <!-- A value of 0.2 will result in a 20% chance to spawn. -->
+            <!-- A value of 1 will result in a 100% chance to spawn. -->
+            <property name="ScoutSpawnChance" value="-1" />
+        </property>
+        ```
+
+    [ ConfigurationFeatureBlock ]
+        - Added ScoutSpawnChance to AdvancedZombieFeatures
+        - Fixed typo in property for EnemyActiveMax setting.
+
+    [ NPCs ]
+        - Fixed an issue where NPCs would jump erratically, enthusastically, and without regard for public moral standards.
+        - Fixed an issue where the NPC's AK47 would shoot a few times, then stop.
+
+Version: 2.1.3.1505
+
+	[ Fire Manager ]
+		- Fixed an issue where fire sounds were heard by every player, regardless of proxmity of fire.
+		- Updated the logic on how each player hears to allow it to fade correctly.
+		- Modified the processing logic to ensure all blocks on fire will be processed accurately.
+		- Added a Fire Particple Optimizer that enables culling based on the size of the fire.
+			- A Small fire will have a particle on each block.
+			- A medium size fire will a particle on it, however, neighborly blocks will not.
+			- A larger size fire will further reduce the concentration of particles.
+
 Version: 2.1.2.1825
 
 	[ Audio Patch ]

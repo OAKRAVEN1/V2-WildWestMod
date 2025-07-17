@@ -72,7 +72,7 @@
 		<set xpath="/entity_classes/entity_class[@name='sc_General']/property[@name='Mesh']/@value">#@modfolder:Resources/WWMsupplycrate.unity3d?SupplyCrateEntityPrefab</set>
 
 	<!-- Wild West Loot Bags -->		
-	<set xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
+	<set xpath="/entity_classes/entity_class[@name='Backpack']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?PlayerBackpack</set>
 	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
 	<set xpath="/entity_classes/entity_class[@name='DroppedVehicleContainer']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
 	<set xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular']/property[@name='Mesh']/@value">#@modfolder:Resources/NewDropBags.unity3d?zpackYellowPrefabNew</set>
