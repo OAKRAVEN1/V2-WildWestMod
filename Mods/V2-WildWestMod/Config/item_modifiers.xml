@@ -122,6 +122,18 @@
 	   <item_property_overrides name="meleeWpnBladeT3Machete">
             <property name="FlameEffect" value="#@modfolder:Resources/WestKnifes.unity3d?Knife3fire"/>
        </item_property_overrides>
+	   
+	   <item_property_overrides name="meleeWpnBladeT0ScrapCleaver">
+            <property name="FlameEffect" value="#@modfolder:Resources/TabbyClever.unity3d?RustyFlameClever"/>
+       </item_property_overrides>
+	   
+	   <item_property_overrides name="meleeWpnBladeT1IronCleaver">
+            <property name="FlameEffect" value="#@modfolder:Resources/TabbyClever.unity3d?TabbyFlameClever"/>
+       </item_property_overrides>
+	   
+	   <item_property_overrides name="meleeWpnBladeT3SteelCleaver">
+            <property name="FlameEffect" value="#@modfolder:Resources/TabbyClever.unity3d?TabbyFlameClever"/>
+       </item_property_overrides>
 
     </append>	
 	

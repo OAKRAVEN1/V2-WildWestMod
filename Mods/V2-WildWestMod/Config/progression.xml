@@ -326,27 +326,24 @@
 		<!-- *** BLADE_SKILLS -->
 	<crafting_skill name="craftingBlades" max_level="75" parent="attCrafting" name_key="craftingBladesName" desc_key="craftingBladesDesc" long_desc_key="craftingBladesLongDesc" icon="ui_game_symbol_knife">
 
-		<display_entry item="meleeWpnBladeT0BoneKnife" unlock_level="1,2,4,6,8,10"/>
-		<display_entry item="meleeWpnBladeT1HuntingKnife" unlock_level="11,15,20,25,30,35"/>
-		<display_entry item="meleeWpnBladeT1HuntingKnifeObsidian" unlock_level="11,15,20,25,30,35" />
-		<display_entry item="meleeWpnBladeT1HuntingKnifeMedusa" unlock_level="11,15,20,25,30,35" />																							 
-		<display_entry item="meleeWpnBladeT3Machete" unlock_level="36,43,51,59,67,75"/>
-		<display_entry item="meleeWpnBladeT3MacheteMini" unlock_level="36,43,51,59,67,75" />
+		<display_entry item="meleeWpnBladeT0BoneKnife" unlock_level="1,2,4,6,8,10">
+			<unlock_entry item="meleeWpnBladeT0ScrapCleaver" unlock_tier="1"/>
+		</display_entry>
+		<display_entry item="meleeWpnBladeT1HuntingKnife" unlock_level="11,15,20,25,30,35">
+			<unlock_entry item="meleeWpnBladeT1HuntingKnifeObsidian,meleeWpnBladeT1HuntingKnifeMedusa,meleeWpnBladeT1IronCleaver" unlock_tier="1"/>
+		</display_entry>		
+		<display_entry item="meleeWpnBladeT3Machete" unlock_level="36,43,51,59,67,75">
+			<unlock_entry item="meleeWpnBladeT3MacheteMini,meleeWpnBladeT3SteelCleaver" unlock_tier="1"/>
+		</display_entry>	
 
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnBladeT0BoneKnife"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnBladeT1HuntingKnife"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnBladeT1HuntingKnifeObsidian"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnBladeT1HuntingKnifeMedusa"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="meleeWpnBladeT3Machete"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="meleeWpnBladeT3MacheteMini"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnBladeT0BoneKnife,meleeWpnBladeT0ScrapCleaver"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1HuntingKnifeObsidian,meleeWpnBladeT1HuntingKnifeMedusa,meleeWpnBladeT1IronCleaver"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="meleeWpnBladeT3Machete,meleeWpnBladeT3MacheteMini,meleeWpnBladeT3SteelCleaver"/>
 
-			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT0BoneKnife"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT1HuntingKnife"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT1HuntingKnifeObsidian"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT1HuntingKnifeMedusa"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="meleeWpnBladeT3Machete"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="meleeWpnBladeT3MacheteMini"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT0BoneKnife,meleeWpnBladeT0ScrapCleaver"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1HuntingKnifeObsidian,meleeWpnBladeT1HuntingKnifeMedusa,meleeWpnBladeT1IronCleaver"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="meleeWpnBladeT3Machete,meleeWpnBladeT3MacheteMini,meleeWpnBladeT3SteelCleaver"/>
 		</effect_group>
 	</crafting_skill>
 

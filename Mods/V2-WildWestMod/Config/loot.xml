@@ -2606,6 +2606,7 @@
 	<item name="meleeWpnSledgeT1IronSledgehammer"/>
 	<item name="meleeWpnKnucklesT1IronKnuckles"/>
 	<item name="meleeWpnBladeT1HuntingKnife"/>
+	<item name="meleeWpnBladeT1IronCleaver"/> <!-- Wild West Mod -->
 	<item name="meleeWpnBladeT1HuntingKnifeObsidian"/> <!-- Wild West Mod -->
 	<item name="meleeWpnBladeT1HuntingKnifeMedusa"/> <!-- Wild West Mod -->
 </lootgroup>
@@ -2617,6 +2618,7 @@
 	<item name="meleeWpnSledgeT3SteelSledgehammer"/>
 	<item name="meleeWpnKnucklesT3SteelKnuckles"/>
 	<item name="meleeWpnBladeT3Machete"/>
+	<item name="meleeWpnBladeT3SteelCleaver"/> <!-- Wild West Mod -->
 	<item name="meleeWpnBladeT3MacheteMini"/> <!-- Wild West Mod -->
 	<!--item name="meleeWpnBatonT2StunBaton"/-->
 </lootgroup>
@@ -4263,6 +4265,7 @@
 	<item name="meleeWpnSledgeT1IronSledgehammer"/>
 	<item name="meleeWpnKnucklesT1IronKnuckles"/>
 	<item name="meleeWpnBladeT1HuntingKnife"/>
+	<item name="meleeWpnBladeT1IronCleaver"/> <!-- Wild West Mod -->
 	<item name="meleeWpnBladeT1HuntingKnifeObsidian"/> <!-- Wild West Mod -->
 	<item name="meleeWpnBladeT1HuntingKnifeMedusa"/> <!-- Wild West Mod -->
 	<!--item name="gunBotT1JunkSledge"/-->
@@ -4275,6 +4278,8 @@
 	<item name="meleeWpnSledgeT3SteelSledgehammer"/>
 	<item name="meleeWpnKnucklesT3SteelKnuckles"/>
 	<item name="meleeWpnBladeT3Machete"/>
+	<item name="meleeWpnBladeT3SteelCleaver"/> <!-- Wild West Mod -->
+	<item name="meleeWpnBladeT3MacheteMini"/> <!-- Wild West Mod -->
 	<item name="meleeWpnSpearT3SteelSpear"/>
 </lootgroup>
 
@@ -7376,19 +7381,19 @@
 	<item name="resourceElectricParts" count="1,2" loot_prob_template="low"/>
 	<item name="resourceMechanicalParts" count="1,2" loot_prob_template="low"/>
 	<item name="resourceDuctTape" count="1,4" loot_prob_template="low"/>
-	<item name="gunBotRoboticsParts" count="1,2" loot_prob_template="low"/>
+	<!--item name="gunBotRoboticsParts" count="1,2" loot_prob_template="low"/-->
 	<item name="medicalFirstAidBandage" loot_prob_template="low"/>
 </lootgroup>
 
 <lootgroup name="groupZpackLab02">
 	<item name="workstationSkillMagazine"/>
 	<item name="roboticsSkillMagazine"/>
-	<item name="electricianSkillMagazine"/>
-	<item name="trapsSkillMagazine"/>
+	<!--item name="electricianSkillMagazine"/-->
+	<!--item name="trapsSkillMagazine"/-->
 	<item name="vehiclesSkillMagazine"/>
 	<item name="medicalSkillMagazine"/>
 	<item group="groupTechJunkieBooks" loot_prob_template="low"/>
-	<item group="groupBotSchematics" loot_prob_template="low"/>
+	<!--item group="groupBotSchematics" loot_prob_template="low"/-->
 </lootgroup>
 
 <lootgroup name="groupZpackLab" count="all">
