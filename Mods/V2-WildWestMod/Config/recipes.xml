@@ -5143,11 +5143,11 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 		<ingredient name="foodChickSticks" count="1"/>
 	</recipe>
 	
-	<recipe name="drinkYuccaJuiceCooler" count="1" craft_area="campfire" tags="perkMasterChef,packMuleCrafting">
+	<recipe name="drinkYuccaJuiceCooler" count="1" tags="perkMasterChef,packMuleCrafting">
 		<ingredient name="foodCropYuccaFruit" count="5"/>
 		<ingredient name="foodCropBlueberries" count="5"/>
 		<ingredient name="resourceSnowBall" count="5"/>
-		<ingredient name="treePlantedWinterPine1m" count="10"/>
+		<ingredient name="treePlantedWinterPine1m" count="1"/>
 	    <ingredient name="drinkJarBoiledWater" count="1"/>
 	</recipe>
 	

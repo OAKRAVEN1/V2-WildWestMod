@@ -244,8 +244,8 @@ questRewardT3RifleLegendaryBundle,items,item,,,Q6 Legendary Tribe Winchester Rif
 
 quest_WhiteRiverCitizen0_name,Quest,Quest Info,,,"Wild West Startpoint",,,,,,,,,,,,,
 quest_WhiteRiverCitizen0_subtitle,Quest,Quest Info,,,"Wild West Startpoint",,,,,,,,,,,,,
-quest_WhiteRiverCitizen0_description,Quest,Quest Info,,,"Welcome Settler!\n\nUnable to navigate through a heavy fog and a strange blood red sky, your ship has crashed into rocks and the vessel upturned. The island you have stumbled upon is fraught with danger. Prepare yourself for....\n\nThe Wild West.",,,,,,,,,,,,,
-quest_WhiteRiverCitizen0_description_title,Journal Tip,,,,Wild West,,,,,,,,,,,,,
+quest_WhiteRiverCitizen0_description,Quest,Quest Info,,,"Welcome Settler!\n\nUnable to navigate through a heavy fog and a strange blood red sky, your ship has crashed into rocks and the vessel upturned. The island you have stumbled upon is fraught with danger. Prepare yourself for....\n\nThe Wild West Mod.",,,,,,,,,,,,,
+quest_WhiteRiverCitizen0_description_title,Journal Tip,,,,Wild West Mod,,,,,,,,,,,,,
 WildWestStarterKit,items,item,,,Settler Starter Kit,,,,,,,,,,,,,
 WildWestStarterKitDesc,items,item,,,This Settler Starter Kit provides a few items to ease you back into the Wild West.,,,,,,,,,,,,,
 
@@ -1137,8 +1137,8 @@ foodApplePie,items,Food,,,Apple Pie,,,,,,,,,,,,,
 foodApplePieDesc,items,Food,,,"Apples can be fed to trained horses to revitalise them, but not this time. Apples can be harvested from trees and sometimes found in loot.",,,,,,,,,,,,,
 foodHoneyApple,items,Food,,,Honey Apple,,,,,,,,,,,,,
 foodHoneyAppleDesc,items,Food,,,"Apples can be fed to trained horses to revitalise them, but this one is all yours. Cures 1% infection. Apples can be harvested from trees and sometimes found in loot.",,,,,,,,,,,,,
-drinkYuccaJuiceCooler,items,Food,,,Yucca Juice Cooler,,,,,,,,,,,,,
-drinkYuccaJuiceCoolerDesc,items,Food,,,"Yucca Juice Cooler helps you resist the heat of the desert.\n\nHeat Resistance +30 for 15 minutes.",,,,,,,,,,,,,
+drinkYuccaJuiceCooler,items,Food,,,Yucca Juice Storm Breaker,,,,,,,,,,,,,
+drinkYuccaJuiceCoolerDesc,items,Food,,,"Yucca Juice Storm Breaker helps you resist storms.\n\nStorm Resistance for 15 minutes.",,,,,,,,,,,,,
 
 foodT3-2,progression,Attribute,,,Tier 3: Hobo Stew & Super Corn Meat Stew,,,,,,,,,,,,,
 

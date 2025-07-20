@@ -317,7 +317,7 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffYuccaJuiceCoolerDuration" operation="set" value="0"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="HyperthermalResist" operation="base_add" value="30"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurnt_Storm,buffDesert_Storm,buffSnow_Storm,buffWasteland_Storm"/>
 		</effect_group>
 	</buff>
 		
