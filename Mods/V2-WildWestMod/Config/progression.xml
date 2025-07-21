@@ -350,27 +350,24 @@
 		<!-- *** CLUB_SKILLS -->
 	<crafting_skill name="craftingClubs" max_level="75" parent="attCrafting" name_key="craftingClubsName" desc_key="craftingClubsDesc" long_desc_key="craftingClubsLongDesc" icon="ui_game_symbol_club">
 
-		<display_entry item="meleeWpnClubT0WoodenClub" unlock_level="1,2,4,6,8,10" />
-		<display_entry item="meleeWpnClubT0Ladle" unlock_level="1,2,4,6,8,10" />
-		<display_entry item="meleeWpnClubT1BaseballBat" unlock_level="11,15,20,25,30,35" />
-		<display_entry item="meleeWpnClubT1OldPan" unlock_level="11,15,20,25,30,35" />
-		<display_entry item="meleeWpnClubT3SteelClub" unlock_level="36,43,51,59,67,75" />
-		<display_entry item="meleeWpnClubT3Skillet" unlock_level="36,43,51,59,67,75" />
+		<display_entry item="meleeWpnClubT0WoodenClub" unlock_level="1,2,4,6,8,10">
+			<unlock_entry item="meleeWpnClubT0Ladle" unlock_tier="1"/>
+		</display_entry>
+		<display_entry item="meleeWpnClubT1BaseballBat" unlock_level="11,15,20,25,30,35">
+			<unlock_entry item="meleeWpnClubT1OldPan" unlock_tier="1"/>
+		</display_entry>
+		<display_entry item="meleeWpnClubT3SteelClub" unlock_level="36,43,51,59,67,75">
+			<unlock_entry item="meleeWpnClubT3Skillet" unlock_tier="1"/>
+		</display_entry>
 
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnClubT0WoodenClub"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnClubT0Ladle"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnClubT1BaseballBat"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnClubT1OldPan"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="meleeWpnClubT3SteelClub"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="meleeWpnClubT3Skillet"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,75" value="1" tags="meleeWpnClubT0WoodenClub,meleeWpnClubT0Ladle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,75" value="1" tags="meleeWpnClubT1BaseballBat,meleeWpnClubT1OldPan"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="meleeWpnClubT3SteelClub,meleeWpnClubT3Skillet"/>
 
-			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnClubT0WoodenClub"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnClubT0Ladle"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnClubT1BaseballBat"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnClubT1OldPan"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="meleeWpnClubT3SteelClub"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="meleeWpnClubT3Skillet"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,75" value="1,2,3,4,5,5" tags="meleeWpnClubT0WoodenClub,meleeWpnClubT0Ladle"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="15,20,25,30,35,75" value="1,2,3,4,5,5" tags="meleeWpnClubT1BaseballBat,meleeWpnClubT1OldPan"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="meleeWpnClubT3SteelClub,meleeWpnClubT3Skillet"/>
 		</effect_group>
 	</crafting_skill>
 
