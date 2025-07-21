@@ -1687,12 +1687,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	</effect_group>
 </recipe--> <!-- trap -->
 
-<recipe name="cntRainDanceCatcher" count="1" craft_time="60">
-	<!-- <ingredient name="resourceWaterFilter" count="1"/> -->
+<recipe name="cntRainDanceCatcher" count="1" craft_time="30" tags="packMuleCrafting">
 	<ingredient name="resourceLeather" count="10"/>
-	<ingredient name="resourceMetalPipe" count="1"/>
+	<ingredient name="resourceMetalPipe" count="3"/>
 	<ingredient name="resourceWood" count="10"/>
 	<ingredient name="resourceScrapIron" count="10"/>
+	<ingredient name="resourceScrapPolymers" count="25"/>
 </recipe>
 <!--recipe name="cntDewCollector" count="1" tags="learnable,workbenchCrafting"-->
 	<!-- <ingredient name="resourceWaterFilter" count="1"/> -->
@@ -5230,6 +5230,14 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 		<ingredient name="foodRawMeat" count="1"/>
 		<ingredient name="resourceRope" count="1"/>
 		<ingredient name="resourceHook" count="2"/>
+	</recipe>
+	
+	<recipe name="cntFishTrapWaterCollector" count="1" tags="workbenchCrafting,packMuleCrafting">
+		<ingredient name="resourceLeather" count="10"/>
+		<ingredient name="resourceMetalPipe" count="3"/>
+		<ingredient name="resourceWood" count="10"/>
+		<ingredient name="resourceScrapIron" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="25"/>
 	</recipe>
 	
 <recipe name="foodCampfireBeans" count="1" craft_time="36" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
