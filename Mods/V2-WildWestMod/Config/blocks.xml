@@ -2309,6 +2309,7 @@
 		<drop event="Harvest" name="resourceRawDiamond" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceSilverNugget" prob=".02" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceGoldNugget" prob=".014" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+		<property name="Tags" value="ore,deepOre"/>
 	</block>	
   <!-- bluerock -->
     <block name="lightblueRock">
@@ -2338,6 +2339,7 @@
 		<drop event="Harvest" name="resourceRawDiamond" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceSilverNugget" prob=".02" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceGoldNugget" prob=".014" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+		<property name="Tags" value="ore,deepOre"/>
 	</block>
 	
 <!-- blackrock1 -->
@@ -2368,6 +2370,7 @@
 		<drop event="Harvest" name="resourceRawDiamond" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceSilverNugget" prob=".02" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceGoldNugget" prob=".014" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+		<property name="Tags" value="ore,deepOre"/>
 	</block>	
 
 <!-- blackrock2 -->
@@ -2398,6 +2401,7 @@
 		<drop event="Harvest" name="resourceRawDiamond" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceSilverNugget" prob=".02" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 		<drop event="Harvest" name="resourceGoldNugget" prob=".014" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+		<property name="Tags" value="ore,deepOre"/>
 	</block>
 	
 	 <block name="RockRespawner">

@@ -20,8 +20,8 @@
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
 		animalHorseKiller, .05
-		zombieSkateboarderUndertakerRadiated, .025
 		zombieWightFeralGunslinger, .025
+		zombieSkateboarderUndertakerRadiated, .01
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForestNight']/text()" delim="\n" op="add" >
@@ -30,35 +30,35 @@
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
 		animalHorseKiller, .05
-		zombieSkateboarderUndertakerRadiated, .025
-		zombieWightFeralGunslinger, .025	
+		zombieWightFeralGunslinger, .025
+		zombieSkateboarderUndertakerRadiated, .01	
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_DESERT_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesert']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .1
-		zombieSkateboarderUndertakerRadiated, .1
 		zombieWightRadiatedGunslinger, .05
+		zombieSkateboarderUndertakerRadiated, .025
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .15
-		zombieSkateboarderUndertakerRadiated, .15
 		zombieWightRadiatedGunslinger, .075
+		zombieSkateboarderUndertakerRadiated, .035
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_SNOW_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnow']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .1
-		zombieSkateboarderUndertakerRadiated, .1
-		zombieWightChargedGunslinger, .05
+		zombieWightChargedGunslinger, .075
+		zombieSkateboarderUndertakerRadiated, .05
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_SNOW_GROUP_NIGHT -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .15
-		zombieSkateboarderUndertakerRadiated, .15
 		zombieWightChargedGunslinger, .075
+		zombieSkateboarderUndertakerRadiated, .05
 	</csv>
 
 <!-- *** BIOME_ZOMBIES_WASTELAND_GROUP -->
@@ -80,7 +80,8 @@
 		zombieTheRatRadiated, .6
 		zombieSpiderRadiated
 		zombieFemaleFatBarker, .8		
-		zombieFemaleBigFatBarker, .5
+		zombieFemaleBigFatBarker, .75
+		zombieWightInfernalGunslinger, .75
 		guppyVultureBurnt, 1.2
 		guppyMommaVultureBurnt, .8
 		guppyRadiatedMommaVultureBurnt, .5
@@ -88,7 +89,6 @@
 		guppyRadiatedFireMommaVultureBurnt, .5
 		zombieSpiderFeralFireGlider, .5
 		zombieSkateboarderUndertakerRadiated, .5
-		zombieWightInfernalGunslinger, .5
 	</set>
 	
 <!-- *** BIOME_ZOMBIES_WASTELAND_NIGHT_GROUP -->
@@ -110,7 +110,8 @@
 		zombieTheRatRadiated, .6
 		zombieSpiderRadiated
 		zombieFemaleFatBarker, 1.5		
-		zombieFemaleBigFatBarker, 1
+		zombieFemaleBigFatBarker, 1.25
+		zombieWightInfernalGunslinger, 1.25
 		guppyVultureBurnt, 1.2
 		guppyMommaVultureBurnt, .8
 		guppyRadiatedMommaVultureBurnt, .5
@@ -118,7 +119,6 @@
 		guppyRadiatedFireMommaVultureBurnt, .5
 		zombieSpiderFeralFireGlider, .5
 		zombieSkateboarderUndertakerRadiated, .5
-		zombieWightInfernalGunslinger, .5
 	</set>
 	
 <!-- *** INTEGRATION FOR ANIMALS -->
@@ -156,7 +156,7 @@
 		animalBisonBear, .75
 		guppyVultureBurnt, 12
 		animalScorpion, 12
-		animalDireWolf, 2
+		animalDireWolf, 3
 	</csv>
 	
 <!-- *** DESERT ANIMALS NIGHT -->
@@ -166,7 +166,7 @@
 		animalBisonBear, .75
 		guppyVultureBurnt, 12
 		animalScorpion, 12
-		animalDireWolf, 4
+		animalDireWolf, 5
 	</csv>
 	
 <!-- *** SNOW ANIMALS -->	
