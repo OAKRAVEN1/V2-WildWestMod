@@ -415,17 +415,18 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <!-- resourceGreenPowder -->	
 <recipe name="resourceGreenPowder" count="1" craft_time="10" craft_area="chemistryStation" tags="chemStationCrafting">
-	<ingredient name="resourceGreenCrystal" count="2"/>
+	<ingredient name="resourceGreenCrystal" count="1"/>
 	<ingredient name="resourceBlueCrystal" count="1"/>
-	<ingredient name="resourceAcid" count="3"/>
-	<ingredient name="resourceGunPowder" count="4"/>
+	<ingredient name="resourceAcid" count="1"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="12"/>
+	<ingredient name="resourceCoal" count="12"/>
 </recipe>
 
 <!-- Green Crystal Ammo -->
 <recipe name="ammo9mmGreenCrystal" count="6" craft_time="1" craft_area="Ammobench" tags="workbenchCrafting">
 	<ingredient name="resourceGreenPowder" count="1"/>
-	<ingredient name="resourceBulletTip" count="1"/>
-	<ingredient name="resourceBulletCasing" count="1"/>
+	<ingredient name="resourceBulletTip" count="6"/>
+	<ingredient name="resourceBulletCasing" count="6"/>
 </recipe>
 
 <!--recipe name="ammoDartIron" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
