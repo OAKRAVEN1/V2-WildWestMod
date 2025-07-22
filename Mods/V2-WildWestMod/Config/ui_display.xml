@@ -94,6 +94,14 @@
 		<item_display_info display_type="modArmorSpeedWWM" display_group="modAttire" >
 			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
 		</item_display_info>
+		
+		<!-- *** AMMO -->
+		<item_display_info display_type="ammo9mmGreenCrystal" display_group="groupAmmo">
+			<display_entry name="EntityDamage" display_type="Decimal1" title_key="statEntityDamageRanged" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+			<display_entry name="BlockDamage" display_type="Decimal1" title_key="statBlockDamage" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+			<display_entry name="dEntityDamageFire" title_key="statEntityDamageFire"/>
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+		</item_display_info>
 	
 	</append>
 	
