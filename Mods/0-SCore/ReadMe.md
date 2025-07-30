@@ -32,6 +32,140 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 
 [ Change Log ]
+Version: 2.1.18.1319
+	[ Triggered Event Hooks Up ]
+		- Added OnSelfItemScrap support
+			<triggered_effect trigger="onSelfScrapItem" action="LogMessage" message="LBD DEBUG: Crafting Harvesting ">
+				<requirement name="ItemHasTags" tags="miningTool,toolAxe,toolShovel"/>
+			</triggered_effect>
+
+		- Renamed onRecipeCrafted to onSelfCraftedRecipe
+			- This is the same as OnRecipeCrafted, but just named better.
+
+		- Added to the onSelfItemRepair to include two Meta data's "DamageAmount" and "PercentDamaged". 
+			This is how much the item was used before the repair was started.
+
+		- Added two cvars for OnSelfItemBought / onSelfItemSold that tracks the current value and the previous value.
+			_item_value is the current value sold
+			_last_item_value is the previous value sold.
+
+	[ OnRecipeCrafted ]
+		- Fixed an issue when the craft area was empty.
+
+	[ Buffs ]
+		- New Requirements: ( shaking up the format )
+		- ItemHasProperty
+			<!-- Returns true if the item has a property called UnlockedBy, with a value of craftingHarvestingTools" -->
+			<requirement name="ItemHasProperty, SCore" property="UnlockedBy" prop_value="craftingHarvestingTools" />
+
+			<!-- Returns true if the item has a property called UnlockedBy, regradless of value. -->
+			<requirement name="ItemHasProperty, SCore" property="UnlockedBy" />
+
+		- ItemHasQuality
+			<requirement name="ItemHasQuality, SCore" operation="Equals" value="4"/>
+	
+		- ItemPercentDamaged
+			<!-- Returns true if the usage is greater than 50% -->
+			<requirement name="ItemPercentDamaged, SCore" operation="GTE" value="0.5"/>
+
+		- BlockHasDestroyTags
+			<!-- returns true if the active block is called plantedGraceCorn1 -->
+			<!-- This supports comma delimited values, and *'s -->
+			<requirement name="BlockHasDestroyName, SCore" block_name="plantedGraceCorn1" />
+			<requirement name="BlockHasDestroyName, SCore" block_name="planted*,blockTree*" />
+	
+		- BlockHasName
+			<!-- true if the active block is called one of these things. -->
+ 			<requirement name="BlockHasName, SCore" block_name="DewCollector*,Workbench*,ChemistryStation*,CementMixer*" />
+
+		- RecipeHasIngredients
+			<!-- true if the ingredients match any of the current recipe -->
+  			<requirement name="RecipeHasIngredients, SCore" ingredients="planted*" />
+			<requirement name="RecipeHasIngredients, SCore" ingredients="plantedCotton1,plantedCoffee*" />
+
+	[ Quests ]
+		- ObjectiveRandomPOIGotoSDX 
+			- Fixed an issue where if multiple POIs were found, it would just take you somewhere random.
+
+	[ Fire Manager ]
+		- Removed the particle optimizer to see if ghost fires will disappear.
+
+	[ Blocks.xml ]
+		- Added missing .prefab for model for PathingBlocks
+	
+	[ SphereII Learn By Doing ]
+		- Completed CraftingSkills Learn by Doing.
+		- No balancing yet.
+		- Fixed a null reference
+
+Version: 2.1.13.1557
+	[ EntityAlive ]
+		- Added a Harmony patch to print all the Events being triggered on an EntityAlive.
+		- To activate, open console and type in:
+			setcvar $fireeventtracker <entityId>
+
+			setcvar $fireeventtracker 172
+
+		- To deactivate, setcvar $fireeventtracker 0
+	
+	[ Triggered Event Hook Ups ]
+		- Added the ability to add custom triggers in SCore. (Features/PassiveEffectHooks/)
+		- Added the following to the triggered events to support Learn by doing.
+			- onSelfLockpickSuccess
+				<!-- Also works with Locks modlet -->
+				<triggered_effect trigger="onSelfLockpickSuccess" action="LogMessage" message="Lock Pick successful">
+			- onSelfItemBought
+				<triggered_effect trigger="onSelfItemBought" action="LogMessage" message="Bought Something" />
+			- onSelfItemSold
+				<triggered_effect trigger="onSelfItemSold" action="LogMessage" message="Sold Something" />
+			- onSelfQuestComplete
+				<triggered_effect trigger="onSelfQuestComplete" action="LogMessage" message="Ques Complete" />
+			- onSelfItemCrafted
+				<!-- 
+					This will fire each time an item completes crafting. In the case of workstation,
+					it will fire when the player opens the workstation.
+				-->
+					
+				<triggered_effect trigger="onSelfItemCrafted" action="LogMessage" message="Item Was Crafted" />
+			- onSelfCraftedRecipe
+				<!-- Sets the CraftArea meta field to be used with the   RequirementRecipeCraftArea below -->
+				<!-- This will only fire if you have the workstation open -->
+				<triggered_effect trigger="onRecipeCrafted" action="LogMessage" message="Recipe Was Crafted" />
+			- onSelfItemRepaired
+				<triggered_effect trigger="onSelfItemRepaired" action="LogMessage" message="Item Was Repaired" />
+
+	[ Buff Requirements ]
+		- Added the following requirements for onSelfItemCrafted:
+			- RequirementRecipeCraftArea
+				<!-- The recipe has to come from one of these work stations -->
+				<requirement name="RequirementRecipeCraftArea, SCore" craft_area="forge,workstation,chemistryStation" />
+			
+	            <triggered_effect trigger="onRecipeCrafted" action="ModifyCVar" cvar="$attintellect_lbd_xp" operation="add" value="@($lbd_xp_attribute_synergy_base)">
+    	            <requirement name="RequirementRecipeCraftArea, SCore" craft_area="forge,workstation,chemistryStation"/>
+        	        <requirement name="NotHasBuff" buff="buffLBD_attIntellect_XPCoolDown"/>
+	            </triggered_effect>
+
+			- RequirementRecipeHasLongCraftTime
+				<!-- The crafting time must be longer than 100 seconds -->
+				 <requirement name="RequirementRecipeHasLongCraftTime, SCore" operation="GTE" value="100" />
+
+		        <triggered_effect trigger="onSelfItemCrafted" action="ModifyCVar" cvar="$perkmasterchef_lbd_xp" operation="add" value="@$lbd_xp_masterchef_longcraft_bonus">
+        	        <requirement name="RequirementRecipeHasLongCraftTime, SCore" operation="GTE" value="60" />
+            	    <requirement name="NotHasBuff" buff="buffLBD_perkMasterChef_XPCoolDown"/>
+            	</triggered_effect>
+
+			- RequirementRecipeHasTags
+				<requirement name="RequirementRecipeHasTags, SCore" tags="perkGreaseMonkey" />
+           		<triggered_effect trigger="onSelfItemCrafted" action="ModifyCVar" cvar="$attintellect_lbd_xp" operation="add" value="@($lbd_xp_attribute_synergy_base)">
+                	<requirement name="RequirementRecipeHasTags, SCore" tags="perkGreaseMonkey"/>
+                	<requirement name="NotHasBuff" buff="buffLBD_attIntellect_XPCoolDown"/>
+            	</triggered_effect>
+
+	[ SphereII Learn By Doing ]
+		- Completed initial work on adding learn by doing for each attribute / perk.
+		- Added documentation for Learn by Doing
+		- Added Decay mechanic, where skills will decay if you don't use them.
+
 Version: 2.1.9.1904
 	[ Requirements ]
 		- Fixed an issue where BlockhasHarvestTags was not working
