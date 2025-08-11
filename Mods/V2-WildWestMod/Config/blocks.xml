@@ -4173,7 +4173,7 @@
 
 	<!-- *** PLAYER_LOCKED_WRITABLE_IRON_DROP_BOX_CRATE_0-SCORE -->
 		<block name="cntIronWWMDropBox">
-			<property name="CustomIcon" value="cntIronWritableCrate"/>
+			<property name="CustomIcon" value="cntIronWWMDropBox"/>
             <property name="Class" value="DropBoxContainer, SCore"/>
 			<property name="CreativeMode" value="Player"/>
 			<property name="Class" value="CompositeTileEntity"/>
@@ -4182,18 +4182,18 @@
 					<property name="LootList" value="playerSteelWritableStorage"/>
 				</property>
 				<property class="TEFeatureLockable"/>
-				<property class="TEFeatureSignable">
+				<!--property class="TEFeatureSignable">
 					<property name="FontSize" value="90"/>
 					<property name="LineCount" value="3"/>
 					<property name="LineWidth" value="0.55"/>
-				</property>
+				</property-->
 			</property>
 
 			<property name="DescriptionKey" value="cntIronWWMDropBoxDesc"/>
             <property name="DropBox" value="true" />
 			<property name="Material" value="Mmetal"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="@:Entities/LootContainers/ironWritableCratePrefab.prefab"/>
+			<property name="Model" value="#@modfolder:Resources/NewDropBags.unity3d?DropCrate"/>
 			<property name="WaterFlow" value="permitted"/>
 			<property name="Path" value="solid"/>
 			<property name="Place" value="TowardsPlacerInverted"/>

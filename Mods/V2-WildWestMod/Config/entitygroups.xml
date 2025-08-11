@@ -3,14 +3,15 @@
 <!-- *** BIOME_GROUPS -->
 	<!-- *** BIOME_ALL_ZOMBIES_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add" >
-		zombieSpiderFeralFireGlider, .05
-		zombieSkateboarderUndertakerRadiated, .05
+		zombieSpiderFeralFireGlider, .025
+		zombieSkateboarderUndertakerRadiated, .025
 	</csv>
 
 	<!-- *** BIOME_ZOMBIES_NIGHT_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .1
 		zombieSkateboarderUndertakerRadiated, .085
+		zombieOakBigFoot, .085
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_BURNT_FOREST_GROUP -->
@@ -21,17 +22,20 @@
 		zombieTheRatRadiated, .05
 		animalHorseKiller, .05
 		zombieWightFeralGunslinger, .05
-		zombieSkateboarderUndertakerRadiated, .01
+		zombieSkateboarderUndertakerRadiated, .025
+		zombieOakBigFoot, .015
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForestNight']/text()" delim="\n" op="add" >
 		zombieTheRat, .1
 		zombieSpiderFeralFireGlider, .1
 		zombieTheRatFeral, .075
+		zombieWightFeralGunslinger, .075
 		zombieTheRatRadiated, .05
 		animalHorseKiller, .05
-		zombieWightFeralGunslinger, .05
-		zombieSkateboarderUndertakerRadiated, .01	
+		zombieSkateboarderUndertakerRadiated, .05
+		zombieOakBigFoot, .025
+		zombieOakBigFootInfernal, .015		
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_DESERT_GROUP -->
@@ -39,12 +43,14 @@
 		zombieSpiderFeralFireGlider, .1
 		zombieWightRadiatedGunslinger, .075
 		zombieSkateboarderUndertakerRadiated, .025
+		zombieOakBigFootInfernal, .025
 	</csv>
 	
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .15
-		zombieWightRadiatedGunslinger, .1
+		zombieWightRadiatedGunslinger, .125
 		zombieSkateboarderUndertakerRadiated, .05
+		zombieOakBigFootInfernal, .05
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_SNOW_GROUP -->
@@ -52,13 +58,15 @@
 		zombieSpiderFeralFireGlider, .1
 		zombieWightChargedGunslinger, .075
 		zombieSkateboarderUndertakerRadiated, .05
+		zombieOakBigFootSnow, .05
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_SNOW_GROUP_NIGHT -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']/text()" delim="\n" op="add" >
 		zombieSpiderFeralFireGlider, .15
-		zombieWightChargedGunslinger, .1
+		zombieWightChargedGunslinger, .125
 		zombieSkateboarderUndertakerRadiated, .05
+		zombieOakBigFootSnow, .05
 	</csv>
 
 <!-- *** BIOME_ZOMBIES_WASTELAND_GROUP -->
@@ -70,6 +78,7 @@
 		zombieSoldierRadiated
 		zombieTheRat, 2
 		zombieTheRatFeral, .8
+		zombieWightInfernalGunslinger, .8
 		zombieBusinessManRadiatedGunslinger, .8
 		zombieBusinessManChargedGunslinger, .5
 		zombieBusinessManInfernalGunslinger, .25
@@ -81,7 +90,6 @@
 		zombieSpiderRadiated
 		zombieFemaleFatBarker, .8		
 		zombieFemaleBigFatBarker, .75
-		zombieWightInfernalGunslinger, .75
 		guppyVultureBurnt, 1.2
 		guppyMommaVultureBurnt, .8
 		guppyRadiatedMommaVultureBurnt, .5
@@ -89,6 +97,10 @@
 		guppyRadiatedFireMommaVultureBurnt, .5
 		zombieSpiderFeralFireGlider, .5
 		zombieSkateboarderUndertakerRadiated, .5
+		zombieOakBigFoot, .5
+		zombieOakBigFootSnow, .5
+		zombieOakBigFootInfernal, .5		
+		zombieOakBigFootCharged, .5
 	</set>
 	
 <!-- *** BIOME_ZOMBIES_WASTELAND_NIGHT_GROUP -->
@@ -99,6 +111,7 @@
 		zombieSoldierFeral, 1.5
 		zombieSoldierRadiated
 		zombieTheRat, 3
+		zombieWightInfernalGunslinger, 1.5
 		zombieBusinessManRadiatedGunslinger, .8
 		zombieBusinessManChargedGunslinger, .5
 		zombieBusinessManInfernalGunslinger, .25
@@ -111,7 +124,6 @@
 		zombieSpiderRadiated
 		zombieFemaleFatBarker, 1.5		
 		zombieFemaleBigFatBarker, 1.25
-		zombieWightInfernalGunslinger, 1.25
 		guppyVultureBurnt, 1.2
 		guppyMommaVultureBurnt, .8
 		guppyRadiatedMommaVultureBurnt, .5
@@ -119,6 +131,10 @@
 		guppyRadiatedFireMommaVultureBurnt, .5
 		zombieSpiderFeralFireGlider, .5
 		zombieSkateboarderUndertakerRadiated, .5
+		zombieOakBigFoot, .5
+		zombieOakBigFootSnow, .5
+		zombieOakBigFootInfernal, .5		
+		zombieOakBigFootCharged, .5
 	</set>
 	
 <!-- *** INTEGRATION FOR ANIMALS -->
@@ -668,6 +684,10 @@
 		zombieTheRatRadiated, .25
 		zombieSpiderFeralFireGlider, .15
 		zombieSkateboarderUndertakerRadiated, .15
+		zombieOakBigFoot, .075
+		zombieOakBigFootSnow, .075
+		zombieOakBigFootInfernal, .075		
+		zombieOakBigFootCharged, .075
 	</csv>
 	
  <!-- First Crispy Family-->	

@@ -3317,6 +3317,163 @@
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
 </entity_class>
+
+<!-- BIGFOOT -->
+
+		<!-- *** ZOMBIE_OAK_BIG_FOOT -->	
+<entity_class name="zombieOakBigFoot" extends="zombieFatCop">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Censor" value="1,2"/>
+	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Mesh" value="#@modfolder:Resources/bigfoot.unity3d?bigfoot.prefab"/>
+	<property name="SoundStepType" value="barehvystep"/>
+	<property name="SizeScale" value="1"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="2"/>
+
+	<!-- Dismemberment -->
+	<property name ="DismemberTag_L_HeadGore" value=""/>
+	<property name ="DismemberTag_L_LeftLowerArmGore" value=""/>
+	<property name ="DismemberTag_L_LeftUpperArmGore" value=""/>
+	<property name ="DismemberTag_L_LeftUpperLegGore" value=""/>
+	<property name ="DismemberTag_L_RightLowerArmGore" value=""/>
+	<property name ="DismemberTag_L_RightUpperArmGore" value=""/>
+	<property name ="DismemberTag_L_RightUpperLegGore" value=""/>
+	<property name ="DismemberTag_L_LeftLowerLegGore" value=""/>
+	<property name ="DismemberTag_L_RightLowerLegGore" value=""/>
+
+	<property name="AITask" value="
+	BreakBlock|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=4;duration=3;minRange=1;maxRange=6;unreachableRange=18|
+	DestroyArea|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachSpot|
+	Look|
+	Wander|
+	"/>
+
+	<property name="SoundRandom" value="zombie_mutated_roam"/>
+	<property name="SoundAlert" value="zombie_mutated_alert"/>
+	<property name="SoundAttack" value="zombie_mutated_attack"/>
+	<property name="SoundHurt" value="zombie_mutated_pain"/>
+	<property name="SoundDeath" value="zombie_mutated_death"/>
+	<property name="SoundSense" value="zombie_mutated_sense"/>
+
+	<!-- Gameplay zombieMutated -->
+	<property name="HandItem" value="meleeHandZombieOakBigFoot"/>
+	<property name="ExplodeHealthThreshold" value="0"/>
+	<property name="MoveSpeed" value=".5"/>
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- Fit Feral -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="2000"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value=".3"/> <!-- Demo -->
+	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5,10"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,5"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,5"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
+
+    <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1500"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="2"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group>
+</entity_class>	
+
+<entity_class name="zombieOakBigFootSnow" extends="zombieOakBigFoot">
+    <property name="UserSpawnType" value="Menu"/>
+    <property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+    <property name="Mesh" value="#@modfolder:Resources/bigfoot.unity3d?bigfootsnow"/>
+    <property name="SoundRandom" value="zombielumberjack_roam"/>
+    <property name="SoundAlert" value="zombielumberjack_alert"/>
+    <property name="SoundAttack" value="zombielumberjack_attack"/>
+    <property name="SoundHurt" value="zombielumberjack_pain"/>
+    <property name="SoundDeath" value="zombielumberjack_death"/>
+    <property name="SoundSense" value="zombielumberjack_sense"/>
+    <property name="SoundFootstepModifier" value="zombielumberjack_footstep"/>
+	<property name="HandItem" value="meleeHandZombieOakBigFootSnow"/>
+	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5,10"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,5"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,5"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
+
+    <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="1500"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="2"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group>        
+</entity_class>
+
+<entity_class name="zombieOakBigFootCharged" extends="zombieOakBigFoot">
+    <property name="UserSpawnType" value="Menu"/>
+    <property name="Tags" value="entity,zombie,walker,charged"/>
+    <property name="Mesh" value="#@modfolder:Resources/bigfoot.unity3d?bigfootblue"/>
+    <property name="SoundRandom" value="zombielumberjack_roam"/>
+    <property name="SoundAlert" value="zombielumberjack_alert"/>
+    <property name="SoundAttack" value="zombielumberjack_attack"/>
+    <property name="SoundHurt" value="zombielumberjack_pain"/>
+    <property name="SoundDeath" value="zombielumberjack_death"/>
+    <property name="SoundSense" value="zombielumberjack_sense"/>
+    <property name="SoundFootstepModifier" value="zombielumberjack_footstep"/>
+	<property name="HandItem" value="meleeHandZombieOakBigFootCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5,10"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,5"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,5"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
+
+    <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="2000"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="2"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group>        
+</entity_class>
+
+<entity_class name="zombieOakBigFootInfernal" extends="zombieOakBigFoot">
+    <property name="UserSpawnType" value="Menu"/>
+    <property name="Tags" value="entity,zombie,walker,infernal"/>
+    <property name="Mesh" value="#@modfolder:Resources/bigfoot.unity3d?bigfootorenge"/>
+    <property name="SoundRandom" value="zombielumberjack_roam"/>
+    <property name="SoundAlert" value="zombielumberjack_alert"/>
+    <property name="SoundAttack" value="zombielumberjack_attack"/>
+    <property name="SoundHurt" value="zombielumberjack_pain"/>
+    <property name="SoundDeath" value="zombielumberjack_death"/>
+    <property name="SoundSense" value="zombielumberjack_sense"/>
+    <property name="SoundFootstepModifier" value="zombielumberjack_footstep"/>
+	<property name="HandItem" value="meleeHandZombieOakBigFootInfernal"/>
+	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
+	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5,10"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2,5"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,5"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
+
+    <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="2000"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="2"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+    </effect_group>        
+</entity_class>
 			
 <!-- VEHICLES -->
 
