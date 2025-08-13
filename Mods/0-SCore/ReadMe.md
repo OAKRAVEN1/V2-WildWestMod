@@ -32,6 +32,40 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 
 [ Change Log ]
+Version: 2.2.12.1420
+	[ Requirements ]
+		- Added new CanPurchasePerk requirement to replace RequirementIsProgressionLocked.
+		- This seems to fire more accurately than the old one.
+			<requirement name="CanPurchasePerk, SCore" progression_name="attPerception" />
+
+	[ SphereII Learn By Doing ]
+		- Reordered Strength for logging to work
+		- Replace RequirementIsProgressionLocked with CanPurchasePerk
+			( Note: SCore version MUST be above 2.2.12 for this to work )
+
+	[ Shared Reading ]
+		- Fixed an issue where SharedReading gave more books than necessary. Maybe.
+
+Version: 2.2.11.825
+	[ Quest ]
+		- Fixed an issue with the ObjectiveFetchByTags not propagating Tags properly.
+			- Literally its only point, and it couldn't even do that.
+	
+	[ DegradeItemValue ]
+		- Added null check to itemvalue.
+
+	[ SphereII Learn By Doing ]
+		- Fixed a PackMule issue where the triggers were doubled up.
+		
+
+	[ SphereII Item Mod Degradation ]
+		- Added a testing modlet for item mod degradation
+		- Added special degradation for Helmet Light
+		- Added special degradation for Water Purifier
+
+	[ SphereII A Round World ]
+		- Moved Item Mod Degradation out into it's own modlet.
+
 Version: 2.2.10.953
 	[ Item Degradation ]
 		- Fixed an issue where a sound would play constantly.

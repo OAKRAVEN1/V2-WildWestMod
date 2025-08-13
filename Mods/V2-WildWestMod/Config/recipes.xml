@@ -5749,9 +5749,15 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceMechanicalParts" count="15"/>
 </recipe>
 
-<recipe name="resourceClayLumpBundle" count="1" craft_time="10" craft_exp_gain="0" tags="learnable,packMuleCrafting">
-	<ingredient name="resourceClayLump" count="6000"/>
-</recipe>
+	<recipe name="resourceCementMixerConcreteBundle" count="1" craft_time="1760" craft_area="cementMixer" tags="cementMixerCrafting">
+		<ingredient name="resourceCrushedSand" count="800"/>
+		<ingredient name="resourceRockSmall" count="800"/>
+		<ingredient name="resourceCement" count="800"/>
+	</recipe>
+
+	<recipe name="resourceClayLumpBundle" count="1" craft_time="10" craft_exp_gain="0" tags="learnable,packMuleCrafting">
+		<ingredient name="resourceClayLump" count="6000"/>
+	</recipe>
 
 	<recipe name="resourceSeasonedWoodLogs" count="1" tags="packMuleCrafting">
 		<ingredient name="resourceWood" count="30"/>
