@@ -672,8 +672,8 @@
 	<property name="OpenSound" value="open_workbench"/>
 	<property name="CloseSound" value="close_workbench"/>
 	<property name="ConvertSound" value="bucketfill_water"/>
-	<property name="MinConvertTime" value="28800" /> <!-- 28800 = 8 Game Hours against default 21600 Game Seconds = 6 Game Hours -->
-	<property name="MaxConvertTime" value="43200" /> <!-- 43200 = 12 Game Hours against default 36000 Game Seconds = 10 Game Hours -->
+	<property name="MinConvertTime" value="21600"/> <!-- 21600 Game Seconds = 6 Game Hours -->
+	<property name="MaxConvertTime" value="36000"/> <!-- 36000 Game Seconds = 10 Game Hours -->
 	<property name="ConvertToItem" value="drinkJarRiverWater"/>
 	<property name="ModdedConvertToItem" value="drinkJarBoiledWater"/>
 	<property name="ModdedConvertSpeed" value="2"/>
@@ -684,7 +684,7 @@
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="MaxDamage" value="200"/>
-	<property name="HeatMapStrength" value="2"/>
+	<property name="HeatMapStrength" value=".8"/>
 	<property name="HeatMapTime" value="5000"/>
 	<property name="HeatMapFrequency" value="1000"/>
 	<property class="RepairItems">
@@ -890,6 +890,8 @@
 	    <property name="Group" value="Decor/Miscellaneous"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="MC_building,SC_loot,SC_electrical"/>
+	<property name="Tags" value="challenge_sinks"/>
+	<property name="IndexName" value="challenge_sinks"/>
 	</block>
 
 </append>	

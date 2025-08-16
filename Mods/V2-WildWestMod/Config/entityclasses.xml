@@ -346,14 +346,14 @@
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="DestroyArea"/>
 	<property name="AITask-3" value="Territorial"/>
-	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30"/>
+	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityBandit,0,EntityNPC,0"/>
 	<property name="AITask-5" value="ApproachSpot"/>
 	<property name="AITask-6" value="Look"/>
 	<property name="AITask-7" value="Wander"/>
 	<property name="AITask-8" value=""/>
 	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 	<property name="AITarget-2" value="BlockingTargetTask"/>
-	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0"/>
+	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityBandit,0,0,EntityNPC,0,0"/>
 	<property name="AITarget-4" value=""/>
 
 	<property name="SoundHurt" value=""/>
@@ -429,14 +429,14 @@
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=3"/>
 	<property name="AITask-3" value="Territorial"/>
-	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30"/>
+	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityBandit,0,EntityNPC,0"/>
 	<property name="AITask-5" value="ApproachSpot"/>
 	<property name="AITask-6" value="Look"/>
 	<property name="AITask-7" value="Wander"/>
 	<property name="AITask-8" value=""/>
 	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 	<property name="AITarget-2" value="BlockingTargetTask"/>
-	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0"/>
+	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityBandit,0,0,EntityNPC,0,0"/>
 	<property name="AITarget-4" value=""/>
 
 	<!-- Gameplay  -->
@@ -482,7 +482,7 @@
 	BreakBlock|
 	ApproachDistraction|
 	RangedAttackTarget itemType=1;cooldown=4;duration=5|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -629,7 +629,7 @@
 	ApproachDistraction|
 	RangedAttackTarget itemType=1;cooldown=4;duration=3;minRange=1;maxRange=6;unreachableRange=18|
 	DestroyArea|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -1014,7 +1014,7 @@
 	BreakBlock|
 	DestroyArea|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -1103,14 +1103,14 @@
 	<property name="AITask-1" value="BreakBlock"/>
     <property name="AITask-2" value="DestroyArea"/>
     <property name="AITask-3" value="Territorial"/>
-    <property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30"/>
+    <property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityBandit,0,EntityNPC,0"/>
     <property name="AITask-5" value="ApproachSpot"/>
     <property name="AITask-6" value="Look"/>
     <property name="AITask-7" value="Wander"/>
     <property name="AITask-8" value=""/>
     <property name="AITarget-1" value="SetAsTargetIfHurt"/>
     <property name="AITarget-2" value="BlockingTargetTask"/>
-    <property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0"/>
+    <property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityBandit,0,0,EntityNPC,0,0"/>
     <property name="AITarget-4" value=""/>
 
 	<property name="SoundRandom" value="Horseroam"/>
@@ -1172,7 +1172,7 @@
 	BreakBlock|
 	DestroyArea|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -1297,7 +1297,7 @@
 	DestroyArea|
 	Territorial|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -1354,7 +1354,7 @@
 	DestroyArea|
 	Territorial|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -1412,7 +1412,7 @@
 	DestroyArea|
 	Territorial|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -1980,7 +1980,7 @@
 	<property name="AITask-2" value="DestroyArea"/>
 	<property name="AITask-3" value="Territorial"/>
 	<property name="AITask-4" value="ApproachDistraction"/>
-	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,0,EntityNPC,0"/>
+	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,0,EntityBandit,0,EntityNPC,0"/>
 	<property name="AITask-6" value="ApproachSpot"/>
 	<property name="AITask-7" value="Look"/>
 	<property name="AITask-8" value="Wander"/>
@@ -2048,7 +2048,7 @@
 			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=5"/>	
 			<property name="AITask-3" value="Leap"/>
 			<property name="AITask-4" value="Territorial"/>
-			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityNPC,0"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityBandit,0,EntityNPC,0"/>
 			<property name="AITask-6" value="ApproachSpot"/>
 			<property name="AITask-7" value="Look"/>
 			<property name="AITask-8" value="Wander"/>
@@ -2056,7 +2056,7 @@
 			<property name="AITask-9" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,24,12,EntityNPC,0,0"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,24,12,EntityBandit,0,0,EntityNPC,0,0"/>
 			<property name="AITarget-4" value=""/>
 	
 			<property name="CanClimbVertical" value="true"/>
@@ -2173,14 +2173,14 @@
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="DestroyArea"/>
 	<property name="AITask-3" value="Territorial"/>
-	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30"/>
+	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityBandit,15,EntityNPC,15"/>
 	<property name="AITask-5" value="ApproachSpot"/>
 	<property name="AITask-6" value="Look"/>
 	<property name="AITask-7" value="Wander"/>
 	<property name="AITask-8" value=""/>
 	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 	<property name="AITarget-2" value="BlockingTargetTask"/>
-	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0"/>
+	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityBandit,0,0,EntityNPC,0,0"/>
 	<property name="AITarget-4" value=""/>
 
 	<property name="SoundHurt" value="Animals/Bear/bearpain"/>
@@ -2225,14 +2225,14 @@
 	<property name="AITask-2" value="DestroyArea"/>
 	<property name="AITask-3" value="Territorial"/>
 	<property name="AITask-4" value="ApproachDistraction"/>
-	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,0,EntityNPC,0"/>
+	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,0,EntityBandit,0,EntityNPC,0"/>
 	<property name="AITask-6" value="ApproachSpot"/>
 	<property name="AITask-7" value="Look"/>
 	<property name="AITask-8" value="Wander"/>
 	<property name="AITask-9" value=""/>
 	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 	<property name="AITarget-2" value="BlockingTargetTask"/>
-	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,18,13,EntityAnimalStag,0,0"/>
+	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,18,13,EntityAnimalStag,0,0,EntityBandit,0,0,EntityNPC,0,0"/>
 	<property name="AITarget-4" value=""/>
 
 	<!-- Gameplay  -->
@@ -2330,14 +2330,14 @@
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="DestroyArea"/>
 	<property name="AITask-3" value="Territorial"/>
-	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30"/>
+	<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,25,EntityZombie,30,EntityBandit,0,EntityNPC,0"/>
 	<property name="AITask-5" value="ApproachSpot"/>
 	<property name="AITask-6" value="Look"/>
 	<property name="AITask-7" value="Wander"/>
 	<property name="AITask-8" value=""/>
 	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 	<property name="AITarget-2" value="BlockingTargetTask"/>
-	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0"/>
+	<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,8,EntityAnimalStag,0,0,EntityZombie,0,0,EntityBandit,0,0,EntityNPC,0,0"/>
 	<property name="AITarget-4" value=""/>
 
 	<property name="SoundHurt" value=""/>
@@ -2387,7 +2387,7 @@
     BreakBlock|
     ApproachDistraction|
     RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
@@ -2430,7 +2430,7 @@
     BreakBlock|
     ApproachDistraction|
     RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
@@ -2474,7 +2474,7 @@
     BreakBlock|
     ApproachDistraction|
     RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
@@ -2532,8 +2532,8 @@
     <property name="AITask" value="
     BreakBlock|
     ApproachDistraction|
-    RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+    RangedAttackTarget itemType=1;cooldown=3;duration=6|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
@@ -2639,8 +2639,8 @@
     <property name="AITask" value="
     BreakBlock|
     ApproachDistraction|
-    RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+    RangedAttackTarget itemType=1;cooldown=3;duration=6|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
@@ -2778,7 +2778,7 @@
     BreakBlock|
     ApproachDistraction|
     RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
@@ -2816,12 +2816,12 @@
     BreakBlock|
     ApproachDistraction|
     RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
     "/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityBandit,200,200,EntityNPC,200,200"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="DismemberMultiplierHead" value=".2"/>
 			<property name="DismemberMultiplierArms" value=".2"/>
@@ -3048,7 +3048,7 @@
     BreakBlock|
     ApproachDistraction|
     RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
@@ -3103,7 +3103,7 @@
 	DestroyArea|
 	Territorial|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -3166,7 +3166,7 @@
 	DestroyArea|
 	Territorial|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -3229,7 +3229,7 @@
 	DestroyArea|
 	Territorial|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -3282,7 +3282,7 @@
 	BreakBlock|
 	ApproachDistraction|
 	RangedAttackTarget itemType=1;cooldown=4;duration=6|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
@@ -3347,7 +3347,7 @@
 	ApproachDistraction|
 	RangedAttackTarget itemType=1;cooldown=4;duration=3;minRange=1;maxRange=6;unreachableRange=18|
 	DestroyArea|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
 	ApproachSpot|
 	Look|
 	Wander|
