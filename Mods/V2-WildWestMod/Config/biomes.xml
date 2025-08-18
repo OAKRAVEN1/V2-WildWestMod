@@ -53,6 +53,7 @@
 	<!-- **** Wasteland: Main Biome -->
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- Subbiome -->
+	<remove xpath="//biome[@name='wasteland']/subbiome/decorations/decoration[@blockname='cntBarrelPlasticSingle45']"/>
 	<remove xpath="//biome[@name='wasteland']/subbiome/decorations/decoration[@blockname='cinderBlocks01']"/>
 	<remove xpath="//biome[@name='wasteland']/subbiome/decorations/decoration[@blockname='cinderBlocks02']"/>
 	<remove xpath="//biome[@name='wasteland']/subbiome/decorations/decoration[@blockname='cinderBlocks03']"/>
