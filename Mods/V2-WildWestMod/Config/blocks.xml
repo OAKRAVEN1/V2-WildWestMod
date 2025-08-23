@@ -303,6 +303,14 @@
 	<set xpath="/blocks/block[@name='cntCementMixerBustedRandomLootHelper']/property[@name='ModelOffset']/@value">0,0.5,0</set>	
 <!-- Wood Saw -->
 	<set xpath="/blocks/block[@name='tableSaw']/property[@name='Model']/@value">#@modfolder:Resources/CementMixer2.unity3d?TableSaw2</set>
+<!-- Toolbox, Rolling Tool Chest, and Cabinets -->
+	<set xpath="/blocks/block[@name='cntToolBoxOpenWhite']/property[@name='Model']/@value">#@modfolder:Resources/NewToolBoxs.unity3d?metalToolBoxEmptyOak</set>
+	<set xpath="/blocks/block[@name='cntToolBoxClosedWhite']/property[@name='Model']/@value">#@modfolder:Resources/NewToolBoxs.unity3d?metalToolBoxClosedOak</set>
+	<set xpath="/blocks/block[@name='cntToolBoxOffsetOpenWhite']/property[@name='Model']/@value">#@modfolder:Resources/NewToolBoxs.unity3d?metalToolBoxEmptyOak</set>
+	<set xpath="/blocks/block[@name='cntToolBoxOffsetClosedWhite']/property[@name='Model']/@value">#@modfolder:Resources/NewToolBoxs.unity3d?metalToolBoxClosedOak</set>
+	<set xpath="/blocks/block[@name='cntRollingToolBoxOpenWhite']/property[@name='Model']/@value">#@modfolder:Resources/NewToolBoxs.unity3d?OldFileCabinetopen</set>
+	<set xpath="/blocks/block[@name='cntRollingToolBoxClosedWhite']/property[@name='Model']/@value">#@modfolder:Resources/NewToolBoxs.unity3d?rollingToolChestClosedOak</set>
+	
 <!-- Decorative Logs Walls and Door -->
 	<set xpath="/blocks/block[@name='doorWoodLargeGate']/property[@name='MaxDamage']/@value">1000</set>
  	<append xpath="/blocks/block[@name='doorWoodLargeGate']/property[@name='Group']/@value">,Decor/Miscellaneous</append>

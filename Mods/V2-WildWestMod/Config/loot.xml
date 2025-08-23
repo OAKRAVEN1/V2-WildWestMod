@@ -11639,11 +11639,11 @@
 	
 	<lootgroup name="groupSluicebox" count="all">
 		<item group="Goldilocks" count="1"/>
-		<item group="groupRareToolsTiered" count="1"/>
+		<item group="groupToolsTiered" count="1"/>
 	</lootgroup>
 
 	<!-- sluice box -->
-	<lootcontainer name="sluicebox" count="2" size="1" sound_open="UseActions/open_toolchest" sound_close="UseActions/close_toolchest" loot_quality_template="qualBaseTemplate">
+	<lootcontainer name="sluicebox" count="1" size="1" sound_open="UseActions/open_toolchest" sound_close="UseActions/close_toolchest" loot_quality_template="qualBaseTemplate">
 		<item group="groupSluicebox"/>
 	</lootcontainer>
 

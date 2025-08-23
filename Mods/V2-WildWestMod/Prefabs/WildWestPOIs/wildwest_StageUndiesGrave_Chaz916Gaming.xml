@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+  <property name="CopyAirBlocks" value="True" />
+  <property name="ExcludeDistantPOIMesh" value="False" />
+  <property name="ExcludePOICulling" value="False" />
+  <property name="DistantPOIYOffset" value="0" />
+  <property name="AllowTopSoilDecorations" value="False" />
+  <property name="DifficultyTier" value="2" />
+  <property name="ShowQuestClearCount" value="1" />
+  <property name="Tags" value="oldwest" />
+  <property name="ThemeRepeatDistance" value="1000" />
+  <property name="QuestTags" value="clear, fetch, restore_power, infested" />
+  <property name="TraderArea" value="False" />
+  <property name="PrefabSize" value="25, 10, 50" />
+  <property name="RotationToFaceNorth" value="1" />
+  <property name="Zoning" value="none" />
+  <property name="YOffset" value="-2" />
+  <property name="SleeperVolumeSize" value="10, 4, 10#10, 4, 8#6, 4, 10#7, 3, 9#17, 4, 19#7, 4, 20" />
+  <property name="SleeperVolumeStart" value="8, 2, 10#8, 7, 10#12, 2, 20#6, 2, 22#3, 1, 31#1, 1, 1" />
+  <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0" />
+  <property name="SleeperVolumeGroup" value="GroupGhostTown,4,5,GroupGenericZombie,2,3,GroupGhostTown,5,6,GroupGenericZombie,4,5,GroupGenericZombie,4,6,ZomLumberJack,1,2" />
+  <property name="SleeperIsLootVolume" value="False,False,False,False,False,False" />
+  <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False" />
+  <property name="SleeperVolumeFlags" value="0,0,0,0,0,0" />
+  <property name="SleeperVolumeTriggeredBy" value=" # # # # # " />
+  <property class="IndexedBlockOffsets">
+    <property class="challenge_polymers">
+      <property name="0" value="9, 4, 14" />
+    </property>
+    <property class="quest_wood_trees">
+      <property name="0" value="7, 2, 6" />
+    </property>
+    <property class="TraderOnOff">
+      <property name="0" value="12, 2, 28" />
+    </property>
+    <property class="challenge_cars">
+      <property name="0" value="16, 2, 35" />
+    </property>
+    <property class="challenge_sinks">
+      <property name="0" value="16, 2, 14" />
+    </property>
+    <property class="FetchContainer">
+      <property name="0" value="16, 8, 12" />
+    </property>
+    <property class="QuestRestorePower">
+      <property name="0" value="11, 2, 27" />
+      <property name="1" value="5, 2, 28" />
+    </property>
+    <property class="challenge_mech_parts">
+      <property name="0" value="7, 2, 28" />
+    </property>
+    <property class="Rally">
+      <property name="0" value="21, 2, 15" />
+    </property>
+    <property class="challenge_steel">
+      <property name="0" value="16, 2, 16" />
+    </property>
+  </property>
+  <property class="Stats">
+    <property name="LightsVolume" value="7960.272" />
+    <property name="TotalVertices" value="385631" />
+    <property name="TotalTriangles" value="258565" />
+    <property class="BlockEntities">
+      <property name="Vertices" value="335946" />
+      <property name="Triangles" value="227137" />
+    </property>
+    <property class="ChunkMeshes0">
+      <property name="Vertices" value="44563" />
+      <property name="Triangles" value="24302" />
+    </property>
+    <property class="ChunkMeshes1">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes2">
+      <property name="Vertices" value="1638" />
+      <property name="Triangles" value="1222" />
+    </property>
+    <property class="ChunkMeshes3">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes4">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes5">
+      <property name="Vertices" value="3484" />
+      <property name="Triangles" value="5904" />
+    </property>
+  </property>
+</prefab>

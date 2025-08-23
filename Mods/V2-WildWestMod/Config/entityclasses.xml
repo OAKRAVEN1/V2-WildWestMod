@@ -151,7 +151,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Tags" value="entity,zombie,walker"/>
 	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse1"/>
-	<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	<property name="SoundRandom" value="zombiefemalescoutroam"/>
 	<property name="SoundAlert" value="zombiefemalescoutalert"/>
 	<property name="SoundAttack" value="zombiefemalescoutattack"/>
@@ -239,7 +239,7 @@
 	<property name="SizeScale" value="1.08"/>
 	<property name="Tags" value="entity,zombie,walker"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?OaksCowboyBiker"/>
-	<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	<property name="Mass" value="230"/>
 	<property name="WalkType" value="7"/>
 	<property name="PainResistPerHit" value=".75"/>
@@ -473,7 +473,7 @@
 	<property name="ModelType" value="Standard"/>
 	<property name="Mass" value="320"/>
 	<property name="Weight" value="70"/>
-	<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	<property name="RootMotion" value="true"/>
 	<property name="HasDeathAnim" value="true"/>
 	<property name="PushFactor" value="20"/>
@@ -740,7 +740,7 @@
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="7"/>
 	        <property name="Mass" value="130"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="RootMotion" value="true"/>
 	        <property name="HasDeathAnim" value="true"/>
 			
@@ -773,7 +773,7 @@
 	<property name="SoundDeath" value="zombiemale2death"/>
 	<property name="SoundSense" value="zombiemale2sense"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinKiller"/>
-	<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="SurfaceCategory" value="metal"/>
 	<property name="WalkType" value="2"/>
@@ -1159,7 +1159,7 @@
 	<property name="Class" value="EntityZombieCop"/>
 	<property name="Tags" value="entity,zombie,walker,boss"/>
 	<property name="Mesh" value="#@modfolder:Resources/windigo2.unity3d?WendigoOld5"/>
-	<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="2"/>
 	<property name="Mass" value="300"/>
@@ -1229,7 +1229,7 @@
             <property name="UserSpawnType" value="Menu"/>
             <property name="Tags" value="entity,zombie,walker,feral,radiated"/>
             <property name="Mesh" value="#@modfolder:Resources/windigo.unity3d?WendigoOld4"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
             <property name="ModelType" value="Standard"/>
             <property name="WalkType" value="2"/>
             <property name="Mass" value="230"/>
@@ -1277,7 +1277,7 @@
 	        <property name="UserSpawnType" value="Menu"/>
 	        <property name="Tags" value="entity,zombie,spider"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
 	        <property name="Mass" value="230"/>
@@ -1334,7 +1334,7 @@
 	        <property name="UserSpawnType" value="Menu"/>
 	        <property name="Tags" value="entity,zombie,feral,spider"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3Fad"/>   <!-- yes, Rat3Fad -->
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
 	        <property name="Mass" value="230"/>
@@ -1392,7 +1392,7 @@
 	        <property name="UserSpawnType" value="Menu"/>
 	        <property name="Tags" value="entity,zombie,feral,spider,radiated"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3Rad"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
 	        <property name="Mass" value="230"/>
@@ -1454,7 +1454,7 @@
 	        <property name="UserSpawnType" value="Menu"/>
 	        <property name="Tags" value="entity,zombie,walker"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="2"/>
 	        <property name="Mass" value="230"/>
@@ -1557,7 +1557,7 @@
 	        <property name="UserSpawnType" value="Menu"/>
 	        <property name="Tags" value="entity,zombie,walker"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?Nurse"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 			<property name="SoundRandom" value="zombiefemaleroam"/>
 			<property name="SoundAlert" value="zombiefemalealert"/>
 			<property name="SoundAttack" value="zombiefemaleattack"/>
@@ -2875,7 +2875,7 @@
             <property name="Mesh" value="#@modfolder:Resources/a20burntvulture.unity3d?gupBurnedVultureTeeth"/>
             <property name="ExperienceGain" value="300"/>
             <property name="DeadBodyHitPoints" value="200"/>
-			<property name="PhysicsBody" value="mixamoConvertedGuppyZombie"/>	
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedGuppyZombie"/>	
             <property name="Mass" value="35"/>
             <property name="Weight" value="80"/>
 			<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
@@ -2923,7 +2923,7 @@
             <property name="DeadBodyHitPoints" value="200"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<property name="LootDropProb" value=".35"/>
-			<property name="PhysicsBody" value="mixamoConvertedGuppyZombie"/>			
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedGuppyZombie"/>			
             <property name="Mass" value="70"/>
             <property name="Weight" value="80"/>
 			<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
@@ -2971,7 +2971,7 @@
             <property name="DeadBodyHitPoints" value="200"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<property name="LootDropProb" value=".5"/>
-			<property name="PhysicsBody" value="mixamoConvertedGuppyZombie"/>			
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedGuppyZombie"/>			
             <property name="Mass" value="70"/>
             <property name="Weight" value="80"/>
 			<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
@@ -3026,7 +3026,7 @@
             <property name="DeadBodyHitPoints" value="200"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<property name="LootDropProb" value=".5"/>
-			<property name="PhysicsBody" value="mixamoConvertedGuppyZombie"/>			
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedGuppyZombie"/>			
             <property name="Mass" value="70"/>
             <property name="Weight" value="80"/>
 			<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
@@ -3085,7 +3085,7 @@
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3Screamer"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="Mass" value="130"/>
 			<property name="LookAtAngle" value="0"/>
 	        <property name="RootMotion" value="true"/>
@@ -3148,7 +3148,7 @@
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3ScreamerFed"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="Mass" value="130"/>
 			<property name="LookAtAngle" value="0"/>
 	        <property name="RootMotion" value="true"/>
@@ -3211,7 +3211,7 @@
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3ScreamerRad"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
-			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="Mass" value="130"/>
 			<property name="LookAtAngle" value="0"/>
 	        <property name="RootMotion" value="true"/>
