@@ -846,7 +846,7 @@
 			<unlock_entry item="vehicleSteamHorsePlaceable" unlock_tier="1" />
 		</display_entry>
 		<display_entry icon="balloon1" name_key="vehiclesT5" has_quality="false" unlock_level="75" >
-			<unlock_entry item="vehicleBalloonPlaceable,vehicleBalloon2Placeable,vehicleBalloon3Placeable,vehicleBalloon4Placeable" unlock_tier="1" />
+			<unlock_entry item="vehicleBalloon2Placeable,vehicleBalloon3Placeable,vehicleBalloon4Placeable" unlock_tier="1" />
 		</display_entry>
 
 		<effect_group>
@@ -854,7 +854,7 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,75" value="1" tags="vehicleSteamVelocipedePlaceable,ammoGasCanBundle,resourceOil"/>
 			<!--passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,100" value="1" tags="vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,ammoGasCanBundle"/-->
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,75" value="1" tags="vehicleSteamHorsePlaceable"/> 
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75" value="1" tags="vehicleBalloonPlaceable,vehicleBalloon2Placeable,vehicleBalloon3Placeable,vehicleBalloon4Placeable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75" value="1" tags="vehicleBalloon2Placeable,vehicleBalloon3Placeable,vehicleBalloon4Placeable"/>
 
 		</effect_group>
 	</crafting_skill>

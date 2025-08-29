@@ -40,29 +40,37 @@
 	
 <!-- *** BIOME_ZOMBIES_DESERT_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesert']/text()" delim="\n" op="add" >
-		zombieSpiderFeralFireGlider, .1
-		zombieWightRadiatedGunslinger, .075
-		zombieSkateboarderUndertakerRadiated, .025
-		zombieOakBigFootInfernal, .025
-	</csv>
-	
-	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']/text()" delim="\n" op="add" >
-		zombieSpiderFeralFireGlider, .15
-		zombieWightRadiatedGunslinger, .125
+		zombieSoldierFeral, .25
+		zombieMaleHazmatFeral, .25
+		zombieMolotovSoldierFeral, .25
+		zombieSpiderFeralFireGlider, .125
+		zombieWightRadiatedGunslinger, .1
 		zombieSkateboarderUndertakerRadiated, .05
 		zombieOakBigFootInfernal, .05
 	</csv>
 	
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']/text()" delim="\n" op="add" >
+		zombieSoldierFeral, .25
+		zombieMaleHazmatFeral, .25
+		zombieMolotovSoldierFeral, .25
+		zombieSpiderFeralFireGlider, .15
+		zombieWightRadiatedGunslinger, .125
+		zombieSkateboarderUndertakerRadiated, .1
+		zombieOakBigFootInfernal, .1
+	</csv>
+	
 <!-- *** BIOME_ZOMBIES_SNOW_GROUP -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnow']/text()" delim="\n" op="add" >
-		zombieSpiderFeralFireGlider, .1
-		zombieWightChargedGunslinger, .075
+		zombieLumberjackFeral, .25
+		zombieSpiderFeralFireGlider, .125
+		zombieWightChargedGunslinger, .1
 		zombieSkateboarderUndertakerRadiated, .05
 		zombieOakBigFootSnow, .05
 	</csv>
 	
 <!-- *** BIOME_ZOMBIES_SNOW_GROUP_NIGHT -->
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']/text()" delim="\n" op="add" >
+		zombieLumberjackRadiatedAxe, .25
 		zombieSpiderFeralFireGlider, .15
 		zombieWightChargedGunslinger, .125
 		zombieSkateboarderUndertakerRadiated, .05

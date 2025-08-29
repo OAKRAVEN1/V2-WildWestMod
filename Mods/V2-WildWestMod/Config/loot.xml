@@ -5618,6 +5618,7 @@
 	<item group="groupDrinksCommon" loot_prob_template="med"/> <!-- Same -->
 	<item name="drinkCanMegaCrush" count="1" loot_prob_template="low"/> <!-- WW New -->
 	<item name="resourceAcid" count="1" loot_prob_template="low"/> <!-- WW New -->	
+	<item name="resourceSnowBall" count="2,4" loot_prob_template="veryLow"/> <!-- WW New -->
 </lootgroup>
 
 <lootgroup name="groupBeerCooler" count="all">
