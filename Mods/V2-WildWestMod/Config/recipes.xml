@@ -4670,6 +4670,17 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="drinkJarBoiledWater" count="1"/>
 	<ingredient name="resourceScrapIron" count="5"/>
 	</recipe>
+	
+	<recipe name="foodCanStock" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+		<ingredient name="resourceBone" count="6"/>
+		<ingredient name="foodCropPotato" count="2"/>
+		<ingredient name="foodCropPumpkin" count="1"/>
+		<ingredient name="foodCornMeal" count="1"/>
+		<ingredient name="foodCropMushrooms" count="6"/>	
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="resourceBone,foodCropMushrooms"/>
+		</effect_group>
+	</recipe>
 
 <!-- Oakraven's Wild West Lights and Piano -->
 

@@ -5713,7 +5713,7 @@
 	<effect_group name="vehicleBalloon" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="5"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
 	</effect_group>
 </item>
 
@@ -5732,7 +5732,7 @@
 	<effect_group name="vehicleBalloon" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="5"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
 	</effect_group>
 </item>
 
@@ -5751,7 +5751,7 @@
 	<effect_group name="vehicleBalloon" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="5"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="2500"/>
 	</effect_group>
 </item>
 
@@ -5908,9 +5908,9 @@
 	        <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	        <property name="Material" value="MresourceAcid"/>
 	        <property name="Weight" value="10"/>
-	        <property name="Stacknumber" value="100"/>
+	        <property name="Stacknumber" value="3000"/>
 			<property name="FuelValue" value="1000"/>
-	        <property name="EconomicValue" value="20"/>
+	        <property name="EconomicValue" value="15"/>
 <!--	        <property name="EconomicBundleSize" value="1"/> -->
 	        <property name="Group" value="Resources,Chemicals"/>
         </item>
@@ -5923,8 +5923,8 @@
 	        <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	        <property name="Material" value="MresourceAcid"/>
 	        <property name="Weight" value="10"/>
-	        <property name="Stacknumber" value="100"/>
-	        <property name="EconomicValue" value="20"/>
+	        <property name="Stacknumber" value="3000"/>
+	        <property name="EconomicValue" value="15"/>
 <!--	        <property name="EconomicBundleSize" value="1"/> -->
 	        <property name="Group" value="Resources,Chemicals"/>
         </item>
@@ -5937,8 +5937,8 @@
 	        <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 	        <property name="Material" value="MresourceAcid"/>
 	        <property name="Weight" value="10"/>
-	        <property name="Stacknumber" value="100"/>
-	        <property name="EconomicValue" value="20"/>
+	        <property name="Stacknumber" value="3000"/>
+	        <property name="EconomicValue" value="15"/>
 <!--	        <property name="EconomicBundleSize" value="1"/> -->
 	        <property name="Group" value="Resources,Chemicals"/>
        </item>
@@ -5948,8 +5948,8 @@
 			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mdirt"/>
-			<property name="Stacknumber" value="1000"/> <!-- STK resource -->
-			<property name="EconomicValue" value="20"/>
+			<property name="Stacknumber" value="3000"/> <!-- STK resource -->
+			<property name="EconomicValue" value="15"/>
 			<property name="EconomicBundleSize" value="10"/>
 			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
 		</item>

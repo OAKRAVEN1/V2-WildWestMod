@@ -3699,7 +3699,7 @@
 	<!-- *** THE_FIREMAN'S_ALMANAC_VOLUME_07_EQUIPMENT -->
 	<book name="perkFiremansAlmanacEquipment" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" name_key="bookFiremansAlmanacEquipment" desc_key="perkFiremansAlmanacEquipmentDesc" long_desc_key="perkFiremansAlmanacEquipmentLongDesc">
 		<effect_group>
-			<passive_effect name="VehicleSelfDamage" operation="perc_add" level="1" value="-.25" tags="vehicle"/>
+			<passive_effect name="VehicleSelfDamage" operation="perc_add" level="1" value="-.65" tags="vehicle"/> <!-- Default -25 -->
 		</effect_group>
 	</book>
 	<!-- *** 7/7 THE_FIREMAN'S_ALMANAC_COMPLETE -->
