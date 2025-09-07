@@ -3614,7 +3614,7 @@
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="organic"/>
 			<property name="IgnoreTrigger" value="true"/>
-			<property name="LootListAlive" value="vehicleGyrocopter"/>
+			<property name="LootListAlive" value="vehicleT3Horse"/>
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="Explosion.ParticleIndex" value="6"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>

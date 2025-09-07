@@ -3,6 +3,10 @@
 <!-- Steroids unlock all 60 Backpack slots for increased capacity -->
 	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@cvar='$encumbranceEffect'][@value='0.026']/@value">0.013</set>
 	<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity'][@operation='base_set']/@operation">base_add</set>
+
+    <!-- Change icons for Sprained Leg and Arm to look like sprains and not breaks with a match for healing icons -->
+	<set xpath="/buffs/buff[@name='buffLegSprained']/@icon">ui_game_symbol_sprained_ankle</set>
+	<set xpath="/buffs/buff[@name='buffArmSprained']/@icon">ui_game_symbol_sprained_wrist</set>
 	
 <!-- Oakraven Fish Traps - Thank you to MeanCloud Fishing, which in turn credits ACP Fishing, for inspiration -->
 

@@ -5,33 +5,34 @@
   <property name="ExcludePOICulling" value="False" />
   <property name="DistantPOIYOffset" value="0" />
   <property name="AllowTopSoilDecorations" value="False" />
-  <property name="DifficultyTier" value="3" />
-  <property name="ShowQuestClearCount" value="1" />
+  <property name="DifficultyTier" value="4" />
+  <property name="ShowQuestClearCount" value="2" />
   <property name="TraderArea" value="False" />
-  <property name="PrefabSize" value="50, 7, 25" />
+  <property name="PrefabSize" value="50, 12, 25" />
   <property name="RotationToFaceNorth" value="2" />
-  <property name="YOffset" value="-4" />
+  <property name="YOffset" value="-8" />
   <property name="Zoning" value="none" />
   <property name="QuestTags" value="clear, fetch, restore_power, infested" />
   <property name="Tags" value="oldwest" />
-  <property name="SleeperVolumeSize" value="23, 6, 23#9, 6, 21#16, 6, 23" />
-  <property name="SleeperVolumeStart" value="1, 1, 1#40, 1, 3#24, 1, 1" />
-  <property name="SleeperVolumeGroupId" value="0,0,0" />
-  <property name="SleeperVolumeGroup" value="GroupSpecialInfected,13,15,GroupSpecialInfected,6,7,GroupSpecialInfected,9,12" />
-  <property name="SleeperIsLootVolume" value="False,False,False" />
-  <property name="SleeperIsQuestExclude" value="False,False,False" />
-  <property name="SleeperVolumeFlags" value="0,0,0" />
-  <property name="SleeperVolumeTriggeredBy" value=" # # " />
+  <property name="SleeperVolumeSize" value="23, 6, 23#9, 6, 21#16, 6, 23#8, 3, 13#41, 3, 8#15, 3, 9#23, 3, 10#28, 3, 5" />
+  <property name="SleeperVolumeStart" value="1, 5, 1#40, 5, 3#24, 5, 1#39, 1, 9#6, 1, 1#24, 1, 15#1, 1, 14#1, 1, 9" />
+  <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0,0,0" />
+  <property name="SleeperVolumeGroup" value="GroupSpecialInfected,13,15,GroupGenericZombie,6,7,GroupSpecialInfected,10,12,GroupSpecialInfected,5,6,GroupSpecialInfected,5,6,GroupSpecialInfected,2,3,GroupSpecialInfected,3,4,GroupSpecialInfected,5,6" />
+  <property name="SleeperIsLootVolume" value="False,False,False,False,False,False,False,False" />
+  <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False,False" />
+  <property name="SleeperVolumeFlags" value="0,0,0,0,0,0,0,0" />
+  <property name="SleeperVolumeTriggeredBy" value=" # # # # # # # " />
   <property class="Stats">
-    <property name="TotalVertices" value="1521676" />
-    <property name="TotalTriangles" value="793862" />
+    <property name="LightsVolume" value="6065.368" />
+    <property name="TotalVertices" value="1741965" />
+    <property name="TotalTriangles" value="1075906" />
     <property class="BlockEntities">
-      <property name="Vertices" value="1509732" />
-      <property name="Triangles" value="782726" />
+      <property name="Vertices" value="1722949" />
+      <property name="Triangles" value="1056830" />
     </property>
     <property class="ChunkMeshes0">
-      <property name="Vertices" value="7630" />
-      <property name="Triangles" value="3856" />
+      <property name="Vertices" value="11238" />
+      <property name="Triangles" value="5852" />
     </property>
     <property class="ChunkMeshes1">
       <property name="Vertices" value="0" />
@@ -50,22 +51,31 @@
       <property name="Triangles" value="0" />
     </property>
     <property class="ChunkMeshes5">
-      <property name="Vertices" value="4314" />
-      <property name="Triangles" value="7280" />
+      <property name="Vertices" value="7778" />
+      <property name="Triangles" value="13224" />
     </property>
   </property>
   <property class="IndexedBlockOffsets">
     <property class="FetchContainer">
-      <property name="0" value="43, 1, 16" />
+      <property name="0" value="43, 5, 16" />
     </property>
     <property class="QuestRestorePower">
-      <property name="0" value="46, 4, 3" />
+      <property name="0" value="46, 8, 3" />
+    </property>
+    <property class="challenge_sinks">
+      <property name="0" value="37, 2, 14" />
+    </property>
+    <property class="challenge_gore">
+      <property name="0" value="32, 2, 2" />
+    </property>
+    <property class="TraderOnOff">
+      <property name="0" value="39, 1, 12" />
     </property>
     <property class="POILight">
-      <property name="0" value="42, 6, 0" />
+      <property name="0" value="42, 10, 0" />
     </property>
     <property class="Rally">
-      <property name="0" value="45, 4, 1" />
+      <property name="0" value="46, 8, 1" />
     </property>
   </property>
 </prefab>
