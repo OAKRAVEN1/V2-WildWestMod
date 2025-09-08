@@ -72,7 +72,6 @@
   <decoration type="model" name="wildwest_strip_02" position="-1400,37,1945" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_remnant_oldwest_04" position="-1433,37,1903" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_gold_01_arramus" position="-1350,37,1912" rotation="2" y_is_groundlevel="true" />
-  <decoration type="model" name="wildwest_remnant_oldwest_05" position="-1350,37,1945" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_bricabrac_01_arramus" position="-1433,37,1970" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_business_11" position="-1400,37,1970" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="rwg_tile_oldwest_t" position="-1475,37,2016" rotation="0" y_is_groundlevel="true" />
@@ -250,7 +249,6 @@
   <decoration type="model" name="wildwest_strip_02" position="-656,37,1171" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_apper_01_arramus" position="-656,37,1116" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_business_02" position="-689,37,1141" rotation="1" y_is_groundlevel="true" />
-  <decoration type="model" name="wildwest_remnant_oldwest_05" position="-656,37,1086" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_bubbles_01_arramus" position="-689,37,1086" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_picturehouse_Medusa" position="-689,37,1116" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="rwg_tile_oldwest_corner" position="-735,37,1233" rotation="0" y_is_groundlevel="true" />
@@ -389,7 +387,6 @@
   <decoration type="model" name="wildwest_strip_01" position="1306,37,1267" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_business_03" position="1273,37,1296" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_gunshop_01_arramus" position="1273,37,1267" rotation="1" y_is_groundlevel="true" />
-  <decoration type="model" name="wildwest_remnant_oldwest_08" position="1273,37,1352" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_business_06" position="1290,37,1387" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_bricabrac_01_arramus" position="1306,37,1334" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_remnant_oldwest_04" position="1306,37,1359" rotation="3" y_is_groundlevel="true" />
@@ -661,7 +658,6 @@
   <decoration type="model" name="wildwest_stables" position="305,61,-1572" rotation="2" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_gallows" position="296,61,-1489" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_sweeney_01_arramus" position="263,61,-1489" rotation="1" y_is_groundlevel="true" />
-  <decoration type="model" name="wildwest_remnant_oldwest_08" position="238,61,-1572" rotation="2" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_ministrip_01_arramus" position="238,61,-1539" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="rwg_tile_oldwest_corner" position="67,61,-1614" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_station_01_arramus" position="113,61,-1589" rotation="1" y_is_groundlevel="true" />
@@ -809,7 +805,6 @@
   <decoration type="model" name="wildwest_bubbles_01_arramus" position="1624,37,-716" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_watertower" position="1624,37,-691" rotation="2" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_stables_01_arramus" position="1624,37,-658" rotation="0" y_is_groundlevel="true" />
-  <decoration type="model" name="wildwest_remnant_oldwest_05" position="1682,37,-637" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_business_04" position="1682,37,-737" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="rwg_tile_oldwest_corner" position="1603,37,-437" rotation="2" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_remnant_business_03" position="1649,37,-412" rotation="2" y_is_groundlevel="true" />
@@ -2091,4 +2086,21 @@
   <decoration type="model" name="wildwest_jeanssteaks_01_arramus" position="-2118,90,-2326" rotation="2" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_old_stormi_09" position="888,38,2196" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_jeanssteaks_01_arramus" position="826,38,2131" rotation="2" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="2112,36,1273" rotation="0" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="1273,37,1352" rotation="1" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="-656,37,1086" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="-1350,37,1945" rotation="0" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="898,38,2048" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="-2396,37,1106" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="-2019,37,-1075" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="-983,37,-1057" rotation="2" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="238,61,-1572" rotation="2" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="1681,37,-2422" rotation="2" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="1682,37,-637" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="-2057,90,-2028" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_stables_03_arramus" position="-668,37,19" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_mine_01_arramus" position="-1595,37,-1175" rotation="0" y_is_groundlevel="true" />
+  <decoration type="model" name="deco_wildwest_craterfallscity_01" position="-1967,45,205" rotation="3" y_is_groundlevel="true" />
+  <decoration type="model" name="deco_wildwest_totem_01" position="-2030,67,363" rotation="2" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_watertower" position="-1784,48,147" rotation="3" y_is_groundlevel="true" />
 </prefabs>
