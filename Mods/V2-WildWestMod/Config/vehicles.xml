@@ -823,7 +823,7 @@
         <property name="tiltUpForce" value="1"/>
 		<property name="hopForce" value="3.0, .005"/>
         <property name="motorTorque_turbo" value="500, 180, 750, 180"/>
-        <property name="velocityMax_turbo" value="11, 8, 15, 10"/>
+        <property name="velocityMax_turbo" value="12, 8, 16, 10"/>
         <property name="brakeTorque" value="6000"/>
         <property name="unstickForce" value="1"/>
         <property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .15"/>
@@ -1228,7 +1228,7 @@
         <property name="tiltUpForce" value="0"/>
 		<property name="hopForce" value="9.0, .005"/>
         <property name="motorTorque_turbo" value="3500, 1500, 4500, 2000"/>
-        <property name="velocityMax_turbo" value="11, 8, 15, 10"/>
+        <property name="velocityMax_turbo" value="12, 8, 16, 10"/>
         <property name="brakeTorque" value="6000"/>
         <property name="unstickForce" value="1"/>
         <property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>

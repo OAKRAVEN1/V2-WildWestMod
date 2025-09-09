@@ -32,6 +32,289 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 
 [ Change Log ]
+Version: 2.3.23.913
+	[ EntityAliveSDX ]
+		- Added a new CheckLeaderProximity check.
+		- A hired entity will allow allied players to 'phase' through them if they are too close, allowing you to run past them in tight spots.
+		
+	[ Crop Manager ]
+		- Fixed an issue where sprinkler range was not being considered for plant growth.
+
+	[ Custom Trader Currency ]
+		- Added a patch to block the sale of a custom currency to the trader with the custom currency
+		- If a trader takes old cash, you will no longer be able to sell it old cash at a profit.
+
+Version: 2.3.20.707
+	[ Advanced Scrapping ]
+		- Fixed an issue where items failed to scrap properly if no recipes were defined.
+		- Moved logic for getting the recipe to the bottom of the logic conditions.
+
+Version: 2.3.19.1401
+	[ Trader Currency ]
+		- Fixed an issue with custom currency where the Sell options were returning default currency, and not the custom one.
+
+	[ Challenges ]
+		- Added a null check on the CraftWithIngredient
+
+	[ EntityAlive SDX ]
+		- Added a try catch to track down a bad error when talking to NPCs.
+
+Version: 2.3.18.1533
+	[ Vehicles ]
+		- Added the ability to change the type of fuel a vehicle can use.
+		- Add a new property to vehicles.xml to add support.
+			<configs>
+				<append xpath="//vehicle[@name='vehicleMinibike']/property[@class='fuelTank']">
+					<property name="fuelType" value="drinkJarRiverWater" />
+				</append>
+			</configs>
+		- Items being used must have FuelValue property on it
+			<append xpath="//item[@name='drinkJarRiverWater']">
+				<property name="FuelValue" value="100" />
+			</append>
+
+	[ Additional Output ]
+		- Added more biome checks to be used for requirements.
+
+	[ Wireless Powered Workstation ]
+		- This feature allows you to require workstations to have a nearby power source.
+		- Added a new XUiC_WorkstationFuelGridSDX.
+		- This is paired with a new windowFuelPoweredSDX, which is included in 0-SCore's Config/XUi/windows.xml.
+			- The window can be changed to whatever you need to, as long as the controller reference remains in tact.
+		- Instead of "Fuel" it shows "Power". This is defined by the Localization entry: xuiNeedPower
+		- This disables the ability to manually add fuel, and instead relies on the Powered Workstation Feature's:
+	        <property name="RequirePower" value="true" />
+		- This also requires the Configuration Block setting "EnablePoweredWorkstations" to be true:
+		    <set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedWorkstationFeatures']/property[@name='EnablePoweredWorkstations']/@value">true</set>
+
+
+
+Version: 2.3.16.1209
+	[ Item Degradation ]
+		- Changed default DegradationPerUse from the test value 100 back to 1.
+
+	[ Additional Output ]
+		- Re-Added support for requirements. 
+		- This still needs to be tested on a dedi. Not all requirements may work.
+		- My test XML:
+		<append xpath="/recipes/recipe[@name='drinkJarRedTea']">
+			<effect_group name="Additional Output">
+				<triggered_effect trigger="onSelfItemCrafted" action="AddAdditionalOutput, SCore" item="foodCropPumpkin" count="4">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>
+			</effect_group>
+		</append>
+
+Version: 2.3.15.2120
+	[ Maintenance ]
+		- Fixed GetBindingValue references to GetBindingValueInternal for 2.3b8
+
+Version: 2.3.14.1308	
+	[ Fire Manager ]
+		- Added a check to make sure we are on the main thread before trying to do particles.
+
+	[ Food Spoilage ]
+		- Fixed an issue where food spoilage was being calculated, but not applied, until after pulled from preserved container.
+	
+	[ OnBought / OnSold
+		- Added a null reference check for possible failure.
+
+Version: 2.3.12.1652
+	[ Challenges ]
+		- Added description_key to the Clone() call for ClearSleepers
+		- Added buff requirements to Big Fire Challenge
+		- Added buff requirements to Start Fire Challenge
+		- Fixed an issue with Extinguish Challenge not counting
+		- Fixed BlockDestroyedByFire challenge by connecting to the right event, rather than an event that never was called.
+
+	[ Maintenance ]
+		- Renamed a file that was mispelled
+
+Version: 2.3.12.844
+	[ Recipes ]
+		- Fixed additional Output recipes to work on servers
+
+	[ Item Degradation ]
+		- Added documentation.
+
+	[ Project Clean up ]
+		- Fixed broken, incorrect, and not-necessary dependencies in vcproj.
+
+Version: 2.3.11.1608
+	[ One Block Crouch ]
+		- Fixed an issue with the cvar check being done too early to be ineffective.
+		- Refactored implementation.
+
+	[ Item Degradation ]	
+		- Fixed an issue where a bad localization was being displayed when Learn by Doing was not available.
+		- added a localilzation entry to tag broken tool's Broken on the tooltip
+		- Added degradation in the worokstations to prevent crafting when a mod is degraded.
+		- Currently, after each recipe that is crafted, the tool requirement will degrade.
+
+	[ Additional Output ]
+		- Fixed a null reference when some player data wasn't available.
+
+	[ New Script ]
+		- Added guppycur's randomAnimationScript
+		- This script is designed to trigger a random animation on an associated Animator component every five minutes 
+			of in-game time. It is a time-based animation controller, useful for adding subtle, random environmental 
+			or character animations without relying on complex state machines or frequent, performance-heavy checks.
+
+
+Version: 2.3.10.1017
+	[ Learn By Doing ]
+		- Fixed an issue with CanPurchasePerk to be more accurate.
+		- Added two new patches to the SkillCraftingINfoWindow, and SkillPerkInfoWindow
+			- It reads the localization entry, if it exists, and populates the perk window when a level is not displayed.
+			- Format:
+				attStrengthLearnByDoingDesc,"Progress your strength by performing any strength-related action."
+
+	[ Fire Manager ]
+		- Fixed a possible null ref in AddExtinguishPosition
+
+	[ Recipes ]
+		- Fixed an issue where work stations were not generating additional outputs when the workstation was closed.
+
+	[ Documentation ]
+		- Added csv documentation
+
+	[ Item Degradation ]
+		- Added a BlockEffectsManager
+		- This adds the ability to read and keep track of any effect_groups that are part of its blocks.xml
+		- Currently, only onSelfItemDegrade trigger is hooked to as part of the Item Degradation effort.
+		- In this case, we wanted to degrade active workstations over time. However the most practical hook was on the TileEntity's UpdateTick.
+		- This happens too frequently, so by adding in support for effect_groups, we can add in further requirements through xml.
+		- For Example: 
+
+   			<append xpath="//block[@name='workbench']">
+        		<property name="DowngradeBlock" value="cntCollapsedWorkbench"/>
+        		<property name="DegradationPerUse" value="1"/>
+        		<effect_group name="DamageHooks Degrade">
+					<!-- Random roll rather than every tick -->
+            		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+
+					<!-- This is called only when the workstation is active -->
+            		<triggered_effect trigger="onSelfItemDegrade" action="LogMessage" message="Damaging Block" />
+            		<triggered_effect trigger="onSelfItemDegrade" action="DamageBlock, SCore"/>
+        		</effect_group>
+    		</append>
+
+	[ SphereII Learn By Doing ]
+		- Added Readme.md detailing changes for history log.
+		- Added a line to the Grandpa's Forgettin' elixir to call the Init buff, to reset progression.
+		- Set every perk to have a To Next Level of 1200.
+		- Set all base action xp to 1. Special or Power action is set to 5.
+		- Set every attribute to have a To Next Level of 5000.
+		- Removed errant cvars in Intellect/Init.xml that re-set the buff.xml's cvars
+		- Added localization entries for each perk / attribute, describing what needs to be leveled up.
+		- Changed Level Up Checks to use the ShowToolBelt message, with Localizationentries added.
+		- Fixed hard coded references of 1.2 and 1.3, and converted them to using curve_multiplier
+		- Fixed missing Javelin level up logic
+		- Added automatic version numbers.
+
+	[ SphereII A Better Life ]
+		- Fixed an issue with the block spawners not spawning fish.
+		- Added automatic version numbers.
+
+Version: 2.3.7.1356 - Experimental
+	[ Random Sizes ]
+		- Fixed a few issues with Random Sizes not doing Random Sizes.
+
+	[ File Management ]
+		- Removed Readme.txt and ModInfo.txt
+
+	[ Soft Hands ]
+		- Added new Configuration block setting
+                <property name="CheckHandArmor" value="true" />
+		- If this is set to true, Soft Hands will be negated if the player is wearing gloves.
+		- If this is set to false, then the player will take damage from hitting globes with just their hands.
+
+	[ SphereII Item Degradation ]
+		- Fixed an issue where pistol would re-holster on update
+
+	[ Challenges ]
+		- Added check for a null reference on Sleeper Volume Group Count for ClearedUpdate event.
+
+Version: 2.3.6.1759 - Experimental
+	[ Challenges ]
+		- Fixed another issue with the V2 tags.
+			- The side effect may have been re-ordering of challenges.
+		- Added PlaceBlockByTagV2
+			<challenge name="burntSurvivalPlantTrees" title_key="challengeBurntPlantTrees" icon="ui_game_symbol_tree" group="ScoreTest"
+					short_description_key="challengeBurntPlantTreesShort" description_key="challengeBurntPlantTreesDesc"
+					reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+				<requirement name="InBiome" biome="9"/>
+				<requirement name="BlockHasTags" tags="wood"/>
+				<objective type="PlaceBlockByTagV2, SCore" count="25" />
+			</challenge>
+		- Changed CVar event for CVar Challenges to not look at the super spammy _CvarName's
+
+	[ OneBlock Crouch ]
+		- Added a check for a cvar that will block the One Block Crouch:
+			NoOneBlockCrouch
+		- If this cvar is set to anything greater than 0, the OneBlock Crouch will be blocked.
+
+Version: 2.3.5.2007 - Experimental
+	[ Shared Reading ]
+		- Refactored shared reading to be more reliable.
+			- Tested on Client, Client -> Server, and Server -> Client(s)
+
+	[ Advanced Repairs ]
+		- Fixed an issue with Advanced Repairs not showing the pop up when items are not available.
+
+	[ Challenges ]
+		- Fixed an issue with CVarV2's Localization not being cloned properly.
+		- HarvestV2 was cleaned out as empty Challenge.  Harvest supports the <requirements now.
+		- Fixed a localization issue with ClearSleepers.
+
+	[ Item Degradation ]
+		- Work is ongoing for this project, but proceeding slowly.
+
+	[ XML Patching ]
+		- Added to the XmlPatcher to help avoid some repetitiveness for item degradation.
+		- This will replace the ref_file node with everything inside the passed in label.
+		- You probably don't want to use this.
+		- If label is not specified, the entire file contents is merged (minus the root node )
+    
+			<append xpath="//item[starts-with(@name,'tool')]">
+        		<!-- Read the snippet file, and merge all the Snippet nodes that match the label. -->
+        		<!-- If label is omitted, the file itself will be merged, minus the root node -->
+        		<ref_file snippet="ItemModifiers/StandardSettings.xml" label="StandardActiveSettings, StandardSettings"/>
+			</append>
+
+		With StandardSettings.xml:
+			<configs>
+			
+				<!-- Actively degrades when the item is considered active -->
+				<Snippet label="StandardActiveSettings">
+					<effect_group name="DamageHooks">
+						<requirement name="ItemPercentUsed, SCore" operation="LT" value="1"/>
+						<requirement name="IsItemActive"/>
+						<triggered_effect trigger="onSelfRoutineUpdate" action="DegradeItemValueMod, SCore"/>
+					</effect_group>
+			
+					<effect_group name="BrokenHooks">
+						<requirement name="ItemPercentUsed, SCore" operation="GTE" value="1"/>
+						<requirement name="IsItemActive"/>
+						<triggered_effect trigger="onSelfRoutineUpdate" action="AddBuff" buff="buffStatusModBroken"/>
+					</effect_group>
+				</Snippet>
+			
+				<Snippet label="StandardSettings">
+					<!-- Enable Quality  -->
+					<property name="ShowQuality" value="true"/>
+
+
+Version: 2.3.2.1055 - Experimental
+	[ General ]
+		- Rebuilt against 2.3
+
+	[ UAI / EAI ]
+		- Fixed broken references to RandomPositionGenerator's Calc calls.
+
+	[ XML Parsing ]
+		- Added experimental xml hook. Don't use it.
+
 Version: 2.2.17.929
 	[ Challenges ]
 		- Added ObjectiveCVarV2 for better localization support and buff requirement hooks

@@ -82,7 +82,7 @@ namespace Harmony.ItemActions
 
             // Used to display the repair requirements
             [HarmonyPatch(typeof(XUiC_ItemInfoWindow))]
-            [HarmonyPatch(nameof(XUiC_ItemInfoWindow.GetBindingValue))]
+            [HarmonyPatch(nameof(XUiC_ItemInfoWindow.GetBindingValueInternal))]
             [HarmonyPatch(new[] { typeof(string), typeof(string) })]
             public static bool Prefix(ref string value, string binding, ItemClass ___itemClass)
             {
@@ -131,7 +131,7 @@ namespace Harmony.ItemActions
                         return false;
                     case ItemActionEntryRepair.StateTypes.NotEnoughMaterials:
                         GameManager.ShowTooltip(__instance.ItemController.xui.playerUI.entityPlayer, __instance.lblNeedMaterials);
-                        return false;
+                        break;
                     case ItemActionEntryRepair.StateTypes.Normal:
                         break;
                     default:
@@ -147,22 +147,24 @@ namespace Harmony.ItemActions
                 {
                     var dynamicProperties3 = forId.Properties.Classes["RepairItems"];
                     stack = ItemsUtilities.ParseProperties(dynamicProperties3);
-                    ItemsUtilities.CheckIngredients(stack, __instance.ItemController.xui.playerUI.entityPlayer);
-                    return false;
+                    if ( !ItemsUtilities.CheckIngredients(stack, __instance.ItemController.xui.playerUI.entityPlayer))
+                        return false;
+                    
                 }
 
                 if (forId.Properties.Contains("RepairItems")) // to support <property name="RepairItems" value="resourceWood,10,resourceForgedIron,10" />
                 {
                     var strData = forId.Properties.Values["RepairItems"];
                     stack = ItemsUtilities.ParseProperties(strData);
-                    ItemsUtilities.CheckIngredients(stack, __instance.ItemController.xui.playerUI.entityPlayer);
-                    return false;
+                    if ( !ItemsUtilities.CheckIngredients(stack, __instance.ItemController.xui.playerUI.entityPlayer)) 
+                        return false;
                 }
 
                 if (forId.RepairTools != null && forId.RepairTools.Length > 0) return true;
 
                 var recipe = ItemsUtilities.GetReducedRecipes(forId.GetItemName(), 2);
-                ItemsUtilities.CheckIngredients(recipe.ingredients, __instance.ItemController.xui.playerUI.entityPlayer);
+                if (!ItemsUtilities.CheckIngredients(recipe.ingredients, __instance.ItemController.xui.playerUI.entityPlayer) )
+                    return false;
                 return false;
             }
         }
@@ -256,11 +258,6 @@ namespace Harmony.ItemActions
                 var forId = ItemClass.GetForId(itemStack.itemValue.type);
                  if (forId.RepairTools is { Length: > 0 }) return true;
 
-                 if (CraftingManager.GetRecipe(forId.GetItemName()) == null) return true;
-
-                 if (CraftingManager.GetRecipe(forId.GetItemName()).tags.Test_AnySet(FastTags<TagGroup.Global>.Parse("usevanillascrap")))
-                    return true;
-
                  var blockList = CheckProperties(forId.GetBlock()?.Properties);
                  if (blockList.Count > 0)
                  {
@@ -271,6 +268,7 @@ namespace Harmony.ItemActions
                  var list = CheckProperties(forId.Properties);
                  if (list.Count > 0)
                  {
+                     Debug.Log($"ItemUtilis.Scrap(): {list.Count}");
                      ItemsUtilities.Scrap(list, itemStack, __instance.ItemController);
                      return false;
                  }
@@ -303,6 +301,14 @@ namespace Harmony.ItemActions
                 //
                 //
                 if (!Configuration.CheckFeatureStatus(AdvFeatureClass, "DisableScrapFallback"))
+                {
+                    Debug.Log("Disabling Scrap FAll back");
+                    return true;
+                }
+
+                if (CraftingManager.GetRecipe(forId.GetItemName()) == null) return true;
+
+                if (CraftingManager.GetRecipe(forId.GetItemName()).tags.Test_AnySet(FastTags<TagGroup.Global>.Parse("usevanillascrap")))
                     return true;
                 // If there's a recipe, reduce it
                 var recipe = ItemsUtilities.GetReducedRecipes(forId.GetItemName(), 2);

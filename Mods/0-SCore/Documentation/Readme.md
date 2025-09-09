@@ -53,6 +53,10 @@ Note: Most of this documentation is AI Generated with tweaks and corrections man
 
 [Item Degradation](Examples/ItemDegradation.md)
 
+[Workstation Degradation](Examples/WorkstationDegradation.md)
+
+[Additional Recipe Output](Examples/AdditionalRecipeOutput.md)
+
 # Patches
 [Animation](../Harmony/Animation/ReadMe.md)
 
