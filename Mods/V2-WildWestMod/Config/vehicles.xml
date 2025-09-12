@@ -28,7 +28,7 @@
 		<property name="brakeTorque" value="3000"/>
 		<property name="hopForce" value="1, .8"/>
 		<property name="unstickForce" value="1"/>
-		<property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .1"/>
+		<property name="waterDrag_y_velScale_velMaxScale" value="1.0, 0.5, .3"/>
 		<property name="wheelPtlScale" value="1"/>
 
 		<property name="hornSound" value="motorbike_horn"/>
@@ -156,7 +156,7 @@
         <property name="velocityMax_turbo" value="10, 8, 14, 10"/>
         <property name="brakeTorque" value="6000"/>
         <property name="unstickForce" value="1"/>
-        <property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+        <property name="waterDrag_y_velScale_velMaxScale" value="1.0, 0.5, .3"/>
         <property name="wheelPtlScale" value="1"/>
 
 		<property name="hornSound" value="Train_horn"/>
@@ -692,12 +692,12 @@
         <property name="tiltDampening" value=".22"/>
         <property name="tiltDampenThreshold" value="8"/>
         <property name="tiltUpForce" value="1"/>
-		<property name="hopForce" value="3.0, .005"/>
+		<property name="hopForce" value="6.0, .005"/>
         <property name="motorTorque_turbo" value="500, 180, 750, 180"/>
-        <property name="velocityMax_turbo" value="7, 5, 9, 5"/>
+        <property name="velocityMax_turbo" value="8, 6, 10, 6"/>
         <property name="brakeTorque" value="6000"/>
         <property name="unstickForce" value="1"/>
-        <property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .15"/>
+        <property name="waterDrag_y_velScale_velMaxScale" value="1.0, 0.5, .3"/>
         <property name="wheelPtlScale" value="1"/>		
 		<property name="hornSound" value="DinkyDonkey"/>
 		
@@ -821,12 +821,12 @@
         <property name="tiltDampening" value=".22"/>
         <property name="tiltDampenThreshold" value="8"/>
         <property name="tiltUpForce" value="1"/>
-		<property name="hopForce" value="3.0, .005"/>
+		<property name="hopForce" value="6.0, .005"/>
         <property name="motorTorque_turbo" value="500, 180, 750, 180"/>
         <property name="velocityMax_turbo" value="12, 8, 16, 10"/>
         <property name="brakeTorque" value="6000"/>
         <property name="unstickForce" value="1"/>
-        <property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .15"/>
+        <property name="waterDrag_y_velScale_velMaxScale" value="1.0, 0.5, .3"/>
         <property name="wheelPtlScale" value="1"/>		
 		<property name="hornSound" value="DinkyDonkey"/>
 		
@@ -956,7 +956,7 @@
         <property name="velocityMax_turbo" value="9, 6, 13, 8"/>
         <property name="brakeTorque" value="6000"/>
         <property name="unstickForce" value="1"/>
-        <property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .15"/>
+        <property name="waterDrag_y_velScale_velMaxScale" value="1.0, 0.5, .3"/>
         <property name="wheelPtlScale" value="1"/>		
 		<property name="hornSound" value="horseHorn"/>
 		
@@ -1086,7 +1086,7 @@
         <property name="velocityMax_turbo" value="10, 7, 14, 9"/>
         <property name="brakeTorque" value="6000"/>
         <property name="unstickForce" value="1"/>
-        <property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .15"/>
+        <property name="waterDrag_y_velScale_velMaxScale" value="1.0, 0.5, .3"/>
         <property name="wheelPtlScale" value="1"/>		
 		<property name="hornSound" value="horseHorn"/>
 
@@ -1231,7 +1231,7 @@
         <property name="velocityMax_turbo" value="12, 8, 16, 10"/>
         <property name="brakeTorque" value="6000"/>
         <property name="unstickForce" value="1"/>
-        <property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+        <property name="waterDrag_y_velScale_velMaxScale" value="1.0, 0.5, .3"/>
         <property name="wheelPtlScale" value="1"/>		
 		<property name="hornSound" value="horseHorn"/>
 

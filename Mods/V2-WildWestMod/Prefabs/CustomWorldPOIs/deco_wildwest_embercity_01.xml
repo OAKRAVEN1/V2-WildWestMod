@@ -11,7 +11,7 @@
   <property name="PrefabSize" value="10, 8, 3" />
   <property name="RotationToFaceNorth" value="2" />
   <property name="Zoning" value="none" />
-  <property name="Tags" value="biomeonly, devonly" />
+  <property name="Tags" value="biomeonly,devonly,part" />
   <property class="Stats">
     <property name="TotalVertices" value="4048" />
     <property name="TotalTriangles" value="2696" />

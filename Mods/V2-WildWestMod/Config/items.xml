@@ -5682,9 +5682,9 @@
     <property name="CustomIcon" value="vehicleSteamHorse"/>
     <property name="Tags" value="vehicle,vengine,vfuel,vlight,vplow,vseat,canHaveCosmetic"/>
     <property name="Meshfile" value="#@modfolder:Resources/SteamHorse.unity3d?SteamHorse"/>
-    <property name="EconomicValue" value="30000"/>
+    <property name="EconomicValue" value="25000"/>
     <property name="UnlockedBy" value="craftingVehicles"/>
-    <property name="TraderStageTemplate" value="vehicleTier4"/>
+    <property name="TraderStageTemplate" value="vehicleTier3"/>
     <property class="Action1">
         <property name="Vehicle" value="vehicleSteamHorse"/>
         <property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -5703,9 +5703,9 @@
 	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
 	<property name="CustomIcon" value="balloon2"/>
 	<property name="Meshfile" value="#@modfolder:Resources/A21NewBalloons.unity3d?balloon2_Prefab"/>
-	<property name="EconomicValue" value="40000"/>
+	<property name="EconomicValue" value="25000"/>
 	<property name="UnlockedBy" value="craftingVehicles"/>
-	<property name="TraderStageTemplate" value="vehicleTier5"/>
+	<property name="TraderStageTemplate" value="vehicleTier4"/>
 	<property class="Action1">
 		<property name="Vehicle" value="vehicleBalloon2"/>
 		<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -5722,9 +5722,9 @@
 	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
 	<property name="CustomIcon" value="balloon3"/>
 	<property name="Meshfile" value="#@modfolder:Resources/A21NewBalloons.unity3d?balloon3_Prefab"/>
-	<property name="EconomicValue" value="40000"/>
+	<property name="EconomicValue" value="25000"/>
 	<property name="UnlockedBy" value="craftingVehicles"/>
-	<property name="TraderStageTemplate" value="vehicleTier5"/>
+	<property name="TraderStageTemplate" value="vehicleTier4"/>
 	<property class="Action1">
 		<property name="Vehicle" value="vehicleBalloon3"/>
 		<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -5741,9 +5741,9 @@
 	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
 	<property name="CustomIcon" value="balloon4"/>
 	<property name="Meshfile" value="#@modfolder:Resources/A21NewBalloons.unity3d?balloon4_Prefab"/>
-	<property name="EconomicValue" value="40000"/>
+	<property name="EconomicValue" value="25000"/>
 	<property name="UnlockedBy" value="craftingVehicles"/>
-	<property name="TraderStageTemplate" value="vehicleTier5"/>
+	<property name="TraderStageTemplate" value="vehicleTier4"/>
 	<property class="Action1">
 		<property name="Vehicle" value="vehicleBalloon4"/>
 		<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -5761,8 +5761,8 @@
 			<property name="Extends" value="vehicleMinibikePlaceable"/>	
 			<property name="Tags" value="vehicle,vengine,canHaveCosmetic"/>
 			<property name="Meshfile" value="#@modfolder:Resources/DinkyDonkey.unity3d?DinkyDonkey.prefab"/>
-			<property name="EconomicValue" value="8000"/>
-			<property name="TraderStageTemplate" value="vehicleTier1"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="TraderStageTemplate" value="vehicleTier0"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleWWMDinkyDonkey"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -5778,8 +5778,8 @@
 			<property name="Extends" value="vehicleMinibikePlaceable"/>	
 			<property name="Tags" value="vehicle,vengine,canHaveCosmetic"/>
 			<property name="Meshfile" value="#@modfolder:Resources/DinkyDonkey.unity3d?DinkyDonkey.prefab"/>
-			<property name="EconomicValue" value="25000"/>
-			<property name="TraderStageTemplate" value="vehicleTier3"/>
+			<property name="EconomicValue" value="15000"/>
+			<property name="TraderStageTemplate" value="vehicleTier2"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleWWMDinkyRacingDonkey"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -5814,7 +5814,7 @@
 			<property name="Extends" value="vehicleMinibikePlaceable"/>	
 			<property name="Tags" value="vehicle,vengine,canHaveCosmetic"/>
 			<property name="Meshfile" value="#@modfolder:Resources/WWMHorsey.unity3d?HorseT2.prefab"/>
-			<property name="EconomicValue" value="20000"/>
+			<property name="EconomicValue" value="15000"/>
 			<property name="TraderStageTemplate" value="vehicleTier2"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleWWMHorseT2"/>
@@ -5831,7 +5831,7 @@
 			<property name="Extends" value="vehicleMinibikePlaceable"/>	
 			<property name="Tags" value="vehicle,vengine,canHaveCosmetic"/>
 			<property name="Meshfile" value="#@modfolder:Resources/WWMHorsey.unity3d?HorseT3.prefab"/>
-			<property name="EconomicValue" value="30000"/>
+			<property name="EconomicValue" value="20000"/>
 			<property name="TraderStageTemplate" value="vehicleTier3"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleWWMHorseT3"/>
