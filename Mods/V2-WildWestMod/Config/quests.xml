@@ -112,6 +112,7 @@
 			<!-- <property name="biome_filter_type" value="ExcludeBiome"/> -->
 			<!-- <property name="biome_filter" value="wasteland"/> -->
 			<property name="nav_object" value="go_to_trader"/>
+			<property name="allow_current_poi" value="true"/>
 		</objective>
 
 		<objective type="InteractWithNPC">
@@ -626,7 +627,7 @@
 		<variable name="completion" value="burnt_completion"/>
 
 		<reward type="Exp" value="10000"/>
-		<reward type="Item" id="biomeBadge1" ischosen="true" value="1"/>
+		<reward type="Item" id="biomeWeatherItem1" ischosen="true" value="1"/>
 
 		<reward type="ShowMessageWindow">
 			<property name="title" value="reward_biome_badge_01_title"/>
@@ -641,7 +642,7 @@
 		<variable name="completion" value="desert_completion"/>
 
 		<reward type="Exp" value="25000"/>
-		<reward type="Item" id="biomeBadge2" ischosen="true" value="1"/>
+		<reward type="Item" id="biomeWeatherItem2" ischosen="true" value="1"/>
 
 		<reward type="ShowMessageWindow">
 			<property name="title" value="reward_biome_badge_02_title"/>
@@ -656,7 +657,7 @@
 		<variable name="completion" value="snow_completion"/>
 
 		<reward type="Exp" value="50000"/>
-		<reward type="Item" id="biomeBadge3" ischosen="true" value="1"/>
+		<reward type="Item" id="biomeWeatherItem3" ischosen="true" value="1"/>
 
 		<reward type="ShowMessageWindow">
 			<property name="title" value="reward_biome_badge_03_title"/>
@@ -671,15 +672,15 @@
 		<variable name="completion" value="wasteland_completion"/>
 
 		<reward type="Exp" value="100000"/>
-		<reward type="Item" id="biomeBadge4" ischosen="true" value="1"/>
+		<reward type="Item" id="biomeWeatherItem4" ischosen="true" value="1"/>
 
 		<reward type="ShowMessageWindow">
 			<property name="title" value="reward_biome_badge_04_title"/>
 			<property name="message" value="reward_biome_badge_04_description"/>
-		</reward>		   
+		</reward>
 	</quest>
 
-		<!-- TWITCH_CHALLENGES_HERE -->
+<!-- PAGE_04_TWITCH_CHALLENGE_REWARDS_ -->
 
 
 
@@ -857,7 +858,7 @@
 		<variable name="offer" value="quest_tier4_fetch_offer"/>
 		<variable name="difficulty" value="4"/>
 		<variable name="extra_tags" value=""/>
-		<variable name="biome_filter_type" value="AnyBiome"/>
+		<variable name="biome_filter_type" value="SameBiome"/>
 		<variable name="biome_filter" value=""/>
 		
 		<reward type="Exp" value="6250"/>
@@ -1027,7 +1028,7 @@
 		<variable name="offer" value="quest_tier4_clear_offer"/>
 		<variable name="difficulty" value="4"/>
 		<variable name="extra_tags" value=""/>
-		<variable name="biome_filter_type" value="AnyBiome"/>
+		<variable name="biome_filter_type" value="SameBiome"/>
 		<variable name="biome_filter" value=""/>
 		
 		<reward type="Exp" value="7500"/>
@@ -1186,7 +1187,7 @@
 		<variable name="spawn_multiplier" value="1.5"/>
 		<variable name="gamestage_mod" value=".6"/>
 		<variable name="gamestage_bonus" value="30"/>
-		<variable name="biome_filter_type" value="AnyBiome"/>
+		<variable name="biome_filter_type" value="SameBiome"/>
 		
 		<reward type="Exp" value="9375"/>
 		<reward type="Item" id="casinoCoin" value="3000"/>
@@ -1349,7 +1350,7 @@
 		<variable name="offer" value="quest_tier4_restore_power_offer"/>
 		<variable name="difficulty" value="4"/>
 		<variable name="extra_tags" value=""/>
-		<variable name="biome_filter_type" value="AnyBiome"/>
+		<variable name="biome_filter_type" value="SameBiome"/>
 		
 		<reward type="Exp" value="8400"/>
 		<reward type="Item" id="casinoCoin" value="2000"/>
@@ -1445,7 +1446,7 @@
 		<variable name="offer" value="quest_tier3_fetch_clear_offer"/>
 		<variable name="difficulty" value="3"/>
 		<variable name="extra_tags" value=""/>
-		<variable name="biome_filter_type" value="AnyBiome"/>
+		<variable name="biome_filter_type" value="SameBiome"/>
 		
 		<reward type="Exp" value="6750"/>
 		<reward type="Item" id="casinoCoin" value="1000"/>
@@ -1464,7 +1465,7 @@
 		<variable name="offer" value="quest_tier4_fetch_clear_offer"/>
 		<variable name="difficulty" value="4"/>
 		<variable name="extra_tags" value=""/>
-		<variable name="biome_filter_type" value="AnyBiome"/>
+		<variable name="biome_filter_type" value="SameBiome"/>
 		
 		<reward type="Exp" value="8400"/>
 		<reward type="Item" id="casinoCoin" value="1500"/>
@@ -1541,7 +1542,8 @@
 			<property name="completion_distance" value="20"/>
 			<property name="distance" value="100-500"/>
 			<property name="nav_object" value="quest"/>
-			<property name="biome_filter_type" value="SameBiome"/>
+			<property name="biome_filter_type" value="OnlyBiome"/>
+			<property name="biome_filter" value="pine_forest"/>
 		</objective>
 
 		<objective type="RallyPoint">

@@ -2089,7 +2089,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	</effect_group>
 </recipe>
 
-<!-- Black Lung Serum -->						 
+<!-- Black Lung Serum -->
 <recipe name="foodBurntSmoothie" craft_time="25" count="1" tags="perkMasterChef,packMuleCrafting">
 	<ingredient name="resourceCoal" count="5"/>
 	<ingredient name="resourceYuccaFibers" count="20"/>
@@ -2100,7 +2100,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	</effect_group>
 </recipe>
 
-<!-- Sunstroke Tonic -->						
+<!-- Sunstroke Tonic -->
 <recipe name="foodOasisSmoothie" craft_time="25" count="1" tags="perkMasterChef,packMuleCrafting">
 	<ingredient name="resourceCropAloeLeaf" count="5"/>
 	<ingredient name="resourceOilShale" count="5"/>
@@ -2111,7 +2111,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	</effect_group>
 </recipe>
 
-<!-- Scorcher Stew -->				  
+<!-- Scorcher Stew -->
 <recipe name="foodFrostbiteSmoothie" craft_time="25" count="1" tags="perkMasterChef,packMuleCrafting">
 	<ingredient name="foodCropBlueberries" count="5"/>
 	<ingredient name="foodRawMeat" count="5"/>
@@ -2122,7 +2122,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	</effect_group>
 </recipe>
 
-<!-- Fallout Flush -->					  
+<!-- Fallout Flush -->
 <recipe name="foodAtomicSmoothie" craft_time="25" count="1" tags="perkMasterChef,packMuleCrafting">
 	<ingredient name="foodCropYuccaFruit" count="5"/>
 	<ingredient name="foodCropGraceCorn" count="1"/>
@@ -2439,7 +2439,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="gunShotgunT0PipeShotgun" count="1" tags="perkBoomstick,packMuleCrafting">
 	<ingredient name="resourceMetalPipe" count="4"/>
 	<ingredient name="resourceGlue" count="2"/>
-	<ingredient name="resourceWood" count="6"/>													  
+	<ingredient name="resourceWood" count="6"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceMetalPipe,resourceGlue,resourceWood"/>																														 
 	</effect_group>
@@ -2490,7 +2490,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="gunRifleT0PipeRifle" count="1" tags="perkDeadEye,packMuleCrafting">
 	<ingredient name="resourceMetalPipe" count="4"/>
 	<ingredient name="resourceGlue" count="2"/>
-	<ingredient name="resourceWood" count="6"/>													  
+	<ingredient name="resourceWood" count="6"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceMetalPipe,resourceGlue,resourceWood"/>																														 
 	</effect_group>
@@ -2691,8 +2691,8 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <!--recipe name="gunBotT3JunkDrone" count="1" craft_area="workbench" tags="learnable,perkTurrets">
 	<ingredient name="gunBotRoboticsParts" count="1"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
-	<ingredient name="resourceDuctTape" count="15"/>
-	<ingredient name="motionsensor" count="2"/>
+	<ingredient name="resourceDuctTape" count="10"/>
+	<ingredient name="resourceElectricParts" count="10"/>
 	<ingredient name="resourceLegendaryParts" count="0"/>
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunBotRoboticsParts,resourceForgedSteel,resourceDuctTape,motionsensor"/>
@@ -3084,11 +3084,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <!--recipe name="meleeWpnBatonT0PipeBaton" count="1" tags="perkElectrocutioner">
 	<ingredient name="resourceMetalPipe" count="4"/>
 	<ingredient name="resourceLeather" count="3"/>
-	<ingredient name="resourceLegendaryParts" count="0"/>
-	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceMetalPipe,resourceLeather"/>
-		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
-	</effect_group>
 </recipe-->
 
 <recipe name="meleeWpnBatonT2StunBaton" count="1" craft_area="workbench" tags="learnable,perkTurrets,workbenchCrafting">
@@ -3186,7 +3181,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	</effect_group>
 </recipe>
 
-<!--recipe name="mineCandyTin" count="1" >
+<!--recipe name="mineCandyTin" count="1" tags="packMuleCrafting">
 	<ingredient name="resourceScrapIron" count="4"/>
 	<ingredient name="resourceGunPowder" count="4"/>
 	<ingredient name="resourceNail" count="1"/>
@@ -3298,12 +3293,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<!--recipe name="modArmorInsulatedLiner" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+<recipe name="modArmorInsulatedLinerT1" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceCloth" count="100"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceSewingKit" count="1"/>
-</recipe-->
+</recipe>
 
 <recipe name="modArmorInsulatedLinerT2" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceCloth" count="200"/>
@@ -3317,7 +3312,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceScrapPolymers" count="20"/>
 	<ingredient name="resourceDuctTape" count="4"/>
 	<ingredient name="resourceLegendaryParts" count="1"/>
-</recipe>		 
+</recipe>
 
 <recipe name="modArmorMuffledConnectors" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedSteel" count="4"/>
