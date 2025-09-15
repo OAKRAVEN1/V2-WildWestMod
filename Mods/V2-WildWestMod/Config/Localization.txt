@@ -999,7 +999,7 @@ gunGatlingDesc,items,item,,,"A prototype mobile gatling gun with a devastating r
 gunBotT2JunkTurretWildWest,items,item,,,Wild West Scrap Spitter,,,,,,,,,,,,,
 gunBotT2JunkTurretWildWestDesc,items,item,,,"The Wild West Scrap Spitter uses steam pressure to release projectiles at incoming hostiles. It incorporates a sophisticated mechanical gyroscope to sense signature vibrations, and then targets with a unique red crystal prism and beam focuser. As the beam bounces back onto a copper collector, it stimulates the firing mechanism. The red crystal has been blessed by a spiritual healer. Can be crafted to Quality Level 6.",,,,,,,,,,,,,
 gunBotT2JunkTurretWildWest,entityclasses,Entity,,,Wild West Scrap Spitter,,,,,,,,,,,,,
-turretPickUp,UI,HUD,,,Pick up turret,,,,,,,,,,,,,
+turretPickUp,UI,HUD,,,Pick up Gatspit Weapon,,,,,,,,,,,,,
 
 gunTurretWildWest,items,item,,,Gatling Turret,,,,,,,,,,,,,
 gunTurretWildWestDesc,items,item,,,"The Gatling Turret. Too heavy to use while walking and must be carried to position in the player's backpack, then extracted to use either handheld, or placed in a suitable position to utilize the sophisticated automated system.",,,,,,,,,,,,,

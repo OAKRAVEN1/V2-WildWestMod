@@ -5434,6 +5434,16 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 		<ingredient name="resourceNail" count="10"/>
 	</recipe>
 	
+	<recipe name="woodenBear" count="1" craft_time="30" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="woodLogPillar100" count="4"/>
+	</recipe>
+	
+	<recipe name="rugBear" count="1" craft_time="30" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceSewingKit" count="1"/>
+		<ingredient name="resourceCloth" count="10"/>
+		<ingredient name="resourceLeather" count="10"/>
+	</recipe>
+	
 <!-- Clucking Bells Screamer Dinner Bell -->
 
 	<recipe name="cluckingbellsTrap" count="1" craft_time="300" craft_area="workbench" tags="workbenchCrafting">
