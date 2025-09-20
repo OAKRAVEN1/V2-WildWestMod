@@ -19,7 +19,7 @@
 <!-- remove tfp electric fence post -->
 	<remove xpath="/blocks/block[@name='electricfencepost']" />
 	
-	<!-- Pickup time -->
+<!-- Pickup time -->
 	<set xpath="/blocks/block[@name='forge']/property[@name='TakeDelay']/@value">5</set> <!-- Default 15 -->
 	<set xpath="/blocks/block[@name='workbench']/property[@name='TakeDelay']/@value">5</set> <!-- Default 15 -->
 	<set xpath="/blocks/block[@name='cementMixer']/property[@name='TakeDelay']/@value">5</set> <!-- Default 15 -->
@@ -29,7 +29,12 @@
     <set xpath="/blocks/block[@name='wallClock']/property[@name='Model']/@value">#@modfolder:Resources/NewWallClock.unity3d?wallClockPrefabNew</set>
     <set xpath="/blocks/block[@name='wallClockBroken']/property[@name='Model']/@value">#@modfolder:Resources/NewWallClock.unity3d?wallClockBrokenPrefabNew</set>
 
-	<!-- Removing movement collision from Drift wood as it can stop a custom vehicle instantly -->
+<!-- Workbench replacements -->
+    <set xpath="/blocks/block[@name='workbench']/property[@name='Model']/@value">#@modfolder:Resources/OakTableSaw.unity3d?TableSaw</set>
+    <set xpath="/blocks/block[@name='cntCollapsedWorkbench']/property[@name='Model']/@value">#@modfolder:Resources/OakTableSaw.unity3d?TableSawBroke</set>
+    <set xpath="/blocks/block[@name='cntCollapsedWorkbenchEmpty']/property[@name='Model']/@value">#@modfolder:Resources/OakTableSaw.unity3d?TableSawBroke</set>
+	
+<!-- Removing movement collision from Drift wood as it can stop a custom vehicle instantly -->
 	<set xpath="/blocks/block[@name='driftwood']/property[@name='Collide']/@value">melee,bullet,arrow,rocket</set>
 
 <!-- Vanilla Tweak for Fish Trap Water Collector -->	
