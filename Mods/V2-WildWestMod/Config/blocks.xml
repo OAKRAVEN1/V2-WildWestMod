@@ -328,7 +328,12 @@
 	<set xpath="/blocks/block[@name='cntFileCabinetTallClosed']/property[@name='Model']/@value">#@modfolder:Resources/NewFileCab.unity3d?filecabinet_tall_closedNew</set>
 	<set xpath="/blocks/block[@name='cntFileCabinetShortClosedYellow_Player']/property[@name='Model']/@value">#@modfolder:Resources/NewFileCab.unity3d?filecabinet_short_closedNew</set>
 	<set xpath="/blocks/block[@name='cntFileCabinetTallClosedYellow_Player']/property[@name='Model']/@value">#@modfolder:Resources/NewFileCab.unity3d?filecabinet_tall_closedNew</set>
-	
+<!-- Mail Drop Box and Newspaper Stands -->
+	<set xpath="/blocks/block[@name='cntPostMailbox']/property[@name='Model']/@value">#@modfolder:Resources/NewsStandNew.unity3d?MailBoxNew2</set>	
+	<set xpath="/blocks/block[@name='cntNewsDispenseFreeGreen']/property[@name='Model']/@value">#@modfolder:Resources/NewsStandNew.unity3d?NewsStandNew</set>
+	<set xpath="/blocks/block[@name='cntNewsDispenseFreeOrange']/property[@name='Model']/@value">#@modfolder:Resources/NewsStandNew.unity3d?NewsStandNew</set>
+	<set xpath="/blocks/block[@name='cntNewspaperDispenserStandBlue']/property[@name='Model']/@value">#@modfolder:Resources/NewsStandNew.unity3d?NewsStandNew</set>
+	<set xpath="/blocks/block[@name='cntNewspaperDispenserStandYellow']/property[@name='Model']/@value">#@modfolder:Resources/NewsStandNew.unity3d?NewsStandNew</set>	
 <!-- Decorative Logs Walls and Door -->
 	<set xpath="/blocks/block[@name='doorWoodLargeGate']/property[@name='MaxDamage']/@value">1000</set>
  	<append xpath="/blocks/block[@name='doorWoodLargeGate']/property[@name='Group']/@value">,Decor/Miscellaneous</append>
