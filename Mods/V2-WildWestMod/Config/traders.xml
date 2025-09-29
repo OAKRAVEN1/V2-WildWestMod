@@ -262,7 +262,7 @@
 		<trader_item_group name="ammoAll">
 			<item name="ammo9mmBulletBall" count="80,150"/> <!-- 40,150 -->
 			<item name="ammo762mmBulletBall" count="40,100"/> <!-- 20,100 -->
-			<item name="ammo44MagnumBulletBall" count="30,60" prob="0.5"/> <!-- 30,60 -->
+			<item name="ammo44MagnumBulletBall" count="30,60" prob="0.5"/> <!-- 15,60 -->
 			<item name="ammoShotgunShell" count="50,100"/> <!-- 15,100 -->
 			<item name="ammoArrowStone" count="20,60"/>
 			<item name="ammoCrossbowBoltStone" count="20,60"/>

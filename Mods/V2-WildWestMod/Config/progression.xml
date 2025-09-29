@@ -390,24 +390,24 @@
 	</crafting_skill>
 
 		<!-- *** BOW_SKILLS -->
-	<crafting_skill name="craftingBows" max_level="40" parent="attCrafting" name_key="craftingBowsName" desc_key="craftingBowsDesc" long_desc_key="craftingBowsLongDesc" icon="ui_game_symbol_archery">
+	<crafting_skill name="craftingBows" max_level="50" parent="attCrafting" name_key="craftingBowsName" desc_key="craftingBowsDesc" long_desc_key="craftingBowsLongDesc" icon="ui_game_symbol_archery">
 
 		<display_entry item="gunBowT0PrimitiveBow" unlock_level="1,2,4,6,8,10"/>
 		<display_entry item="gunBowT1WoodenBow" unlock_level="11,12,14,16,18,20"/>
-		<display_entry item="gunBowT1IronCrossbow" unlock_level="21,23,26,29,32,40"/>
+		<display_entry item="gunBowT1IronCrossbow" unlock_level="21,25,30,35,42,50"/>
 		<!--display_entry item="gunBowT3CompoundBow" unlock_level="36,39,43,47,51,55"/-->
 		<!--display_entry item="gunBowT3CompoundCrossbow" unlock_level="56,59,63,67,71,75"/-->
 
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,40" value="1" tags="gunBowT0PrimitiveBow"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,40" value="1" tags="gunBowT1WoodenBow"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,40" value="1" tags="gunBowT1IronCrossbow"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,50" value="1" tags="gunBowT0PrimitiveBow"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,50" value="1" tags="gunBowT1WoodenBow"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,50" value="1" tags="gunBowT1IronCrossbow"/>
 			<!--passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,100" value="1" tags="gunBowT3CompoundBow"/-->
 			<!--passive_effect name="RecipeTagUnlocked" operation="base_set" level="56,100" value="1" tags="gunBowT3CompoundCrossbow"/-->
 
-			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,40" value="1,2,3,4,5,5" tags="gunBowT0PrimitiveBow"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="12,14,16,18,20,40" value="1,2,3,4,5,5" tags="gunBowT1WoodenBow"/>
-			<passive_effect name="CraftingTier" operation="base_add" level="23,26,29,32,40" value="1,2,3,4,5" tags="gunBowT1IronCrossbow"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="2,4,6,8,10,50" value="1,2,3,4,5,5" tags="gunBowT0PrimitiveBow"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="12,14,16,18,20,50" value="1,2,3,4,5,5" tags="gunBowT1WoodenBow"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="25,30,35,42,50" value="1,2,3,4,5" tags="gunBowT1IronCrossbow"/>
 			<!--passive_effect name="CraftingTier" operation="base_add" level="39,43,47,51,55,75" value="1,2,3,4,5,5" tags="gunBowT3CompoundBow"/-->
 			<!--passive_effect name="CraftingTier" operation="base_add" level="59,63,67,71,75" value="1,2,3,4,5" tags="gunBowT3CompoundCrossbow"/-->
 		</effect_group>
@@ -657,32 +657,32 @@
 	<crafting_skill name="craftingFood" max_level="100" parent="attCrafting" name_key="craftingFoodName" desc_key="craftingFoodDesc" long_desc_key="craftingFoodLongDesc" icon="ui_game_symbol_fork">
 
 		<display_entry icon="foodCornOnTheCob,foodCornBread,foodGrilledMeat,foodBoiledMeat,foodBaconAndEggs" name_key="foodT1-1,foodT1-2,foodT1-3,foodT1-4,foodT1-5" has_quality="false" unlock_level="2,4,6,8,10" >
-			<unlock_entry item="foodCornOnTheCob,foodBakedPotato" unlock_tier="1" />
-			<unlock_entry item="foodCornBread,drinkJarGoldenRodTea" unlock_tier="2" />
-			<unlock_entry item="foodGrilledMeat,drinkJarRedTea" unlock_tier="3" />
-			<unlock_entry item="foodBoiledMeat,drinkJarYuccaJuice" unlock_tier="4" />
-			<unlock_entry item="foodBaconAndEggs,foodWildWestBaconAndEggsAndAcornHardtack,foodWildWestPineConeJamPancakes,foodFriedCatfish,foodRoastChicken,drinkJarCoffee" unlock_tier="5" />
+			<unlock_entry item="foodCornOnTheCob,foodBakedPotato" unlock_tier="1"/>
+			<unlock_entry item="foodCornBread,drinkJarGoldenRodTea" unlock_tier="2"/>
+			<unlock_entry item="foodGrilledMeat,drinkJarRedTea" unlock_tier="3"/>
+			<unlock_entry item="foodBoiledMeat,drinkJarYuccaJuice" unlock_tier="4"/>
+			<unlock_entry item="foodBaconAndEggs,foodWildWestBaconAndEggsAndAcornHardtack,foodWildWestPineConeJamPancakes,foodFriedCatfish,foodRoastChicken,drinkJarCoffee" unlock_tier="5"/>
 		</display_entry>
 		<display_entry icon="foodPumpkinBread,foodPumpkinPie,foodPumpkinCheesecake,foodMeatStew,foodSteakAndPotato" name_key="foodT2-1,foodT2-2,foodT2-3,foodT2-4,foodT2-5" has_quality="false" unlock_level="11,14,18,22,26" >
-			<unlock_entry item="foodPumpkinBread,foodBlueberryPie,foodEggQuiche" unlock_tier="1" />
-			<unlock_entry item="foodPumpkinPie,foodHoneyPumpkinPie" unlock_tier="2" />
-			<unlock_entry item="foodPumpkinCheesecake" unlock_tier="3" />
-			<unlock_entry item="foodVegetableStew,foodMeatStew,foodcottagebake,foodRubaboo,foodChickenStew" unlock_tier="4" />
-			<unlock_entry item="foodSteakAndPotato" unlock_tier="5" />
+			<unlock_entry item="foodPumpkinBread,foodBlueberryPie,foodEggQuiche" unlock_tier="1"/>
+			<unlock_entry item="foodPumpkinPie,foodHoneyPumpkinPie" unlock_tier="2"/>
+			<unlock_entry item="foodPumpkinCheesecake" unlock_tier="3"/>
+			<unlock_entry item="foodVegetableStew,foodMeatStew,foodcottagebake,foodRubaboo,foodChickenStew" unlock_tier="4"/>
+			<unlock_entry item="foodSteakAndPotato" unlock_tier="5"/>
 		</display_entry>
 		<display_entry icon="drinkYuccaJuiceSmoothie,foodHoboStew,foodFishTacos,foodChiliDog,foodShamChowder" name_key="foodT3-1,foodT3-2,foodT3-3,foodT3-4,foodT3-5" has_quality="false" unlock_level="27,35,43,51,59" >
-			<unlock_entry item="drinkYuccaJuiceSmoothie,drinkJarBeer" unlock_tier="1" />
-			<unlock_entry item="foodHoboStew,foodSuperCornMeatStew" unlock_tier="2" />
-			<unlock_entry item="foodFishTacos,foodCampfireBeans" unlock_tier="3" />
-			<unlock_entry item="foodChiliDog" unlock_tier="4" />
-			<unlock_entry item="foodShamChowder,foodCrawfishGumbo,foodChowder" unlock_tier="5" />
+			<unlock_entry item="drinkYuccaJuiceSmoothie,drinkJarBeer" unlock_tier="1"/>
+			<unlock_entry item="foodHoboStew,foodSuperCornMeatStew" unlock_tier="2"/>
+			<unlock_entry item="foodFishTacos,foodCampfireBeans" unlock_tier="3"/>
+			<unlock_entry item="foodChiliDog" unlock_tier="4"/>
+			<unlock_entry item="foodShamChowder,foodCrawfishGumbo,foodChowder" unlock_tier="5"/>
 		</display_entry>
 		<display_entry icon="foodTunaFishGravyToast,foodShepardsPie,drinkJarGrandpasLearningElixir,foodSpaghetti,foodGumboStew" name_key="foodT4-1,foodT4-2,foodT4-3,foodT4-4,foodT4-5" has_quality="false" unlock_level="60,70,80,90,100" >
-			<unlock_entry item="foodTunaFishGravyToast,drinkJarGrandpasAwesomeSauce" unlock_tier="1" />
-			<unlock_entry item="foodShepardsPie,drinkJarGrandpasMoonshine" unlock_tier="2" />
-			<unlock_entry item="drinkJarGrandpasLearningElixir" unlock_tier="3" />
-			<unlock_entry item="foodSpaghetti,foodSuperCornSuperSupper" unlock_tier="4" />
-			<unlock_entry item="foodGumboStew" unlock_tier="5" />
+			<unlock_entry item="foodTunaFishGravyToast,drinkJarGrandpasAwesomeSauce" unlock_tier="1"/>
+			<unlock_entry item="foodShepardsPie,drinkJarGrandpasMoonshine" unlock_tier="2"/>
+			<unlock_entry item="drinkJarGrandpasLearningElixir" unlock_tier="3"/>
+			<unlock_entry item="foodSpaghetti,foodSuperCornSuperSupper" unlock_tier="4"/>
+			<unlock_entry item="foodGumboStew" unlock_tier="5"/>
 		</display_entry>
 
 		<effect_group>
@@ -834,19 +834,19 @@
 	<crafting_skill name="craftingVehicles" max_level="75" parent="attCrafting" name_key="craftingVehiclesName" desc_key="craftingVehiclesDesc" long_desc_key="craftingVehiclesLongDesc" icon="ui_game_symbol_balloon">
 
 		<display_entry icon="vehicleBicyclePlaceable" name_key="vehiclesT1" has_quality="false" unlock_level="5" >
-			<unlock_entry item="vehicleBicycleChassis,vehicleBicycleHandlebars,vehicleWheels,ammoGasCan" unlock_tier="1" />
+			<unlock_entry item="vehicleBicycleChassis,vehicleBicycleHandlebars,vehicleWheels,ammoGasCan" unlock_tier="1"/>
 		</display_entry>
 		<display_entry icon="vehicleSteamVelocipedePlaceable" name_key="vehiclesT2" has_quality="false" unlock_level="25" >
-			<unlock_entry item="vehicleSteamVelocipedePlaceable,ammoGasCanBundle,resourceOil" unlock_tier="1" />
+			<unlock_entry item="vehicleSteamVelocipedePlaceable,ammoGasCanBundle,resourceOil" unlock_tier="1"/>
 		</display_entry>
 		<!--display_entry icon="vehicleMotorcyclePlaceable" name_key="vehiclesT3" has_quality="false" unlock_level="45" >
 			<unlock_entry item="vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,ammoGasCanBundle" unlock_tier="1" />
 		</display_entry-->
 		<display_entry icon="vehicleSteamHorse" name_key="vehiclesT4" has_quality="false" unlock_level="50" >
-			<unlock_entry item="vehicleSteamHorsePlaceable" unlock_tier="1" />
+			<unlock_entry item="vehicleSteamHorsePlaceable" unlock_tier="1"/>
 		</display_entry>
 		<display_entry icon="balloon1" name_key="vehiclesT5" has_quality="false" unlock_level="75" >
-			<unlock_entry item="vehicleBalloon2Placeable,vehicleBalloon3Placeable,vehicleBalloon4Placeable" unlock_tier="1" />
+			<unlock_entry item="vehicleBalloon2Placeable,vehicleBalloon3Placeable,vehicleBalloon4Placeable" unlock_tier="1"/>
 		</display_entry>
 
 		<effect_group>
@@ -906,7 +906,7 @@
 			<!--
 			head,arm,leg" are already set up as FastTags so may need to add "chest" to avoid weird cases.
 			Would be used like:
-			<effect_group name="cripple Proc" tiered="false">
+			<effect_group name="cripple Proc">
 				<requirement name="HitLocation" body_parts="xxleg,secondary"/>
 			-->
 		</effect_group>
@@ -1754,7 +1754,7 @@
 		<requirement name="!HasBuff" buff="buffTwitchRadiation"/>
 		<requirement name="!IsAttachedToEntity"/>
 		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
-			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_at_self="true"/>
+			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_in_head="true"/>
 			<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="buffPackMuleDisplay"/>
 			<passive_effect name="GeneralDamageResist" operation="base_add" level="1" value="1"/>
 		</effect_group>
@@ -1772,7 +1772,7 @@
 		<requirement name="!HasBuff" buff="buffTwitchRadiation"/>
 		<requirement name="!IsAttachedToEntity"/>
 		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
-			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_at_self="true"/>
+			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_in_head="true"/>
 			<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="buffPackMuleDisplay"/>
 			<passive_effect name="GeneralDamageResist" operation="base_add" level="2" value="1"/>
 		</effect_group>
@@ -1790,7 +1790,7 @@
 		<requirement name="!HasBuff" buff="buffTwitchRadiation"/>
 		<requirement name="!IsAttachedToEntity"/>
 		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
-			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_at_self="true"/>
+			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_in_head="true"/>
 			<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="buffPackMuleDisplay"/>
 			<passive_effect name="GeneralDamageResist" operation="base_add" level="3" value="1"/>
 		</effect_group>
@@ -1808,7 +1808,7 @@
 		<requirement name="!HasBuff" buff="buffTwitchRadiation"/>
 		<requirement name="!IsAttachedToEntity"/>
 		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
-			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_at_self="true"/>
+			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_in_head="true"/>
 			<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="buffPackMuleDisplay"/>
 			<passive_effect name="GeneralDamageResist" operation="base_add" level="4" value="1"/>
 		</effect_group>
@@ -1825,7 +1825,7 @@
 		<requirement name="!HasBuff" buff="buffTwitchShocked"/>
 		<requirement name="!HasBuff" buff="buffTwitchRadiation"/>
 		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
-			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_at_self="true"/>
+			<triggered_effect trigger="onOtherAttackedSelf" action="PlaySound" sound="twitch_bucket_hit" play_in_head="true"/>
 			<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="buffPackMuleDisplay"/>
 			<passive_effect name="GeneralDamageResist" operation="base_add" level="5" value="1"/>
 		</effect_group>
@@ -2411,12 +2411,12 @@
 
 			<!-- Increase the chance to find bow crafting skill magazines with each perk rank up to crafting skill 75 -->
 			<passive_effect name="LootProb" operation="perc_add" level="1,5" value="2,10" tags="bowsCSM">
-				<requirement name="ProgressionLevel" progression_name="craftingBows" operation="LT" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="craftingBows" operation="LT" value="50"/>
 			</passive_effect>
 
 			<!-- Once bow crafting skill reaches 75, set the probability bonus of finding bow crafting skill magazines to 0 -->
 			<passive_effect name="LootProb" operation="base_set" level="1,5" value="1,1" tags="bowsCSM">
-				<requirement name="ProgressionLevel" progression_name="craftingBows" operation="Equals" value="40"/>
+				<requirement name="ProgressionLevel" progression_name="craftingBows" operation="Equals" value="50"/>
 			</passive_effect>
 
 			<!-- Increase the chance to find Ranger's Guide to Archery books until each book is read -->
@@ -2809,16 +2809,27 @@
 		</effect_group>
 
 		<effect_group>
-			<!-- Handguns now cause bleeding -->
-			<requirement name="HoldingItemHasTags" tags="perkGunslinger"/>
+			<!-- Handguns cause bleeding -->
+			<requirement name="HoldingItemHasTags" tags="perkGunslinger,perkArchery"/>
 			<requirement name="ProgressionLevel" progression_name="perkAgilityMastery" operation="GTE" value="3"/>
 			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="1" target="other"/>
 				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
 		</effect_group>
-
 		<effect_group>
 			<requirement name="CVarCompare" cvar="bleedCounter" operation="GT" value="0" target="other"/>
 				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		</effect_group>
+
+		<effect_group>
+			<!-- Bows and crossbows cause bleeding -->
+			<requirement name="HoldingItemHasTags" tags="perkArchery"/>
+			<requirement name="ProgressionLevel" progression_name="perkAgilityMastery" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="1" target="other"/>
+				<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="GT" value="0" target="other"/>
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
 		</effect_group>
 
 		<effect_group>
@@ -3425,7 +3436,7 @@
 			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="armorLightSkill"/>
 
 			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
-			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="armorCSM">
+			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="4,20" tags="armorCSM">
 				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
 			</passive_effect>
 
@@ -3453,7 +3464,7 @@
 			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="armorMediumSkill"/>
 
 			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
-			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="armorCSM">
+			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="4,20" tags="armorCSM">
 				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
 			</passive_effect>
 
@@ -3481,7 +3492,7 @@
 			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="armorHeavySkill"/>
 
 			<!-- Increase the chance to find armor crafting skill magazines with each perk rank up to crafting skill 100 -->
-			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="2,10" tags="armorCSM">
+			<passive_effect name="LootProb" operation="perc_add" level="1,4" value="4,20" tags="armorCSM">
 				<requirement name="ProgressionLevel" progression_name="craftingArmor" operation="LT" value="100"/>
 			</passive_effect>
 

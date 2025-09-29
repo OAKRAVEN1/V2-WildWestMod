@@ -10626,7 +10626,7 @@
 </lootcontainer>
 
 <!-- vehicleT3Horse storage -->
-<lootcontainer name="vehicleT3Horse" count="0" size="9,7" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="vehicleT3Horse" count="0" size="9,8" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
 
 <!-- vehicleMotorcycle storage -->
@@ -11651,7 +11651,7 @@
 	<!-- *** Wild West Treasure Crate Goodies -->
 	<lootgroup name="groupWildWestTreasure" count="all">
 		<item group="groupValuablesExtraLarge" count="1,2"/>
-		<item group="groupAmmoPileLarge" count="2,3"/>
+		<item group="groupAmmoPileLarge" count="1,2"/>
 		<item group="groupWeaponsRangedScaledTPlus" count="1"/>
 		<item group="groupModAllScaled" count="1"/>
 		<item group="groupWeaponModsScaled" count="1"/>
