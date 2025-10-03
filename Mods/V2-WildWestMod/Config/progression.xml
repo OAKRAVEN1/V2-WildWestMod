@@ -4743,7 +4743,7 @@
 	<!-- *** TECH_JUNKIE_VOLUME_03_APAMMO -->
 	<book name="perkTechJunkie3APAmmo" parent="skillTechJunkie" max_level="1" base_skill_point_cost="0" name_key="bookTechJunkie3APAmmo" desc_key="perkTechJunkie3APAmmoDesc" long_desc_key="perkTechJunkie3APAmmoLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoJunkTurretAP"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoJunkTurretAP,ammoTurretAP"/>
 		</effect_group>
 	</book>
 	<!-- *** TECH_JUNKIE_VOLUME_04_TURRET_SHELLS -->
