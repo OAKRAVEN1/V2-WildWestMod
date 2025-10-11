@@ -356,10 +356,11 @@
 	<!--remove xpath="/blocks/block[@name='switch']/property[@name='UnlockedBy']"/>
 	<remove xpath="/blocks/block[@name='electricwirerelay']/property[@name='UnlockedBy']"/-->
 	
-	<!-- Apples for the Wild West due to Zero Rotten Trash Plastic Bags -->
+	<!-- Apples and Chicks for the Wild West Trees due to Zero Rotten Trash Plastic Bags and Nest Loot Oddities -->
 	
 	<append xpath="/blocks/block[@name='treeMaster']" >
 		<drop event="Destroy" name="foodApple" prob=".175" count="1,2"/>
+		<drop event="Destroy" name="CaughtChick" prob=".175" count="1,2"/>
 	</append>
 	
 	<!-- A19 Farming update by arramus -->

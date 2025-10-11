@@ -32,6 +32,96 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 
 [ Change Log ]
+Version: 2.4.11.1222
+
+	[ Quest ]
+		- Added new quest Action to teleport the player.
+		- This action relies on the Objectives for GotoPOISDX to set the position.
+
+           <objective type="GotoPOISDX, SCore" value="200-8000" phase="1">
+                <property name="completion_distance" value="50"/>
+                <property name="PrefabName" value="trader_jen"/>
+            </objective>
+
+		- By default, the teleport position will be in the SW corner of the POI.
+		- If the block property is set, it will attempt to teleport you to that block within the POI.
+		- If the blocK_tag property is set, and a block with the Tags is within the POI, that will be used as a position.
+		- If offset is specified, the position, regardless of how it was set, will be applied to the position.
+		- If the offset is 0,0,0, a random position will be calculated within 2 blocks of the position.
+        	<action type="Teleport, SCore">
+                <property name="block" value="radioHam" />
+                <property name="phase" value="1" />
+                <property name="delay" value="5" />
+                <property name="offset" value="0,0,0" />
+            </action>
+
+		- Notes:
+			- A delay is higly recommend to be set, even if it's 1. The objective will set up the initial position, and needs 
+				time to be calculated. Without the delay, the position may not be set in time for the teleport.
+			- The GotoPOISDX and Teleport Action should be in the same phase.
+			- In the case of a new location, blocks may not be in place yet to calculate an offset.
+				- This will have the effect that the SW corner will be used as a position.
+				- A potential work around is as follows, which sends the player, allows the world to rebuild, then move the player again.
+				   <action type="Teleport, SCore">
+						<property name="phase" value="1" />
+						<property name="delay" value="5" />
+						<property name="offset" value="0,0,0" />
+					</action>
+					<action type="Teleport, SCore">
+						<property name="block" value="radioHam" />
+						<property name="phase" value="1" />
+						<property name="delay" value="6" />
+						<property name="offset" value="0,0,0" />
+					</action>
+
+Version: 2.4.9.835
+	[ Quality ]
+		- Fixed an issue where some items would not have a quality when they should have, when not using the quality feature.
+
+Version: 2.4.8.1712
+	[ Item Actions ]
+		- Disabled adding additional actions to items.
+		- This was done in the past to allow NPCs to use more creative actions, but was never used.
+
+	[ Trader Placable ]
+		- Removed Debug statement.
+
+	[ Sleepers ]
+		- Fixed an issue with the Challenge for Clearing Sleepers that was also clearing quests.
+
+	
+
+Version: 2.4.7.833
+	[ Challenges ]
+		- Fixed an issue with Clear Challenges not properly reporting on dedi
+		- Fixed an issue where blocks destroyed by fire was not properly reporting on dedi.
+
+	[ Fire Manager ]
+		- Added a different call to trigger an event for a block destroyed by fire ( for challenge support ).
+		- Fixed an issue where blocks were not being properly destroyed on dedi.
+		- Fixed an issue with fire particles not spreading on dedi.
+
+	[ MinEvent ]
+		- Updated MinEventActionReplaceMaterial to take a comma delimited list of replace_materials to randomize them.
+
+	[ Item Degradation ]
+		- Fixed an issue where worn equipment wasn't properly breaking.
+
+	[ Quality ]
+		- Added new entry to blocks.xml to control the increase/decrease tiers for quality, called "QualityStage".
+		- Default is set to 25.
+		- When using quality tiers, the quality selector will increment up and down based on that value.
+		- Fixed an issue where quality seemed random when crafting, and not the selected crafting.
+
+	[ Food Spoilage ]	
+		- Fixed an issue with quality colours when using the extended quality.
+
+	[ Trader Areas ]
+		- Added a new patch to allow properly tagged blocks to be placed within a trader area.
+		- If a block has the tag "traderPlaceable", you may place it within the trader area.
+		- Blocks with this tag can also be repaired, damaged, etc.
+		- This patch does not rely on trader protection being off, or on.
+
 Version: 2.4.2.1406
 	[ Fire Manager ]
 		- Fixed (again) the fire manager from not breaking blocks on a dedicated server.

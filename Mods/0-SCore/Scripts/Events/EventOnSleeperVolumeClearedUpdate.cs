@@ -6,25 +6,31 @@ public static class EventOnSleeperVolumeClearedUpdate {
 
     public static event OnSleeperVolumeClearedUpdate OnSleeperVolumeClearedEvent;
 
-    [HarmonyPatch(typeof(SleeperVolume))]
-    [HarmonyPatch(nameof(SleeperVolume.ClearedUpdate))]
-    public class SleeperVolumeClearedUpdatePatch {
-        private static void Postfix(SleeperVolume __instance)
+    public static void SleeperVolumeCleared(Vector3 pos)
+    {
+        OnSleeperVolumeClearedEvent?.Invoke(pos);
+    }
+    [HarmonyPatch(typeof(SleeperVolume), "ClearedUpdate")]
+    public class SleeperVolume_ClearedUpdate_Patch
+    {
+        public static void Postfix(SleeperVolume __instance, bool __state)
         {
-            if (__instance?.groupCountList == null) return;
-            
-            // Don't fire the event if there was no spawn.
-            var count = 0;
-            foreach (var group in __instance.groupCountList)
-                count += group.count;
-
-            // There were never any spawns
-            if (count == 0) return;
-
-            // The volume wasn't cleared. Why are we getting here?
-            if (__instance.GetAliveCount() > 0) return;
-            
-            OnSleeperVolumeClearedEvent?.Invoke(__instance.Center);
+            if (__instance.wasCleared)
+            {
+                var playerId = __instance.GetPlayerTouchedToUpdateId();
+                var player = GameManager.Instance.World.GetEntity(playerId) as EntityPlayer;
+                var position = __instance.PrefabInstance.boundingBoxPosition;
+                if (player is EntityPlayerLocal localPlayer)
+                {
+                    Debug.Log($"Local Player: Position: {position}");
+                    SleeperVolumeCleared(position);
+                    return;
+                }
+                
+                Debug.Log($"Remote Player: Position: {position}");
+                SingletonMonoBehaviour<ConnectionManager>.Instance.SendPackage(NetPackageManager.GetPackage<NetPackageSleeperVolumeCleared>().Setup(position,playerId ));
+              
+            }
         }
     }
 }

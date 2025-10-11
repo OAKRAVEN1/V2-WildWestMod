@@ -83,6 +83,7 @@
     <Compile Include="Features\Challenges\Scripts\ChallengeObjectiveWearTags.cs" />
     <Compile Include="Features\Challenges\Scripts\ChallengeRequirementManager.cs" />
     <Compile Include="Features\Challenges\Scripts\IChallengeObjective.cs" />
+    <Compile Include="Features\Challenges\Scripts\NetPackageSleeperVolumeCleared.cs" />
     <Compile Include="Features\Challenges\Scripts\SCoreChallengeUtils.cs" />
     <Compile Include="Features\Drones\Harmony\EntityDronePatches.cs" />
     <Compile Include="Features\DynamicBones\Harmony\SDCSMatchRigs.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Features\Farming\Scripts\FarmPlotManager.cs" />
     <Compile Include="Features\Farming\Scripts\NetPackage\NetPackageToggleSprinkler.cs" />
     <Compile Include="Features\Farming\Scripts\WaterPipeManager.cs" />
+    <Compile Include="Features\FireV2\Harmony\BlockInit.cs" />
     <Compile Include="Features\FireV2\Harmony\ChunkSetBlock.cs" />
     <Compile Include="Features\FireV2\Harmony\Explosion.cs" />
     <Compile Include="Features\FireV2\Harmony\FireInit.cs" />
@@ -231,8 +233,10 @@
     <Compile Include="Features\Quality\Harmony\QualityInfoGetQualityColorHex.cs" />
     <Compile Include="Features\Quality\Harmony\QualityInfoGetQualityLevelName.cs" />
     <Compile Include="Features\Quality\Harmony\QualityInfoGetTierColor.cs" />
+    <Compile Include="Features\Quality\Harmony\XUiCCombineGridMergeSlotChangedEvent.cs" />
     <Compile Include="Features\Quality\Harmony\XUiCCraftingInfoAddQualityButton_OnPress.cs" />
     <Compile Include="Features\Quality\Harmony\XUiCCraftingInfoSubtractQualityButton_OnPress.cs" />
+    <Compile Include="Features\Quality\Harmony\XUiCRecipeStackSetRecipe.cs" />
     <Compile Include="Features\Quality\Harmony\XUiMTraderGetBuyPrice.cs" />
     <Compile Include="Features\Quality\Harmony\XUiMTraderGetSellPrice.cs" />
     <Compile Include="Features\Quality\Scripts\QualityUtils.cs" />
@@ -340,8 +344,11 @@
     <Compile Include="Harmony\PlayerFeatures\PlayerMoveControllerUpdate.cs" />
     <Compile Include="Harmony\PlayerFeatures\SoftHands.cs" />
     <Compile Include="Harmony\PlayerFeatures\TeleportNPCs.cs" />
+    <Compile Include="Harmony\PrefabFeatures\BlockCanPlaceBlockAt.cs" />
     <Compile Include="Harmony\PrefabFeatures\DynamicPrefabDecorator.cs" />
     <Compile Include="Harmony\PrefabFeatures\RemoveTraderProtection.cs" />
+    <Compile Include="Harmony\PrefabFeatures\WorldCanPlaceBlockAt.cs" />
+    <Compile Include="Harmony\PrefabFeatures\WorldIsWithinTraderArea.cs" />
     <Compile Include="Harmony\Progression\EntityAliveSDXProgressionHooks.cs" />
     <Compile Include="Harmony\Progression\Progression.cs" />
     <Compile Include="Harmony\Quests\QuestEventManager.cs" />
@@ -639,6 +646,7 @@
     <Compile Include="Scripts\Quests\QuestActionReplaceEntitySDX.cs" />
     <Compile Include="Scripts\Quests\QuestActionSetRevengeTargetsSDX.cs" />
     <Compile Include="Scripts\Quests\QuestActionSpawnEntitySDX.cs" />
+    <Compile Include="Scripts\Quests\QuestActionTeleport.cs" />
     <Compile Include="Scripts\Quests\QuestUtils.cs" />
     <Compile Include="Scripts\Quests\RewardGiveBuff.cs" />
     <Compile Include="Scripts\Quests\RewardGiveCvarDMT.cs" />
