@@ -54,6 +54,18 @@
 <remove xpath="/entity_classes/entity_class[@name='zombieNurseCharged']"/>
 <!--remove xpath="/entity_classes/entity_class[@name='zombieNurseInfernal']"/-->
 
+<remove xpath="/entity_classes/entity_class[@name='zombieLab']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieLabFeral']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieLabRadiated']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombieLabCharged']"/>
+<!--remove xpath="/entity_classes/entity_class[@name='zombieLabInfernal']"/-->
+
+<remove xpath="/entity_classes/entity_class[@name='zombiePartyGirl']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombiePartyGirlFeral']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombiePartyGirlRadiated']"/>
+<remove xpath="/entity_classes/entity_class[@name='zombiePartyGirlCharged']"/>
+<!--remove xpath="/entity_classes/entity_class[@name='zombiePartyGirlInfernal']"/-->
+
 	<!-- Horse - Zilox and Darkstardragon -->
 
 	<append xpath="/entity_classes/entity_class[@name='playerMale']">
@@ -1623,6 +1635,157 @@
 	<!--property name="MatColor" value="charged"/-->
 	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
 	<property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?NurseBlue"/>
+	<property name="ExperienceGain" value="1400"/><!-- XP Slim Charged -->
+	<property name="HandItem" value="meleeHandZombieCharged"/>
+	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+	<property name="LootDropProb" value=".1"/> <!-- Charged -->
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthSlimCharged"/>
+	</effect_group>
+</entity_class>
+
+                    <!-- New CowGirlsMedusa for ZOMBIE_LAB -->
+	
+	  <entity_class name="zombieLab" extends="zombieTemplateMale">
+	        <property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome"/>
+	        <property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?cowgirlMedusa"/>
+			<property name="SoundRandom" value="zombiefemaleroam"/>
+			<property name="SoundAlert" value="zombiefemalealert"/>
+			<property name="SoundAttack" value="zombiefemaleattack"/>
+			<property name="SoundHurt" value="zombiefemalepain"/>
+			<property name="SoundDeath" value="zombiefemaledeath"/>
+			<property name="SoundSense" value="zombiefemalesense"/>
+			<property name="SoundStepType" value="barestep"/>
+            <property name="ModelType" value="Standard"/>
+            <property name="WalkType" value="7"/>
+            <property name="Mass" value="130"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
+			<property name="AIPathCostScale" value=".5, .65"/>
+			<property name="NavObjectHeadOffset" value="0,-0.15,0"/>
+			<property name="DanceType" value="2"/>
+			<property name="LootDropProb" value=".04"/> <!-- Lab -->
+			<property name="LootDropEntityClass" value="EntityLootContainerLab"/>
+
+			<!-- Gameplay zombieLab -->
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="^healthNormal"/>
+			</effect_group>
+		</entity_class>
+
+				<!-- *** ZOMBIE_LAB_FERAL -->	  
+	  <entity_class name="zombieLabFeral" extends="zombieLab">
+	        <property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome"/>
+	        <property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?cowgirlMedusaFed"/>
+	
+			<!-- Gameplay zombieLabFeral -->
+			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+			<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="HandItem" value="meleeHandZombieFeral"/>
+			<property name="ExperienceGain" value="750"/><!-- XP Normal Feral -->
+			<property name="LootDropProb" value=".04"/> <!-- Feral -->
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="^healthNormalFeral"/>
+			</effect_group>
+		</entity_class>
+		
+				<!-- *** ZOMBIE_LAB_RADIATED -->
+		<entity_class name="zombieLabRadiated" extends="zombieLabFeral">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
+	        <property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?cowgirlMedusaRAD"/>
+
+			<!-- Gameplay zombieLabRadiated -->
+			<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+			<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+			<property name="ExperienceGain" value="1200"/><!-- XP Normal Radiated -->
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="^healthNormalRadiated"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>
+		</entity_class>
+	  
+				<!-- *** ZOMBIE_LAB_CHARGED -->
+		<entity_class name="zombieLabCharged" extends="zombieLabRadiated">
+			<property name="Tags" value="entity,zombie,walker,allbiome,feral,charged"/>
+			<property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?cowgirlMedusaCharged"/>
+			<property name="ExperienceGain" value="1400"/><!-- XP Normal Charged -->
+			<property name="HandItem" value="meleeHandZombieCharged"/>
+			<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
+			<property name="LootDropProb" value=".1"/> <!-- Charged -->
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="^healthNormalCharged"/>
+			</effect_group>
+		</entity_class>
+
+                    <!-- New CowGirlsOak as ZOMBIE_PARTY_GIRL -->
+					
+ <entity_class name="zombiePartyGirl" extends="zombieTemplateSlimFemale">
+	        <property name="UserSpawnType" value="Menu"/>
+	        <property name="Tags" value="entity,zombie,walker,allbiome"/>
+	        <property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?CowGirloak"/>
+            <property name="ModelType" value="Standard"/>
+            <property name="WalkType" value="7"/>
+            <property name="Mass" value="130"/>
+			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
+            <property name="RootMotion" value="true"/>
+            <property name="HasDeathAnim" value="true"/>
+
+	<!-- Gameplay zombiePartyGirl -->
+	<property name="MoveSpeedAggro" value="0.3, 1.35"/> <!-- Slim -->
+</entity_class>
+
+		<!-- *** ZOMBIE_PARTY_GIRL_FERAL -->
+<entity_class name="zombiePartyGirlFeral" extends="zombiePartyGirl">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
+	<property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?CowGirloakfed"/>
+
+	<!-- Gameplay zombiePartyGirlFeral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+	<property name="MoveSpeedAggro" value="0.6, 1.45"/> <!-- Slim Feral -->
+	<property name="JumpMaxDistance" value="4.6, 5"/>
+	<property name="HandItem" value="meleeHandZombieShortFeral"/>
+	<property name="ExperienceGain" value="750"/><!-- XP Slim Feral -->
+	<property name="LootDropProb" value=".04"/> <!-- Feral -->
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthSlimFeral"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_PARTY_GIRL_RADIATED -->
+<entity_class name="zombiePartyGirlRadiated" extends="zombiePartyGirlFeral">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
+	<property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?CowGirloakRad"/>
+
+	<!-- Gameplay zombiePartyGirlRadiated -->
+	<property name="DismemberMultiplierHead" value=".4"/><property name="DismemberMultiplierArms" value=".4"/><property name="DismemberMultiplierLegs" value=".4"/><!-- Radiated -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="ExperienceGain" value="1200"/><!-- XP Slim Radiated -->
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="^healthSlimRadiated"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_PARTY_GIRL_CHARGED -->
+<entity_class name="zombiePartyGirlCharged" extends="zombiePartyGirlRadiated">
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?CowGirloakCharged"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Slim Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
 	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
