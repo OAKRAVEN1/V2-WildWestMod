@@ -3865,6 +3865,11 @@
 <entity_class name="zombieWWMZombies" extends="zombieTemplateMale">
 	<property name="UserSpawnType" value="None"/>
 </entity_class>
+
+		<!-- *** TOY_SOLDIERS -->
+<entity_class name="zombieWWMSoldierZombies" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="None"/>
+</entity_class>
 	  
 </append>
 

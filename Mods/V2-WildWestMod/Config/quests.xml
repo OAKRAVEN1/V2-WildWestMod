@@ -1,7 +1,7 @@
 <wildwestmod>
 
 	<set xpath="/quests/@max_quest_tier">6</set>
-	<set xpath="/quests/@quests_per_tier">8</set>
+	<set xpath="/quests/@quests_per_tier">2</set>
 	<!--set xpath="/quests/@quests_per_tier">1</set--> <!-- For Testing Quest Progression -->
 
 <set xpath="/quests">
@@ -2619,6 +2619,7 @@
 		<property name="extra_tags" value="tiercomplete"/>
 
 		<reward type="Item" id="casinoCoin" value="2000"/>
+		<reward type="Item" id="qc_eliminatetoysoldiers" value="1"/> <!-- Toy Soldiers Quest -->
 
 		<reward type="Item" id="vehicleWWMHorseT3Placeable" ischosen="true" isfixed="true" value="1"/>
 		<reward type="LootItem" id="groupQuestcasinoCoinT3" ischosen="true" value="4"/>
@@ -2858,10 +2859,10 @@
 	<!-- Adds the "Chuckwagon Dinner Bell Challenge" -->	
 	<!-- Chuckwagon Dinner Bell Craft and Place -->
 		<quest id="quest_chuckwagondinnerbell01">
-		<property name="offer_key" value="Accept this Quest to begin the Chuckwagon Dinner Bell Challenge. Craft a Chuckwagon Dinner Bell and place it on a flat surface. Strike it repeatedly to announce that dinner has been served. A Screamer Scout will hear the sound, pick up the scent, and invite her friends to the feast. The more you hit it, the more will appear. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing. Receive 2 Skill Points for eliminating 200 Screamer Scouts. This quest continually loops." />
-		<property name="name_key" value="Chuckwagon Dinner Bell"/>
-		<property name="subtitle_key" value="Chuckwagon Dinner Bell"/>
-		<property name="description_key" value="Craft a Chuckwagon Dinner Bell and place it on a flat surface. Strike it repeatedly to announce that dinner has been served. A Screamer Scout will hear the sound, pick up the scent, and invite her friends to the feast. The more you hit it, the more will appear. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing."/>
+		<property name="offer_key" value="quest_chuckwagondinnerbell01_offer"/>
+		<property name="name_key" value="quest_chuckwagondinnerbell01_name"/>
+		<property name="subtitle_key" value="quest_chuckwagondinnerbell01_subtitle"/>
+		<property name="description_key" value="quest_chuckwagondinnerbell01_description"/>
 		<property name="icon" value="ui_game_symbol_zombie"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="veryeasy"/>
@@ -2873,12 +2874,12 @@
 		<reward type="Quest" id="quest_chuckwagondinnerbell02"/>
 	</quest>
 	
-	<!-- Adds the "Zombie Looping" Bounty Quest -->
+	<!-- Adds the "Screamer Looping" Quest -->
 	<quest id="quest_chuckwagondinnerbell02">
-	<property name="offer_key" value="Accept this Quest to begin the Chuckwagon Dinner Bell Challenge. Craft a Chuckwagon Dinner Bell and place it on a flat surface. Strike it to announce that dinner has been served. A Screamer Scout will hear the sound, pick up the scent, and invite her friends to the feast. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing. Receive 2 Skill Points and 10,000 XP for eliminating 200 Screamer Scouts. This quest continually loops." />       
-    <property name="name_key" value="Screamer Scouts" />
-	<property name="subtitle_key" value="Screamer Scouts" />
-	<property name="description_key" value="Craft a Chuckwagon Dinner Bell and place it on a flat surface. Strike it to announce that dinner has been served. A Screamer Scout will hear the sound, pick up the scent, and invite her friends to the feast. Pick up the Chuckwagon Dinner Bell to stop any more Screamer Scouts from appearing." />
+	<property name="offer_key" value="quest_chuckwagondinnerbell02_offer"/>       
+    <property name="name_key" value="quest_chuckwagondinnerbell02_name"/>
+	<property name="subtitle_key" value="quest_chuckwagondinnerbell02_subtitle"/>
+	<property name="description_key" value="quest_chuckwagondinnerbell02_description"/>
 	<property name="icon" value="ui_game_symbol_zombie"/>
 	<property name="repeatable" value="true"/>
 	<property name="category_key" value="quest"/>
@@ -2896,10 +2897,10 @@
 	
 	<!-- Adds the "Zombie Looping" Bounty Quest -->
 	<quest id="quest_eliminatezombies25">
-	<property name="offer_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />       
-    <property name="name_key" value="25 Infected Settlers" />
-	<property name="subtitle_key" value="25 Infected Settlers" />
-	<property name="description_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />
+	<property name="offer_key" value="quest_eliminatezombies25_offer"/>       
+    <property name="name_key" value="quest_eliminatezombies25_name"/>
+	<property name="subtitle_key" value="quest_eliminatezombies25_subtitle"/>
+	<property name="description_key" value="quest_eliminatezombies25_description"/>
 	<property name="icon" value="ui_game_symbol_zombie"/>
 	<property name="repeatable" value="true"/>
 	<property name="add_to_tier_complete" value="false"/>
@@ -2916,10 +2917,10 @@
 	</quest>
 	
 	<quest id="quest_eliminatezombies50">
-	<property name="offer_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />       
-    <property name="name_key" value="50 Infected Settlers" />
-	<property name="subtitle_key" value="50 Infected Settlers" />
-	<property name="description_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />
+	<property name="offer_key" value="quest_eliminatezombies50_offer"/>       
+    <property name="name_key" value="quest_eliminatezombies50_name"/>
+	<property name="subtitle_key" value="quest_eliminatezombies50_subtitle"/>
+	<property name="description_key" value="quest_eliminatezombies25_description"/>
 	<property name="icon" value="ui_game_symbol_zombie"/>
 	<property name="repeatable" value="true"/>
 	<property name="add_to_tier_complete" value="false"/>
@@ -2936,10 +2937,10 @@
 	</quest>
 	
 	<quest id="quest_eliminatezombies75">
-	<property name="offer_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />       
-    <property name="name_key" value="75 Infected Settlers" />
-	<property name="subtitle_key" value="75 Infected Settlers" />
-	<property name="description_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />
+	<property name="offer_key" value="quest_eliminatezombies75_offer"/>       
+    <property name="name_key" value="quest_eliminatezombies75_name"/>
+	<property name="subtitle_key" value="quest_eliminatezombies75_subtitle"/>
+	<property name="description_key" value="quest_eliminatezombies75_description"/>
 	<property name="icon" value="ui_game_symbol_zombie"/>
 	<property name="repeatable" value="true"/>
 	<property name="add_to_tier_complete" value="false"/>
@@ -2956,10 +2957,10 @@
 	</quest>
 	
 	<quest id="quest_eliminatezombies100">
-	<property name="offer_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />       
-    <property name="name_key" value="100 Infected Settlers" />
-	<property name="subtitle_key" value="100 Infected Settlers" />
-	<property name="description_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />
+	<property name="offer_key" value="quest_eliminatezombies100_offer"/>       
+    <property name="name_key" value="quest_eliminatezombies100_name"/>
+	<property name="subtitle_key" value="quest_eliminatezombies100_subtitle"/>
+	<property name="description_key" value="quest_eliminatezombies100_description"/>
 	<property name="icon" value="ui_game_symbol_zombie"/>
 	<property name="repeatable" value="true"/>
 	<property name="add_to_tier_complete" value="false"/>
@@ -2976,10 +2977,10 @@
 	</quest>
 	
 	<quest id="quest_eliminatezombies250">
-	<property name="offer_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />       
-    <property name="name_key" value="250 Infected Settlers" />
-	<property name="subtitle_key" value="250 Infected Settlers" />
-	<property name="description_key" value="Accept this bounty quest to 'cure' the infected settlers. There are multiple stages which continuosly loop. Cure 25, 50, 75, 100, and 250 for a total of 500 for incremental XP and 3 Skill. Start all over again." />
+	<property name="offer_key" value="quest_eliminatezombies250_offer"/>       
+    <property name="name_key" value="quest_eliminatezombies250_name"/>
+	<property name="subtitle_key" value="quest_eliminatezombies250_subtitle"/>
+	<property name="description_key" value="quest_eliminatezombies250_description"/>
 	<property name="icon" value="ui_game_symbol_zombie"/>
 	<property name="repeatable" value="true"/>
 	<property name="add_to_tier_complete" value="false"/>
@@ -3096,10 +3097,10 @@
 	
 	<!-- Adds the "Crispy Family" Horde Quest -->
 	<quest id="challenge_eliminatecrispyfamily">
-	<property name="offer_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill and 10,000 XP for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />       
-    <property name="name_key" value="Crispy Family and Friends" />
-	<property name="subtitle_key" value="Crispy Family and Friends" />
-	<property name="description_key" value="Accept this bounty quest to eliminate 200 Crispy Family members and their Mutant Rat friends. 2 Skill and 10,000 XP for your troubles. This bounty quest continually loops, since their presence can be maintained, but never eradicated." />
+	<property name="offer_key" value="challenge_eliminatecrispyfamily_offer"/>       
+    <property name="name_key" value="challenge_eliminatecrispyfamily_name"/>
+	<property name="subtitle_key" value="challenge_eliminatecrispyfamily_subtitle"/>
+	<property name="description_key" value="challenge_eliminatecrispyfamily_description"/>
 	<property name="icon" value="ui_game_symbol_crispy"/>
 	<property name="repeatable" value="true"/>
 	<property name="add_to_tier_complete" value="false"/>
@@ -3194,6 +3195,28 @@
 		
 		<reward type="Exp" value="20000"/>
 		<reward type="SkillPoints" value="4" chainreward="false"/>
+	</quest>
+	
+	<!-- Toy Soldiers -->
+	<quest id="quest_eliminatetoysoldiers">
+		<property name="offer_key" value="quest_eliminatetoysoldiers_offer"/>
+		<property name="name_key" value="quest_eliminatetoysoldiers_name"/>
+		<property name="subtitle_key" value="quest_eliminatetoysoldiers_subtitle"/>
+		<property name="description_key" value="quest_eliminatetoysoldiers_description"/>
+		<property name="icon" value="ui_game_symbol_zombie"/>
+		<property name="repeatable" value="true"/>
+		<property name="add_to_tier_complete" value="false"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="EntityKill" id="zombieWWMSoldierZombies,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieSoldierInfernal,zombieMolotovSoldierFeral,zombieMutated,zombieMutatedFeral,zombieMutatedRadiated,zombieMutatedCharged,zombieMutatedInfernal,zombieMaleHazmat,zombieMaleHazmatFeral,zombieMaleHazmatRadiated,zombieMaleHazmatCharged,zombieMaleHazmatInfernal,Grin,zombieGrinBomb" value="250" phase="1"/>
+
+		<reward type="Exp" value="10000"/>
+		<reward type="SkillPoints" value="2" chainreward="false"/>	
+		<reward type="Quest" id="quest_eliminatetoysoldiers">
+				<property name="chainquest" value="false"/>
+		</reward>
 	</quest>
 
 <!-- *** QUEST_LISTS -->
