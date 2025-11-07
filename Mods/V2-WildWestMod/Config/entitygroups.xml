@@ -44,7 +44,7 @@
 		zombieMaleHazmatFeral, .25
 		zombieMolotovSoldierFeral, .25
 		zombieSpiderFeralFireGlider, .125
-		zombieWightRadiatedGunslinger, .1
+		zombieWightRadiatedGunslinger, .125
 		zombieSkateboarderUndertakerRadiated, .05
 		zombieOakBigFootInfernal, .05
 	</csv>
@@ -54,7 +54,7 @@
 		zombieMaleHazmatFeral, .25
 		zombieMolotovSoldierFeral, .25
 		zombieSpiderFeralFireGlider, .15
-		zombieWightRadiatedGunslinger, .125
+		zombieWightRadiatedGunslinger, .15
 		zombieSkateboarderUndertakerRadiated, .1
 		zombieOakBigFootInfernal, .1
 	</csv>
@@ -63,7 +63,7 @@
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnow']/text()" delim="\n" op="add" >
 		zombieLumberjackFeral, .25
 		zombieSpiderFeralFireGlider, .125
-		zombieWightChargedGunslinger, .1
+		zombieWightChargedGunslinger, .125
 		zombieSkateboarderUndertakerRadiated, .05
 		zombieOakBigFootSnow, .05
 	</csv>
@@ -72,7 +72,7 @@
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']/text()" delim="\n" op="add" >
 		zombieLumberjackRadiatedAxe, .25
 		zombieSpiderFeralFireGlider, .15
-		zombieWightChargedGunslinger, .125
+		zombieWightChargedGunslinger, .15
 		zombieSkateboarderUndertakerRadiated, .05
 		zombieOakBigFootSnow, .05
 	</csv>
@@ -85,11 +85,11 @@
 		zombieSoldierFeral, 1.5
 		zombieSoldierRadiated
 		zombieTheRat, 2
-		zombieTheRatFeral, .8
-		zombieWightInfernalGunslinger, .8
-		zombieBusinessManRadiatedGunslinger, .8
-		zombieBusinessManChargedGunslinger, .5
-		zombieBusinessManInfernalGunslinger, .25
+		zombieTheRatFeral, 1
+		zombieWightInfernalGunslinger, 1
+		zombieBusinessManRadiatedGunslinger, .85
+		zombieBusinessManChargedGunslinger, .65
+		zombieBusinessManInfernalGunslinger, .5
 		zombieLumberjackRadiatedAxe, .8
 		zombieLumberjackInfernalAxe, .25
 		zombieMutatedFeral, 1.5
@@ -119,10 +119,10 @@
 		zombieSoldierFeral, 1.5
 		zombieSoldierRadiated
 		zombieTheRat, 3
-		zombieWightInfernalGunslinger, 1.5
-		zombieBusinessManRadiatedGunslinger, .8
-		zombieBusinessManChargedGunslinger, .5
-		zombieBusinessManInfernalGunslinger, .25
+		zombieWightInfernalGunslinger, 2
+		zombieBusinessManRadiatedGunslinger, 1
+		zombieBusinessManChargedGunslinger, .75
+		zombieBusinessManInfernalGunslinger, .65
 		zombieLumberjackRadiatedAxe, .8
 		zombieLumberjackInfernalAxe, .25
 		zombieTheRatFeral, .8
