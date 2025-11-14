@@ -31,78 +31,42 @@
 	<append xpath="/spawning/biome[@name='wasteland']/spawn[@entitygroup='ZombiesWastelandNight']/@notags">,oldwest</append>
 	<append xpath="/spawning/biome[@name='wasteland']/spawn[@entitygroup='ZombiesWastelandDowntown']/@tags">,oldwest</append>	
 
-	<!-- Bison POI tag Group -->
+	<!-- Custom POI tagging for special spawning -->
 
+	<!-- Bison, Bats, and Monsignor -->
 	<append xpath="/spawning/biome[@name='pine_forest']">
-		<spawn id="aawwmbison01" maxcount="10" respawndelay="0.3" time="Any" entitygroup="animalBisonBoar" tags="bison" spawnDeadChance="0" />
-	</append>
-
-	<append xpath="/spawning/biome[@name='desert']">
-		<spawn id="aawwmbison01" maxcount="10" respawndelay="0.3" time="Any" entitygroup="animalBisonBoar" tags="bison" spawnDeadChance="0" />
+		<spawn id="aawwmbison01" maxcount="10" respawndelay="0.3" time="Any" entitygroup="animalBisonBoar" tags="bison"/>
+		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat"/>
+		<spawn id="azwwmmonsignor01" maxcount="2" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor"/>
 	</append>
 	
-	<append xpath="/spawning/biome[@name='snow']">
-		<spawn id="aawwmbison01" maxcount="10" respawndelay="0.3" time="Any" entitygroup="animalBisonBoar" tags="bison" spawnDeadChance="0" />
-	</append>
-	
-	<!-- Bat POI tag Group -->
-
-	<append xpath="/spawning/biome[@name='pine_forest']">
-		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat" spawnDeadChance="0" />
-	</append>
-
-	<append xpath="/spawning/biome[@name='desert']">
-		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat" spawnDeadChance="0" />
-	</append>
-	
-	<append xpath="/spawning/biome[@name='snow']">
-		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat" spawnDeadChance="0" />
-	</append>
-	
-	<append xpath="/spawning/biome[@name='wasteland']">
-		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat" spawnDeadChance="0" />
-	</append>
-	
+	<!-- Bats, Military, and Monsignor -->	
 	<append xpath="/spawning/biome[@name='burnt_forest']">
-		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat" spawnDeadChance="0" />
+		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat"/>
+		<spawn id="aawwmmilitary01" maxcount="6" respawndelay="0.3" time="Any" entitygroup="zombieMilitaryFeral" tags="militaryferal"/>
+		<spawn id="azwwmmonsignor01" maxcount="2" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor"/>
 	</append>
-	
-	<!-- Scorpion POI tag Group -->
 
+	<!-- Bison, Bats, Scorpion and Monsignor -->	
 	<append xpath="/spawning/biome[@name='desert']">
-		<spawn id="aawwmscorpion01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalScorpion" tags="scorpion" spawnDeadChance="0" />
+		<spawn id="aawwmbison01" maxcount="10" respawndelay="0.3" time="Any" entitygroup="animalBisonBoar" tags="bison"/>
+		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat"/>
+		<spawn id="aawwmscorpion01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalScorpion" tags="scorpion"/>
+		<spawn id="azwwmmonsignor01" maxcount="2" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor"/>
 	</append>
 
-	<!-- Military Feral POI tag Group (Burnt, Waste) -->
-	<append xpath="/spawning/biome[@name='wasteland']">
-		<spawn id="aawwmscorpion01" maxcount="6" respawndelay="0.3" time="Any" entitygroup="zombieMilitaryFeral" tags="militaryferal" spawnDeadChance="0" />
-	</append>
-	
-	<append xpath="/spawning/biome[@name='burnt_forest']">
-		<spawn id="aawwmscorpion01" maxcount="6" respawndelay="0.3" time="Any" entitygroup="zombieMilitaryFeral" tags="militaryferal" spawnDeadChance="0" />
-	</append>
-
-	<!-- Monsignor POI tag Group -->
-
-	<append xpath="/spawning/biome[@name='pine_forest']">
-		<spawn id="azwwmmonsignor01" maxcount="1" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor" spawnDeadChance="0" />
-	</append>
-
-	<append xpath="/spawning/biome[@name='desert']">
-		<spawn id="azwwmmonsignor01" maxcount="1" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor" spawnDeadChance="0" />
-	</append>
-	
+	<!-- Bison, Bats, and Monsignor -->	
 	<append xpath="/spawning/biome[@name='snow']">
-		<spawn id="azwwmmonsignor01" maxcount="1" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor" spawnDeadChance="0" />
+		<spawn id="aawwmbison01" maxcount="10" respawndelay="0.3" time="Any" entitygroup="animalBisonBoar" tags="bison"/>
+		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat"/>
+		<spawn id="azwwmmonsignor01" maxcount="2" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor"/>
 	</append>
-	
+
+	<!-- Bats, Military, and Monsignor -->	
 	<append xpath="/spawning/biome[@name='wasteland']">
-		<spawn id="azwwmmonsignor01" maxcount="2" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor" spawnDeadChance="0" />
-	</append>
-	
-	<append xpath="/spawning/biome[@name='burnt_forest']">
-		<spawn id="azwwmmonsignor01" maxcount="2" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor" spawnDeadChance="0" />
+		<spawn id="aawwmbat01" maxcount="12" respawndelay="0.3" time="Any" entitygroup="animalSmallBat" tags="smallbat"/>
+		<spawn id="aawwmmilitary01" maxcount="6" respawndelay="0.3" time="Any" entitygroup="zombieMilitaryFeral" tags="militaryferal"/>
+		<spawn id="azwwmmonsignor01" maxcount="2" respawndelay="0.3" time="Any" entitygroup="zombieMonsignor" tags="monsignor"/>
 	</append>	
-	
 	
 </wildwestmod>
