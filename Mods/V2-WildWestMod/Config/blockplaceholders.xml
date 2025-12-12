@@ -117,7 +117,7 @@
 		<block name="treeOakSml01" prob="1.0" biome="desert" randomrotation="true"/>
 		<block name="treeBurntMaple01" prob="1.0" biome="wasteland" randomrotation="true"/>
 		<block name="treeDeadTree01" prob="1.0" biome="burnt_forest" randomrotation="true"/>
-		<block name="treeBurntMaple01" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+		<block name="treeDeadTree01" prob="1.0" biome="burnt_forest" randomrotation="true"/>
 	</placeholder>
 
 		<!-- *** TREES_SMALL_THIN -->
@@ -144,7 +144,7 @@
 		<block name="treeOakSml01" prob="1.0" biome="desert" randomrotation="true"/>
 		<block name="treeOakMed01" prob="1.0" biome="desert" randomrotation="false"/>
 		<block name="treeBurntMaple02" prob="1.0" biome="wasteland" randomrotation="true"/>
-		<block name="treeBurntMaple02" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+		<block name="treePineBurntMed" prob="1.0" biome="burnt_forest" randomrotation="true"/>
 	</placeholder>
 
 		<!-- *** TREES_LARGE -->
@@ -159,7 +159,7 @@
 		<block name="treeOakMed01" prob="1.0" biome="desert" randomrotation="false"/>
 		<block name="treeBurntMaple03" prob="1.0" biome="wasteland" randomrotation="true"/>
 		<block name="treeMountainPineDry21m" prob="1.0" biome="wasteland" randomrotation="true"/>
-		<block name="treeBurntMaple03" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+		<block name="treePineBurntLrg" prob="1.0" biome="burnt_forest" randomrotation="true"/>
 	</placeholder>
 
 		<!-- *** TREES_TRADER -->
@@ -174,7 +174,7 @@
 		<!-- *** GRASS -->
 	<placeholder name="plantedtreeGrassSeedRandomHelper">
 		<block name="treeSnowyGrassDiagonal" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" biome="pine_forest" randomrotation="true"/>
 		<block name="treeDesertShrub" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" biome="underwater" randomrotation="true"/>
@@ -186,7 +186,7 @@
 	<placeholder name="plantedtreeGrassAirRandomHelper">
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" biome="underwater" randomrotation="true"/>
@@ -201,7 +201,7 @@
 		<block name="air" prob=".87"/>
 		<block name="plantedCornDead" prob=".11" randomrotation="true"/>
 		<block name="treeSnowyGrassDiagonal" prob=".321" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".321" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".321" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".321" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".321" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".321" biome="wasteland" randomrotation="true"/>
@@ -214,7 +214,7 @@
 		<block name="plantedYuccaDead" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -227,7 +227,7 @@
 		<block name="plantedCottonDead" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -240,7 +240,7 @@
 		<block name="plantedCoffeeDead" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -252,7 +252,7 @@
 		<block name="plantedGoldenrod3Harvest" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -265,7 +265,7 @@
 		<block name="plantedAloeDead" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -278,7 +278,7 @@
 		<block name="plantedBlueberryDead" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -291,7 +291,7 @@
 		<block name="plantedPotatoDead" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -303,7 +303,7 @@
 		<block name="plantedChrysanthemum3Harvest" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -315,7 +315,7 @@
 		<block name="plantedGraceCorn3Harvest" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".87"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -328,7 +328,7 @@
 		<block name="plantedHopDead" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".1"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
@@ -340,13 +340,24 @@
 		<block name="plantedPumpkin3Harvest" prob=".03" randomrotation="true"/>
 		<block name="air" prob=".1"/>
 		<block name="treeSnowyGrassDiagonal" prob=".431" biome="snow" randomrotation="true"/>
-		<block name="treeTallGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
+		<block name="treeBrownGrassDiagonal" prob=".431" biome="pine_forest" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="desert" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="water" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="wasteland" randomrotation="true"/>
 		<block name="treeBrownGrassDiagonal" prob=".431" biome="burnt_forest" randomrotation="true"/>
 	</placeholder>
 
+		<!-- *** GRASS_VS_PUMPKIN -->
+	<placeholder name="biomeHarvestRandomHelper">
+		<block name="plantedBlueberry3Harvest" prob=".35" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedMushroom3Harvest" prob=".35" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedAloe3Harvest" prob=".3" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedMushroom3Harvest" prob="1" biome="burnt_forest" randomrotation="true"/>
+		<block name="plantedAloe3Harvest" prob="1" biome="desert" randomrotation="true"/>
+		<block name="plantedBlueberry3Harvest" prob="1" biome="snow" randomrotation="true"/>
+		<block name="mushroomRadiated02" prob=".5" biome="wasteland" randomrotation="true"/>
+		<block name="mushroomRadiated04" prob=".5" biome="wasteland" randomrotation="true"/>
+	</placeholder>																					  
 <!-- *** RANDOM_LOOT_HELPERS -->
 
 		<!-- *** FOREST_LOOT_HELPER -->
@@ -1011,7 +1022,7 @@
 		<block name="cntFrontCrumpledSedan01Grey" prob="1"/>
 		<block name="cntFrontCrumpledSedan01Pink" prob="0.5"/>
 	</placeholder>
-	
+
 		<!-- *** FRONT_CRUMPLED_SEDAN -->
 	<placeholder name="cntFrontCrumpledSedan01AirRandomHelper">
 		<block name="cntFrontCrumpledSedan01White" prob="1"/>
@@ -1450,7 +1461,7 @@
 		<block name="air" prob=".7"/>
 		<block name="cntServiceTruckWorkingStiffTools" prob=".5"/>
 	</placeholder>
-	
+
 		<!-- *** SERVICE_TRUCK -->
 	<placeholder name="cntServiceTruckRandomLootHelper">
 		<block name="cntServiceTruckWhite" prob="1"/>
@@ -1551,7 +1562,7 @@
 		<block name="cntMicrowaveOvenVer1Closed" prob=".35"/>
 		<block name="cntMicrowaveOvenVer2Closed" prob=".35"/>
 	</placeholder>
-	
+
 		<!-- *** MINI_BEVERAGE_COOLER -->
 	<placeholder name="cntMiniBeverageCoolerRandomLootHelper">
 		<block name="cntMiniBeverageCoolerEmpty" prob=".65"/>
@@ -1820,7 +1831,7 @@
 		<block name="pictureFrame_01g" prob="1"/>
 		<block name="pictureFrame_01i" prob="1"/>
 	</placeholder>
-	
+
 		<!-- *** DESK_FRAMES -->
 	<placeholder name="pictureDeskFrameRandomHelper">
 		<block name="pictureDeskFrameBigFam" prob="1"/>
@@ -2698,6 +2709,12 @@
 		<block name="cntLuggagePileBClosed" prob=".33"/>
 	</placeholder>
 
+		<!-- *** TRASH_BOXES -->
+	<placeholder name="cntTrashBoxRandomLootHelper">
+		<block name="cntTrashPile06" prob=".34"/>
+		<block name="cntTrashPile08" prob=".33"/>
+		<block name="cntTrashPile09" prob=".33"/>
+	</placeholder>
 		<!-- *** TRASH_CANS -->
 	<placeholder name="cntDomedTrashCanRandomLootHelper">
 		<block name="cntDomedTrashCanEmpty" prob=".66"/>
@@ -2773,7 +2790,7 @@
 		<block name="cntBruteStyleTrashCanEmpty" prob=".66"/>
 		<block name="cntBruteStyleTrashCanFull" prob=".33"/>
 	</placeholder>
-	
+
 		<!-- *** DUMPSTERS -->
 	<placeholder name="cntDumpsterRandomLootHelper">
 		<block name="cntDumpster" prob=".25"/>
@@ -2942,7 +2959,95 @@
 		<block name="cntModularClosetClosedBlue" prob=".1"/>
 	</placeholder>
 
+		<!-- *** KING_SIZE_BEDS -->
+	<placeholder name="bed02RandomHelper">
+		<block name="bed02White" prob="1"/>
+		<block name="bed02Brown" prob="1"/>
+		<block name="bed02Red" prob="1"/>
+		<block name="bed02Orange" prob="1"/>
+		<block name="bed02Yellow" prob="1"/>
+		<block name="bed02Green" prob="1"/>
+		<block name="bed02Blue" prob="1"/>
+		<block name="bed02Purple" prob="1"/>
+		<block name="bed02Grey" prob="1"/>
+		<block name="bed02" prob="1"/>
+		<block name="bed02Pink" prob="1"/>
+		<block name="bed02ArmyGreen" prob="1"/>
+	</placeholder>
 		<!-- *** BUNK_BEDS -->
+	<!-- White -->
+	<placeholder name="bunkBedRandomHelperWhite">
+		<block name="bunkBedMadeWhite" prob="1"/>
+		<block name="bunkBedMessyWhite" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Brown -->
+	<placeholder name="bunkBedRandomHelperBrown">
+		<block name="bunkBedMadeBrown" prob="1"/>
+		<block name="bunkBedMessyBrown" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Red -->
+	<placeholder name="bunkBedRandomHelperRed">
+		<block name="bunkBedMadeRed" prob="1"/>
+		<block name="bunkBedMessyRed" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Orange -->
+	<placeholder name="bunkBedRandomHelperOrange">
+		<block name="bunkBedMadeOrange" prob="1"/>
+		<block name="bunkBedMessyOrange" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Yellow -->
+	<placeholder name="bunkBedRandomHelperYellow">
+		<block name="bunkBedMadeYellow" prob="1"/>
+		<block name="bunkBedMessyYellow" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Green -->
+	<placeholder name="bunkBedRandomHelperGreen">
+		<block name="bunkBedMadeGreen" prob="1"/>
+		<block name="bunkBedMessyGreen" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Blue -->
+	<placeholder name="bunkBedRandomHelperBlue">
+		<block name="bunkBedMadeBlue" prob="1"/>
+		<block name="bunkBedMessyBlue" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Purple -->
+	<placeholder name="bunkBedRandomHelperPurple">
+		<block name="bunkBedMadePurple" prob="1"/>
+		<block name="bunkBedMessyPurple" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Grey -->
+	<placeholder name="bunkBedRandomHelperGrey">
+		<block name="bunkBedMadeGrey" prob="1"/>
+		<block name="bunkBedMessyGrey" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Black -->
 	<placeholder name="bunkBedRandomHelper">
 		<block name="bunkBedMade" prob="1"/>
 		<block name="bunkBedMessy" prob="1"/>
@@ -2950,6 +3055,166 @@
 		<block name="bunkBedFrame" prob="1"/>
 	</placeholder>
 
+	<!-- Pink -->
+	<placeholder name="bunkBedRandomHelperPink">
+		<block name="bunkBedMadePink" prob="1"/>
+		<block name="bunkBedMessyPink" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<!-- Army Green -->
+	<placeholder name="bunkBedRandomHelperArmyGreen">
+		<block name="bunkBedMadeArmyGreen" prob="1"/>
+		<block name="bunkBedMessyArmyGreen" prob="1"/>
+		<block name="bunkBedMattress" prob="1"/>
+		<block name="bunkBedFrame" prob="1"/>
+	</placeholder>
+
+	<placeholder name="bunkBedMadeRandomHelper">
+		<block name="bunkBedMade" prob="1"/>
+		<block name="bunkBedMadeWhite" prob="1"/>
+		<block name="bunkBedMadeBrown" prob="1"/>
+		<block name="bunkBedMadeRed" prob="1"/>
+		<block name="bunkBedMadeOrange" prob="1"/>
+		<block name="bunkBedMadeYellow" prob="1"/>
+		<block name="bunkBedMadeGreen" prob="1"/>
+		<block name="bunkBedMadeBlue" prob="1"/>
+		<block name="bunkBedMadePurple" prob="1"/>
+		<block name="bunkBedMadeGrey" prob="1"/>
+		<block name="bunkBedMadePink" prob="1"/>
+		<block name="bunkBedMadeArmyGreen" prob="1"/>
+	</placeholder>
+
+	<placeholder name="bunkBedMessyRandomHelper">
+		<block name="bunkBedMessy" prob="1"/>
+		<block name="bunkBedMessyWhite" prob="1"/>
+		<block name="bunkBedMessyBrown" prob="1"/>
+		<block name="bunkBedMessyRed" prob="1"/>
+		<block name="bunkBedMessyOrange" prob="1"/>
+		<block name="bunkBedMessyYellow" prob="1"/>
+		<block name="bunkBedMessyGreen" prob="1"/>
+		<block name="bunkBedMessyBlue" prob="1"/>
+		<block name="bunkBedMessyPurple" prob="1"/>
+		<block name="bunkBedMessyGrey" prob="1"/>
+		<block name="bunkBedMessyPink" prob="1"/>
+		<block name="bunkBedMessyArmyGreen" prob="1"/>
+	</placeholder>
+
+		<!-- *** BUNK_BEDS -->
+	<!-- White -->
+	<placeholder name="bedNoFrameRandomHelperWhite">
+		<block name="bedMadeNoFrameWhite" prob="1"/>
+		<block name="bedMessyNoFrameWhite" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Brown -->
+	<placeholder name="bedNoFrameRandomHelperBrown">
+		<block name="bedMadeNoFrameBrown" prob="1"/>
+		<block name="bedMessyNoFrameBrown" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Red -->
+	<placeholder name="bedNoFrameRandomHelperRed">
+		<block name="bedMadeNoFrameRed" prob="1"/>
+		<block name="bedMessyNoFrameRed" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Orange -->
+	<placeholder name="bedNoFrameRandomHelperOrange">
+		<block name="bedMadeNoFrameOrange" prob="1"/>
+		<block name="bedMessyNoFrameOrange" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Yellow -->
+	<placeholder name="bedNoFrameRandomHelperYellow">
+		<block name="bedMadeNoFrameYellow" prob="1"/>
+		<block name="bedMessyNoFrameYellow" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Green -->
+	<placeholder name="bedNoFrameRandomHelperGreen">
+		<block name="bedMadeNoFrameGreen" prob="1"/>
+		<block name="bedMessyNoFrameGreen" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Blue -->
+	<placeholder name="bedNoFrameRandomHelperBlue">
+		<block name="bedMadeNoFrameBlue" prob="1"/>
+		<block name="bedMessyNoFrameBlue" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Purple -->
+	<placeholder name="bedNoFrameRandomHelperPurple">
+		<block name="bedMadeNoFramePurple" prob="1"/>
+		<block name="bedMessyNoFramePurple" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Grey -->
+	<placeholder name="bedNoFrameRandomHelperGrey">
+		<block name="bedMadeNoFrameGrey" prob="1"/>
+		<block name="bedMessyNoFrameGrey" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Black -->
+	<placeholder name="bedNoFrameRandomHelperBlack">
+		<block name="bedMadeNoFrameBlack" prob="1"/>
+		<block name="bedMessyNoFrameBlack" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Pink -->
+	<placeholder name="bedNoFrameRandomHelperPink">
+		<block name="bedMadeNoFramePink" prob="1"/>
+		<block name="bedMessyNoFramePink" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<!-- Army Green -->
+	<placeholder name="bedNoFrameRandomHelperArmyGreen">
+		<block name="bedMadeNoFrameArmyGreen" prob="1"/>
+		<block name="bedMessyNoFrameArmyGreen" prob="1"/>
+		<block name="mattressFlatThin" prob="1"/>
+	</placeholder>
+
+	<placeholder name="bedMadeNoFrameRandomHelper">
+		<block name="bedMadeNoFrameWhite" prob="1"/>
+		<block name="bedMadeNoFrameBrown" prob="1"/>
+		<block name="bedMadeNoFrameRed" prob="1"/>
+		<block name="bedMadeNoFrameOrange" prob="1"/>
+		<block name="bedMadeNoFrameYellow" prob="1"/>
+		<block name="bedMadeNoFrameGreen" prob="1"/>
+		<block name="bedMadeNoFrameBlue" prob="1"/>
+		<block name="bedMadeNoFramePurple" prob="1"/>
+		<block name="bedMadeNoFrameGrey" prob="1"/>
+		<block name="bedMadeNoFrameBlack" prob="1"/>
+		<block name="bedMadeNoFramePink" prob="1"/>
+		<block name="bedMadeNoFrameArmyGreen" prob="1"/>
+	</placeholder>
+
+	<placeholder name="bedMessyNoFrameRandomHelper">
+		<block name="bedMessyNoFrameWhite" prob="1"/>
+		<block name="bedMessyNoFrameBrown" prob="1"/>
+		<block name="bedMessyNoFrameRed" prob="1"/>
+		<block name="bedMessyNoFrameOrange" prob="1"/>
+		<block name="bedMessyNoFrameYellow" prob="1"/>
+		<block name="bedMessyNoFrameGreen" prob="1"/>
+		<block name="bedMessyNoFrameBlue" prob="1"/>
+		<block name="bedMessyNoFramePurple" prob="1"/>
+		<block name="bedMessyNoFrameGrey" prob="1"/>
+		<block name="bedMessyNoFrameBlack" prob="1"/>
+		<block name="bedMessyNoFramePink" prob="1"/>
+		<block name="bedMessyNoFrameArmyGreen" prob="1"/>
+	</placeholder>
 		<!-- *** CLOTHES_RACKS -->
 	<placeholder name="cntClothesRackRoundRandomLootHelper">
 		<block name="cntClothesRackRoundEmpty" prob=".4"/>
@@ -3209,7 +3474,7 @@
 		<block name="cntBookPile14" prob="1"/>
 		<block name="cntBookPile15" prob="1"/>
 	</placeholder>
-	
+
 	<placeholder name="cntBookPile01AirRandomLootHelper">
 		<block name="air" prob=".5"/>
 		<block name="cntBookPile01" prob=".5"/>
@@ -3291,7 +3556,7 @@
 		<block name="cntGasPumpEmpty" prob=".66"/>
 		<block name="cntGasPumpFull" prob=".35"/>
 	</placeholder>
-	
+
 		<!-- *** COOKING_POT -->
 	<placeholder name="decoCookingPotRandomLootHelper">
 		<block name="decoCookingPot" prob=".4"/>
@@ -3635,7 +3900,7 @@
 		<block name="chairCampingGrey"/>
 		<block name="chairCampingPink"/>
 	</placeholder>
-	
+
 		<!-- *** CAMPING_TENTS_DOME -->
 	<placeholder name="cntCampingTentDomeRandomHelper">
 		<block name="cntCampingTentDomeRainCoverRed" prob="0.2"/>

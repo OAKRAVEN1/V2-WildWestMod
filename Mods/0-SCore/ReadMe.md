@@ -32,6 +32,27 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 
 [ Change Log ]
+Version: 2.4.73.2102
+	[ Troubleshooting ]
+		- Added a patch to EntityGroup.IsEnemyGroup to add more error checking, in case an entity group or entity isn't valid.
+			- This would throw a null reference with no hint on what the error was.
+
+	[ Challenges ]
+		- CraftWithIngredients - Now supports localization of the ingredient string
+
+	[ Quest ]
+		- FetchByTags now properly passes the Localization Description
+
+
+Version: 2.4.62.1047
+	[ EntityNPCBandit ]
+		- Merged fix for null reference on bodyDamage by Aevum11.
+
+	[ EntityAliveSDX ]
+		- Many fixes and code adjustments to preserve NPC's stats, inventory, and preferred weapon when pickup/deploy
+		- Fixed issue where items with mods would come back without mods.
+		- Added some safe guards to end of stream errors
+
 Version: 2.4.15.809
 	[ Challenges ]
 		- Fixed an issue where block destroyed by fire was not registering in SP
