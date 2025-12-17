@@ -517,6 +517,11 @@ zombieOakBigFoot,entityclasses,Entity,,,Oak Big Foot,,,,,,,,,,,,,
 zombieOakBigFootSnow,entityclasses,Entity,,,Snow Oak Big Foot,,,,,,,,,,,,,
 zombieOakBigFootCharged,entityclasses,Entity,,,Charged Oak Big Foot,,,,,,,,,,,,,
 zombieOakBigFootInfernal,entityclasses,Entity,,,Infernal Oak Big Foot,,,,,,,,,,,,,
+zombieMiniRancher,entityclasses,Entity,,,Mini Rancher,,,,,,,,,,,,,
+zombieMiniRancherCharged,entityclasses,Entity,,,Mini Charged Rancher,,,,,,,,,,,,,
+zombieMiniRancherFeral,entityclasses,Entity,,,Mini Feral Rancher,,,,,,,,,,,,,
+zombieMiniRancherInfernal,entityclasses,Entity,,,Mini Infernal Rancher,,,,,,,,,,,,,
+zombieMiniRancherRadiated,entityclasses,Entity,,,Mini Radiated Rancher,,,,,,,,,,,,,
 zombieWWMZombies,entityclasses,Entity,,,Zombies,,,,,,,,,,,,,
 zombieWWMSoldierZombies,entityclasses,Entity,,,Toy Soldiers,,,,,,,,,,,,,
 
@@ -713,7 +718,7 @@ cntStoneWell,blocks,block,,,Stone Well - Groundwater Collector,,,,,,,,,,,,,
 cntWoodWell,blocks,block,,,Wood Well - Groundwater Collector,,,,,,,,,,,,,
 
 resourceWaterFilterDesc,items,item,,,"A component used in the crafting of a Water Collector.",,,,,,,,,,,,,
-workstationsT1-1,progression,Attribute,,,Tier 1: Water Collector,,,,,,,,,,,,,
+workstationsT2-1,progression,Attribute,,,Tier 1: Water Collector,,,,,,,,,,,,,
 xuiDewCollector,UI,XUI,,,Water Collector,,,,,,,,,,,,,
 
 cntGroundWaterCollectorDesc,blocks,block,,,A more efficient option to the [DECEA3]Rain Dance Catcher[-]. A well that collects groundwater over time for clean drinking water. Choose from three different styles.,,,,,,,,,,,,,
@@ -1281,7 +1286,7 @@ resourceClayLumpBundleDesc,items,Item,,,This is a compact stack of clay soil. Us
 
 Ammobench,blocks,Workstation,,,Ammo Press,,,,,,,,,,,,,
 AmmobenchDesc,blocks,Block,,,"The Ammo Press allows players to press ammunition in a compact standalone device.",,,,,,,,,,,,,
-workstationsT3-2OAB,progression,Attribute,,,Tier 2: Ammo Press,,,,,,,,,,,,,
+workstationsT3-2OAB,progression,Attribute,,,Tier 3: Ammo Press,,,,,,,,,,,,,
 lblCategoryAmmoPress,UI,Tooltip,,,Ammo,,Munition,Munición,Munitions,Munizioni,弾薬,탄약,Amunicja,Munição,Боеприпасы,Mühimmat,弹药
 lblCategoryAmmoPressRegularAmmo,UI,Tooltip,,,Regular Ammo,,,,,,,,,,,,,
 lblCategoryAmmoPressHPAmmo,UI,Tooltip,,,HP Ammo,,,,,,,,,,,,,

@@ -6,7 +6,7 @@
 <!-- Search_Find_All_for *** -->
 
 <!-- Loot placeholders do NOT use weighted probabilities like the rest of the loot system. -->
-<!-- The max that an entry can have is 1.0. That is 100%. -->
+<!-- The max that an entry can have is 1. That is 100%. -->
 <!-- One item is randomly picked from the list, then has it's prob rolled. -->
 <!-- If that fails, try again. -->
 <!-- Continue until an item is found. -->
@@ -89,86 +89,86 @@
 
 		<!-- *** HEDGES -->
 	<placeholder name="plantHedgeRandomHelper">
-		<block name="plantHedge" prob="1.0" biome="pine_forest"/>
-		<block name="plantHedgeDead" prob="1.0" biome="burnt_forest"/>
-		<block name="plantHedgeDead" prob="1.0" biome="desert"/>
-		<block name="plantHedgeSnow" prob="1.0" biome="snow"/>
-		<block name="plantHedgeDead" prob="1.0" biome="wasteland"/>
+		<block name="plantHedge" biome="pine_forest"/>
+		<block name="plantHedgeDead" biome="burnt_forest"/>
+		<block name="plantHedgeDead" biome="desert"/>
+		<block name="plantHedgeSnow" biome="snow"/>
+		<block name="plantHedgeDead" biome="wasteland"/>
 	</placeholder>
 
 		<!-- *** SHRUBS -->
 	<placeholder name="plantShrubRandomHelper">
-		<block name="plantShrub" prob="1.0" biome="pine_forest" randomrotation="true"/>
-		<block name="plantShrubDead" prob="1.0" biome="burnt_forest" randomrotation="true"/>
-		<block name="plantShrubDead" prob="1.0" biome="desert" randomrotation="true"/>
-		<block name="plantShrubSnow" prob="1.0" biome="snow" randomrotation="true"/>
-		<block name="plantShrubDead" prob="1.0" biome="wasteland" randomrotation="true"/>
+		<block name="plantShrub" biome="pine_forest" randomrotation="true"/>
+		<block name="plantShrubDead" biome="burnt_forest" randomrotation="true"/>
+		<block name="plantShrubDead" biome="desert" randomrotation="true"/>
+		<block name="plantShrubSnow" biome="snow" randomrotation="true"/>
+		<block name="plantShrubDead" biome="wasteland" randomrotation="true"/>
 	</placeholder>
 
 		<!-- *** TREES_SMALL -->
 	<placeholder name="treeSmallRandomHelper">
-		<block name="treeWinterEverGreen" prob="1.0" biome="snow" randomrotation="true"/>
-		<block name="treeWinterPine13m" prob="1.0" biome="snow" randomrotation="true"/>
-		<block name="treeMountainPine19m" prob="1.0" biome="pine_forest" randomrotation="true"/>
-		<block name="treeOakSml01" prob="1.0" biome="pine_forest" randomrotation="true"/>
-		<block name="treeCactus03" prob="1.0" biome="desert" randomrotation="true"/>
-		<block name="treeCactus02" prob="1.0" biome="desert" randomrotation="true"/>
-		<block name="treeCactus01" prob="1.0" biome="desert" randomrotation="true"/>
-		<block name="treeOakSml01" prob="1.0" biome="desert" randomrotation="true"/>
-		<block name="treeBurntMaple01" prob="1.0" biome="wasteland" randomrotation="true"/>
-		<block name="treeDeadTree01" prob="1.0" biome="burnt_forest" randomrotation="true"/>
-		<block name="treeDeadTree01" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+		<block name="treeWinterEverGreen" biome="snow" randomrotation="true"/>
+		<block name="treeWinterPine13m" biome="snow" randomrotation="true"/>
+		<block name="treeMountainPine19m" biome="pine_forest" randomrotation="true"/>
+		<block name="treeOakSml01" biome="pine_forest" randomrotation="true"/>
+		<block name="treeCactus03" biome="desert" randomrotation="true"/>
+		<block name="treeCactus02" biome="desert" randomrotation="true"/>
+		<block name="treeCactus01" biome="desert" randomrotation="true"/>
+		<block name="treeOakSml01" biome="desert" randomrotation="true"/>
+		<block name="treeBurntMaple01" biome="wasteland" randomrotation="true"/>
+		<block name="treeDeadTree01" biome="burnt_forest" randomrotation="true"/>
+		<block name="treeDeadTree01" biome="burnt_forest" randomrotation="true"/>
 	</placeholder>
 
 		<!-- *** TREES_SMALL_THIN -->
 	<placeholder name="treeSmallThinRandomHelper">
-		<block name="treeWinterEverGreen" prob="1.0" biome="snow" randomrotation="true"/>
-		<block name="treeJuniper4m" prob="1.0" biome="pine_forest" randomrotation="false"/>
+		<block name="treeWinterEverGreen" prob="1" biome="snow" randomrotation="true"/>
+		<block name="treeJuniper4m" prob="1" biome="pine_forest" randomrotation="false"/>
 		<block name="treeCactus03" prob=".5" biome="desert" randomrotation="true"/>
 		<block name="treeCactus02" prob=".5" biome="desert" randomrotation="true"/>
 		<block name="treeCactus01" prob=".5" biome="desert" randomrotation="true"/>
-		<block name="treeDeadTree01" prob="1.0" biome="desert" randomrotation="false"/>
-		<block name="treeDeadTree01" prob="1.0" biome="wasteland" randomrotation="true"/>
-		<block name="treeDeadTree01" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+		<block name="treeDeadTree01" prob="1" biome="desert" randomrotation="false"/>
+		<block name="treeDeadTree01" prob="1" biome="wasteland" randomrotation="true"/>
+		<block name="treeDeadTree01" prob="1" biome="burnt_forest" randomrotation="true"/>
 	</placeholder>
 
 		<!-- *** TREES_MEDIUM -->
 	<placeholder name="treeMediumRandomHelper">
-		<block name="treeWinterPine19m" prob="1.0" biome="snow" randomrotation="true"/>
-		<block name="treeMountainPine27m" prob="1.0" biome="pine_forest" randomrotation="true"/>
-		<block name="treeMountainPineDry21m" prob="1.0" biome="pine_forest" randomrotation="true"/>
-		<block name="treeOakMed01" prob="1.0" biome="pine_forest" randomrotation="false"/>
+		<block name="treeWinterPine19m" prob="1" biome="snow" randomrotation="true"/>
+		<block name="treeMountainPine27m" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="treeMountainPineDry21m" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="treeOakMed01" prob="1" biome="pine_forest" randomrotation="false"/>
 		<block name="treeCactus03" prob=".5" biome="desert" randomrotation="true"/>
 		<block name="treeCactus02" prob=".5" biome="desert" randomrotation="true"/>
 		<block name="treeCactus01" prob=".5" biome="desert" randomrotation="true"/>
-		<block name="treeOakSml01" prob="1.0" biome="desert" randomrotation="true"/>
-		<block name="treeOakMed01" prob="1.0" biome="desert" randomrotation="false"/>
-		<block name="treeBurntMaple02" prob="1.0" biome="wasteland" randomrotation="true"/>
-		<block name="treePineBurntMed" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+		<block name="treeOakSml01" prob="1" biome="desert" randomrotation="true"/>
+		<block name="treeOakMed01" prob="1" biome="desert" randomrotation="false"/>
+		<block name="treeBurntMaple02" prob="1" biome="wasteland" randomrotation="true"/>
+		<block name="treePineBurntMed" prob="1" biome="burnt_forest" randomrotation="true"/>
 	</placeholder>
 
 		<!-- *** TREES_LARGE -->
 	<placeholder name="treeLargeRandomHelper">
-		<block name="treeWinterPine28m" prob="1.0" biome="snow" randomrotation="false"/>
-		<block name="treeMountainPine31m" prob="1.0" biome="pine_forest" randomrotation="true"/>
-		<block name="treeOakMed01" prob="1.0" biome="pine_forest" randomrotation="false"/>
-		<block name="treeFirLrg01" prob="1.0" biome="pine_forest" randomrotation="true"/>
+		<block name="treeWinterPine28m" prob="1" biome="snow" randomrotation="false"/>
+		<block name="treeMountainPine31m" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="treeOakMed01" prob="1" biome="pine_forest" randomrotation="false"/>
+		<block name="treeFirLrg01" prob="1" biome="pine_forest" randomrotation="true"/>
 		<block name="treeCactus03" prob=".15" biome="desert" randomrotation="true"/>
 		<block name="treeCactus02" prob=".15" biome="desert" randomrotation="true"/>
 		<block name="treeCactus01" prob=".15" biome="desert" randomrotation="true"/>
-		<block name="treeOakMed01" prob="1.0" biome="desert" randomrotation="false"/>
-		<block name="treeBurntMaple03" prob="1.0" biome="wasteland" randomrotation="true"/>
-		<block name="treeMountainPineDry21m" prob="1.0" biome="wasteland" randomrotation="true"/>
-		<block name="treePineBurntLrg" prob="1.0" biome="burnt_forest" randomrotation="true"/>
+		<block name="treeOakMed01" prob="1" biome="desert" randomrotation="false"/>
+		<block name="treeBurntMaple03" prob="1" biome="wasteland" randomrotation="true"/>
+		<block name="treeMountainPineDry21m" prob="1" biome="wasteland" randomrotation="true"/>
+		<block name="treePineBurntLrg" prob="1" biome="burnt_forest" randomrotation="true"/>
 	</placeholder>
 
 		<!-- *** TREES_TRADER -->
 	<placeholder name="treeTraderRandomHelper">
-		<block name="treePlantedOak27m" prob="1.0" biome="pine_forest" randomrotation="false"/>
-		<block name="treePlantedOak27m" prob="1.0" biome="desert" randomrotation="false"/>
-		<block name="treeWinterPine19m" prob="1.0" biome="snow" randomrotation="false"/>
-		<block name="treePineBurntLrg" prob="1.0" biome="wasteland" randomrotation="false"/>
-		<block name="treePineBurntLrg" prob="1.0" biome="burnt_forest" randomrotation="false"/>
+		<block name="treePlantedOak27m" biome="pine_forest" randomrotation="false"/>
+		<block name="treePlantedOak27m" biome="desert" randomrotation="false"/>
+		<block name="treeWinterPine19m" biome="snow" randomrotation="false"/>
+		<block name="treePineBurntLrg" biome="wasteland" randomrotation="false"/>
+		<block name="treePineBurntLrg" biome="burnt_forest" randomrotation="false"/>
 	</placeholder>
 
 		<!-- *** GRASS -->
@@ -357,7 +357,7 @@
 		<block name="plantedBlueberry3Harvest" prob="1" biome="snow" randomrotation="true"/>
 		<block name="mushroomRadiated02" prob=".5" biome="wasteland" randomrotation="true"/>
 		<block name="mushroomRadiated04" prob=".5" biome="wasteland" randomrotation="true"/>
-	</placeholder>																					  
+	</placeholder>
 <!-- *** RANDOM_LOOT_HELPERS -->
 
 		<!-- *** FOREST_LOOT_HELPER -->
@@ -902,59 +902,59 @@
 
 		<!-- *** FULL_CAR_VS_AIR -->
 	<placeholder name="cntCar03SedanDamage0RandomHelper">
-		<block name="cntCar03SedanDamage0v01" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage0v02" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage0v03" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage0v04" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage0v05" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage0v06" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage0v07" prob="1"/>
-		<block name="air" prob="1"/>
+		<block name="cntCar03SedanDamage0v01"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage0v02"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage0v03"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage0v04"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage0v05"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage0v06"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage0v07"/>
+		<block name="air"/>
 	</placeholder>
 	
 		<!-- *** 2ND_STAGE_CAR_VS_AIR -->
 	<placeholder name="cntCar03SedanDamage1RandomHelper">
-		<block name="cntCar03SedanDamage1v01" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage1v02" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage1v03" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage1v04" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage1v05" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage1v06" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntCar03SedanDamage1v07" prob="1"/>
-		<block name="air" prob="1"/>
+		<block name="cntCar03SedanDamage1v01"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage1v02"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage1v03"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage1v04"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage1v05"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage1v06"/>
+		<block name="air"/>
+		<block name="cntCar03SedanDamage1v07"/>
+		<block name="air"/>
 	</placeholder>
 	
 		<!-- *** WRECKED_CAR_VS_AIR -->
 	<placeholder name="cntCar03SedanDamage2RandomHelper">
 		<!-- <block name="cntCar03SedanDamage2v01" prob="1"/> -->
-		<!-- <block name="air" prob="1"/> -->
+		<!-- <block name="air"/> -->
 		<!-- <block name="cntCar03SedanDamage2v02" prob="1"/> -->
-		<!-- <block name="air" prob="1"/> -->
+		<!-- <block name="air"/> -->
 		<!-- <block name="cntCar03SedanDamage2v03" prob="1"/> -->
-		<!-- <block name="air" prob="1"/> -->
+		<!-- <block name="air"/> -->
 		<!-- <block name="cntCar03SedanDamage2v04" prob="1"/> -->
-		<!-- <block name="air" prob="1"/> -->
+		<!-- <block name="air"/> -->
 		<!-- <block name="cntCar03SedanDamage2v05" prob="1"/> -->
-		<!-- <block name="air" prob="1"/> -->
+		<!-- <block name="air"/> -->
 		<!-- <block name="cntCar03SedanDamage2v06" prob="1"/> -->
-		<!-- <block name="air" prob="1"/> -->
+		<!-- <block name="air"/> -->
 		<!-- <block name="cntCar03SedanDamage2v07" prob="1"/> -->
-		<!-- <block name="air" prob="1"/> -->
+		<!-- <block name="air"/> -->
 		
 		<block name="burntSedan01" prob="1"/>
-		<block name="air" prob="1"/>
+		<block name="air"/>
 	</placeholder>
 
 		<!-- *** SEDAN -->
@@ -1148,29 +1148,29 @@
 	</placeholder>
 
 	<placeholder name="abandonedSUV01RandomHelper">
-		<block name="abandonedSUV01White" prob="1"/>
-		<block name="abandonedSUV01Brown" prob="1"/>
-		<block name="abandonedSUV01Red" prob="1"/>
-		<block name="abandonedSUV01Orange" prob="1"/>
-		<block name="abandonedSUV01Yellow" prob="1"/>
-		<block name="abandonedSUV01Green" prob="1"/>
-		<block name="abandonedSUV01Blue" prob="1"/>
-		<block name="abandonedSUV01Purple" prob="1"/>
-		<block name="abandonedSUV01Grey" prob="1"/>
-		<block name="abandonedSUV01Pink" prob="1"/>
+		<block name="abandonedSUV01White"/>
+		<block name="abandonedSUV01Brown"/>
+		<block name="abandonedSUV01Red"/>
+		<block name="abandonedSUV01Orange"/>
+		<block name="abandonedSUV01Yellow"/>
+		<block name="abandonedSUV01Green"/>
+		<block name="abandonedSUV01Blue"/>
+		<block name="abandonedSUV01Purple"/>
+		<block name="abandonedSUV01Grey"/>
+		<block name="abandonedSUV01Pink"/>
 	</placeholder>
 
 	<placeholder name="abandonedSUV01DoorsRandomHelper">
-		<block name="abandonedSUV01DoorsWhite" prob="1"/>
-		<block name="abandonedSUV01DoorsBrown" prob="1"/>
-		<block name="abandonedSUV01DoorsRed" prob="1"/>
-		<block name="abandonedSUV01DoorsOrange" prob="1"/>
-		<block name="abandonedSUV01DoorsYellow" prob="1"/>
-		<block name="abandonedSUV01DoorsGreen" prob="1"/>
-		<block name="abandonedSUV01DoorsBlue" prob="1"/>
-		<block name="abandonedSUV01DoorsPurple" prob="1"/>
-		<block name="abandonedSUV01DoorsGrey" prob="1"/>
-		<block name="abandonedSUV01DoorsPink" prob="1"/>
+		<block name="abandonedSUV01DoorsWhite"/>
+		<block name="abandonedSUV01DoorsBrown"/>
+		<block name="abandonedSUV01DoorsRed"/>
+		<block name="abandonedSUV01DoorsOrange"/>
+		<block name="abandonedSUV01DoorsYellow"/>
+		<block name="abandonedSUV01DoorsGreen"/>
+		<block name="abandonedSUV01DoorsBlue"/>
+		<block name="abandonedSUV01DoorsPurple"/>
+		<block name="abandonedSUV01DoorsGrey"/>
+		<block name="abandonedSUV01DoorsPink"/>
 	</placeholder>
 
 		<!-- *** 3_WIDE_SUV -->
@@ -1188,29 +1188,29 @@
 	</placeholder>
 
 	<placeholder name="abandonedSUV3Wide01RandomHelper">
-		<block name="abandonedSUV3Wide01White" prob="1"/>
-		<block name="abandonedSUV3Wide01Brown" prob="1"/>
-		<block name="abandonedSUV3Wide01Red" prob="1"/>
-		<block name="abandonedSUV3Wide01Orange" prob="1"/>
-		<block name="abandonedSUV3Wide01Yellow" prob="1"/>
-		<block name="abandonedSUV3Wide01Green" prob="1"/>
-		<block name="abandonedSUV3Wide01Blue" prob="1"/>
-		<block name="abandonedSUV3Wide01Purple" prob="1"/>
-		<block name="abandonedSUV3Wide01Grey" prob="1"/>
-		<block name="abandonedSUV3Wide01Pink" prob="1"/>
+		<block name="abandonedSUV3Wide01White"/>
+		<block name="abandonedSUV3Wide01Brown"/>
+		<block name="abandonedSUV3Wide01Red"/>
+		<block name="abandonedSUV3Wide01Orange"/>
+		<block name="abandonedSUV3Wide01Yellow"/>
+		<block name="abandonedSUV3Wide01Green"/>
+		<block name="abandonedSUV3Wide01Blue"/>
+		<block name="abandonedSUV3Wide01Purple"/>
+		<block name="abandonedSUV3Wide01Grey"/>
+		<block name="abandonedSUV3Wide01Pink"/>
 	</placeholder>
 
 	<placeholder name="abandonedSUV3Wide01DoorsRandomHelper">
-		<block name="abandonedSUV3Wide01DoorsWhite" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsBrown" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsRed" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsOrange" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsYellow" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsGreen" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsBlue" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsPurple" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsGrey" prob="1"/>
-		<block name="abandonedSUV3Wide01DoorsPink" prob="1"/>
+		<block name="abandonedSUV3Wide01DoorsWhite"/>
+		<block name="abandonedSUV3Wide01DoorsBrown"/>
+		<block name="abandonedSUV3Wide01DoorsRed"/>
+		<block name="abandonedSUV3Wide01DoorsOrange"/>
+		<block name="abandonedSUV3Wide01DoorsYellow"/>
+		<block name="abandonedSUV3Wide01DoorsGreen"/>
+		<block name="abandonedSUV3Wide01DoorsBlue"/>
+		<block name="abandonedSUV3Wide01DoorsPurple"/>
+		<block name="abandonedSUV3Wide01DoorsGrey"/>
+		<block name="abandonedSUV3Wide01DoorsPink"/>
 	</placeholder>
 
 		<!-- *** SUV_VS_AIR -->
@@ -1393,19 +1393,19 @@
 
 		<!-- *** FIRE_TRUCK -->
 	<placeholder name="cntFireTruck01RandomHelper">
-		<block name="cntFireTruck01Red" prob="1"/>
-		<block name="cntFireTruck01Orange" prob="1"/>
-		<block name="cntFireTruck01Yellow" prob="1"/>
+		<block name="cntFireTruck01Red"/>
+		<block name="cntFireTruck01Orange"/>
+		<block name="cntFireTruck01Yellow"/>
 	</placeholder>
 
 		<!-- *** FIRE_TRUCK_VS_AIR -->
 	<placeholder name="cntFireTruck01AirRandomHelper">
-		<block name="cntFireTruck01Red" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntFireTruck01Orange" prob="1"/>
-		<block name="air" prob="1"/>
-		<block name="cntFireTruck01Yellow" prob="1"/>
-		<block name="air" prob="1"/>
+		<block name="cntFireTruck01Red"/>
+		<block name="air"/>
+		<block name="cntFireTruck01Orange"/>
+		<block name="air"/>
+		<block name="cntFireTruck01Yellow"/>
+		<block name="air"/>
 	</placeholder>
 
 		<!-- *** SHORT_BUS_50/50_AIR -->
@@ -1523,9 +1523,9 @@
 	</placeholder>
 
 	<placeholder name="cntCounterHollowCabinetRandomLootHelper">
-		<block name="counterHollowCabinetOpen" prob=".30"/>
-		<block name="counterHollowCabinetBroken" prob=".30"/>
-		<block name="cntCounterHollowCabinet" prob=".40"/>
+		<block name="counterHollowCabinetOpen" prob=".3"/>
+		<block name="counterHollowCabinetBroken" prob=".3"/>
+		<block name="cntCounterHollowCabinet" prob=".4"/>
 	</placeholder>
 
 	<placeholder name="cntCabinetOldBottomLootHelper">
@@ -1534,15 +1534,15 @@
 	</placeholder>
 
 	<placeholder name="cntCounterHollowCabinetOldRandomLootHelper">
-		<block name="counterHollowCabinetOldOpen" prob=".30"/>
-		<block name="counterHollowCabinetOldBroken" prob=".30"/>
-		<block name="cntCounterHollowCabinetOld" prob=".40"/>
+		<block name="counterHollowCabinetOldOpen" prob=".3"/>
+		<block name="counterHollowCabinetOldBroken" prob=".3"/>
+		<block name="cntCounterHollowCabinetOld" prob=".4"/>
 	</placeholder>
 
 	<placeholder name="cntCounterHollowCabinetTaupeRandomLootHelper">
-		<block name="counterHollowCabinetTaupeOpen" prob=".30"/>
-		<block name="counterHollowCabinetTaupeBroken" prob=".30"/>
-		<block name="cntCounterHollowCabinetTaupe" prob=".40"/>
+		<block name="counterHollowCabinetTaupeOpen" prob=".3"/>
+		<block name="counterHollowCabinetTaupeBroken" prob=".3"/>
+		<block name="cntCounterHollowCabinetTaupe" prob=".4"/>
 	</placeholder>
 
 	<placeholder name="cntCupboardCabinetOldTopLootHelper">
@@ -1700,21 +1700,21 @@
 
 		<!-- *** STORE_CRATES -->
 	<placeholder name="cntStoreCratesRandomLootHelper">
-		<block name="cntShippingCrateShamway" prob="1"/>
-		<block name="cntShippingCrateShotgunMessiah" prob="1"/>
-		<block name="cntShippingCrateWorkingStiffs" prob="1"/>
-		<block name="cntShippingCrateSavageCountry" prob="1"/>
-		<block name="cntShippingCrateMoPowerElectronics" prob="1"/>
-		<block name="cntShippingCrateBookstore" prob="1"/>
-		<block name="cntShippingCrateCarParts" prob="1"/>
-		<block name="cntShippingCrateLabEquipment" prob="1"/>
+		<block name="cntShippingCrateShamway"/>
+		<block name="cntShippingCrateShotgunMessiah"/>
+		<block name="cntShippingCrateWorkingStiffs"/>
+		<block name="cntShippingCrateSavageCountry"/>
+		<block name="cntShippingCrateMoPowerElectronics"/>
+		<block name="cntShippingCrateBookstore"/>
+		<block name="cntShippingCrateCarParts"/>
+		<block name="cntShippingCrateLabEquipment"/>
 	</placeholder>
 
 		<!-- *** UTILITY_CRATES -->
 	<placeholder name="cntUtilityStoreCratesRandomLootHelper">
-		<block name="cntShippingCrateWorkingStiffs" prob="1"/>
-		<block name="cntShippingCrateMoPowerElectronics" prob="1"/>
-		<block name="cntShippingCrateCarParts" prob="1"/>
+		<block name="cntShippingCrateWorkingStiffs"/>
+		<block name="cntShippingCrateMoPowerElectronics"/>
+		<block name="cntShippingCrateCarParts"/>
 	</placeholder>
 
 		<!-- *** CONSTRUCTION_SUPPLIES -->
@@ -1737,21 +1737,21 @@
 
 		<!-- *** SHOPPING_CARTS -->
 	<placeholder name="cntShoppingCartRandomLootHelper">
-		<block name="cntShoppingCartEmptyWhite" prob=".1"/>
-		<block name="cntShoppingCartEmptyRed" prob=".1"/>
-		<block name="cntShoppingCartEmptyOrange" prob=".1"/>
-		<block name="cntShoppingCartEmptyYellow" prob=".1"/>
-		<block name="cntShoppingCartEmptyGreen" prob=".1"/>
-		<block name="cntShoppingCartEmptyBlue" prob=".1"/>
-		<block name="cntShoppingCartEmptyGrey" prob=".1"/>
+		<block name="cntShoppingCartEmptyWhite"/>
+		<block name="cntShoppingCartEmptyRed"/>
+		<block name="cntShoppingCartEmptyOrange"/>
+		<block name="cntShoppingCartEmptyYellow"/>
+		<block name="cntShoppingCartEmptyGreen"/>
+		<block name="cntShoppingCartEmptyBlue"/>
+		<block name="cntShoppingCartEmptyGrey"/>
 		
-		<block name="cntShoppingCartWhite" prob=".1"/>
-		<block name="cntShoppingCartRed" prob=".1"/>
-		<block name="cntShoppingCartOrange" prob=".1"/>
-		<block name="cntShoppingCartYellow" prob=".1"/>
-		<block name="cntShoppingCartGreen" prob=".1"/>
-		<block name="cntShoppingCartBlue" prob=".1"/>
-		<block name="cntShoppingCartGrey" prob=".1"/>
+		<block name="cntShoppingCartWhite"/>
+		<block name="cntShoppingCartRed"/>
+		<block name="cntShoppingCartOrange"/>
+		<block name="cntShoppingCartYellow"/>
+		<block name="cntShoppingCartGreen"/>
+		<block name="cntShoppingCartBlue"/>
+		<block name="cntShoppingCartGrey"/>
 	</placeholder>
 	
 	<placeholder name="cntShoppingCartBlueRandomLootHelper">
@@ -1766,117 +1766,117 @@
 
 		<!-- *** SHOPPING_BASKETS -->
 	<placeholder name="cntShoppingBasketRandomLootHelper">
-		<block name="cntShoppingBasketEmptyTeal" prob=".1"/>
-		<block name="cntShoppingBasketEmptyRed" prob=".1"/>
-		<block name="cntShoppingBasketEmptyGreen" prob=".1"/>
-		<block name="cntShoppingBasketEmptyBlue" prob=".1"/>
-		<block name="cntShoppingBasketEmptyYellow" prob=".1"/>
-		<block name="cntShoppingBasketEmptyWhite" prob=".1"/>
-		<block name="cntShoppingBasketEmptyOrange" prob=".1"/>
+		<block name="cntShoppingBasketEmptyTeal"/>
+		<block name="cntShoppingBasketEmptyRed"/>
+		<block name="cntShoppingBasketEmptyGreen"/>
+		<block name="cntShoppingBasketEmptyBlue"/>
+		<block name="cntShoppingBasketEmptyYellow"/>
+		<block name="cntShoppingBasketEmptyWhite"/>
+		<block name="cntShoppingBasketEmptyOrange"/>
 		
-		<block name="cntShoppingBasketTeal" prob=".1"/>
-		<block name="cntShoppingBasketRed" prob=".1"/>
-		<block name="cntShoppingBasketGreen" prob=".1"/>
-		<block name="cntShoppingBasketBlue" prob=".1"/>
-		<block name="cntShoppingBasketYellow" prob=".1"/>
-		<block name="cntShoppingBasketWhite" prob=".1"/>
-		<block name="cntShoppingBasketOrange" prob=".1"/>
+		<block name="cntShoppingBasketTeal"/>
+		<block name="cntShoppingBasketRed"/>
+		<block name="cntShoppingBasketGreen"/>
+		<block name="cntShoppingBasketBlue"/>
+		<block name="cntShoppingBasketYellow"/>
+		<block name="cntShoppingBasketWhite"/>
+		<block name="cntShoppingBasketOrange"/>
 	</placeholder>
 
 		<!-- *** PICTURE_CANVAS -->
 	<placeholder name="pictureCanvasRandomHelper">
-		<block name="pictureCanvas_01b" prob="1"/>
-		<block name="pictureCanvas_01c" prob="1"/>
-		<block name="pictureCanvas_01d" prob="1"/>
-		<block name="pictureCanvas_01e" prob="1"/>
-		<block name="pictureCanvas_01a" prob="1"/>
-		<block name="pictureCanvas_01f" prob="1"/>
-		<block name="pictureCanvas_01g" prob="1"/>
-		<block name="pictureCanvas_01h" prob="1"/>
-		<block name="pictureCanvas_01i" prob="1"/>
-		<block name="pictureCanvas_01j" prob="1"/>
+		<block name="pictureCanvas_01b"/>
+		<block name="pictureCanvas_01c"/>
+		<block name="pictureCanvas_01d"/>
+		<block name="pictureCanvas_01e"/>
+		<block name="pictureCanvas_01a"/>
+		<block name="pictureCanvas_01f"/>
+		<block name="pictureCanvas_01g"/>
+		<block name="pictureCanvas_01h"/>
+		<block name="pictureCanvas_01i"/>
+		<block name="pictureCanvas_01j"/>
 	</placeholder>
 
 		<!-- *** PICTURES_SMALL -->
 	<placeholder name="pictureSmallRandomHelper">
-		<block name="pictureFrame_01a" prob="1"/>
-		<block name="pictureFrame_01b" prob="1"/>
-		<block name="pictureFrame_01c" prob="1"/>
-		<block name="pictureFrame_01e" prob="1"/>
-		<block name="pictureFrame_01h" prob="1"/>
-		<block name="pictureFrame_01j" prob="1"/>
-		<block name="pictureFrame_01k" prob="1"/>
-		<block name="pictureFrame_01n" prob="1"/>
-		<block name="pictureFrame_01o" prob="1"/>
-		<block name="pictureFrame_01q" prob="1"/>
-		<block name="pictureFrame_01s" prob="1"/>
-		<block name="pictureFrame_01t" prob="1"/>
-		<block name="pictureFrame_01u" prob="1"/>
-		<block name="pictureFrame_01v" prob="1"/>
-		<block name="pictureFrame_01w" prob="1"/>
+		<block name="pictureFrame_01a"/>
+		<block name="pictureFrame_01b"/>
+		<block name="pictureFrame_01c"/>
+		<block name="pictureFrame_01e"/>
+		<block name="pictureFrame_01h"/>
+		<block name="pictureFrame_01j"/>
+		<block name="pictureFrame_01k"/>
+		<block name="pictureFrame_01n"/>
+		<block name="pictureFrame_01o"/>
+		<block name="pictureFrame_01q"/>
+		<block name="pictureFrame_01s"/>
+		<block name="pictureFrame_01t"/>
+		<block name="pictureFrame_01u"/>
+		<block name="pictureFrame_01v"/>
+		<block name="pictureFrame_01w"/>
 	</placeholder>
 
 		<!-- *** PICTURES_MED -->
 	<placeholder name="pictureMediumRandomHelper">
-		<block name="pictureFrame_01d" prob="1"/>
-		<block name="pictureFrame_01f" prob="1"/>
-		<block name="pictureFrame_01l" prob="1"/>
-		<block name="pictureFrame_01m" prob="1"/>
-		<block name="pictureFrame_01p" prob="1"/>
-		<block name="pictureFrame_01r" prob="1"/>
+		<block name="pictureFrame_01d"/>
+		<block name="pictureFrame_01f"/>
+		<block name="pictureFrame_01l"/>
+		<block name="pictureFrame_01m"/>
+		<block name="pictureFrame_01p"/>
+		<block name="pictureFrame_01r"/>
 	</placeholder>
 
 		<!-- *** PICTURES_LARGE -->
 	<placeholder name="pictureLargeRandomHelper">
-		<block name="pictureFrame_01g" prob="1"/>
-		<block name="pictureFrame_01i" prob="1"/>
+		<block name="pictureFrame_01g"/>
+		<block name="pictureFrame_01i"/>
 	</placeholder>
 
 		<!-- *** DESK_FRAMES -->
 	<placeholder name="pictureDeskFrameRandomHelper">
-		<block name="pictureDeskFrameBigFam" prob="1"/>
-		<block name="pictureDeskFrameModFam" prob="1"/>
-		<block name="pictureDeskFrameRetroFam" prob="1"/>
+		<block name="pictureDeskFrameBigFam"/>
+		<block name="pictureDeskFrameModFam"/>
+		<block name="pictureDeskFrameRetroFam"/>
 	</placeholder>
 
 		<!-- *** PICTURES_SAFES -->
 	<placeholder name="cntPictureSafeRandomLootHelper">
-		<block name="hiddenSafePictureFrame_01a" prob="1"/>
-		<block name="hiddenSafePictureFrame_01c" prob="1"/>
-		<block name="hiddenSafePictureFrame_01d" prob="1"/>
-		<block name="hiddenSafePictureFrame_01e" prob="1"/>
-		<block name="hiddenSafePictureFrame_01f" prob="1"/>
-		<block name="hiddenSafePictureFrame_01h" prob="1"/>
-		<block name="hiddenSafePictureFrame_01j" prob="1"/>
-		<block name="hiddenSafePictureFrame_01l" prob="1"/>
-		<block name="hiddenSafePictureFrame_01m" prob="1"/>
-		<block name="hiddenSafePictureFrame_01o" prob="1"/>
-		<block name="hiddenSafePictureFrame_01p" prob="1"/>
-		<block name="hiddenSafePictureFrame_01q" prob="1"/>
-		<block name="hiddenSafePictureFrame_01r" prob="1"/>
-		<block name="hiddenSafePictureFrame_01s" prob="1"/>
-		<block name="hiddenSafePictureFrame_01t" prob="1"/>
-		<block name="hiddenSafePictureFrame_01u" prob="1"/>
+		<block name="hiddenSafePictureFrame_01a"/>
+		<block name="hiddenSafePictureFrame_01c"/>
+		<block name="hiddenSafePictureFrame_01d"/>
+		<block name="hiddenSafePictureFrame_01e"/>
+		<block name="hiddenSafePictureFrame_01f"/>
+		<block name="hiddenSafePictureFrame_01h"/>
+		<block name="hiddenSafePictureFrame_01j"/>
+		<block name="hiddenSafePictureFrame_01l"/>
+		<block name="hiddenSafePictureFrame_01m"/>
+		<block name="hiddenSafePictureFrame_01o"/>
+		<block name="hiddenSafePictureFrame_01p"/>
+		<block name="hiddenSafePictureFrame_01q"/>
+		<block name="hiddenSafePictureFrame_01r"/>
+		<block name="hiddenSafePictureFrame_01s"/>
+		<block name="hiddenSafePictureFrame_01t"/>
+		<block name="hiddenSafePictureFrame_01u"/>
 	</placeholder>
 
 		<!-- *** BACKER_PAINTINGS -->
 	<placeholder name="paintingPictureRandomHelper">
-		<block name="paintingBen" prob="1"/>
-		<block name="paintingLorien" prob="1"/>
-		<block name="paintingDerek" prob="1"/>
-		<block name="paintingNoah" prob="1"/>
-		<block name="paintingDuke" prob="1"/>
-		<block name="paintingKen" prob="1"/>
+		<block name="paintingBen"/>
+		<block name="paintingLorien"/>
+		<block name="paintingDerek"/>
+		<block name="paintingNoah"/>
+		<block name="paintingDuke"/>
+		<block name="paintingKen"/>
 	</placeholder>
 
 		<!-- *** BACKER_PAINTING_SAFES -->
 	<placeholder name="cntPaintingPictureSafeRandomLootHelper">
-		<block name="hiddenSafePaintingBen" prob="1"/>
-		<block name="hiddenSafePaintingLorien" prob="1"/>
-		<block name="hiddenSafePaintingDerek" prob="1"/>
-		<block name="hiddenSafePaintingNoah" prob="1"/>
-		<block name="hiddenSafePaintingDuke" prob="1"/>
-		<block name="hiddenSafePaintingKen" prob="1"/>
+		<block name="hiddenSafePaintingBen"/>
+		<block name="hiddenSafePaintingLorien"/>
+		<block name="hiddenSafePaintingDerek"/>
+		<block name="hiddenSafePaintingNoah"/>
+		<block name="hiddenSafePaintingDuke"/>
+		<block name="hiddenSafePaintingKen"/>
 	</placeholder>
 
 		<!-- *** WALL_SAFE_VS_AIR -->
@@ -2113,40 +2113,40 @@
 	</placeholder>
 
 	<placeholder name="schoolDeskFlippedRandomHelper">
-		<block name="schoolDesk03White" prob="1"/>
-		<block name="schoolDesk03Brown" prob="1"/>
-		<block name="schoolDesk03Red" prob="1"/>
-		<block name="schoolDesk03Orange" prob="1"/>
-		<block name="schoolDesk03Yellow" prob="1"/>
-		<block name="schoolDesk03Green" prob="1"/>
-		<block name="schoolDesk03Blue" prob="1"/>
-		<block name="schoolDesk03Purple" prob="1"/>
-		<block name="schoolDesk03Grey" prob="1"/>
+		<block name="schoolDesk03White"/>
+		<block name="schoolDesk03Brown"/>
+		<block name="schoolDesk03Red"/>
+		<block name="schoolDesk03Orange"/>
+		<block name="schoolDesk03Yellow"/>
+		<block name="schoolDesk03Green"/>
+		<block name="schoolDesk03Blue"/>
+		<block name="schoolDesk03Purple"/>
+		<block name="schoolDesk03Grey"/>
 	</placeholder>
 
 		<!-- *** SCHOOL_SEATS -->
 	<placeholder name="schoolSeat01RandomHelper">
-		<block name="schoolSeat01White" prob="1"/>
-		<block name="schoolSeat01Brown" prob="1"/>
-		<block name="schoolSeat01Red" prob="1"/>
-		<block name="schoolSeat01Orange" prob="1"/>
-		<block name="schoolSeat01Yellow" prob="1"/>
-		<block name="schoolSeat01Green" prob="1"/>
-		<block name="schoolSeat01Blue" prob="1"/>
-		<block name="schoolSeat01Purple" prob="1"/>
-		<block name="schoolSeat01Grey" prob="1"/>
+		<block name="schoolSeat01White"/>
+		<block name="schoolSeat01Brown"/>
+		<block name="schoolSeat01Red"/>
+		<block name="schoolSeat01Orange"/>
+		<block name="schoolSeat01Yellow"/>
+		<block name="schoolSeat01Green"/>
+		<block name="schoolSeat01Blue"/>
+		<block name="schoolSeat01Purple"/>
+		<block name="schoolSeat01Grey"/>
 	</placeholder>
 
 	<placeholder name="schoolSeat02RandomHelper">
-		<block name="schoolSeat02White" prob="1"/>
-		<block name="schoolSeat02Brown" prob="1"/>
-		<block name="schoolSeat02Red" prob="1"/>
-		<block name="schoolSeat02Orange" prob="1"/>
-		<block name="schoolSeat02Yellow" prob="1"/>
-		<block name="schoolSeat02Green" prob="1"/>
-		<block name="schoolSeat02Blue" prob="1"/>
-		<block name="schoolSeat02Purple" prob="1"/>
-		<block name="schoolSeat02Grey" prob="1"/>
+		<block name="schoolSeat02White"/>
+		<block name="schoolSeat02Brown"/>
+		<block name="schoolSeat02Red"/>
+		<block name="schoolSeat02Orange"/>
+		<block name="schoolSeat02Yellow"/>
+		<block name="schoolSeat02Green"/>
+		<block name="schoolSeat02Blue"/>
+		<block name="schoolSeat02Purple"/>
+		<block name="schoolSeat02Grey"/>
 	</placeholder>
 
 		<!-- *** BACKPACKS_BAGS_AND_DUFFLES -->
@@ -2250,64 +2250,64 @@
 
 		<!-- *** CASKET -->
 	<placeholder name="cntCasketModernRandomHelper">
-		<block name="cntCasketModernOpenTan" prob=".1"/>
-		<block name="cntCasketModernOpenBrown" prob=".1"/>
-		<block name="cntCasketModernOpenGrey" prob=".1"/>
-		<block name="cntCasketModernOpenRed" prob=".1"/>
-		<block name="cntCasketModernOpenGreen" prob=".1"/>
-		<block name="cntCasketModernOpenBlue" prob=".1"/>
-		<block name="cntCasketModernOpenYellow" prob=".1"/>
-		<block name="cntCasketModernOpenAqua" prob=".1"/>
-		<block name="cntCasketModernOpenPurple" prob=".1"/>
-		<block name="cntCasketModernOpenWhite" prob=".1"/>
+		<block name="cntCasketModernOpenTan"/>
+		<block name="cntCasketModernOpenBrown"/>
+		<block name="cntCasketModernOpenGrey"/>
+		<block name="cntCasketModernOpenRed"/>
+		<block name="cntCasketModernOpenGreen"/>
+		<block name="cntCasketModernOpenBlue"/>
+		<block name="cntCasketModernOpenYellow"/>
+		<block name="cntCasketModernOpenAqua"/>
+		<block name="cntCasketModernOpenPurple"/>
+		<block name="cntCasketModernOpenWhite"/>
 		
-		<block name="cntCasketModernClosedTan" prob=".1"/>
-		<block name="cntCasketModernClosedBrown" prob=".1"/>
-		<block name="cntCasketModernClosedGrey" prob=".1"/>
-		<block name="cntCasketModernClosedRed" prob=".1"/>
-		<block name="cntCasketModernClosedGreen" prob=".1"/>
-		<block name="cntCasketModernClosedBlue" prob=".1"/>
-		<block name="cntCasketModernClosedYellow" prob=".1"/>
-		<block name="cntCasketModernClosedAqua" prob=".1"/>
-		<block name="cntCasketModernClosedPurple" prob=".1"/>
-		<block name="cntCasketModernClosedWhite" prob=".1"/>
+		<block name="cntCasketModernClosedTan"/>
+		<block name="cntCasketModernClosedBrown"/>
+		<block name="cntCasketModernClosedGrey"/>
+		<block name="cntCasketModernClosedRed"/>
+		<block name="cntCasketModernClosedGreen"/>
+		<block name="cntCasketModernClosedBlue"/>
+		<block name="cntCasketModernClosedYellow"/>
+		<block name="cntCasketModernClosedAqua"/>
+		<block name="cntCasketModernClosedPurple"/>
+		<block name="cntCasketModernClosedWhite"/>
 	</placeholder>
 
 	<placeholder name="cntCasketModernClosedRandomHelper">
-		<block name="cntCasketModernClosedTan" prob=".1"/>
-		<block name="cntCasketModernClosedBrown" prob=".1"/>
-		<block name="cntCasketModernClosedGrey" prob=".1"/>
-		<block name="cntCasketModernClosedRed" prob=".1"/>
-		<block name="cntCasketModernClosedGreen" prob=".1"/>
-		<block name="cntCasketModernClosedBlue" prob=".1"/>
-		<block name="cntCasketModernClosedYellow" prob=".1"/>
-		<block name="cntCasketModernClosedAqua" prob=".1"/>
-		<block name="cntCasketModernClosedPurple" prob=".1"/>
-		<block name="cntCasketModernClosedWhite" prob=".1"/>
+		<block name="cntCasketModernClosedTan"/>
+		<block name="cntCasketModernClosedBrown"/>
+		<block name="cntCasketModernClosedGrey"/>
+		<block name="cntCasketModernClosedRed"/>
+		<block name="cntCasketModernClosedGreen"/>
+		<block name="cntCasketModernClosedBlue"/>
+		<block name="cntCasketModernClosedYellow"/>
+		<block name="cntCasketModernClosedAqua"/>
+		<block name="cntCasketModernClosedPurple"/>
+		<block name="cntCasketModernClosedWhite"/>
 	</placeholder>
 
 	<placeholder name="cntCasketModernOffsetRandomHelper">
-		<block name="cntCasketModernOpenTanOffset" prob=".1"/>
-		<block name="cntCasketModernOpenBrownOffset" prob=".1"/>
-		<block name="cntCasketModernOpenGreyOffset" prob=".1"/>
-		<block name="cntCasketModernOpenRedOffset" prob=".1"/>
-		<block name="cntCasketModernOpenGreenOffset" prob=".1"/>
-		<block name="cntCasketModernOpenBlueOffset" prob=".1"/>
-		<block name="cntCasketModernOpenYellowOffset" prob=".1"/>
-		<block name="cntCasketModernOpenAquaOffset" prob=".1"/>
-		<block name="cntCasketModernOpenPurpleOffset" prob=".1"/>
-		<block name="cntCasketModernOpenWhiteOffset" prob=".1"/>
+		<block name="cntCasketModernOpenTanOffset"/>
+		<block name="cntCasketModernOpenBrownOffset"/>
+		<block name="cntCasketModernOpenGreyOffset"/>
+		<block name="cntCasketModernOpenRedOffset"/>
+		<block name="cntCasketModernOpenGreenOffset"/>
+		<block name="cntCasketModernOpenBlueOffset"/>
+		<block name="cntCasketModernOpenYellowOffset"/>
+		<block name="cntCasketModernOpenAquaOffset"/>
+		<block name="cntCasketModernOpenPurpleOffset"/>
+		<block name="cntCasketModernOpenWhiteOffset"/>
 		
-		<block name="cntCasketModernClosedTanOffset" prob=".1"/>
-		<block name="cntCasketModernClosedBrownOffset" prob=".1"/>
-		<block name="cntCasketModernClosedGreyOffset" prob=".1"/>
-		<block name="cntCasketModernClosedRedOffset" prob=".1"/>
-		<block name="cntCasketModernClosedGreenOffset" prob=".1"/>
-		<block name="cntCasketModernClosedBlueOffset" prob=".1"/>
-		<block name="cntCasketModernClosedYellowOffset" prob=".1"/>
-		<block name="cntCasketModernClosedAquaOffset" prob=".1"/>
-		<block name="cntCasketModernClosedPurpleOffset" prob=".1"/>
-		<block name="cntCasketModernClosedWhiteOffset" prob=".1"/>
+		<block name="cntCasketModernClosedTanOffset"/>
+		<block name="cntCasketModernClosedBrownOffset"/>
+		<block name="cntCasketModernClosedGreyOffset"/>
+		<block name="cntCasketModernClosedRedOffset"/>
+		<block name="cntCasketModernClosedGreenOffset"/>
+		<block name="cntCasketModernClosedBlueOffset"/>
+		<block name="cntCasketModernClosedYellowOffset"/>
+		<block name="cntCasketModernClosedAquaOffset"/>
+		<block name="cntCasketModernClosedPurpleOffset"/>
+		<block name="cntCasketModernClosedWhiteOffset"/>
 	</placeholder>
 
 		<!-- *** COFFINS -->
@@ -2961,259 +2961,259 @@
 
 		<!-- *** KING_SIZE_BEDS -->
 	<placeholder name="bed02RandomHelper">
-		<block name="bed02White" prob="1"/>
-		<block name="bed02Brown" prob="1"/>
-		<block name="bed02Red" prob="1"/>
-		<block name="bed02Orange" prob="1"/>
-		<block name="bed02Yellow" prob="1"/>
-		<block name="bed02Green" prob="1"/>
-		<block name="bed02Blue" prob="1"/>
-		<block name="bed02Purple" prob="1"/>
-		<block name="bed02Grey" prob="1"/>
-		<block name="bed02" prob="1"/>
-		<block name="bed02Pink" prob="1"/>
-		<block name="bed02ArmyGreen" prob="1"/>
+		<block name="bed02White"/>
+		<block name="bed02Brown"/>
+		<block name="bed02Red"/>
+		<block name="bed02Orange"/>
+		<block name="bed02Yellow"/>
+		<block name="bed02Green"/>
+		<block name="bed02Blue"/>
+		<block name="bed02Purple"/>
+		<block name="bed02Grey"/>
+		<block name="bed02"/>
+		<block name="bed02Pink"/>
+		<block name="bed02ArmyGreen"/>
 	</placeholder>
 		<!-- *** BUNK_BEDS -->
 	<!-- White -->
 	<placeholder name="bunkBedRandomHelperWhite">
-		<block name="bunkBedMadeWhite" prob="1"/>
-		<block name="bunkBedMessyWhite" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeWhite"/>
+		<block name="bunkBedMessyWhite"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Brown -->
 	<placeholder name="bunkBedRandomHelperBrown">
-		<block name="bunkBedMadeBrown" prob="1"/>
-		<block name="bunkBedMessyBrown" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeBrown"/>
+		<block name="bunkBedMessyBrown"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Red -->
 	<placeholder name="bunkBedRandomHelperRed">
-		<block name="bunkBedMadeRed" prob="1"/>
-		<block name="bunkBedMessyRed" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeRed"/>
+		<block name="bunkBedMessyRed"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Orange -->
 	<placeholder name="bunkBedRandomHelperOrange">
-		<block name="bunkBedMadeOrange" prob="1"/>
-		<block name="bunkBedMessyOrange" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeOrange"/>
+		<block name="bunkBedMessyOrange"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Yellow -->
 	<placeholder name="bunkBedRandomHelperYellow">
-		<block name="bunkBedMadeYellow" prob="1"/>
-		<block name="bunkBedMessyYellow" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeYellow"/>
+		<block name="bunkBedMessyYellow"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Green -->
 	<placeholder name="bunkBedRandomHelperGreen">
-		<block name="bunkBedMadeGreen" prob="1"/>
-		<block name="bunkBedMessyGreen" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeGreen"/>
+		<block name="bunkBedMessyGreen"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Blue -->
 	<placeholder name="bunkBedRandomHelperBlue">
-		<block name="bunkBedMadeBlue" prob="1"/>
-		<block name="bunkBedMessyBlue" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeBlue"/>
+		<block name="bunkBedMessyBlue"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Purple -->
 	<placeholder name="bunkBedRandomHelperPurple">
-		<block name="bunkBedMadePurple" prob="1"/>
-		<block name="bunkBedMessyPurple" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadePurple"/>
+		<block name="bunkBedMessyPurple"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Grey -->
 	<placeholder name="bunkBedRandomHelperGrey">
-		<block name="bunkBedMadeGrey" prob="1"/>
-		<block name="bunkBedMessyGrey" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeGrey"/>
+		<block name="bunkBedMessyGrey"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Black -->
 	<placeholder name="bunkBedRandomHelper">
-		<block name="bunkBedMade" prob="1"/>
-		<block name="bunkBedMessy" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMade"/>
+		<block name="bunkBedMessy"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Pink -->
 	<placeholder name="bunkBedRandomHelperPink">
-		<block name="bunkBedMadePink" prob="1"/>
-		<block name="bunkBedMessyPink" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadePink"/>
+		<block name="bunkBedMessyPink"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<!-- Army Green -->
 	<placeholder name="bunkBedRandomHelperArmyGreen">
-		<block name="bunkBedMadeArmyGreen" prob="1"/>
-		<block name="bunkBedMessyArmyGreen" prob="1"/>
-		<block name="bunkBedMattress" prob="1"/>
-		<block name="bunkBedFrame" prob="1"/>
+		<block name="bunkBedMadeArmyGreen"/>
+		<block name="bunkBedMessyArmyGreen"/>
+		<block name="bunkBedMattress"/>
+		<block name="bunkBedFrame"/>
 	</placeholder>
 
 	<placeholder name="bunkBedMadeRandomHelper">
-		<block name="bunkBedMade" prob="1"/>
-		<block name="bunkBedMadeWhite" prob="1"/>
-		<block name="bunkBedMadeBrown" prob="1"/>
-		<block name="bunkBedMadeRed" prob="1"/>
-		<block name="bunkBedMadeOrange" prob="1"/>
-		<block name="bunkBedMadeYellow" prob="1"/>
-		<block name="bunkBedMadeGreen" prob="1"/>
-		<block name="bunkBedMadeBlue" prob="1"/>
-		<block name="bunkBedMadePurple" prob="1"/>
-		<block name="bunkBedMadeGrey" prob="1"/>
-		<block name="bunkBedMadePink" prob="1"/>
-		<block name="bunkBedMadeArmyGreen" prob="1"/>
+		<block name="bunkBedMade"/>
+		<block name="bunkBedMadeWhite"/>
+		<block name="bunkBedMadeBrown"/>
+		<block name="bunkBedMadeRed"/>
+		<block name="bunkBedMadeOrange"/>
+		<block name="bunkBedMadeYellow"/>
+		<block name="bunkBedMadeGreen"/>
+		<block name="bunkBedMadeBlue"/>
+		<block name="bunkBedMadePurple"/>
+		<block name="bunkBedMadeGrey"/>
+		<block name="bunkBedMadePink"/>
+		<block name="bunkBedMadeArmyGreen"/>
 	</placeholder>
 
 	<placeholder name="bunkBedMessyRandomHelper">
-		<block name="bunkBedMessy" prob="1"/>
-		<block name="bunkBedMessyWhite" prob="1"/>
-		<block name="bunkBedMessyBrown" prob="1"/>
-		<block name="bunkBedMessyRed" prob="1"/>
-		<block name="bunkBedMessyOrange" prob="1"/>
-		<block name="bunkBedMessyYellow" prob="1"/>
-		<block name="bunkBedMessyGreen" prob="1"/>
-		<block name="bunkBedMessyBlue" prob="1"/>
-		<block name="bunkBedMessyPurple" prob="1"/>
-		<block name="bunkBedMessyGrey" prob="1"/>
-		<block name="bunkBedMessyPink" prob="1"/>
-		<block name="bunkBedMessyArmyGreen" prob="1"/>
+		<block name="bunkBedMessy"/>
+		<block name="bunkBedMessyWhite"/>
+		<block name="bunkBedMessyBrown"/>
+		<block name="bunkBedMessyRed"/>
+		<block name="bunkBedMessyOrange"/>
+		<block name="bunkBedMessyYellow"/>
+		<block name="bunkBedMessyGreen"/>
+		<block name="bunkBedMessyBlue"/>
+		<block name="bunkBedMessyPurple"/>
+		<block name="bunkBedMessyGrey"/>
+		<block name="bunkBedMessyPink"/>
+		<block name="bunkBedMessyArmyGreen"/>
 	</placeholder>
 
 		<!-- *** BUNK_BEDS -->
 	<!-- White -->
 	<placeholder name="bedNoFrameRandomHelperWhite">
-		<block name="bedMadeNoFrameWhite" prob="1"/>
-		<block name="bedMessyNoFrameWhite" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameWhite"/>
+		<block name="bedMessyNoFrameWhite"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Brown -->
 	<placeholder name="bedNoFrameRandomHelperBrown">
-		<block name="bedMadeNoFrameBrown" prob="1"/>
-		<block name="bedMessyNoFrameBrown" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameBrown"/>
+		<block name="bedMessyNoFrameBrown"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Red -->
 	<placeholder name="bedNoFrameRandomHelperRed">
-		<block name="bedMadeNoFrameRed" prob="1"/>
-		<block name="bedMessyNoFrameRed" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameRed"/>
+		<block name="bedMessyNoFrameRed"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Orange -->
 	<placeholder name="bedNoFrameRandomHelperOrange">
-		<block name="bedMadeNoFrameOrange" prob="1"/>
-		<block name="bedMessyNoFrameOrange" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameOrange"/>
+		<block name="bedMessyNoFrameOrange"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Yellow -->
 	<placeholder name="bedNoFrameRandomHelperYellow">
-		<block name="bedMadeNoFrameYellow" prob="1"/>
-		<block name="bedMessyNoFrameYellow" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameYellow"/>
+		<block name="bedMessyNoFrameYellow"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Green -->
 	<placeholder name="bedNoFrameRandomHelperGreen">
-		<block name="bedMadeNoFrameGreen" prob="1"/>
-		<block name="bedMessyNoFrameGreen" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameGreen"/>
+		<block name="bedMessyNoFrameGreen"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Blue -->
 	<placeholder name="bedNoFrameRandomHelperBlue">
-		<block name="bedMadeNoFrameBlue" prob="1"/>
-		<block name="bedMessyNoFrameBlue" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameBlue"/>
+		<block name="bedMessyNoFrameBlue"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Purple -->
 	<placeholder name="bedNoFrameRandomHelperPurple">
-		<block name="bedMadeNoFramePurple" prob="1"/>
-		<block name="bedMessyNoFramePurple" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFramePurple"/>
+		<block name="bedMessyNoFramePurple"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Grey -->
 	<placeholder name="bedNoFrameRandomHelperGrey">
-		<block name="bedMadeNoFrameGrey" prob="1"/>
-		<block name="bedMessyNoFrameGrey" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameGrey"/>
+		<block name="bedMessyNoFrameGrey"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Black -->
 	<placeholder name="bedNoFrameRandomHelperBlack">
-		<block name="bedMadeNoFrameBlack" prob="1"/>
-		<block name="bedMessyNoFrameBlack" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameBlack"/>
+		<block name="bedMessyNoFrameBlack"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Pink -->
 	<placeholder name="bedNoFrameRandomHelperPink">
-		<block name="bedMadeNoFramePink" prob="1"/>
-		<block name="bedMessyNoFramePink" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFramePink"/>
+		<block name="bedMessyNoFramePink"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<!-- Army Green -->
 	<placeholder name="bedNoFrameRandomHelperArmyGreen">
-		<block name="bedMadeNoFrameArmyGreen" prob="1"/>
-		<block name="bedMessyNoFrameArmyGreen" prob="1"/>
-		<block name="mattressFlatThin" prob="1"/>
+		<block name="bedMadeNoFrameArmyGreen"/>
+		<block name="bedMessyNoFrameArmyGreen"/>
+		<block name="mattressFlatThin"/>
 	</placeholder>
 
 	<placeholder name="bedMadeNoFrameRandomHelper">
-		<block name="bedMadeNoFrameWhite" prob="1"/>
-		<block name="bedMadeNoFrameBrown" prob="1"/>
-		<block name="bedMadeNoFrameRed" prob="1"/>
-		<block name="bedMadeNoFrameOrange" prob="1"/>
-		<block name="bedMadeNoFrameYellow" prob="1"/>
-		<block name="bedMadeNoFrameGreen" prob="1"/>
-		<block name="bedMadeNoFrameBlue" prob="1"/>
-		<block name="bedMadeNoFramePurple" prob="1"/>
-		<block name="bedMadeNoFrameGrey" prob="1"/>
-		<block name="bedMadeNoFrameBlack" prob="1"/>
-		<block name="bedMadeNoFramePink" prob="1"/>
-		<block name="bedMadeNoFrameArmyGreen" prob="1"/>
+		<block name="bedMadeNoFrameWhite"/>
+		<block name="bedMadeNoFrameBrown"/>
+		<block name="bedMadeNoFrameRed"/>
+		<block name="bedMadeNoFrameOrange"/>
+		<block name="bedMadeNoFrameYellow"/>
+		<block name="bedMadeNoFrameGreen"/>
+		<block name="bedMadeNoFrameBlue"/>
+		<block name="bedMadeNoFramePurple"/>
+		<block name="bedMadeNoFrameGrey"/>
+		<block name="bedMadeNoFrameBlack"/>
+		<block name="bedMadeNoFramePink"/>
+		<block name="bedMadeNoFrameArmyGreen"/>
 	</placeholder>
 
 	<placeholder name="bedMessyNoFrameRandomHelper">
-		<block name="bedMessyNoFrameWhite" prob="1"/>
-		<block name="bedMessyNoFrameBrown" prob="1"/>
-		<block name="bedMessyNoFrameRed" prob="1"/>
-		<block name="bedMessyNoFrameOrange" prob="1"/>
-		<block name="bedMessyNoFrameYellow" prob="1"/>
-		<block name="bedMessyNoFrameGreen" prob="1"/>
-		<block name="bedMessyNoFrameBlue" prob="1"/>
-		<block name="bedMessyNoFramePurple" prob="1"/>
-		<block name="bedMessyNoFrameGrey" prob="1"/>
-		<block name="bedMessyNoFrameBlack" prob="1"/>
-		<block name="bedMessyNoFramePink" prob="1"/>
-		<block name="bedMessyNoFrameArmyGreen" prob="1"/>
+		<block name="bedMessyNoFrameWhite"/>
+		<block name="bedMessyNoFrameBrown"/>
+		<block name="bedMessyNoFrameRed"/>
+		<block name="bedMessyNoFrameOrange"/>
+		<block name="bedMessyNoFrameYellow"/>
+		<block name="bedMessyNoFrameGreen"/>
+		<block name="bedMessyNoFrameBlue"/>
+		<block name="bedMessyNoFramePurple"/>
+		<block name="bedMessyNoFrameGrey"/>
+		<block name="bedMessyNoFrameBlack"/>
+		<block name="bedMessyNoFramePink"/>
+		<block name="bedMessyNoFrameArmyGreen"/>
 	</placeholder>
 		<!-- *** CLOTHES_RACKS -->
 	<placeholder name="cntClothesRackRoundRandomLootHelper">
@@ -3380,13 +3380,13 @@
 
 		<!-- *** SHOE_PILES_AND_SHELVES -->
 	<placeholder name="cntShoesPileRandomLootHelper">
-		<block name="cntShoesPileSandals" prob="1"/>
-		<block name="cntShoesPileWomensHeels" prob="1"/>
-		<block name="cntShoesPileSneakers" prob="1"/>
-		<block name="cntShoesPileLeatherBoots" prob="1"/>
-		<block name="cntShoesPileBusinessShoes" prob="1"/>
-		<block name="cntShoesPileCommercial01" prob="1"/>
-		<block name="cntShoesPileCommercial02" prob="1"/>
+		<block name="cntShoesPileSandals"/>
+		<block name="cntShoesPileWomensHeels"/>
+		<block name="cntShoesPileSneakers"/>
+		<block name="cntShoesPileLeatherBoots"/>
+		<block name="cntShoesPileBusinessShoes"/>
+		<block name="cntShoesPileCommercial01"/>
+		<block name="cntShoesPileCommercial02"/>
 	</placeholder>
 
 	<placeholder name="cntStoreShelfDoubleBottomShoesRandomLootHelper">
@@ -3447,10 +3447,10 @@
 	</placeholder>
  
 	<placeholder name="cntBookPileRandomLootHelper">
-		<block name="cntBookPile01" prob=".25"/>
-		<block name="cntBookPile02" prob=".25"/>
-		<block name="cntBookPile03" prob=".25"/>
-		<block name="cntBookPile04" prob=".25"/>
+		<block name="cntBookPile01"/>
+		<block name="cntBookPile02"/>
+		<block name="cntBookPile03"/>
+		<block name="cntBookPile04"/>
 	</placeholder>
 
 	<placeholder name="cntBookPileRandomLootHelper2">
@@ -3462,37 +3462,37 @@
 	</placeholder>
 
 	<placeholder name="cntBookPileRandomLootHelper3">
-		<block name="cntBookPile05" prob="1"/>
-		<block name="cntBookPile06" prob="1"/>
-		<block name="cntBookPile07" prob="1"/>
-		<block name="cntBookPile08" prob="1"/>
-		<block name="cntBookPile09" prob="1"/>
-		<block name="cntBookPile10" prob="1"/>
-		<block name="cntBookPile11" prob="1"/>
-		<block name="cntBookPile12" prob="1"/>
-		<block name="cntBookPile13" prob="1"/>
-		<block name="cntBookPile14" prob="1"/>
-		<block name="cntBookPile15" prob="1"/>
+		<block name="cntBookPile05"/>
+		<block name="cntBookPile06"/>
+		<block name="cntBookPile07"/>
+		<block name="cntBookPile08"/>
+		<block name="cntBookPile09"/>
+		<block name="cntBookPile10"/>
+		<block name="cntBookPile11"/>
+		<block name="cntBookPile12"/>
+		<block name="cntBookPile13"/>
+		<block name="cntBookPile14"/>
+		<block name="cntBookPile15"/>
 	</placeholder>
 
 	<placeholder name="cntBookPile01AirRandomLootHelper">
-		<block name="air" prob=".5"/>
-		<block name="cntBookPile01" prob=".5"/>
+		<block name="air"/>
+		<block name="cntBookPile01"/>
 	</placeholder>
 
 	<placeholder name="cntBookPile02AirRandomLootHelper">
-		<block name="air" prob=".5"/>
-		<block name="cntBookPile02" prob=".5"/>
+		<block name="air"/>
+		<block name="cntBookPile02"/>
 	</placeholder>
 
 	<placeholder name="cntBookPile03AirRandomLootHelper">
-		<block name="air" prob=".5"/>
-		<block name="cntBookPile03" prob=".5"/>
+		<block name="air"/>
+		<block name="cntBookPile03"/>
 	</placeholder>
 
 	<placeholder name="cntBookPile04AirRandomLootHelper">
-		<block name="air" prob=".5"/>
-		<block name="cntBookPile04" prob=".5"/>
+		<block name="air"/>
+		<block name="cntBookPile04"/>
 	</placeholder>
 
 		<!-- *** GUN_RACKS -->
@@ -3505,8 +3505,8 @@
 	</placeholder>
 
 	<placeholder name="cntGunRackLargeRandomLootHelper">
-		<block name="cntGunRackLargeGuns01" prob="1"/>
-		<block name="cntGunRackLargeGuns02" prob="1"/>
+		<block name="cntGunRackLargeGuns01"/>
+		<block name="cntGunRackLargeGuns02"/>
 	</placeholder>
 
 		<!-- *** ELECTRONICS_SHELVES -->
@@ -3566,35 +3566,35 @@
 
 		<!-- *** CLOCKS -->
 	<placeholder name="wallClockRandomLootHelper">
-		<block name="wallClock" prob=".5"/>
-		<block name="wallClockBroken" prob=".5"/>
+		<block name="wallClock"/>
+		<block name="wallClockBroken"/>
 	</placeholder>
 
 		<!-- *** NUMBERS_NO_ZERO -->
 	<placeholder name="metalSignNumbersOnlyNoZeroRandomHelper">
-		<block name="metalSignLetter_1" prob=".1"/>
-		<block name="metalSignLetter_2" prob=".1"/>
-		<block name="metalSignLetter_3" prob=".1"/>
-		<block name="metalSignLetter_4" prob=".1"/>
-		<block name="metalSignLetter_5" prob=".1"/>
-		<block name="metalSignLetter_6" prob=".1"/>
-		<block name="metalSignLetter_7" prob=".1"/>
-		<block name="metalSignLetter_8" prob=".1"/>
-		<block name="metalSignLetter_9" prob=".1"/>
+		<block name="metalSignLetter_1"/>
+		<block name="metalSignLetter_2"/>
+		<block name="metalSignLetter_3"/>
+		<block name="metalSignLetter_4"/>
+		<block name="metalSignLetter_5"/>
+		<block name="metalSignLetter_6"/>
+		<block name="metalSignLetter_7"/>
+		<block name="metalSignLetter_8"/>
+		<block name="metalSignLetter_9"/>
 	</placeholder>
 
 		<!-- *** NUMBERS -->
 	<placeholder name="metalSignNumbersOnlyRandomHelper">
-		<block name="metalSignLetter_0" prob=".1"/>
-		<block name="metalSignLetter_1" prob=".1"/>
-		<block name="metalSignLetter_2" prob=".1"/>
-		<block name="metalSignLetter_3" prob=".1"/>
-		<block name="metalSignLetter_4" prob=".1"/>
-		<block name="metalSignLetter_5" prob=".1"/>
-		<block name="metalSignLetter_6" prob=".1"/>
-		<block name="metalSignLetter_7" prob=".1"/>
-		<block name="metalSignLetter_8" prob=".1"/>
-		<block name="metalSignLetter_9" prob=".1"/>
+		<block name="metalSignLetter_0"/>
+		<block name="metalSignLetter_1"/>
+		<block name="metalSignLetter_2"/>
+		<block name="metalSignLetter_3"/>
+		<block name="metalSignLetter_4"/>
+		<block name="metalSignLetter_5"/>
+		<block name="metalSignLetter_6"/>
+		<block name="metalSignLetter_7"/>
+		<block name="metalSignLetter_8"/>
+		<block name="metalSignLetter_9"/>
 	</placeholder>
 
 		<!-- *** MAILBOXES -->
@@ -3678,21 +3678,21 @@
 
 		<!-- *** FOOD_PILES_VS_AIR -->
 	<placeholder name="cntFoodPileSmallRandomHelper">
-		<block name="cntFoodPileSmall" prob="0.5"/>
-		<block name="air" prob="0.5"/>
+		<block name="cntFoodPileSmall"/>
+		<block name="air"/>
 	</placeholder>
 
 	<placeholder name="cntFoodPileSmallCornerRandomHelper">
-		<block name="cntFoodPileSmallCorner" prob="0.5"/>
-		<block name="air" prob="0.5"/>
+		<block name="cntFoodPileSmallCorner"/>
+		<block name="air"/>
 	</placeholder>
 
 		<!-- *** SMALL_AMMO_FOOD_MEDICAL_PILE_VS_AIR -->
 	<placeholder name="smallPileRandomHelper">
-		<block name="cntAmmoPileSmall" prob="0.25"/>
-		<block name="cntFoodPileSmall" prob="0.25"/>
-		<block name="cntMedicLootPileA" prob="0.25"/>
-		<block name="air" prob="0.25"/>
+		<block name="cntAmmoPileSmall"/>
+		<block name="cntFoodPileSmall"/>
+		<block name="cntMedicLootPileA"/>
+		<block name="air"/>
 	</placeholder>
 
 		<!-- *** WOODEN_CHEST_HELPERS -->
@@ -3952,9 +3952,9 @@
 		<block name="cntAmmoPileSmall" prob=".1"/>
 		<block name="cntFoodPileSmall" prob=".05"/>
 		<block name="cntBookPile01" prob=".05"/>
-		<block name="cntTrashPile06" prob="5"/>
-		<block name="cntTrashPile08" prob="5"/>
-		<block name="cntTrashPile09" prob="5"/>
+		<block name="cntTrashPile06" prob="1"/>
+		<block name="cntTrashPile08" prob="1"/>
+		<block name="cntTrashPile09" prob="1"/>
 	</placeholder>
 
 		<!-- *** FETCH_OR_AIR_"NO_PLACEHOLDER" -->

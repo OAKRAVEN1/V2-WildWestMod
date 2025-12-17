@@ -2286,6 +2286,34 @@
 	<item name="qt_raphael"/>
 </lootgroup>
 
+<!-- *** Clothing Groups -->
+
+<lootgroup name="groupT1Clothing">
+	<item name="clothingHeadT1"/>
+	<item name="clothingOutfitT1"/>
+	<item name="clothingHandsT1"/>
+	<item name="clothingFeetT1"/>
+</lootgroup>
+
+<lootgroup name="groupT2Clothing">
+	<item name="clothingHeadT2"/>
+	<item name="clothingOutfitT2"/>
+	<item name="clothingHandsT2"/>
+	<item name="clothingFeetT2"/>
+</lootgroup>
+
+<lootgroup name="groupT3Clothing">
+	<item name="clothingHeadT3"/>
+	<item name="clothingOutfitT3"/>
+	<item name="clothingHandsT3"/>
+	<item name="clothingFeetT3"/>
+</lootgroup>
+
+<lootgroup name="groupAllClothing">
+	<item group="groupT1Clothing" loot_prob_template="ProbT0"/>
+	<item group="groupT2Clothing" loot_prob_template="ProbT1Cap"/>
+	<item group="groupT3Clothing" loot_prob_template="ProbT2Cap"/>
+</lootgroup>
 <!-- *** Armor_Groups -->
 
 <lootgroup name="groupArmorParts">
@@ -2293,6 +2321,7 @@
 	<item name="resourceLeather" count="1" loot_prob_template="low"/>
 	<item name="resourceSewingKit" count="1" loot_prob_template="low"/>
 	<item name="armorParts" count="1" loot_prob_template="low"/>
+	<item group="groupAllClothing" count="1" loot_prob_template="low"/>
 	<item name="resourceLegendaryParts" count="1" loot_prob_template="veryLowDelayed"/>
 </lootgroup>
 
@@ -2595,12 +2624,6 @@
 
 <!-- *** T1_Melee_Weapons -->
 <lootgroup name="groupWeaponsT1_Melee" loot_quality_template="QLTemplateT1">
-	<conditional evaluator="client">
-		<if cond="event('christmas')">
-			<item name="meleeWpnClubT1CandyClub" prob="0.3"/>		<!-- *** HOLIDAY_ITEM -->
-			<item name="meleeWpnBladeT1CandyKnife" prob="0.3"/>		<!-- *** HOLIDAY_ITEM -->
-		</if>
-	</conditional>
 	<item name="meleeWpnSpearT1IronSpear"/>
 	<item name="meleeWpnClubT1BaseballBat"/>
 	<item name="meleeWpnSledgeT1IronSledgehammer"/>
@@ -2878,6 +2901,7 @@
 	<item name="modArmorPlatingBasic"/>
 	<item name="modArmorStoragePocket"/>
 	<item name="modArmorImprovedFittings"/>
+	<item name="modArmorInsulatedLinerT1"/>
 </lootgroup>
 
 <!-- *** T2_Armor_Mods -->
@@ -2888,6 +2912,7 @@
 	<item name="modArmorMuffledConnectors"/>
 	<item name="modArmorDoubleStoragePocket"/>
 	<item name="modArmorCustomizedFittings"/>
+	<item name="modArmorInsulatedLinerT2"/>
 </lootgroup>
 
 <!-- *** T3_Armor_Mods -->
@@ -2896,6 +2921,7 @@
 	<item name="modArmorTripleStoragePocket"/>
 	<item name="modArmorAdvancedMuffledConnectors"/>
 	<item name="modArmorPlatingCrystalReinforced"/> <!-- Wild West Mod -->
+	<item name="modArmorInsulatedLinerT3"/>
 </lootgroup>
 
 <!-- *** Mods_Scaled -->
@@ -2966,6 +2992,11 @@
 	<item group="groupModAllT4" loot_prob_template="low"/>
 </lootgroup>
 
+<lootgroup name="groupHolidayGear" loot_quality_template="armorQualityTemplate">
+	<item name="meleeWpnClubT1CandyClub"/>		 <!-- *** HOLIDAY_ITEM -->
+	<item name="meleeWpnBladeT1CandyKnife"/>	 <!-- *** HOLIDAY_ITEM -->
+	<item name="armorSantaHatHelmet"/>			 <!-- *** HOLIDAY_ITEM -->
+</lootgroup>			
 <!-- *** Grill_Loot -->
 <lootgroup name="groupGrills01">
 	<item name="foodRottingFlesh" count="1,3" loot_prob_template="high"/>
@@ -2998,7 +3029,7 @@
 	<item name="bookSpearHunter5RapidStrike"/>
 	<item name="bookSpearHunter6PenetratingShaft"/>
 	<item name="bookSpearHunter7QuickStrike"/>
-	
+
 	<item name="bookHuntingJournalBears"/>
 	<item name="bookHuntingJournalCoyotes"/>
 	<item name="bookHuntingJournalDeer"/>
@@ -3006,7 +3037,7 @@
 	<item name="bookHuntingJournalVultures"/>
 	<item name="bookHuntingJournalWolves"/>
 	<item name="bookHuntingJournalSelfDefense"/>
-	
+
 	<item name="bookArtOfMiningLuckyStrike"/>
 	<item name="bookArtOfMiningDiamondTools"/>
 	<item name="bookArtOfMiningCoffee"/>
@@ -3014,7 +3045,7 @@
 	<item name="bookArtOfMiningPallets"/>
 	<item name="bookArtOfMiningAvalanche"/>
 	<item name="bookArtOfMiningDamage"/>
-	
+
 	<item name="bookBatterUpFoulBalls"/>
 	<item name="bookBatterUpBigHits"/>
 	<item name="bookBatterUpStealingBases"/>
@@ -3022,7 +3053,7 @@
 	<item name="bookBatterUpSlowPitch"/>
 	<item name="bookBatterUpMaintenance"/>
 	<item name="bookBatterUpMetalChain"/>
-	
+
 	<item name="bookSledgeSagaKnockdown"/>
 	<item name="bookSledgeSagaDegradation"/>
 	<item name="bookSledgeSagaCrippledMorale"/>
@@ -3078,7 +3109,7 @@
 	<item name="bookPistolPeteSteadyHand"/>
 	<item name="bookPistolPeteSwissKnees"/>
 	<item name="bookPistolPeteTakeAim"/>
-	
+
 	<item name="bookLuckyLooterAmmunition"/>
 	<item name="bookLuckyLooterBooks"/>
 	<item name="bookLuckyLooterBrass"/>
@@ -3094,7 +3125,7 @@
 	<item name="bookEnforcerDamage"/>
 	<item name="bookEnforcerIntimidation"/>
 	<item name="bookEnforcerPunks"/>
-	
+
 	<item name="bookShotgunMessiahBreachingSlugs"/>
 	<item name="bookShotgunMessiahDamage"/>
 	<item name="bookShotgunMessiahLimbShot"/>
@@ -3118,7 +3149,7 @@
 	<item name="bookSniperHeadShot"/>
 	<item name="bookSniperReload"/>
 	<item name="bookSniperHPAmmo"/>
-	
+
 	<item name="bookAutoWeaponsDamage"/>
 	<item name="bookAutoWeaponsRagdoll"/>
 	<item name="bookAutoWeaponsMaintenance"/>
@@ -3133,7 +3164,7 @@
 	<item name="bookTechJunkie4Shells"/>
 	<item name="bookTechJunkie5Repulsor"/>
 	<item name="bookTechJunkie6BatonCharge"/>
-	<item name="bookTechJunkie7Hydraulics"/>	
+	<item name="bookTechJunkie7Hydraulics"/>
 </lootgroup>
 
 <!-- *** PERK_BOOK_GROUPS -->
@@ -3357,7 +3388,7 @@
 </lootgroup>
 
 <!-- Increased from 3 due to decrease in book cases/cabinets/etc -->
-<lootgroup name="groupQuestRewardSkillMagazinesAll01" count="4" >
+<lootgroup name="groupQuestRewardSkillMagazinesAll01" count="4">
 	<item name="bowsSkillMagazine" count="2"/>
 	<item name="spearsSkillMagazine" count="2"/>
 	<item name="clubsSkillMagazine" count="2"/>
@@ -3436,7 +3467,7 @@
 </lootgroup>
 
 <lootgroup name="groupMilitaryBooks">
-	
+
 	<item name="bookSniperAPAmmo"/>
 	<item name="bookSniperControlledBreathing"/>
 	<item name="bookSniperCripplingShot"/>
@@ -3575,6 +3606,7 @@
 <!-- *** T0_Vehicle_Mod_Schematics -->
 <lootgroup name="vehicleModSchematics01">
 	<item name="modVehicleOffRoadHeadlightsSchematic"/>
+	<item name="modVehicleStorageSchematic"/>
 	<item name="modVehicleFuelSaverSchematic"/>
 	<item name="modVehicleReserveFuelTankSchematic"/>
 	<item name="modVehicleSuperChargerSchematic"/>
@@ -3583,6 +3615,7 @@
 <!-- *** T1_Vehicle_Mod_Schematics -->
 <lootgroup name="vehicleModSchematics02">
 	<item name="modVehicleOffRoadHeadlightsSchematic"/>
+	<item name="modVehicleStorageSchematic"/>
 	<item name="modVehicleFuelSaverSchematic"/>
 	<item name="modVehicleReserveFuelTankSchematic"/>
 	<item name="modVehicleSuperChargerSchematic"/>
@@ -3595,6 +3628,7 @@
 	<item name="modVehicleSuperChargerSchematic"/>
 	<item name="modVehiclePlowSchematic"/>
 	<item name="modVehicleArmorSchematic"/>
+	<item name="modVehicleStorageSchematic"/>
 	<item name="modVehicleFuelSaverSchematic"/>
 	<item name="modVehicleReserveFuelTankSchematic"/>
 </lootgroup>
@@ -3724,7 +3758,7 @@
 	<item name="foodCanPears"/>
 	<item name="foodRawMeat" count="1,5"/>
 	<item name="foodEgg" count="1,5"/>
-	<item name="drinkJarRiverWater" count="1,2"/>
+	<item name="drinkJarEmpty" count="1"/>
 </lootgroup>
 
 <!-- *** Candy -->
@@ -3781,6 +3815,14 @@
 	<!-- <item name="drinkJarYuccaJuice" count="1" loot_prob_template="low"/> -->
 	<!-- <item name="drinkCanMegaCrush" count="1" loot_prob_template="veryLow"/> -->
 <!-- </lootgroup> -->
+
+<!-- *** Water_Cooler -->
+<lootgroup name="groupWaterCooler">
+	<item name="resourceScrapPolymers" count="2,4" loot_prob_template="high"/>
+	<item name="drinkJarBoiledWater" count="1" loot_prob_template="low"/>
+	<item name="drinkJarPureMineralWater" count="1" loot_prob_template="veryLow"/>
+	<item name="drinkJarEmpty" count="1"/>
+</lootgroup>
 
 <!-- *** Rare_Ores -->
 <lootgroup name="rareOres">
@@ -3956,7 +3998,7 @@
 	<item name="bookArtOfMiningPallets"/>
 	<item name="bookArtOfMiningAvalanche"/>
 	<item name="bookArtOfMiningDamage"/>
-	
+
 	<item name="bookSledgeSagaKnockdown"/>
 	<item name="bookSledgeSagaDegradation"/>
 	<item name="bookSledgeSagaCrippledMorale"/>
@@ -3964,7 +4006,7 @@
 	<item name="bookSledgeSagaSavageReaper"/>
 	<item name="bookSledgeSagaConcussiveStrike"/>
 	<item name="bookSledgeSagaArmorCrusher"/>
-	
+
 	<item name="bookWasteTreasuresAcid"/>
 	<item name="bookWasteTreasuresCloth"/>
 	<item name="bookWasteTreasuresCoffins"/>
@@ -4048,6 +4090,7 @@
 <!-- *** Vehicle_Mods -->
 <lootgroup name="vehicleMods">
 	<item name="modVehicleOffRoadHeadlights" loot_prob_template="ProbT1Cap"/>
+	<item name="modVehicleStorage" loot_prob_template="ProbT1Cap"/>
 	<item name="modVehicleFuelSaver" loot_prob_template="ProbT1Cap"/>
 	<item name="modVehicleReserveFuelTank" loot_prob_template="ProbT2Cap"/>
 <!--	<item name="modVehicleExpandedSeat" loot_prob_template="ProbT3"/> -->    <!-- #####################-->
@@ -4118,7 +4161,7 @@
 	</item>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>		
+	</item>
 </lootgroup>
 
 <!-- *** Weapon_Parts -->
@@ -4835,7 +4878,7 @@
 	</item>
 	<item group="groupTreasureHunter5" count="1">
 		<requirement class="Progression" name="perkTreasureHunter" operation="Equals" value="5"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- Custom Wild West Group Reward Additions -->
@@ -5227,23 +5270,25 @@
 
 <!-- *** Food_Trash -->
 <lootgroup name="groupFoodTrashCommon">
-	<item name="foodRottingFlesh" count="1,3" loot_prob_template="medLow"/>
 	<item name="resourceBone" count="1,3" loot_prob_template="med"/>
+	<item name="foodRottingFlesh" count="1,3" loot_prob_template="medLow"/>
 	<item name="foodShamSandwich" loot_prob_template="low"/>
 	<item name="resourceAnimalFat" count="1,2" loot_prob_template="veryLow"/>
+	<item name="drinkJarEmpty" count="1" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupFoodTrashUncommon">
-	<item name="foodRottingFlesh" count="1,3" loot_prob_template="medLow"/>
-	<item name="resourceBone" count="1,3" loot_prob_template="med"/>
-	<item name="foodShamSandwich" loot_prob_template="low"/>
+	<item name="resourceBone" count="1,3" loot_prob_template="medHigh"/>
+	<item name="foodRottingFlesh" count="1,3" loot_prob_template="med"/>
+	<item name="foodCropCorn" count="1,2" loot_prob_template="medLow"/>
+	<item name="foodCropPotato" count="1,2" loot_prob_template="medLow"/>
+	<item name="foodShamSandwich" loot_prob_template="medLow"/>
+	<item name="foodCornMeal" count="1,2" loot_prob_template="medLow"/>
+	<item name="foodCropYuccaFruit" count="1,2" loot_prob_template="low"/>
 	<item name="resourceAnimalFat" count="1,2" loot_prob_template="veryLow"/>
 	<item name="foodCropBlueberries" count="2,4" loot_prob_template="veryLow"/>
-	<item name="foodCornMeal" count="1,2" loot_prob_template="medLow"/>
-	<item name="foodCropCorn" count="1,2" loot_prob_template="low"/>
-	<item name="foodCropPotato" count="1,2" loot_prob_template="low"/>
-	<item name="foodCropYuccaFruit" count="1,2" loot_prob_template="low"/>																	   
 	<item name="foodCropPumpkin" count="1,2" loot_prob_template="veryLow"/>
+	<item name="drinkJarEmpty" count="1" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <!-- *** Cooking_Tools_Groups -->
@@ -5266,7 +5311,7 @@
 	<item name="foodCropBlueberries" count="3,6"/>
 	<item name="foodCropCorn" count="1,4"/>
 	<item name="foodCropPotato" count="1,4"/>
-	<item name="foodCropYuccaFruit" count="1,4"/>											  
+	<item name="foodCropYuccaFruit" count="1,4"/>
 	<item name="foodCropMushrooms" count="1,4"/>
 	<item name="foodCropPumpkin" count="1,4"/>
 </lootgroup>
@@ -5331,7 +5376,10 @@
 
 <!-- *** Drink_Groups -->
 <lootgroup name="groupDrinksCommon">
-	<item name="drinkJarRiverWater"/>
+	<item name="drinkJarEmpty" count="1"/>
+	<item name="drinkJarRiverWater" count="1" loot_prob_template="medLow"/>
+	<item name="drinkJarBoiledWater" count="1" loot_prob_template="low"/>
+	<item name="drinkJarPureMineralWater" count="1" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupDrinksUncommon">
@@ -5543,12 +5591,12 @@
 	<item name="resourcePotassiumNitratePowder" count="25,50"/>
 	<item name="resourceCoal" count="25,50"/>
 	<item name="resourceScrapLead" count="25,50"/>
-	<item name="drinkJarRiverWater" loot_prob_template="med"/>
 	<item name="resourceOil" loot_prob_template="med"/>
 	<item name="resourceAcid" count="1" loot_prob_template="medHigh"/>
 	<item name="resourceTestosteroneExtract" loot_prob_template="low"/>
 	<item name="resourceSilverNugget" loot_prob_template="veryLow"/>
 	<item name="resourceGoldNugget" loot_prob_template="veryLow"/>
+	<item name="drinkJarEmpty" loot_prob_template="veryLow"/>
 	<item name="toolBeaker" loot_prob_template="veryLow"/>
 </lootgroup>
 
@@ -5557,8 +5605,10 @@
 <!-- *** Cupboard_Loot -->
 <lootgroup name="groupCupboard01">
 	<item group="groupFoodTrashUncommon" loot_prob_template="high"/>
+	<item name="resourceCloth" count="1,4" loot_prob_template="low"/>
 	<item group="groupFoodCommon" loot_prob_template="veryLow"/>
 	<item name="foodSkillMagazine" loot_prob_template="veryLow"/>
+	<item name="drinkJarEmpty" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupCupboard02">
@@ -5576,7 +5626,7 @@
 <!-- *** Microwave_Loot -->
 <lootgroup name="groupMicrowave01">
 	<item group="groupFoodTrashUncommon" loot_prob_template="high"/>
-	<item group="groupDrinksCommon" loot_prob_template="low"/>
+	<!-- <item group="groupDrinksCommon" loot_prob_template="low"/> -->
 	<item group="groupFoodCommon" loot_prob_template="low"/>
 </lootgroup>
 
@@ -5627,9 +5677,12 @@
 
 <!-- *** CoffeeMaker_Loot -->
 <lootgroup name="groupCoffeeMaker01">
-	<item name="resourceCropCoffeeBeans" count="1,3" loot_prob_template="med"/> <!-- Lowered -->
-	<item name="drinkJarRiverWater" count="1" loot_prob_template="med"/>
-	<item name="drinkJarCoffee" count="1" loot_prob_template="low"/> <!-- Raised -->
+	<item name="resourceCropCoffeeBeans" count="1,3"/>
+	<item name="resourcePaper" count="1"/>
+	<item name="drinkJarRiverWater" count="1" loot_prob_template="medLow"/>
+	<item name="drinkJarBoiledWater" count="1" loot_prob_template="low"/>
+	<item name="drinkJarCoffee" count="1" loot_prob_template="Low"/> <!-- Raised -->
+	<!-- <item name="drinkJarEmpty" count="1" loot_prob_template="veryLow"/> -->
 </lootgroup>
 
 <lootgroup name="groupCoffeeMaker" count="all">
@@ -5638,8 +5691,11 @@
 
 <!-- *** SodaFountain_Loot -->
 <lootgroup name="groupSodaFountain01">
-	<item name="drinkJarRiverWater" count="1"/>
+	<item name="resourcePaper" count="1"/>
+	<item name="drinkJarRiverWater" count="1" loot_prob_template="medLow"/>
+	<item name="drinkJarBoiledWater" count="1" loot_prob_template="low"/>
 	<item name="drinkCanMegaCrush" count="1" loot_prob_template="med"/> <!-- Raised -->
+	<!-- <item name="drinkJarEmpty" count="1" loot_prob_template="veryLow"/> -->
 </lootgroup>
 
 <lootgroup name="groupSodaFountain" count="all">
@@ -5654,8 +5710,8 @@
 </lootgroup>
 
 <lootgroup name="groupShoppingCart02">
-	<item group="groupDrinksCommon" loot_prob_template="low"/>
-	<item group="groupDrinksUncommon" loot_prob_template="veryLow"/>
+	<!-- <item group="groupDrinksCommon" loot_prob_template="low"/> -->
+	<item group="groupDrinksUncommon" loot_prob_template="low"/>
 	<item group="groupDrinksRare" loot_prob_template="veryLow"/>
 </lootgroup>
 
@@ -5686,7 +5742,7 @@
 <!-- *** INTRO_BURIED_SUPPLIES -->
 <lootgroup name="groupIntroBuriedSupplies" count="all">
 	<item name="foodShamSandwich" count="1"/>
-	<item name="drinkJarRiverWater" count="1"/>
+	<item name="drinkJarEmpty" count="1"/>
 	<item name="foodRottingFlesh" count="1"/>
 	<item name="oldCash" count="100,200">
 		<requirement class="Progression" name="perkTreasureHunter" operation="GTE" value="4"/>
@@ -5729,7 +5785,7 @@
 	</item>
 	<item group="groupTreasureHunter5" count="1">
 		<requirement class="Progression" name="perkTreasureHunter" operation="Equals" value="5"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** ShamwayProduce_Loot -->
@@ -5816,7 +5872,7 @@
 	<item group="groupSmallAmmoMedMed" loot_prob_template="low" force_prob="true"/>
 	<item group="weaponSkillMagazinesOnly" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <lootgroup name="groupLargeWeaponBag" count="all">
@@ -5826,7 +5882,7 @@
 	<item group="groupSmallAmmoMedMed" loot_prob_template="high" force_prob="true"/>
 	<item group="weaponSkillMagazinesOnly" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Gun_Rack -->
@@ -5883,7 +5939,7 @@
 	<item group="weaponSkillMagazinesOnly" loot_prob_template="med" force_prob="true"/>
 	<item group="groupSafeBooksAndMagazines" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** FOOD -->
@@ -5894,7 +5950,7 @@
 	<item name="foodSkillMagazine" count="1" loot_prob_template="low" force_prob="true"/>
 	<item name="foodSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <lootgroup name="groupFoodPileMed" count="all">
@@ -5905,7 +5961,7 @@
 	<item name="foodSkillMagazine" count="1" loot_prob_template="medLow" force_prob="true"/>
 	<item name="foodSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <lootgroup name="groupFoodPileLarge" count="all">
@@ -5918,7 +5974,7 @@
 	<item name="foodSkillMagazine" count="1" loot_prob_template="med" force_prob="true"/>
 	<item name="foodSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Medical_Piles -->
@@ -5945,27 +6001,38 @@
 
 <!-- *** Liquor_Piles -->
 <lootgroup name="groupLiquorSmall01">
-	<item name="drinkJarRiverWater" count="1" loot_prob_template="high"/>
+	<item name="drinkJarEmpty" count="1" loot_prob_template="high"/>
+	<item name="drinkJarRiverWater" count="1" loot_prob_template="med"/>
+	<item name="drinkJarBoiledWater" count="1" loot_prob_template="veryLow"/>
+	<item name="drinkJarBeer" count="1" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupLiquorMed01">
-	<item name="drinkJarRiverWater" count="1,2" loot_prob_template="high"/>
-	<item name="drinkJarBeer" count="1" loot_prob_template="low"/>
+	<item name="drinkJarEmpty" count="1" loot_prob_template="high"/>
+	<item name="drinkJarRiverWater" count="1" loot_prob_template="med"/>
+	<item name="drinkJarBoiledWater" count="1" loot_prob_template="veryLow"/>
+	<item name="drinkJarBeer" count="1" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupLiquorLarge01">
-	<item name="drinkJarRiverWater" count="1,2" loot_prob_template="high"/>
-	<item name="drinkJarBeer" count="1" loot_prob_template="med"/>
+	<item name="drinkJarEmpty" count="1" loot_prob_template="high"/>
+	<item name="drinkJarRiverWater" count="1" loot_prob_template="med"/>
+	<item name="drinkJarBoiledWater" count="1" loot_prob_template="veryLow"/>
+	<item name="drinkJarBeer" count="1" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupLiquorBonus">
-	<item name="drinkJarRiverWater" count="1" loot_prob_template="high"/>
 	<item name="drinkJarBeer" count="1" loot_prob_template="med"/>
-	<item name="drinkJarGrandpasMoonshine" count="1" loot_prob_template="low"/>
-	<item name="drinkJarGrandpasAwesomeSauce" count="1" loot_prob_template="low"/>
-	<item name="drinkJarGrandpasLearningElixir" count="1" loot_prob_template="low"/>
-	<item name="drugRecog" count="1" loot_prob_template="low"/>
+	<item name="drinkJarGrandpasMoonshine" count="1" loot_prob_template="medLow"/>
+	<item name="drinkJarGrandpasAwesomeSauce" count="1" loot_prob_template="medLow"/>
+	<item name="drinkJarGrandpasLearningElixir" count="1" loot_prob_template="medLow"/>
+	<item name="drugRecog" count="1" loot_prob_template="medLow"/>
 	<item name="foodSkillMagazine" count="0,1" loot_prob_template="low"/>
+	<item name="handgunsSkillMagazine" count="0,1" loot_prob_template="low"/>
+	<item name="shotgunsSkillMagazine" count="0,1" loot_prob_template="low"/>
+	<item name="riflesSkillMagazine" count="0,1" loot_prob_template="low"/>
+	<item name="machineGunsSkillMagazine" count="0,1" loot_prob_template="low"/>
+	<!-- <item name="drinkJarEmpty" count="1" loot_prob_template="veryLow"/> -->
 </lootgroup>
 
 <lootgroup name="groupLiquorPileSmall" count="all">
@@ -5983,7 +6050,7 @@
 	<item group="groupLiquorBonus" count="1" loot_prob_template="low" force_prob="true"/>
 	<item name="foodSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>		
+	</item>
 </lootgroup>
 
 <!-- *** First_Aid_Station -->
@@ -6124,14 +6191,14 @@
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
 	</item>
-	</lootgroup>		 
+	</lootgroup>
 
 <!-- *** Junk_Garbage -->
 <lootgroup name="groupGarbage" count="all">
 	<item group="groupJunk" count="1,2"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Fast_Food_Garbage -->
@@ -6144,6 +6211,7 @@
 <lootgroup name="groupDumpster01">
 	<item group="groupJunk"/>
 	<item group="groupDumpsterFood" prob="0" tags="perkMasterChef2"/> <!-- Special case for Master Chef 2. See progression.xml. -->
+	<item group="seeds" prob="0" count="1,2" tags="perkMasterChefSeeds"/> <!-- Special case for Master Chef 2. See progression.xml. -->
 </lootgroup>
 
 <lootgroup name="groupDumpster" count="all">
@@ -6151,7 +6219,7 @@
 	<item group="groupDumpster01" count="1" prob=".5" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Dishwasher_Junk -->
@@ -6217,7 +6285,7 @@
 	<item group="groupRottenChest03" loot_prob_template="veryLow" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Old_West_Chest -->
@@ -6252,7 +6320,7 @@
 	<item group="groupFootlocker02" loot_prob_template="med" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Military_Footlocker -->
@@ -6388,7 +6456,7 @@
 	<item group="groupFileCabinet02" loot_prob_template="veryLow" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Purse_Loot -->
@@ -6446,7 +6514,7 @@
 	<item group="groupPOIStorageBox02" loot_prob_template="low" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Workstations -->
@@ -6497,7 +6565,7 @@
 	<item group="groupWorkbenchLoot04" loot_prob_template="low" force_prob="true"/>
 	<item name="workstationSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Forge_Loot -->
@@ -6550,7 +6618,7 @@
 	<item name="workstationSkillMagazine" loot_prob_template="high" force_prob="true"/>
 	<item name="workstationSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Chem_Station_Loot -->
@@ -6599,6 +6667,7 @@
 <lootgroup name="groupDewCollectorLoot02">
 	<item name="drinkJarRiverWater" count="1" loot_prob_template="low"/>
 	<item name="workstationSkillMagazine" loot_prob_template="med"/>
+	<item name="drinkJarEmpty" count="1" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupDewCollectorLoot03">
@@ -6614,7 +6683,7 @@
 	<item group="groupDewCollectorLoot03" loot_prob_template="veryLow" force_prob="true"/>
 	<item name="workstationSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Battery_Bank -->
@@ -6796,7 +6865,7 @@
 	<item name="medicalSkillMagazine" count="1" loot_prob_template="low" force_prob="true"/>
 	<item name="medicalSkillMagazine" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Fire_Truck_Loot -->
@@ -6829,7 +6898,7 @@
 	<item group="groupFireTruck03" loot_prob_template="veryLow" force_prob="true"/>
 	<item group="groupFireTruck02" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Army_Truck -->
@@ -6848,7 +6917,7 @@
 	<item group="groupWeaponsAllScaled" loot_prob_template="low"/>
 	<item group="groupWeaponModsScaled" loot_prob_template="low"/>
 	<item group="weaponParts" loot_prob_template="low"/>
-	<item group="groupMilitaryBooks" loot_prob_template="low"/>									
+	<item group="groupMilitaryBooks" loot_prob_template="low"/>
 </lootgroup>
 
 <lootgroup name="groupArmyTruck04">
@@ -6976,7 +7045,7 @@
 	<item group="groupBookcase02" loot_prob_template="low" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Mailbox_Loot -->
@@ -6992,7 +7061,7 @@
 	<item group="skillMagazines" count="1" loot_prob_template="low"/>
 	<item name="plantedGraceCorn1Schematic" loot_prob_template="low">
 		<requirement class="Biome" biomes="wasteland"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <lootgroup name="groupMailbox" count="all">
@@ -7013,7 +7082,7 @@
 	<item group="groupBookPile01" count="1"/>
 	<item group="groupBookPile01" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Single_Books -->
@@ -7042,7 +7111,7 @@
 	<item group="groupCrackabookShelves02" loot_prob_template="veryLow" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Crackabook_Crate -->
@@ -7067,7 +7136,7 @@
 	<item group="groupCrackabookCrate03" loot_prob_template="veryLow" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Backpack_Loot -->
@@ -7081,8 +7150,8 @@
 	<item group="groupCupboard"/>
 	<item group="survivalMedical"/>
 	<item group="skillMagazines" loot_prob_template="medLow"/>
-	<item name="drinkJarRiverWater" loot_prob_template="low"/>
-	<item name="resourceGlue" count="1,2" loot_prob_template="veryLow"/>
+	<item name="resourceGlue" count="1,2" loot_prob_template="low"/>
+	<item name="drinkJarEmpty" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupBackpacks02">
@@ -7101,7 +7170,7 @@
 	<item group="groupBackpacks02" loot_prob_template="medLow" force_prob="true"/>
 	<item group="groupBackpacksBooks" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>																										   
+	</item>
 </lootgroup>
 
 <!-- *** Camping_Tents -->
@@ -7110,7 +7179,7 @@
 	<item group="groupCupboard"/>
 	<item group="survivalMedical"/>
 	<item group="skillMagazines" loot_prob_template="medLow"/>
-	<item name="drinkJarRiverWater" loot_prob_template="veryLow"/>
+	<item name="drinkJarEmpty" loot_prob_template="veryLow"/>
 </lootgroup>
 
 <lootgroup name="groupCampingTents02">
@@ -7128,7 +7197,7 @@
 	<item group="groupCampingTents02" loot_prob_template="low" force_prob="true"/>
 	<item group="groupBackpacksBooks" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>																									   
+	</item>
 </lootgroup>
 
 <!-- *** Pass_N_Gas -->
@@ -7169,12 +7238,12 @@
 	<item name="vehicleWheels" count="1" loot_prob_template="low" force_prob="true"/>
 	<item group="groupPassNGasMagazines" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>																									   
+	</item>
 </lootgroup>
 
 <!-- *** Toilet_Loot -->
 <lootgroup name="groupToilet01">
-	<item name="drinkJarRiverWater" count="1" loot_prob_template="med"/>
+	<!-- <item name="drinkJarEmpty" count="1" loot_prob_template="med"/> -->
 	<item name="resourcePaper" count="1,3" loot_prob_template="high"/>
 </lootgroup>
 
@@ -7274,7 +7343,7 @@
 	<item group="groupSavageCountryCrate03" loot_prob_template="low" force_prob="true"/>
 	<item group="groupSavageCountryBooks" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>																									   
+	</item>
 </lootgroup>
 
 <!-- *** Zpack_Reg -->
@@ -7323,7 +7392,7 @@
 	<item group="groupZpackReg04" loot_prob_template="low" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>																											   
+	</item>
 </lootgroup>
 
 <!-- *** Zpack_Nurse -->
@@ -7579,7 +7648,57 @@
 	<item group="groupZpackStrong04" loot_prob_template="low" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
+</lootgroup>
+
+<!-- *** Zpack_Strong -->
+<lootgroup name="groupZpackPlague01">
+	<item group="groupScrapUncommon" loot_prob_template="high"/>
+	<item name="resourceGlue" count="1,2" loot_prob_template="low"/>
+	<item group="groupFoodUncommon" loot_prob_template="high"/>
+	<item group="groupDrinksUncommon" loot_prob_template="high"/>
+	<item name="resourceDuctTape" count="1,2" loot_prob_template="med"/>
+	<item name="resourceMechanicalParts" count="1,2" loot_prob_template="veryLow"/>
+	<item group="groupMedicalUncommon" loot_prob_template="med"/>
+	<item name="resourceAcid" count="1" loot_prob_template="veryLow"/>
+</lootgroup>
+
+<lootgroup name="groupZpackPlague02">
+	<item group="booksAllScaled" loot_prob_template="medHigh"/>
+	<item group="groupChallengeRewardSkillMagazinesAll" loot_prob_template="high"/>
+</lootgroup>
+
+<lootgroup name="groupZpackPlague03">
+	<item group="groupArmorParts" loot_prob_template="med"/>
+	<item group="groupArmorPartsChests" loot_prob_template="low"/>
+	<item group="groupToolsTiered" loot_prob_template="medHigh"/>
+	<item group="groupArmorScaled" loot_prob_template="medHigh"/>
+	<item group="groupCraftingRare" loot_prob_template="med"/>
+</lootgroup>
+
+<lootgroup name="groupZpackPlague04">
+	<item group="groupRareToolsTiered" loot_prob_template="high"/>
+	<item group="groupWeaponsAllScaled" loot_prob_template="high"/>
+	<item name="casinoCoin" count="400,600" loot_prob_template="med"/>
+	<item name="oldCash" count="400,600" loot_prob_template="med"/>
+	<item group="groupMedicalRare" loot_prob_template="medHigh"/>
+	<item group="groupTreasureMaps" loot_prob_template="low"/>
+	<item group="groupModAllScaled" loot_prob_template="med"/>
+	<item group="vehiclePartsTiered" loot_prob_template="med"/>
+	<!--item name="modArmorNightVision" loot_prob_template="veryLow"/-->
+	<item name="modArmorHelmetLight" loot_prob_template="veryLow"/>
+</lootgroup>
+
+<lootgroup name="groupZpackPlague" count="all">
+	<!--item name="resourceBeeswax" count="1"/-->
+	<item group="groupAmmoLarge" count="1"/>
+	<item group="groupZpackPlague01" count="2"/>
+	<item group="groupZpackPlague02" count="2"/>
+	<item group="groupZpackPlague03" count="1"/>
+	<item group="groupZpackPlague04" loot_prob_template="low" force_prob="true"/>
+	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
+		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
+	</item>
 </lootgroup>
 
 <!-- *** Zpack_Boss -->
@@ -7598,7 +7717,7 @@
 	</item>
 	<item name="foodCropGraceCorn" count="1,2" loot_prob_template="low">
 		<requirement class="Biome" biomes="wasteland"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <lootgroup name="groupZpackBoss02">
@@ -7633,6 +7752,11 @@
 	<item group="groupZpackBoss02" count="2"/>
 	<item group="groupZpackBoss03" count="1"/>
 	<item group="groupZpackBoss04" loot_prob_template="med" force_prob="true"/>
+	<conditional evaluator="client">
+		<if cond="event('christmas')">
+			<item group="groupHolidayGear" loot_prob_template="low" force_prob="true"/>
+		</if>
+	</conditional>	   
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
 	</item>	
@@ -7909,6 +8033,11 @@
 	<item group="groupReinforcedChestT1_02" count="1"/> <!-- Weapon OR Armor -->
 	<item group="groupReinforcedChestT1_04" count="1"/> <!-- Medical OR Food -->
 	<item group="groupReinforcedChestT1_05" count="1"/> <!-- Mods OR Early Books -->
+	<conditional evaluator="client">
+		<if cond="event('christmas')">
+			<item group="groupHolidayGear" loot_prob_template="low" force_prob="true"/>
+		</if>
+	</conditional>
 	<item group="perkBooks" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
 	</item>
@@ -7948,6 +8077,11 @@
 	<item group="groupReinforcedChestT2_05" count="1"/> <!-- Medical OR Food -->
 	<item group="groupReinforcedChestT2_06" count="1"/> <!-- Mods -->
 	<item group="groupReinforcedChestT2_07" count="1"/> <!-- Early Books -->
+	<conditional evaluator="client">
+		<if cond="event('christmas')">
+			<item group="groupHolidayGear" loot_prob_template="low" force_prob="true"/>
+		</if>
+	</conditional>
 	<item group="perkBooks" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
 	</item>
@@ -7989,9 +8123,14 @@
 	<item group="groupReinforcedChestT3_04" count="1"/> <!-- Mods -->
 	<item group="groupReinforcedChestT3_05" count="1"/> <!-- Books/Schematics -->
 	<item group="groupReinforcedChestT3_06" count="1"/> <!-- Bonus Items -->
+	<conditional evaluator="client">
+		<if cond="event('christmas')">
+			<item group="groupHolidayGear" loot_prob_template="low" force_prob="true"/>
+		</if>
+	</conditional>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>		
+	</item>
 </lootgroup>
 
 <!-- *** Hardened_Chest_T4 -->
@@ -8049,6 +8188,11 @@
 	<item group="groupHardenedChestT4_07" count="1"/> <!-- Books/Schematics -->
 	<item group="groupHardenedChestT4_08" count="2"/> <!-- Bonus Items -->
 	<item group="groupHardenedChestT4_09" count="1"/> <!-- Cash-n-Prizes -->
+	<conditional evaluator="client">
+		<if cond="event('christmas')">
+			<item group="groupHolidayGear" loot_prob_template="low" force_prob="true"/>
+		</if>
+	</conditional>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
 	</item>
@@ -8112,9 +8256,14 @@
 	<item group="groupHardenedChestT5_06" count="2"/> <!-- Bonus Items -->
 	<item group="groupHardenedChestT5_07" count="1"/> <!-- Cash-n-Prizes -->
 	<item group="groupHardenedChestT5_08" count="2"/> <!-- T5 Bonus Items --> <!-- From 1 to 2 to replace bonus depletion -->
+	<conditional evaluator="client">
+		<if cond="event('christmas')">
+			<item group="groupHolidayGear" loot_prob_template="low" force_prob="true"/>
+		</if>
+	</conditional>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** INFESTED_LOOT -->
@@ -8179,7 +8328,7 @@
 	<item group="groupHardenedChestT5_08" count="2"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Laundry_Loot -->
@@ -8195,8 +8344,13 @@
 	<item name="casinoCoin" count="1,10" loot_prob_template="veryLow"/>
 </lootgroup>
 
+<lootgroup name="groupLaundry03">
+	<item group="groupAllClothing" loot_prob_template="low"/>
+</lootgroup>
+
 <lootgroup name="groupLaundry" count="all">
 	<item group="groupLaundry01" count="1"/>
+	<item group="groupLaundry03" loot_prob_template="low" force_prob="true"/>
 	<item group="groupLaundry02" loot_prob_template="veryLow" force_prob="true"/>
 </lootgroup>
 
@@ -8266,7 +8420,7 @@
 	<item group="groupNightstand02" loot_prob_template="veryLow" force_prob="true"/>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Locker_Loot -->
@@ -8381,6 +8535,11 @@
 <lootgroup name="groupHiddenStash" count="all">
 	<item group="groupHiddenStash01" count="1"/>
 	<item group="groupHiddenStash02" loot_prob_template="med" force_prob="true"/>
+	<conditional evaluator="client">
+		<if cond="event('christmas')">
+			<item group="groupHolidayGear" loot_prob_template="low" force_prob="true"/>
+		</if>
+	</conditional>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
 	</item>
@@ -9566,7 +9725,7 @@
 	<item name="drinkYuccaJuiceSmoothie" count="2"/>
 </lootgroup>
 
-<!-- *** Twitch_Books -->					 
+<!-- *** Twitch_Books -->
 <lootgroup name="twitch_perkBooks">
 	<item name="bookRangersArrowRecovery"/>
 	<item name="bookRangersCripplingShot"/>
@@ -9595,7 +9754,7 @@
 	<item name="bookSledgeSagaPulverizingFinishers"/>
 	<item name="bookSledgeSagaSavageReaper"/>
 	<item name="bookSledgeSagaConcussiveStrike"/>
-	<item name="bookSledgeSagaArmorCrusher"/>									  
+	<item name="bookSledgeSagaArmorCrusher"/>
 	<item name="bookEnforcerAPAmmo"/>
 	<item name="bookEnforcerApparel"/>
 	<item name="bookEnforcerCriminalPursuit"/>
@@ -10608,6 +10767,20 @@
 	<item group="groupZpackBoss"/>
 </lootcontainer>
 
+<!-- EntityLootContainerPlague, rare random drop off bosses -->
+<lootcontainer name="zPackPlague" count="1" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template" ignore_loot_abundance="true">
+	<item group="groupZpackPlague"/>
+</lootcontainer>
+
+<!-- EntityLootContainerBandit -->
+<lootcontainer name="banditLoot" count="1,2" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
+<!-- bandit melee -->
+	<!-- <item group="banditsGeneral"/> -->
+	<item name="meleeWpnClubT0WoodenClub" prob="0.7"/>
+<!-- bandit ranged -->
+	<!-- <item group="banditsGeneral"/> -->
+</lootcontainer>
+
 <!-- cntFetchQuestSatchel -->
 <lootcontainer name="questSatchel" count="0" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
@@ -10618,27 +10791,27 @@
 </lootcontainer>
 
 <!-- vehicleBicycle storage, vehicle storage max is 90 slots, width has worked up to 16+ -->
-<lootcontainer name="vehicleBicycle" count="0" size="9,1" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="vehicleBicycle" count="0" size="10,1" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
 
 <!-- vehicleMinibike storage -->
-<lootcontainer name="vehicleMinibike" count="0" size="9,3" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="vehicleMinibike" count="0" size="10,3" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
 
 <!-- vehicleT3Horse storage -->
-<lootcontainer name="vehicleT3Horse" count="0" size="9,8" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="vehicleT3Horse" count="0" size="10,8" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
 
 <!-- vehicleMotorcycle storage -->
-<lootcontainer name="vehicleMotorcycle" count="0" size="9,4" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="vehicleMotorcycle" count="0" size="10,4" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
 
 <!-- vehicleTruck4x4 storage -->
-<lootcontainer name="vehicle4x4Truck" count="0" size="9,9" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="vehicle4x4Truck" count="0" size="10,9" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
 
 <!-- vehicleGyrocopter storage -->
-<lootcontainer name="vehicleGyrocopter" count="0" size="9,5" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="vehicleGyrocopter" count="0" size="10,5" sound_open="UseActions/vehicle_storage_open" open_time="0" sound_close="UseActions/vehicle_storage_close" loot_quality_template="qualBaseTemplate">
 </lootcontainer>
 
 <!-- army truck-->
@@ -10733,9 +10906,7 @@
 
 <!-- cntWaterCoolerFull -->
 <lootcontainer name="waterCooler" count="1" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
-	<!-- <item name="drinkJarPureMineralWater" count="1"/> -->
-	<item name="drinkJarRiverWater" count="1"/>
-	<!-- <item name="drinkJarBoiledWater" count="1"/> -->
+	<item group="groupWaterCooler"/>
 </lootcontainer>
 
 <!-- cntWeaponsBagSmall -->
@@ -10933,12 +11104,12 @@
 </lootcontainer>
 
 <!-- cntBookPile01 etc. -->
-<lootcontainer name="bookPile" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true">
+<lootcontainer name="bookPile" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" ignore_loot_abundance="true">
 	<item group="groupBookPile"/>
 </lootcontainer>
 
 <!-- cntBookPile05 - 15 etc. -->
-<lootcontainer name="singleBooks" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="true" ignore_loot_abundance="true">
+<lootcontainer name="singleBooks" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="empty" ignore_loot_abundance="true">
 	<item group="groupSingleBooks"/>
 </lootcontainer>
 
@@ -10967,7 +11138,7 @@
 </lootcontainer>
 
 <!-- clothes shelves -->
-<lootcontainer name="clothesShelves" count="1" size="7,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
+<lootcontainer name="clothesShelves" count="1" size="7,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
 	<item group="groupArmorParts"/>
 </lootcontainer>
 
@@ -11216,7 +11387,7 @@
 	<item group="twitch_bicycle"/>
 </lootcontainer>
 
-<!-- MINIBIKE -->			 
+<!-- MINIBIKE -->
 <lootcontainer name="twitch_minibike" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true" unmodified_lootstage="true">
 	<item group="twitch_minibike"/>
 </lootcontainer>

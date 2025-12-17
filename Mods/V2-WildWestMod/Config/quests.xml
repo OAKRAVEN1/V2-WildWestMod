@@ -96,11 +96,12 @@
 		<property name="add_to_tier_complete" value="false"/>
 		<property name="shareable" value="false"/>
 		<property name="quest_hints" value="quest_whiteRiverCitizen1_hint1,quest_whiteRiverCitizen1_hint2"/>
-		
+
 		<property name="completiontype" value="TurnIn"/>
 		<property name="completion_key" value="quest_white_river_completion"/>
+		<property name="unique_key" value="traderquest"/>
 
-		
+
 		<action type="ShowMessageWindow">
 			<property name="message" value="quest_WhiteRiverCitizen1_description"/>
 			<property name="title" value="quest_WhiteRiverCitizen1_description_title"/>
@@ -120,7 +121,7 @@
 			<property name="nav_object" value="return_to_trader"/>
 			<property name="use_closest" value="true"/>
 		</objective>
-		
+
 		<action type="TrackChallenge">
 			<property name="challenge" value="craftlandclaim"/>
 			<property name="on_complete" value="true"/>
@@ -130,7 +131,7 @@
 		<reward type="Exp" value="500"/>
 		<reward type="Item" id="meleeToolShovelT0StoneShovel" ischosen="true" value="1"/>
 	</quest>
-	
+
 <!-- *** PAGE_01_BASIC_CHALLENGE_REWARDS -->
 	<quest id="challengegroup_reward_homesteading">
 		<property name="name_key" value="homesteading_name" param1="name"/>
@@ -620,6 +621,7 @@
 
 <!-- *** PAGE_03_BIOMES_CHALLENGE_REWARDS -->
 
+<!-- NO_LONGER_USED_BUT_KEEP_FOR_V2_0_SAVE_GAMES -->
 	<quest id="challengegroup_reward_burnt" template="challengegroup_reward_homesteading">
 		<variable name="name" value="xuiBurntForest"/>
 		<variable name="subtitle" value="xuiBurntForest"/>
@@ -635,6 +637,7 @@
 		</reward>
 	</quest>
 
+<!-- NO_LONGER_USED_BUT_KEEP_FOR_V2_0_SAVE_GAMES -->
 	<quest id="challengegroup_reward_desert" template="challengegroup_reward_homesteading">
 		<variable name="name" value="xuiDesert"/>
 		<variable name="subtitle" value="xuiDesert"/>
@@ -650,6 +653,7 @@
 		</reward>
 	</quest>
 
+<!-- NO_LONGER_USED_BUT_KEEP_FOR_V2_0_SAVE_GAMES -->
 	<quest id="challengegroup_reward_snow" template="challengegroup_reward_homesteading">
 		<variable name="name" value="xuiSnow"/>
 		<variable name="subtitle" value="xuiSnow"/>
@@ -665,6 +669,7 @@
 		</reward>
 	</quest>
 
+<!-- NO_LONGER_USED_BUT_KEEP_FOR_V2_0_SAVE_GAMES -->
 	<quest id="challengegroup_reward_wasteland" template="challengegroup_reward_homesteading">
 		<variable name="name" value="xuiWasteland"/>
 		<variable name="subtitle" value="xuiWasteland"/>
@@ -1249,7 +1254,8 @@
 
 <!-- *** RESTORE_POWER_QUESTS -->
 	<quest id="tier2_restore_power">
-		<property name="name_key" value="quest_tier2_restore_power" param1="name"/>
+    <property name="max_quest_count" value="1"/>
+	<property name="name_key" value="quest_tier2_restore_power" param1="name"/>
 		<property name="subtitle_key" value="quest_restore_power_subtitle"/>
 		<property name="description_key" value="quest_restore_power_description"/>
 		<property name="icon" value="ui_game_symbol_quest"/>
@@ -1614,7 +1620,8 @@
 		<reward type="Item" id="questRewardPipePistolBundle" ischosen="true" value="1"/>
 		<reward type="Item" id="questRewardPipeShotgunBundle" ischosen="true" value="1"/>
 		<reward type="Item" id="questRewardPipeRifleBundle" ischosen="true" value="1"/>
-<!--		<reward type="Item" id="questRewardPipeBatonBundle" ischosen="true" value="1"/> -->
+<!--	<reward type="Item" id="questRewardPipeMachineGunBundle" ischosen="true" value="1"/> -->
+<!--	<reward type="Item" id="questRewardPipeBatonBundle" ischosen="true" value="1"/> -->
 	</quest>
 
 	<quest id="tier1_buried_supplies">
@@ -2563,7 +2570,7 @@
 		<reward type="Item" id="vehicleWWMHorseT1Placeable" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="toolDewGatherer" ischosen="true" isfixed="true" value="1"/>
 		<reward type="LootItem" id="groupQuestcasinoCoinT1" ischosen="true" value="2"/>
-<!--		<reward type="LootItem" id="groupQuestHelmetLightSchematic" ischosen="true" value="2"/> -->
+<!--	<reward type="LootItem" id="groupQuestHelmetLightSchematic" ischosen="true" value="2"/> -->
 		<reward type="LootItem" id="groupQuestForge" ischosen="true" value="2"/>
 		<reward type="LootItem" id="groupQuestFarmPlotsT1" ischosen="true" value="2"/>
 		<reward type="LootItem" id="groupQuestAmmoCraftingBundle" ischosen="true" value="2"/>
@@ -2592,12 +2599,12 @@
 
 		<reward type="Item" id="vehicleWWMHorseT2Placeable" ischosen="true" isfixed="true" value="1"/>
 		<reward type="LootItem" id="groupQuestcasinoCoinT2" ischosen="true" value="3"/>
-<!--		<reward type="LootItem" id="groupQuestMiningHelmet" ischosen="true" value="3"/> -->
+<!--	<reward type="LootItem" id="groupQuestMiningHelmet" ischosen="true" value="3"/> -->
 		<reward type="LootItem" id="groupQuestFarmPlotsT2" ischosen="true" value="3"/>
 		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
 		<reward type="LootItem" id="groupQuestWorkbench" ischosen="true" value="3"/>
-<!--		<reward type="LootItem" id="groupQuestNailgun" ischosen="true" value="1"/> -->
-<!--		<reward type="LootItem" id="groupQuestT2Traps" ischosen="true" value="3"/> -->
+<!--	<reward type="LootItem" id="groupQuestNailgun" ischosen="true" value="1"/> -->
+<!--	<reward type="LootItem" id="groupQuestT2Traps" ischosen="true" value="3"/> -->
 		<reward type="LootItem" id="groupQuestForgedIron" ischosen="true" value="3"/>
 		<reward type="LootItem" id="groupQuestLockPicks" ischosen="true" value="3"/>
 		<reward type="LootItem" id="groupQuestT3Food" ischosen="true" value="3"/>
@@ -2623,11 +2630,11 @@
 
 		<reward type="Item" id="vehicleWWMHorseT3Placeable" ischosen="true" isfixed="true" value="1"/>
 		<reward type="LootItem" id="groupQuestcasinoCoinT3" ischosen="true" value="4"/>
-<!--		<reward type="LootItem" id="groupQuestNightVisionGoggles" ischosen="true" value="4"/> -->
+<!--	<reward type="LootItem" id="groupQuestNightVisionGoggles" ischosen="true" value="4"/> -->
 		<reward type="LootItem" id="groupQuestFarmPlotsT3" ischosen="true" value="4"/>
-<!--		<reward type="LootItem" id="groupQuestDartTrap" ischosen="true" value="4"/> -->
-<!--		<reward type="LootItem" id="groupQuestSecuritySystem" ischosen="true" value="4"/> -->
-<!--		<reward type="LootItem" id="groupQuestGeneratorBank" ischosen="true" value="4"/> -->
+<!--	<reward type="LootItem" id="groupQuestDartTrap" ischosen="true" value="4"/> -->
+<!--	<reward type="LootItem" id="groupQuestSecuritySystem" ischosen="true" value="4"/> -->
+<!--	<reward type="LootItem" id="groupQuestGeneratorBank" ischosen="true" value="4"/> -->
 		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
 		<reward type="LootItem" id="groupQuestMeleeCrafting" ischosen="true" value="4"/>
 		<reward type="LootItem" id="groupQuestRangedCrafting" ischosen="true" value="4"/>
@@ -2651,14 +2658,14 @@
 
 		<reward type="Item" id="casinoCoin" value="2000"/>
 
-<!--		<reward type="LootItem" id="groupQuest4x4Parts" ischosen="true" value="5"/> --> <!-- ########## to be replaced ######### -->
+<!--	<reward type="LootItem" id="groupQuest4x4Parts" ischosen="true" value="5"/> --> <!-- ########## to be replaced ######### -->
 		<reward type="LootItem" id="groupQuestcasinoCoinT4" ischosen="true" value="5"/>
-<!--		<reward type="LootItem" id="groupQuestBatteryBank" ischosen="true" value="5"/> -->
+<!--	<reward type="LootItem" id="groupQuestBatteryBank" ischosen="true" value="5"/> -->
 		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
 		<reward type="LootItem" id="groupQuestMeleeCrafting" ischosen="true" value="5"/>
 		<reward type="LootItem" id="groupQuestRangedCrafting" ischosen="true" value="5"/>
 		<reward type="LootItem" id="groupQuestConcreteShapes" ischosen="true" value="5"/>
-<!--		<reward type="LootItem" id="groupQuestBladeTrap" ischosen="true" value="5"/> -->
+<!--	<reward type="LootItem" id="groupQuestBladeTrap" ischosen="true" value="5"/> -->
 		<reward type="LootItem" id="groupQuestT4Food" ischosen="true" value="5"/>
 		<reward type="LootItem" id="groupQuestT3MeleeMods" ischosen="true" value="5"/>
 		<reward type="LootItem" id="groupQuestT3RangedMods" ischosen="true" value="5"/>
@@ -2682,11 +2689,11 @@
 		<reward type="Item" id="casinoCoin" value="2000"/>
 
 		<reward type="LootItem" id="groupQuestArmorResources" ischosen="true" value="1"/>
-<!--		<reward type="LootItem" id="groupQuestGyrocopterParts" ischosen="true" value="6"/> -->
+<!--	<reward type="LootItem" id="groupQuestGyrocopterParts" ischosen="true" value="6"/> -->
 		<reward type="LootItem" id="groupQuestcasinoCoinT5" ischosen="true" value="6"/>
-<!--		<reward type="LootItem" id="groupQuestSolarBank" ischosen="true" value="6"/> -->
-<!--		<reward type="LootItem" id="groupQuestShotgunTurret" ischosen="true" value="6"/> -->
-<!--		<reward type="LootItem" id="groupQuestAutoTurret" ischosen="true" value="6"/> -->
+<!--	<reward type="LootItem" id="groupQuestSolarBank" ischosen="true" value="6"/> -->
+<!--	<reward type="LootItem" id="groupQuestShotgunTurret" ischosen="true" value="6"/> -->
+<!--	<reward type="LootItem" id="groupQuestAutoTurret" ischosen="true" value="6"/> -->
 		<reward type="LootItem" id="groupQuestForgedSteel" ischosen="true" value="6"/>
 		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
 		<reward type="LootItem" id="groupQuestMeleeCrafting" ischosen="true" value="6"/>
@@ -2712,11 +2719,11 @@
 		<reward type="Item" id="casinoCoin" value="2000"/>
 
 		<reward type="Item" id="resourceLegendaryParts" ischosen="true" isfixed="true" value="1"/>
-<!--		<reward type="LootItem" id="groupQuestGyrocopterParts" ischosen="true" value="2"/> -->
+<!--	<reward type="LootItem" id="groupQuestGyrocopterParts" ischosen="true" value="2"/> -->
 		<reward type="LootItem" id="groupQuestcasinoCoinT5" ischosen="true" value="7"/>
-<!--		<reward type="LootItem" id="groupQuestSolarBank" ischosen="true" value="7"/> -->
-<!--		<reward type="LootItem" id="groupQuestShotgunTurret" ischosen="true" value="7"/> -->
-<!--		<reward type="LootItem" id="groupQuestAutoTurret" ischosen="true" value="7"/> -->
+<!--	<reward type="LootItem" id="groupQuestSolarBank" ischosen="true" value="7"/> -->
+<!--	<reward type="LootItem" id="groupQuestShotgunTurret" ischosen="true" value="7"/> -->
+<!--	<reward type="LootItem" id="groupQuestAutoTurret" ischosen="true" value="7"/> -->
 		<reward type="LootItem" id="groupQuestForgedSteel" ischosen="true" value="7"/>
 		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
 		<reward type="LootItem" id="groupQuestLegendaryMeleeCrafting" ischosen="true" value="4"/>
