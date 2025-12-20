@@ -7690,7 +7690,7 @@
 </lootgroup>
 
 <lootgroup name="groupZpackPlague" count="all">
-	<!--item name="resourceBeeswax" count="1"/-->
+	<item name="resourceBeeswax" count="1"/>
 	<item group="groupAmmoLarge" count="1"/>
 	<item group="groupZpackPlague01" count="2"/>
 	<item group="groupZpackPlague02" count="2"/>

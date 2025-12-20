@@ -5885,6 +5885,34 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceBulletCasing" count="800"/>
 </recipe>
 
+<!-- Steel Beeswax AP -->
+<recipe name="resourceBeeswaxBlob" count="100" craft_time="30" tags="workbenchCrafting,packMuleCrafting">
+	<ingredient name="resourceBeeswax" count="1"/>
+</recipe>
+
+<recipe name="ammoArrowSteelBeeswaxAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+	<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceBeeswaxBlob" count="1"/>
+</recipe>
+
+<recipe name="ammoBundleArrowSteelBeeswaxAP" count="1" craft_time="240" craft_area="workbench" tags="learnable,workbenchCrafting">
+	<ingredient name="resourceArrowHeadSteelAP" count="80"/>
+	<ingredient name="resourceScrapPolymers" count="160"/>
+	<ingredient name="resourceBeeswaxBlob" count="80"/>
+</recipe>
+
+<recipe name="ammoCrossbowBoltSteelBeeswaxAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+	<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+	<ingredient name="resourceScrapPolymers" count="2"/>
+	<ingredient name="resourceBeeswaxBlob" count="1"/>
+</recipe>
+
+<recipe name="ammoBundleCrossbowBoltSteelBeeswaxAP" count="1" craft_time="240" craft_area="workbench" tags="learnable,workbenchCrafting">
+	<ingredient name="resourceArrowHeadSteelAP" count="80"/>
+	<ingredient name="resourceScrapPolymers" count="160"/>
+	<ingredient name="resourceBeeswaxBlob" count="80"/>
+</recipe>
 
 <recipe name="cntjailDoorWhiteVariantHelper" craft_time="90" count="1" craft_area="workbench">
 	<ingredient name="resourceForgedSteel" count="22"/>

@@ -33,7 +33,13 @@
 	<remove xpath="/doc/tips/tip[@key='loadingTipScrapping']"/>
 	<remove xpath="/doc/tips/tip[@key='loadingTipBuffs']"/>
 	<remove xpath="/doc/tips/tip[@key='loadingTipKnownSchematics']"/>
-	<remove xpath="/doc/tips/tip[@key='loadingTipTwitchIntegration']"/>	
+	<remove xpath="/doc/tips/tip[@key='loadingTipTwitchIntegration']"/>
+	<remove xpath="/doc/tips/tip[@key='loadingTipSmell']"/>
+	<remove xpath="/doc/tips/tip[@key='loadingTipWeather']"/>
+	<remove xpath="/doc/tips/tip[@key='loadingTipSeeds']"/>
+	<remove xpath="/doc/tips/tip[@key='loadingTipDewCollector']"/>
+	<remove xpath="/doc/tips/tip[@key='loadingTipApiary']"/>
+	<remove xpath="/doc/tips/tip[@key='loadingTipCollectors']"/>	
 
 	<append xpath="/doc/tips">
 		<tip key="loadingTipWildWestTomahawk"/>	

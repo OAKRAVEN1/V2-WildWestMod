@@ -4233,7 +4233,7 @@
 	<!-- *** RANGER'S_GUIDE_TO_ARCHERY_VOLUME_04_APARROWS -->
 	<book name="perkRangersAPAmmo" parent="skillArchery" max_level="1" base_skill_point_cost="0" name_key="bookRangersAPAmmo" desc_key="perkRangersAPAmmoDesc" long_desc_key="perkRangersAPAmmoLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoArrowSteelAP,ammoCrossbowBoltSteelAP"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoArrowSteelAP,ammoCrossbowBoltSteelAP,ammoArrowSteelBeeswaxAP,ammoCrossbowBoltSteelBeeswaxAP"/>
 		</effect_group>
 	</book>
 	<!-- *** RANGER'S_GUIDE_TO_ARCHERY_VOLUME_05_FLAMING_ARROWS -->
@@ -4263,7 +4263,7 @@
 	<!-- *** 7/7 RANGER'S_GUIDE_TO_ARCHERY_COMPLETE -->
 	<book name="perkRangersComplete" parent="skillArchery" max_level="1" base_skill_point_cost="0" name_key="perkRangersCompleteName" desc_key="perkRangersCompleteDesc" long_desc_key="perkRangersCompleteLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoBundleArrowStone,ammoBundleArrowIron,ammoBundleArrowFlaming,ammoBundleCrossbowBoltFlaming,ammoBundleArrowSteelAP,ammoBundleCrossbowBoltExploding,ammoBundleArrowExploding,ammoBundleCrossbowBoltIron,ammoBundleCrossbowBoltSteelAP,ammoBundleCrossbowBoltStone"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoBundleArrowStone,ammoBundleArrowIron,ammoBundleArrowFlaming,ammoBundleCrossbowBoltFlaming,ammoBundleArrowSteelAP,ammoBundleArrowSteelBeeswaxAP,ammoBundleCrossbowBoltExploding,ammoBundleArrowExploding,ammoBundleCrossbowBoltIron,ammoBundleCrossbowBoltSteelAP,ammoBundleCrossbowBoltSteelBeeswaxAP,ammoBundleCrossbowBoltStone"/>
 		</effect_group>
 	</book>
 

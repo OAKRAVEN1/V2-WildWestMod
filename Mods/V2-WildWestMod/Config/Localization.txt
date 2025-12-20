@@ -818,9 +818,18 @@ modGunWinchesterMagazineExtender,item_modifiers,mod,,,Winchester Speedloader Mod
 modGunWinchesterMagazineExtenderDesc,item_modifiers,mod,,,"The Winchester Speedloader Mod doubles the ammunition capacity of the Winchester Rifle and Legendary Tribe Winchester Rifle before requiring a full reload.",,,,,,,,,,,,,
 modGunWinchesterMagazineExtenderSchematic,item_modifiers,Mod,,,Winchester Speedloader Mod Schematic,,,,,,,,,,,,,
 
+resourceBeeswaxDesc,items,Item,,,Each piece of beeswax can craft 100 beeswax blob for arrow and bolt recipes.,,,,,,,,,,,,,
+resourceBeeswaxBlob,items,Resource,,,Beeswax Blob,,,,,,,,,,,,,
+resourceBeeswaxBlobDesc,items,Resource,,,"Used for crafting steel and beeswax-tipped arrows and bolts.",,,,,,,,,,,,,
 resourceGreenPowder,items,Resource,,,Green Powder,,,,,,,,,,,,,
 resourceGreenPowderDesc,items,Resource,,,"Green Crystals processed in the Chemistry Station produce Green Powder. A key ingredient in the manufacturing of Green Crystal Ammo.",,,,,,,,,,,,,
 
+ammoBundleArrowSteelBeeswaxAP,items,Ammo,,,Box of Steel Beeswax Arrows (100),,,,,,,,,,,,,
+ammoBundleCrossbowBoltSteelBeeswaxAP,items,Ammo,,,Box of Steel Beeswax Crossbow Bolts (100),,,,,,,,,,,,,
+ammoArrowSteelBeeswaxAP,items,Ammo,,,Steel Beeswax Arrow (Ammo),,,,,,,,,,,,,
+ammoArrowSteelBeeswaxAPDesc,items,Ammo,,,Steel and Beeswax-tipped arrows do yet even more damage and fly straighter.\nHold reload to use alternate ammo.,,,,,,,,,,,,,
+ammoCrossbowBoltSteelBeeswaxAP,items,Ammo,,,Steel Beeswax Crossbow Bolt (Ammo),,,,,,,,,,,,,
+ammoCrossbowBoltSteelBeeswaxAPDesc,items,Ammo,,,Steel and Beeswax-tipped bolts do yet even more damage and fly straighter.\nHold reload to use alternate ammo.,,,,,,,,,,,,,
 ammo9mmGreenCrystal,items,Ammo,,,Green Crystal Ammo (6),,,,,,,,,,,,,
 ammo9mmGreenCrystalDesc,items,Ammo,,,"Green Crystal Ammo has incendiary properties. Crafted in the Ammo Press using Green Powder, Bullet Tips and Bullet Cases",,,,,,,,,,,,
 ammo762mmBulletAP,items,Ammo,,,AP .50-90 Sharps Ammo,,,,,,,,,,,,,
