@@ -237,7 +237,7 @@
 				<filledsprite depth="8" name="background" color="0,50,0,255" width="171" fillcenter="false" type="filled" fill="1"/>
 				<filledsprite depth="3" name="background" color="0,50,0,255" width="170" fillcenter="false" type="filled" fill="1"/>
 				
-				<texture depth="9" pos="86,-23" width="177" height="52" pivot="center" texture="@modfolder:Textures/HUDleftstatsborder01.png"/>
+				<texture depth="9" pos="86,-23" width="177" height="52" pivot="center" texture="@modfolder:Textures/HUDleftstatsborder03.png"/>
 			</rect>
 
 			<!-- Stamina -->
