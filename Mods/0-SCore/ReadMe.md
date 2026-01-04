@@ -32,6 +32,68 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 
 [ Change Log ]
+Version: 2.5.25.1105
+	[ NPCs ]
+		- Fixed an issue where NPCs would duplicate on dedi, and respawn dupes when reloading the game.
+
+	[ UAI ]
+		- Fixed a bug where an NPC would sort of slide towards you rather than actually start running with you.
+		- Optimized the UAI Follow task to perform a bit better.
+
+	[ Challenges ]
+		- Reworked requirements for Challenges to work more smoothly with the game.
+
+		*** XML Change Required! ***
+
+		- Effect groups are now required for requirements.
+
+		BEFORE:
+        <challenge name="burntSurvivalPlantTrees" title_key="challengeBurntPlantTrees" icon="ui_game_symbol_tree" group="ScoreTest"
+                   short_description_key="challengeBurntPlantTreesShort" description_key="challengeBurntPlantTreesDesc"
+                   reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+            <objective type="PlaceBlockByTagV2, SCore" count="25" description_key="xuiPlantTrees"/>
+            <requirement name="InBiome" biome="9"/>
+            <requirement name="BlockHasTags" tags="challenge_plant_trees"/>
+        </challenge>
+
+		AFTER:
+        <challenge name="burntSurvivalPlantTrees2" title_key="challengeBurntPlantTrees2" icon="ui_game_symbol_tree" group="ScoreTest"
+                   short_description_key="challengeBurntPlantTreesShort" description_key="challengeBurntPlantTreesDesc"
+                   reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
+            <objective type="PlaceBlockByTagV2, SCore" count="25" description_key="xuiPlantTrees"/>
+            <effect_group name="Groups are required">
+                <requirement name="InBiome" biome="9"/>
+                <requirement name="BlockHasTags" tags="challenge_plant_trees"/>
+            </effect_group>
+        </challenge>
+	
+
+Version: 2.5.20.1243
+
+	[ Event on Sleeper VOlume Cleared Update ]
+		- Added another null check
+
+	[ Shared XP ]
+		- Fixed an issue where NPC kills were not being shared, and causing crashes.
+
+	[ Fire Manager ]
+		- Fixed a recursion issue when extingushing on a dedi
+
+	[ WorldCanPlaceBlockAt ]
+		- Fixed a possible error when placing a land claim block
+
+	[ NPC Issues ]
+		- When an NPC is being picked up, the hired_ cvar is now removed. 
+			- When the NPC gets placed down, there's a new ID assigned, so it can create duplicates
+
+		- Note: Sometimes when placed down, an NPC will not move or be interactable. Still invesgigating the conditions in which this happens.
+
+	[ Challenges ]
+		- Modified the BlockDestroyed Challenge
+			- Fixed an issue where the challenge was registered for both destroyed AND change, so was triggering twice.
+			- Fixed an issue where the challenge would not register if you were not in a POI, even if you were not checking for POIs.
+
+
 Version: 2.5.10.2106
 
 	[ Event On Sleeper Volume Cleared Update ]

@@ -977,27 +977,18 @@ public static class EntityUtilities
         var leader = GameManager.Instance.World.GetEntity(leaderID) as EntityPlayer;
         if (leader == null) return;
 
-        //for (int j = 0; j < leader.Companions.Count; j++)
-        //{
-        //    var companion = leader.Companions[j] as EntityAliveSDX;
-        //    if (companion != null)
-        //    {
-        //        bool canRespawn = companion.Buffs.HasCustomVar("respawn");
-        //        if (_respawnReason == RespawnType.Died && !canRespawn)
-        //        {
-        //            continue;
-        //        }
-
-        //        Log.Out($"Teleporting {companion.EntityName} ({companion.entityId})");
-        //        companion.TeleportToPlayer(leader, true);
-        //    }
-        //}
+        
 
         var removeList = new List<string>();
         foreach (var cvar in leader.Buffs.CVars)
         {
             if (cvar.Key.StartsWith("hired_"))
             {
+                if (cvar.Value == -1f)
+                {
+                    removeList.Add(cvar.Key);
+                    continue;
+                }
                 var entity = GameManager.Instance.World.GetEntity((int) cvar.Value) as EntityAliveSDX;
                 if (entity)
                 {
@@ -1012,6 +1003,7 @@ public static class EntityUtilities
                     {
                         continue;
                     }
+                    
 
                     entity.TeleportToPlayer(leader, true);
                 }
@@ -1376,9 +1368,13 @@ public static class EntityUtilities
                 break;
             case "Dismiss":
                 SetCurrentOrder(EntityID, Orders.Wander);
-                myEntity.Buffs.RemoveCustomVar("Leader");
-                myEntity.Buffs.RemoveCustomVar("Owner");
+                myEntity.Buffs.SetCustomVar("Leader", 0f);
+                myEntity.Buffs.SetCustomVar("Owner", 0f);
+                // flag to disable respawning on server reload.
+                myEntity.Buffs.SetCustomVar("Persist", 0f);
                 player.Companions?.Remove(myEntity);
+                player.Buffs.SetCustomVar($"hired_{EntityID}", 0f);
+                CheckForDanglingHires(player.entityId);
                 break;
         }
 
