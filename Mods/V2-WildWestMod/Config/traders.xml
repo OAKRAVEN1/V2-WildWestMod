@@ -701,6 +701,7 @@
 			<item name="vehiclesSkillMagazine" count="1,3"/>
 			<!--item name="electricianSkillMagazine" count="1,3"/-->
 			<!--item name="trapsSkillMagazine" count="1,3"/-->
+			<item name="clothingSkillMagazine" count="2,3"/>
 		</trader_item_group>
 
 <!-- *** SCHEMATICS -->

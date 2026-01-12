@@ -78,7 +78,11 @@
 			<decoration type="block" blockname="rubblePileWoodBurntSmall" prob=".00075" rotatemax="7"/>
 			<decoration type="prefab" name="deco_wildwest_smokeriser3000" prob=".003" rotatemax="3"/>
 			<decoration type="prefab" name="deco_wasteland_tradersmoke_white" prob=".003" rotatemax="3"/>
-			<decoration type="prefab" name="deco_wasteland_tradersmoke_black" prob=".0035" rotatemax="3"/>			
+			<decoration type="prefab" name="deco_wasteland_tradersmoke_black" prob=".0035" rotatemax="3"/>
+			<decoration type="block" blockname="bluerock22" prob="0.0001" rotatemax="7"/>
+			<decoration type="block" blockname="bluerock33" prob="0.0001" rotatemax="7"/>
+			<decoration type="block" blockname="lightblueRock" prob="0.0001" rotatemax="7"/>
+			<decoration type="block" blockname="greenrock" prob="0.0001" rotatemax="7"/>			
 	</append>
 	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 	<!-- **** Underwater: Main Biome -->

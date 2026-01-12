@@ -540,6 +540,11 @@
 			<property name="CustomIconTint" value="57,61,71"/>
 			<property name="TintColor" value="57,61,71"/>	
 	</append>
+
+	<!-- Adding Undergarments to Progression -->
+	<append xpath="/items/item[@name='clothingMaster']">
+	<property name="UnlockedBy" value="craftingClothing"/>
+	</append>
 	
 	<!-- Changing base from animalInsectSwarm to a mini rancher -->
 	<set xpath="/items/item[@name='meleeHandZombieRancher']/property[@class='Action1']/property[@name='Entity']/@value">zombieMiniRancher</set>
@@ -2849,6 +2854,37 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 			</effect_group>
 		</item>
+		
+<!-- *** Insulated_Undergarment_Clothing_Magazine -->
+<item name="clothingSkillMagazine">
+	<property name="Extends" value="masterSkillMagazine"/>
+	<property name="Tags" value="clothingCSM,csm"/>
+	<property name="CustomIcon" value="bookClothingOn"/>
+	<property name="DescriptionKey" value="clothingSkillMagazineDesc"/>
+	<property name="Unlocks" value="craftingClothing"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingClothing" level="1"/> <!-- level="-1" sets a perk to max level -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement_group op="or">
+			<requirement name="ProgressionLevel" progression_name="perkIntellectMastery" operation="GTE" value="3"/>
+			<requirement name="HasBuff" buff="buffNerdOutfit"/>
+		</requirement_group>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="nerdPointChance" operation="set" value="1"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="nerdPointChance" operation="EQ" value="1"/>
+		<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$nerdOutfitSkillPointChance"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingClothing" level="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="nerd_outfit_perk" play_in_head="true"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveCVar" cvar="nerdPointChance"/>
+			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="Extra Point!"/> -->
+	</effect_group>
+</item>
 		
 <!-- Gatling Gun - Thank you to Snufkin for base inspiration -->
 

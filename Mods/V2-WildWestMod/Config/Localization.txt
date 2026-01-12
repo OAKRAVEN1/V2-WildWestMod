@@ -867,6 +867,16 @@ ammoBundle9mmBulletAP,items,Ammo,,,Box of AP .38 Short Colt Ammo (100),,,,,,,,,,
 ammoBundle9mmBulletBall,items,Ammo,,,Box of .38 Short Colt Ammo (100),,,,,,,,,,,,,
 ammoBundle9mmBulletHP,items,Ammo,,,Box of HP .38 Short Colt Ammo (100),,,,,,,,,,,,,
 
+clothingSkillMagazine,items,Armor,,,Clothing On,,,,,,,,,,,,,
+clothingSkillMagazineDesc,items,Armor,,,Increase your ability to withstand the weather with insulated undergarment clothing.\n\nImproves Insulated Undergarment Clothing Crafting Skills.,,,,,,,,,,,,,
+craftingMedicGunsLongDesc,progression,Attribute,,x,CURRENTLY NOT USED,,,,,,,,,,,,,
+craftingClothingDesc,progression,Attribute,,,Reading [DECEA3]Clothing On[-] will increase the quality of crafted insulated clothing.\nMagazines are only found in the Trader inventory.,,,,,,,,,,,,,
+craftingClothingName,progression,Attribute,,,Insulated Undergarment Clothing,,,,,,,,,,,,,
+
+clothingT1,progression,Attribute,,,Tattered Clothing,,,,,,,,,,,,,
+clothingT2,progression,Attribute,,,Patchwork Clothing,,,,,,,,,,,,,
+clothingT3,progression,Attribute,,,ThermaCore Clothing,,,,,,,,,,,,,
+
 apparelArmyPants,items,Clothes,,,Army Pants,,,,,,,,,,,,,
 apparelArmyShirt,items,Clothes,,,Army Shirt,,,,,,,,,,,,,
 apparelCoatJacketGeneric,items,Clothes,,,Padded Llama Wool Jacket,,,,,,,,,,,,,
