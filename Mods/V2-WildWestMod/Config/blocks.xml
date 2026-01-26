@@ -1044,7 +1044,7 @@
 	<property name="HeatMapTime" value="2500"/>
 	<property name="HeatMapFrequency" value="500"/>
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE,3"/>
 	<property name="OpenSound" value="campfire_open"/>
 	<property name="CloseSound" value="campfire_close"/>
 	<property name="CraftSound" value="campfire_cook_click"/>
@@ -1113,7 +1113,7 @@
 	<property name="HeatMapTime" value="2500"/>
 	<property name="HeatMapFrequency" value="500"/>
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE,3"/>
 	<property name="OpenSound" value="campfire_open"/>
 	<property name="CloseSound" value="campfire_close"/>
 	<property name="CraftSound" value="campfire_cook_click"/>
@@ -1172,7 +1172,7 @@
 	<property name="HeatMapTime" value="2500"/>
 	<property name="HeatMapFrequency" value="500"/>
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE,3"/>
 	<property name="OpenSound" value="campfire_open"/>
 	<property name="CloseSound" value="campfire_close"/>
 	<property name="CraftSound" value="campfire_cook_click"/>
@@ -1231,7 +1231,7 @@
 	<property name="HeatMapTime" value="2500"/>
 	<property name="HeatMapFrequency" value="500"/>
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE,3"/>
 	<property name="OpenSound" value="campfire_open"/>
 	<property name="CloseSound" value="campfire_close"/>
 	<property name="CraftSound" value="campfire_cook_click"/>
@@ -1258,6 +1258,8 @@
 	<!--property name="StabilitySupport" value="false"/--> <!-- build restriction -->
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="@:Entities/Furniture/woodBurningStovePrefab.prefab"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="IsTerrainDecoration" value="true"/>
@@ -1268,7 +1270,7 @@
 	<property name="HeatMapTime" value="2500"/>
 	<property name="HeatMapFrequency" value="500"/>
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE,3"/>
 	<property class="Workstation">
 		<property name="Modules" value="tools,output,fuel,input"/>
 		<property name="CraftingAreaRecipes" value="campfire"/>

@@ -720,6 +720,8 @@ cntWoodWell,blocks,block,,,Wood Well - Groundwater Collector,,,,,,,,,,,,,
 resourceWaterFilterDesc,items,item,,,"A component used in the crafting of a Water Collector.",,,,,,,,,,,,,
 workstationsT2-1,progression,Attribute,,,Tier 1: Water Collector,,,,,,,,,,,,,
 xuiDewCollector,UI,XUI,,,Water Collector,,,,,,,,,,,,,
+buffFishTrapEmptyWaterDesc,buffs,Buff,,,"Add Fish Trap Bait with your secondary action while fully under water to bait the trap.",,,,,,,,,,,,,
+buffFishTrapEmptyWaterName,buffs,Buff,,,Fish Trap,,,,,,,,,,,,,
 
 cntGroundWaterCollectorDesc,blocks,block,,,A more efficient option to the [DECEA3]Rain Dance Catcher[-]. A well that collects groundwater over time for clean drinking water. Choose from three different styles.,,,,,,,,,,,,,
 
