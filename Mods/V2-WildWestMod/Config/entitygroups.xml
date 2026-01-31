@@ -587,6 +587,80 @@
 		zombieTheRatRadiated, .1
 	</entitygroup>
 	
+	<!-- Boss Spitter Family -->
+	
+	<entitygroup name="BossSpitterVariantsGroupGS01">
+		animalZombieMiniPlasmaVulture
+		zombieMiniSpiderFeralFireGlider
+		guppyVultureBurnt
+		zombieSpiderFeralFireGlider, .15
+		guppyMommaVultureBurnt, .15
+		guppyRadiatedMommaVultureBurnt, .1
+		guppyRadiatedFireMommaVultureBurnt, .1
+	</entitygroup>
+	<entitygroup name="BossSpitterVariantsGroupGS50">
+		animalZombieMiniPlasmaVulture
+		zombieMiniSpiderFeralFireGlider
+		guppyVultureBurnt
+		zombieSpiderFeralFireGlider, .25
+		guppyMommaVultureBurnt, .25
+		guppyRadiatedMommaVultureBurnt, .15
+		guppyRadiatedFireMommaVultureBurnt, .15
+	</entitygroup>
+	<entitygroup name="BossSpitterVariantsGroupGS100">
+		animalZombieMiniPlasmaVulture
+		zombieMiniSpiderFeralFireGlider
+		guppyVultureBurnt
+		zombieSpiderFeralFireGlider, .35
+		guppyMommaVultureBurnt, .35
+		guppyRadiatedMommaVultureBurnt, .25
+		guppyRadiatedFireMommaVultureBurnt, .25
+	</entitygroup>
+	<entitygroup name="BossSpitterVariantsGroupGS200">
+		animalZombieMiniPlasmaVulture
+		zombieMiniSpiderFeralFireGlider
+		guppyVultureBurnt
+		zombieSpiderFeralFireGlider, .5
+		guppyMommaVultureBurnt, .5
+		guppyRadiatedMommaVultureBurnt, .35
+		guppyRadiatedFireMommaVultureBurnt, .35
+	</entitygroup>
+	<entitygroup name="BossSpitterVariantsGroupGS400">
+		animalZombieMiniPlasmaVulture
+		zombieMiniSpiderFeralFireGlider
+		guppyVultureBurnt
+		zombieSpiderFeralFireGlider, .75
+		guppyMommaVultureBurnt, .75
+		guppyRadiatedMommaVultureBurnt, .5
+		guppyRadiatedFireMommaVultureBurnt, .5
+	</entitygroup>
+	<entitygroup name="BossSpitterVariantsGroupGS800">
+		animalZombieMiniPlasmaVulture
+		zombieMiniSpiderFeralFireGlider
+		guppyVultureBurnt
+		zombieSpiderFeralFireGlider
+		guppyMommaVultureBurnt
+		guppyRadiatedMommaVultureBurnt
+		guppyRadiatedFireMommaVultureBurnt
+	</entitygroup>
+	
+	<!-- Wasteland Crater Boss POI -->
+
+	<entitygroup name="zombieBlueCrystalWendigo">
+		zombieBlueCrystalWendigo
+	</entitygroup>
+	<entitygroup name="zombieGreenCrystalWendigo">
+		zombieGreenCrystalWendigo
+	</entitygroup>
+	<entitygroup name="zombieBlackCrystalWendigo">
+		zombieBlackCrystalWendigo
+	</entitygroup>
+	<entitygroup name="BossSpitterGroup">
+		zombieBlueCrystalWendigo
+		zombieGreenCrystalWendigo
+		zombieBlackCrystalWendigo
+	</entitygroup>
+	
 	</append>
 	
 <!-- *** INTEGRATION FOR SLEEPERS -->

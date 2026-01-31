@@ -190,6 +190,17 @@
 	<!-- Snow Bear Sleeper Group -->
 	<group name="animalWildWestSnowBear" spawner="animalWildWestSnowBear"/>
 	
+	<!-- Boss Spitter Family -->	
+	<group name="Boss_Spitter_Family" spawner="BossSpitterVariants"/>
+	
+	<!-- Boss Spitter Types -->	
+	<group name="zombieBlueCrystalWendigo" spawner="zombieBlueCrystalWendigo"/>
+	<group name="zombieGreenCrystalWendigo" spawner="zombieGreenCrystalWendigo"/>
+	<group name="zombieBlackCrystalWendigo" spawner="zombieBlackCrystalWendigo"/>
+	
+	<!-- Boss Spitter Group Types -->	
+	<group name="Boss_Spitter_Group" spawner="BossSpitterGroup"/>
+	
 	<!-- SPAWNERS -->
 	
 	<!-- Boss Group with gradual feed from hard to deadly -->
@@ -313,6 +324,52 @@
 	<spawner name="animalWildWestSnowBear">
 		<gamestage stage="1">
 			<spawn group="animalWildWestSnowBear" num="1" maxAlive="1" duration="10"/>
+		</gamestage>
+	</spawner>
+	
+	<!-- Boss Spitter Group -->
+	<spawner name="BossSpitterVariants">
+		<gamestage stage="1">
+			<spawn group="BossSpitterVariantsGroupGS01" num="1" maxAlive="1" duration="1" />
+		</gamestage>
+		<gamestage stage="50">
+			<spawn group="BossSpitterVariantsGroupGS50" num="1" maxAlive="1" duration="1" />
+		</gamestage>
+		<gamestage stage="100">
+			<spawn group="BossSpitterVariantsGroupGS100" num="1" maxAlive="1" duration="1" />
+		</gamestage>
+		<gamestage stage="200">
+			<spawn group="BossSpitterVariantsGroupGS200" num="1" maxAlive="1" duration="1" />
+		</gamestage>
+		<gamestage stage="400">
+			<spawn group="BossSpitterVariantsGroupGS400" num="1" maxAlive="1" duration="1" />
+		</gamestage>
+		<gamestage stage="800">
+			<spawn group="BossSpitterVariantsGroupGS800" num="1" maxAlive="1" duration="1" />
+		</gamestage>
+	</spawner>
+
+	<!-- Boss Spitter Types -->	
+	<spawner name="zombieBlueCrystalWendigo">
+		<gamestage stage="1">
+			<spawn group="zombieBlueCrystalWendigo" duration="10"/>
+		</gamestage>
+	</spawner>
+	<spawner name="zombieGreenCrystalWendigo">
+		<gamestage stage="1">
+			<spawn group="zombieGreenCrystalWendigo" duration="10"/>
+		</gamestage>
+	</spawner>
+	<spawner name="zombieBlackCrystalWendigo">
+		<gamestage stage="1">
+			<spawn group="zombieBlackCrystalWendigo" duration="10"/>
+		</gamestage>
+	</spawner>
+	
+	<!-- Boss Spitter Group -->
+	<spawner name="BossSpitterGroup">
+		<gamestage stage="1">
+			<spawn group="BossSpitterGroup" duration="10"/>
 		</gamestage>
 	</spawner>
 	

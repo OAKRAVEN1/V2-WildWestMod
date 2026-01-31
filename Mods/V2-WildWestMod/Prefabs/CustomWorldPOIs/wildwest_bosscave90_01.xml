@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+  <property name="CopyAirBlocks" value="True" />
+  <property name="ExcludeDistantPOIMesh" value="False" />
+  <property name="ExcludePOICulling" value="False" />
+  <property name="DistantPOIYOffset" value="0" />
+  <property name="AllowTopSoilDecorations" value="False" />
+  <property name="DifficultyTier" value="5" />
+  <property name="ShowQuestClearCount" value="1" />
+  <property name="QuestTags" value="clear, fetch, infested" />
+  <property name="Tags" value="custom" />
+  <property name="TraderArea" value="False" />
+  <property name="PrefabSize" value="90, 64, 90" />
+  <property name="RotationToFaceNorth" value="2" />
+  <property name="YOffset" value="-30" />
+  <property name="Zoning" value="none" />
+  <property name="SleeperVolumeSize" value="15, 4, 10#21, 15, 21#17, 19, 2#21, 4, 20#21, 10, 26#46, 10, 25#11, 10, 39#18, 8, 16#19, 11, 48#23, 11, 54#25, 10, 36" />
+  <property name="SleeperVolumeStart" value="57, 31, 43#50, 35, 23#52, 31, 21#50, 31, 23#43, 2, 40#3, 2, 8#67, 2, 8#49, 2, 18#1, 1, 41#20, 1, 33#64, 2, 53" />
+  <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0,0,0,0,0,0" />
+  <property name="SleeperVolumeGroup" value="animalZombieBear,2,3,Boss_Spitter_Family,14,15,Boss_Spitter_Family,7,8,Crispy_Family,10,12,Boss_Spitter_Group,3,4,zombieGreenCrystalWendigo,1,2,zombieBlueCrystalWendigo,1,2,zombieBlackCrystalWendigo,1,2,Boss_Spitter_Group,5,6,Boss_Family,9,10,Boss_Family,9,10" />
+  <property name="SleeperIsLootVolume" value="False,False,False,False,False,False,False,False,False,False,False" />
+  <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False,False,False,False,False" />
+  <property name="SleeperVolumeFlags" value="0,0,0,0,0,2,2,2,0,0,0" />
+  <property name="SleeperVolumeTriggeredBy" value=" # # # # # # # # # # " />
+  <property class="IndexedBlockOffsets">
+    <property class="quest_stone">
+      <property name="0" value="78, 35, 78" />
+      <property name="1" value="88, 32, 78" />
+    </property>
+    <property class="quest_wood">
+      <property name="0" value="82, 35, 79" />
+      <property name="1" value="83, 35, 85" />
+    </property>
+    <property class="FetchContainer">
+      <property name="0" value="58, 2, 77" />
+    </property>
+    <property class="quest_stone_boulder">
+      <property name="0" value="71, 34, 75" />
+    </property>
+    <property class="quest_wood_trees">
+      <property name="0" value="70, 39, 49" />
+    </property>
+    <property class="challenge_polymers">
+      <property name="0" value="84, 30, 63" />
+    </property>
+    <property class="Rally">
+      <property name="0" value="58, 31, 3" />
+    </property>
+    <property class="quest_feather">
+      <property name="0" value="69, 45, 30" />
+      <property name="1" value="70, 38, 31" />
+      <property name="2" value="68, 38, 42" />
+    </property>
+    <property class="challenge_sinks">
+      <property name="0" value="58, 31, 31" />
+    </property>
+    <property class="challenge_gore">
+      <property name="0" value="59, 31, 31" />
+    </property>
+    <property class="challenge_steel">
+      <property name="0" value="62, 31, 46" />
+    </property>
+    <property class="challenge_mech_parts">
+      <property name="0" value="61, 31, 32" />
+    </property>
+    <property class="challenge_cars">
+      <property name="0" value="81, 35, 81" />
+    </property>
+  </property>
+  <property class="Stats">
+    <property name="LightsVolume" value="17135.65" />
+    <property name="TotalVertices" value="1143287" />
+    <property name="TotalTriangles" value="908675" />
+    <property class="BlockEntities">
+      <property name="Vertices" value="973283" />
+      <property name="Triangles" value="745335" />
+    </property>
+    <property class="ChunkMeshes0">
+      <property name="Vertices" value="1248" />
+      <property name="Triangles" value="624" />
+    </property>
+    <property class="ChunkMeshes1">
+      <property name="Vertices" value="71616" />
+      <property name="Triangles" value="35808" />
+    </property>
+    <property class="ChunkMeshes2">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes3">
+      <property name="Vertices" value="28312" />
+      <property name="Triangles" value="14156" />
+    </property>
+    <property class="ChunkMeshes4">
+      <property name="Vertices" value="8" />
+      <property name="Triangles" value="4" />
+    </property>
+    <property class="ChunkMeshes5">
+      <property name="Vertices" value="68820" />
+      <property name="Triangles" value="112748" />
+    </property>
+  </property>
+</prefab>

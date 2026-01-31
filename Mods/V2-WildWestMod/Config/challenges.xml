@@ -831,7 +831,7 @@
 	<challenge name="killVultures" title_key="challengeKillVultures" icon="ui_game_symbol_zombie" group="Zombies"
 		short_description_key="challengeKillVulturesShort" description_key="challengeKillVulturesDesc"
 		reward_text_key="challengeKillRewardRegAmmo" reward_event="reward_vulture_zombie_slayer">
-		<objective type="Kill" entity_names="animalZombieVulture,animalZombieVultureRadiated" count="50"/>
+		<objective type="Kill" entity_names="animalZombieVulture,animalZombieVultureRadiated,animalZombieLargeVulture,animalZombieMiniPlasmaVulture" count="50"/>
 	</challenge>
 
 	<challenge name="killLumberjack" title_key="challengeKillLumberjacks" icon="ui_game_symbol_zombie" group="Zombies"
@@ -843,7 +843,7 @@
 	<challenge name="killSpider" title_key="challengeKillSpiderZombies" icon="ui_game_symbol_zombie" group="Zombies"
 		short_description_key="challengeKillSpiderZombiesShort" description_key="challengeKillSpiderZombiesDesc"
 		reward_text_key="challengeKillRewardMods" reward_event="reward_spider_zombie_slayer">
-		<objective type="Kill" entity_names="zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderCharged,zombieSpiderInfernal" count="50"/>
+		<objective type="Kill" entity_names="zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieSpiderCharged,zombieSpiderInfernal,zombieSpiderFeralFireGlider,zombieMiniSpiderFeralFireGlider," count="50"/>
 	</challenge>
 
 	<challenge name="killBigMama" title_key="challengeKillBigMama" icon="ui_game_symbol_zombie" group="Zombies"

@@ -1271,16 +1271,16 @@
             <property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
 			<property name="LootDropProb" value=".3"/>
 			<property name="DeadBodyHitPoints" value="100"/>
-			<drop event="Harvest" name="resourceStagAntler" tag="butcherHarvest" count="1,2"/>
-		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="2,3"/>
-		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1,3"/>
-		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,3"/>
-		<drop event="Harvest" name="resourceCloth" tag="butcherHarvest" count="1,3"/>
-		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
-		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
-		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
-		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="2,3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1,3"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,3"/>
+			<drop event="Harvest" name="resourceCloth" tag="butcherHarvest" count="1,3"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceStagAntler" tag="butcherHarvest" count="1,2"/>
 		
         <effect_group name="Base Effects">
@@ -3026,7 +3026,7 @@
 			<property name="ChestExplosionDamageMultiplier" value=".85"/>
 			<property name="ExperienceGain" value="1750"/>
 			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
-			<property name="LootDropProb" value="1"/>
+			<property name="LootDropProb" value=".25"/>
 			
 		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="2,3"/>
@@ -3824,6 +3824,293 @@
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="1250"/>
 		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="zombieBlueCrystalWendigo" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="SizeScale" value="1.2"/>
+	<property name="Tags" value="entity,zombie,walker,desert,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/WendigoBoss.unity3d?WendigoBlue.prefab"/>
+	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
+	<property name="WalkType" value="7"/>
+	<property name="Mass" value="160"/>
+	<property name="SoundRandom" value="Wendigobossroam"/>
+    <property name="SoundAlert" value="WendigobossAlert"/>
+    <property name="SoundAttack" value="WendigobossAttack"/>
+    <property name="SoundHurt" value="WendigobossHurt"/>
+    <property name="SoundDeath" value="WendigobossDie"/>
+    <property name="SoundSense" value="WendigobossSense"/>
+	<property name="SoundStepType" value="barestep"/>
+	<property name="ExperienceGain" value="5000"/><!-- XP Plague Spitter -->
+	<property name="PainResistPerHit" value="1"/><!-- No Pain -->
+	
+	<property name="DismemberMultiplierHead" value="0"/>
+	<property name="DismemberMultiplierArms" value="0"/>
+	<property name="DismemberMultiplierLegs" value="0"/>
+
+	<property name="AITask" value="
+	BreakBlock|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=4;duration=7;minRange=4;maxRange=27|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachSpot|
+	Look|
+	Wander exePer=.1;lookMin=8;lookMax=15|
+	"/>
+
+	<!-- Gameplay zombiePlagueSpitter -->
+	<property name="MoveSpeed" value=".4"/>
+	<property name="MoveSpeedAggro" value=".4, 1.35"/> <!-- Normal -->
+	<property name="HandItem" value="meleeHandZombieBlueCrystalWendigo"/>
+	<property name="SightRange" value="80"/>
+	<property name="StompsSpikes" value="true"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value="1"/>
+
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="2,3"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1,3"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,3"/>
+		<drop event="Harvest" name="resourceCloth" tag="butcherHarvest" count="1,3"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceStagAntler" tag="butcherHarvest" count="1,2"/>
+	
+	<effect_group>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="6"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		<passive_effect name="HealthMax" operation="base_set" value="12000"/>
+	</effect_group>
+</entity_class>
+
+<!-- Mini Plasma Vulture -->
+		
+<entity_class name="animalZombieMiniPlasmaVulture" extends="animalZombieVulture">
+	<property name="Tags" value="entity,animal,zombie,hostile,vulture"/>
+	<property name="Class" value="EntityVulture"/>
+	<property name="EntityType" value="Zombie"/>
+	<property name="AvatarController" value="AvatarAnimalController"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="PhysicsBody" value="vulture"/>
+	<property name="Mass" value="70"/>
+	<property name="Prefab" value="@:Entities/Animals/Vulture/animalBirdVulturePrefab.prefab"/>
+	<property name="PrefabCombined" value="true"/>
+	<property name="SizeScale" value=".65"/>
+
+	<!-- Gameplay  -->
+	<property name="MoveSpeed" value="1.2"/>
+	<property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
+	<property name="MaxTurnSpeed" value="190"/>
+
+	<property name="HandItem" value="meleeHandanimalZombieMiniPlasmaVulture"/>
+	<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
+	<property name="ExperienceGain" value="1320"/><!-- XP grunt radiated -->
+
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="PainResistPerHit" value="-1"/> <!-- no pain -->
+
+	<property name="DeadBodyHitPoints" value="200"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="10"/>
+	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="20"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="3,8" tag="butcherHarvest"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="500"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".4"/> <!-- Feral damage -->
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="zombieGreenCrystalWendigo" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="SizeScale" value="1.2"/>
+	<property name="Tags" value="entity,zombie,walker,desert,infernal,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/WendigoBoss.unity3d?WendigoGreen.prefab"/>
+	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
+	<property name="WalkType" value="7"/>
+	<property name="Mass" value="160"/>
+	<property name="SoundRandom" value="Wendigobossroam"/>
+    <property name="SoundAlert" value="WendigobossAlert"/>
+    <property name="SoundAttack" value="WendigobossAttack"/>
+    <property name="SoundHurt" value="WendigobossHurt"/>
+    <property name="SoundDeath" value="WendigobossDie"/>
+    <property name="SoundSense" value="WendigobossSense"/>
+	<property name="SoundStepType" value="barestep"/>
+	<property name="ExperienceGain" value="5000"/><!-- XP Plague Spitter -->	
+	<property name="PainResistPerHit" value="1"/><!-- No Pain -->
+	
+	<property name="DismemberMultiplierHead" value="0"/>
+	<property name="DismemberMultiplierArms" value="0"/>
+	<property name="DismemberMultiplierLegs" value="0"/>
+
+	<property name="AITask" value="
+	BreakBlock|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=4;duration=7;minRange=4;maxRange=27|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachSpot|
+	Look|
+	Wander exePer=.1;lookMin=8;lookMax=15|
+	"/>
+
+	<!-- Gameplay zombiePlagueSpitter -->
+	<property name="MoveSpeed" value=".4"/>
+	<property name="MoveSpeedAggro" value=".4, 1.35"/> <!-- Normal -->
+	<property name="HandItem" value="meleeHandZombieGreenCrystalWendigo"/>
+	<property name="SightRange" value="80"/>
+	<property name="StompsSpikes" value="true"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value="1"/>
+	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="2,3"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1,3"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,3"/>
+		<drop event="Harvest" name="resourceCloth" tag="butcherHarvest" count="1,3"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceStagAntler" tag="butcherHarvest" count="1,2"/>	
+	
+	<effect_group>
+		<passive_effect name="HealthMax" operation="base_set" value="12000"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="6"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire"/>
+	</effect_group>
+</entity_class>
+
+<!-- Mini Fire Spider Glider -->
+
+		<entity_class name="zombieMiniSpiderFeralFireGlider" extends="zombieSpiderFeral">
+			<property name="Tags" value="entity,zombie,walker,feral,radiated,hostile,vulture"/>
+			<property name="Class" value="EntityVulture"/>
+			<property name="Mesh" value="@:Entities/Zombies/Spider/ZSpiderFeral.prefab"/>
+            <property name="SizeScale" value=".5"/> 
+			<property name="Mass" value="50"/>
+			<property name="MoveSpeed" value=".7"/>
+			<property name="MoveSpeedAggro" value="2, 2"/>
+			<property name="MaxTurnSpeed" value="150"/>
+			<property name="HandItem" value="meleeHandzombieSpiderFeralFireGlider"/>
+   <property name="AITask" value="
+    BreakBlock|
+    ApproachDistraction|
+    RangedAttackTarget itemType=1;cooldown=4;duration=5|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
+    ApproachSpot|
+    Look|
+    Wander|
+    "/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityBandit,200,200,EntityNPC,200,200"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="DismemberMultiplierHead" value=".2"/>
+			<property name="DismemberMultiplierArms" value=".2"/>
+			<property name="DismemberMultiplierLegs" value=".2"/>
+			<property name="PainResistPerHit" value="1"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="LegCrippleThreshold" value="0"/>
+			<property name="KnockdownProneDamageThreshold" value="0"/>
+			<property name="KnockdownProneStunDuration" value="0"/>
+			<property name="KnockdownProneRefillRate" value="0"/>
+			<property name="KnockdownKneelDamageThreshold" value="0"/>
+			<property name="KnockdownKneelStunDuration" value="0"/>
+			<property name="KnockdownKneelRefillRate" value="0"/>
+			<property name="LegsExplosionDamageMultiplier" value=".85"/>
+			<property name="ArmsExplosionDamageMultiplier" value=".85"/>
+			<property name="HeadExplosionDamageMultiplier" value=".85"/>
+			<property name="ChestExplosionDamageMultiplier" value=".85"/>
+			<property name="ExperienceGain" value="1000"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+			<property name="LootDropProb" value=".25"/>
+			
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="2,3"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1,3"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,3"/>
+		<drop event="Harvest" name="resourceCloth" tag="butcherHarvest" count="1,3"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>			
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieSpiderFeralFireGliderDeco"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>
+		</entity_class>
+
+<entity_class name="zombieBlackCrystalWendigo" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="SizeScale" value="1.2"/>
+	<property name="Tags" value="entity,zombie,walker,desert,charged"/>
+	<property name="Mesh" value="#@modfolder:Resources/WendigoBoss.unity3d?WendigoRed.prefab"/>
+	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
+	<property name="WalkType" value="7"/>
+	<property name="Mass" value="160"/>
+	<property name="SoundRandom" value="Wendigobossroam"/>
+    <property name="SoundAlert" value="WendigobossAlert"/>
+    <property name="SoundAttack" value="WendigobossAttack"/>
+    <property name="SoundHurt" value="WendigobossHurt"/>
+    <property name="SoundDeath" value="WendigobossDie"/>
+    <property name="SoundSense" value="WendigobossSense"/>
+	<property name="SoundStepType" value="barestep"/>
+	<property name="ExperienceGain" value="5000"/><!-- XP Plague Spitter -->
+	<property name="PainResistPerHit" value="1"/><!-- No Pain -->
+	
+	<property name="DismemberMultiplierHead" value="0"/>
+	<property name="DismemberMultiplierArms" value="0"/>
+	<property name="DismemberMultiplierLegs" value="0"/>
+
+	<property name="AITask" value="
+	BreakBlock|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=4;duration=7;minRange=4;maxRange=27|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachSpot|
+	Look|
+	Wander exePer=.1;lookMin=8;lookMax=15|
+	"/>
+
+	<!-- Gameplay zombiePlagueSpitter -->
+	<property name="MoveSpeed" value=".4"/>
+	<property name="MoveSpeedAggro" value=".4, 1.35"/> <!-- Normal -->
+	<property name="HandItem" value="meleeHandZombieBlackCrystalWendigo"/>
+	<property name="SightRange" value="80"/>
+	<property name="StompsSpikes" value="true"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+	<property name="LootDropProb" value="1"/>
+	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="2,3"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1,3"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,3"/>
+		<drop event="Harvest" name="resourceCloth" tag="butcherHarvest" count="1,3"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceStagAntler" tag="butcherHarvest" count="1,2"/>	
+	
+	<effect_group>
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="90"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="6"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+		<passive_effect name="HealthMax" operation="base_set" value="12000"/>
+        <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieWendigoRadiatedShowerAOE"/>
 	</effect_group>
 </entity_class>
 			
