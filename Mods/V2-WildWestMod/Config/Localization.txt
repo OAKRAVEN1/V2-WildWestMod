@@ -712,7 +712,7 @@ barracksChair,blocks,Block,,,Deck Chair,,,,,,,,,,,,,
 capChimneyLargeSmoke,blocks,block,,,Chimney Cap Large Smoke,,"Schornstein – Abdeckung, groß, Rauch",Sombrero de chimenea grande humeante,"Grand chapeau de cheminée, fumée",Coperchio del camino grande con fumo,煙突キャップ（大・スモーク）,치메니 캡 라지 스모크,"Komin – końcówka, duży, dym",Tampo de chaminé grande esfumaçado,Большая дымящаяся верхушка трубы,"Baca Külahı, Büyük, Duman",烟囱 顶盖 大 冒烟,冒煙大煙囪蓋
 
 cntDewCollectorVariantHelper,blocks,block,,,Water Wells,,,,,,,,,,,,,
-cntRainDanceCatcherDesc,blocks,block,,,"Collects water over time for clean drinking water.\n\nRepair with Tree Resin.",,,,,,,,,,,,,
+cntRainDanceCatcherDesc,blocks,block,,,"Collects water over time. Wells collect faster, and attract less screamers, than Rain Dance Catchers.\n\nRepair with Tree Resin.",,,,,,,,,,,,,
 cntRainDanceCatcher,blocks,block,,,Rain Dance Catcher,,,,,,,,,,,,,
 
 challengePlaceRainDanceCatcher,Challenges,Challenge,,,Place Rain Dance Catcher,,,,,,,,,,,,,
