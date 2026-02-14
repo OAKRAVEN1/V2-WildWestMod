@@ -109,6 +109,7 @@
 		zombieOakBigFootSnow, .5
 		zombieOakBigFootInfernal, .5		
 		zombieOakBigFootCharged, .5
+		zombieScreamerBossRadiatedSpitter, .5
 	</set>
 	
 <!-- *** BIOME_ZOMBIES_WASTELAND_NIGHT_GROUP -->
@@ -143,6 +144,7 @@
 		zombieOakBigFootSnow, .5
 		zombieOakBigFootInfernal, .5		
 		zombieOakBigFootCharged, .5
+		zombieScreamerBossRadiatedSpitter, .5
 	</set>
 	
 <!-- *** INTEGRATION FOR ANIMALS -->
@@ -585,6 +587,7 @@
 		zombieTheRat
 		zombieTheRatFeral, .2
 		zombieTheRatRadiated, .1
+		zombieScreamerBossRadiatedSpitter, .025
 	</entitygroup>
 	
 	<!-- Boss Spitter Family -->
@@ -736,6 +739,7 @@
 
     <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'scoutHordeStageGS') and contains (text(), 'zombieScreamerRadiated')]/text()" delim="\n" op="add">
         zombieRatPetRadiated, 1.5
+		zombieScreamerBossRadiatedSpitter, .25
     </csv> <!-- GS 164 -->
 	
 <!-- *** FERAL_HORDE_STAGES -->
@@ -770,6 +774,7 @@
 		zombieOakBigFootSnow, .075
 		zombieOakBigFootInfernal, .075		
 		zombieOakBigFootCharged, .075
+		zombieScreamerBossRadiatedSpitter, .075
 	</csv>
 	
  <!-- First Crispy Family-->	

@@ -3681,16 +3681,16 @@
 	DestroyArea|
 	Territorial|
 	ApproachDistraction|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityEnemyAnimal,0,EntityAnimal|
 	ApproachSpot|
 	Look|
 	Wander|
 	"/>
 	<property name="AITarget" value="
-	SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityEnemyAnimal|
+	SetAsTargetIfHurt class=EntityPlayer,EntityBandit,EntityNPC,EntityEnemyAnimal|
 	BlockingTargetTask|
 	SetNearestCorpseAsTarget flags=edible|
-	SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityBandit,0,-10|
+	SetNearestEntityAsTarget class=EntityPlayer,0,0,EntityBandit,0,-10,EntityNPC,0|
 	"/>
 
 	<!-- Gameplay zombieRancher -->
@@ -3853,7 +3853,7 @@
 	BreakBlock|
 	ApproachDistraction|
 	RangedAttackTarget itemType=1;cooldown=4;duration=7;minRange=4;maxRange=27|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityEnemyAnimal,0,EntityAnimal|
 	ApproachSpot|
 	Look|
 	Wander exePer=.1;lookMin=8;lookMax=15|
@@ -3956,7 +3956,7 @@
 	BreakBlock|
 	ApproachDistraction|
 	RangedAttackTarget itemType=1;cooldown=4;duration=7;minRange=4;maxRange=27|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityEnemyAnimal,0,EntityAnimal|
 	ApproachSpot|
 	Look|
 	Wander exePer=.1;lookMin=8;lookMax=15|
@@ -4007,7 +4007,7 @@
     BreakBlock|
     ApproachDistraction|
     RangedAttackTarget itemType=1;cooldown=4;duration=5|
-    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityNPC,0|
+    ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityEnemyAnimal,0,EntityNPC,0|
     ApproachSpot|
     Look|
     Wander|
@@ -4079,7 +4079,7 @@
 	BreakBlock|
 	ApproachDistraction|
 	RangedAttackTarget itemType=1;cooldown=4;duration=7;minRange=4;maxRange=27|
-	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityEnemyAnimal,0,EntityAnimal|
 	ApproachSpot|
 	Look|
 	Wander exePer=.1;lookMin=8;lookMax=15|
@@ -4111,6 +4111,42 @@
 		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 		<passive_effect name="HealthMax" operation="base_set" value="12000"/>
         <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieWendigoRadiatedShowerAOE"/>
+	</effect_group>
+</entity_class>
+
+		<!-- *** ZOMBIE_SCREAMER_RADIATED_SPITTER -->
+<entity_class name="zombieScreamerBossRadiatedSpitter" extends="zombieTemplateMale">
+	<property name="UserSpawnType" value="Menu"/>
+	<property name="SizeScale" value="1.65"/>
+	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse2"/>
+
+	<!-- Gameplay zombieScreamerRadiated -->
+	<property name="DismemberMultiplierHead" value="0"/><property name="DismemberMultiplierArms" value="0"/><property name="DismemberMultiplierLegs" value="0"/><!-- Radiated Boss Spitter -->
+	<property name="PainResistPerHit" value=".9"/><!-- Radiated -->
+	<property name="MoveSpeedAggro" value=".5, 1.35"/>
+	<property name="HandItem" value="meleeHandZombieScreamerBossRadiatedSpitter"/>
+	<property name="ExperienceGain" value="2200"/>
+	<property name="StompsSpikes" value="true"/>
+	<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+	<property name="LootDropProb" value="0.3"/>
+	
+	<property name="AITask" value="
+	BreakBlock|
+	ApproachDistraction|
+	RangedAttackTarget itemType=1;cooldown=4;duration=7;minRange=4;maxRange=27|
+	ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityNPC,0,EntityEnemyAnimal,0,EntityAnimal|
+	ApproachSpot|
+	Look|
+	Wander exePer=.1;lookMin=8;lookMax=15|
+	"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="70"/>
+		<passive_effect name="HealthMax" operation="base_set" value="3500"/>
+		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="3.5"/>
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
 	</effect_group>
 </entity_class>
 			

@@ -4293,6 +4293,19 @@
 	<property name="PlaceAltBlockValue" value="WWjailDoorDouble,WWjailDoorDoubleBrown,WWjailDoorDoubleYellow,WWjailDoorDoubleGreen,WWjailDoorDoubleBlue,WWjailDoorDoubleGrey"/>
 </block>
 
+<!-- Wine Bottles -->
+
+<block name="decoWineBottleVariantHelper">
+	<property name="Extends" value="decoWineBottle"/>		
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="decoWineBottle"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="Group" value="Building,advBuilding,Decor/Miscellaneous"/>
+	<property name="PlaceAltBlockValue" value="decoWineBottle,decoWineBottleCorner,decoWineBottleShelfRow,decoWineBottlePile01,decoWineBottlePile02"/>
+</block>
+
 	<!-- *** PLAYER_LOCKED_WRITABLE_IRON_DROP_BOX_CRATE_0-SCORE -->
 		<block name="cntIronWWMDropBox">
 			<property name="CustomIcon" value="cntIronWWMDropBox"/>

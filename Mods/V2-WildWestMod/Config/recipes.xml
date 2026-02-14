@@ -5519,6 +5519,11 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 		<ingredient name="resourceScrapIron" count="25"/>
 	</recipe>
 	
+	<recipe name="decoWineBottleVariantHelper" count="1" craft_time="5" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceBrokenGlass" count="1"/>
+		<ingredient name="resourcePaper" count="1"/>
+	</recipe>
+	
 <!-- Clucking Bells Screamer Dinner Bell -->
 
 	<recipe name="cluckingbellsTrap" count="1" craft_time="300" craft_area="workbench" tags="workbenchCrafting">
