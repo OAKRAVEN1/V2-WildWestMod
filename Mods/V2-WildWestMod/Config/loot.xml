@@ -389,7 +389,6 @@
 <lootqualitytemplates>
 
 	<lootqualitytemplate name="qualBaseTemplate">
-	<!-- QL4 starts at 50, QL5 at 80, QL6 at 110 -->
 		<qualitytemplate level="0,9" default_quality="1">
 			<loot quality="1" prob="0.764"/>
 			<loot quality="2" prob="0.765"/>
@@ -558,6 +557,194 @@
 			<loot quality="3" prob="0.306"/>
 			<loot quality="4" prob="0.44"/>
 			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+	</lootqualitytemplate>
+
+	<lootqualitytemplate name="q6Template">
+	<!-- QL4 starts at 50, QL5 at 80, QL6 at 110 -->
+		<qualitytemplate level="0,9" default_quality="1">
+			<loot quality="1" prob="0.764"/>
+			<loot quality="2" prob="0.765"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="10,19" default_quality="1">
+			<loot quality="1" prob="0.742"/>
+			<loot quality="2" prob="0.7"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="20,29" default_quality="1">
+			<loot quality="1" prob="0.72"/>
+			<loot quality="2" prob="0.644"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="30,39" default_quality="1">
+			<loot quality="1" prob="0.697"/>
+			<loot quality="2" prob="0.596"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="40,49" default_quality="1">
+			<loot quality="1" prob="0.674"/>
+			<loot quality="2" prob="0.554"/>
+			<loot quality="3" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="50,59" default_quality="1">
+			<loot quality="1" prob="0.651"/>
+			<loot quality="2" prob="0.517"/>
+			<loot quality="3" prob="0.404"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="60,69" default_quality="1">
+			<loot quality="1" prob="0.628"/>
+			<loot quality="2" prob="0.484"/>
+			<loot quality="3" prob="0.388"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="70,79" default_quality="1">
+			<loot quality="1" prob="0.604"/>
+			<loot quality="2" prob="0.455"/>
+			<loot quality="3" prob="0.376"/>
+			<loot quality="4" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="80,89" default_quality="1">
+			<loot quality="1" prob="0.579"/>
+			<loot quality="2" prob="0.429"/>
+			<loot quality="3" prob="0.366"/>
+			<loot quality="4" prob="0.46"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="90,99" default_quality="1">
+			<loot quality="1" prob="0.555"/>
+			<loot quality="2" prob="0.405"/>
+			<loot quality="3" prob="0.357"/>
+			<loot quality="4" prob="0.457"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="100,109" default_quality="1">
+			<loot quality="1" prob="0.53"/>
+			<loot quality="2" prob="0.383"/>
+			<loot quality="3" prob="0.35"/>
+			<loot quality="4" prob="0.454"/>
+			<loot quality="5" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="110,119" default_quality="1">
+			<loot quality="1" prob="0.504"/>
+			<loot quality="2" prob="0.363"/>
+			<loot quality="3" prob="0.344"/>
+			<loot quality="4" prob="0.452"/>
+			<loot quality="5" prob="0.4"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="120,129" default_quality="1">
+			<loot quality="1" prob="0.479"/>
+			<loot quality="2" prob="0.345"/>
+			<loot quality="3" prob="0.339"/>
+			<loot quality="4" prob="0.451"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="130,139" default_quality="1">
+			<loot quality="1" prob="0.453"/>
+			<loot quality="2" prob="0.329"/>
+			<loot quality="3" prob="0.334"/>
+			<loot quality="4" prob="0.449"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="140,149" default_quality="1">
+			<loot quality="1" prob="0.426"/>
+			<loot quality="2" prob="0.313"/>
+			<loot quality="3" prob="0.33"/>
+			<loot quality="4" prob="0.448"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="150,159" default_quality="1">
+			<loot quality="1" prob="0.399"/>
+			<loot quality="2" prob="0.299"/>
+			<loot quality="3" prob="0.327"/>
+			<loot quality="4" prob="0.447"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="160,169" default_quality="1">
+			<loot quality="1" prob="0.372"/>
+			<loot quality="2" prob="0.286"/>
+			<loot quality="3" prob="0.324"/>
+			<loot quality="4" prob="0.446"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="170,179" default_quality="1">
+			<loot quality="1" prob="0.344"/>
+			<loot quality="2" prob="0.274"/>
+			<loot quality="3" prob="0.321"/>
+			<loot quality="4" prob="0.445"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="180,189" default_quality="1">
+			<loot quality="1" prob="0.316"/>
+			<loot quality="2" prob="0.262"/>
+			<loot quality="3" prob="0.318"/>
+			<loot quality="4" prob="0.444"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="190,199" default_quality="1">
+			<loot quality="1" prob="0.287"/>
+			<loot quality="2" prob="0.252"/>
+			<loot quality="3" prob="0.316"/>
+			<loot quality="4" prob="0.443"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="200,209" default_quality="1">
+			<loot quality="1" prob="0.258"/>
+			<loot quality="2" prob="0.242"/>
+			<loot quality="3" prob="0.314"/>
+			<loot quality="4" prob="0.443"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="210,219" default_quality="1">
+			<loot quality="1" prob="0.228"/>
+			<loot quality="2" prob="0.232"/>
+			<loot quality="3" prob="0.312"/>
+			<loot quality="4" prob="0.442"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="220,229" default_quality="1">
+			<loot quality="1" prob="0.198"/>
+			<loot quality="2" prob="0.224"/>
+			<loot quality="3" prob="0.31"/>
+			<loot quality="4" prob="0.441"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="230,239" default_quality="1">
+			<loot quality="1" prob="0.167"/>
+			<loot quality="2" prob="0.215"/>
+			<loot quality="3" prob="0.308"/>
+			<loot quality="4" prob="0.441"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="240,249" default_quality="1">
+			<loot quality="1" prob="0.136"/>
+			<loot quality="2" prob="0.207"/>
+			<loot quality="3" prob="0.307"/>
+			<loot quality="4" prob="0.44"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="250,999999" default_quality="1">
+			<loot quality="1" prob="0.104"/>
+			<loot quality="2" prob="0.2"/>
+			<loot quality="3" prob="0.306"/>
+			<loot quality="4" prob="0.44"/>
+			<loot quality="5" prob="0.5"/>
+			<loot quality="6" prob="1"/>
 		</qualitytemplate>
 	</lootqualitytemplate>
 </lootqualitytemplates>
@@ -2309,20 +2496,33 @@
 	<item name="clothingFeetT3"/>
 </lootgroup>
 
-<lootgroup name="groupAllClothing">
+<lootgroup name="groupAllClothing" loot_quality_template="q6Template">
 	<item group="groupT1Clothing" loot_prob_template="ProbT0"/>
 	<item group="groupT2Clothing" loot_prob_template="ProbT1Cap"/>
 	<item group="groupT3Clothing" loot_prob_template="ProbT2Cap"/>
 </lootgroup>
-<!-- *** Armor_Groups -->
 
-<lootgroup name="groupArmorParts">
+<!-- *** Armor_Groups -->
+<lootgroup name="groupArmorParts01">
 	<item name="resourceCloth" count="1,3"/>
-	<item name="resourceLeather" count="1" loot_prob_template="low"/>
+	<item name="resourceLeather" count="1" loot_prob_template="med"/>
+	<item name="armorParts" count="1" loot_prob_template="veryLow"/>
+</lootgroup>
+
+<lootgroup name="groupArmorParts02">
+	<item group="groupAllClothing" count="1" loot_prob_template="med"/>
+</lootgroup>
+
+<lootgroup name="groupArmorParts03">
 	<item name="resourceSewingKit" count="1" loot_prob_template="low"/>
-	<item name="armorParts" count="1" loot_prob_template="low"/>
-	<item group="groupAllClothing" count="1" loot_prob_template="low"/>
+	<item name="resourceArmorCraftingKit" count="1" loot_prob_template="low"/>
 	<item name="resourceLegendaryParts" count="1" loot_prob_template="veryLowDelayed"/>
+</lootgroup>
+
+<lootgroup name="groupArmorParts" count="all">
+	<item group="groupArmorParts01" count="1"/>
+	<item group="groupArmorParts02" count="1" loot_prob_template="medLow" force_prob="true"/>
+	<item group="groupArmorParts03" count="1" loot_prob_template="low" force_prob="true"/>
 </lootgroup>
 
 <lootgroup name="groupArmorPartsChests">
@@ -3821,15 +4021,15 @@
 	<item name="resourceScrapPolymers" count="2,4" loot_prob_template="high"/>
 	<item name="drinkJarBoiledWater" count="1" loot_prob_template="low"/>
 	<item name="drinkJarPureMineralWater" count="1" loot_prob_template="veryLow"/>
-	<item name="drinkJarEmpty" count="1"/>
+	<!-- <item name="drinkJarEmpty" count="1"/> -->
 </lootgroup>
 
 <!-- *** Rare_Ores -->
 <lootgroup name="rareOres">
 	<item name="resourceSilverNugget" count="1,5"/>
-	<item name="resourceGreenCrystal" count="1,3" loot_prob_template="medLow"/> <!-- WW Mod -->
-	<item name="resourceBlueCrystal" count="1,3" loot_prob_template="medLow"/> <!-- WW Mod -->
-	<item name="resourceBlackCrystal" count="1,3" loot_prob_template="medLow"/> <!-- WW Mod -->
+	<item name="resourceGreenCrystal" count="3,10" loot_prob_template="medLow"/> <!-- WW Mod -->
+	<item name="resourceBlueCrystal" count="3,10" loot_prob_template="medLow"/> <!-- WW Mod -->
+	<item name="resourceBlackCrystal" count="3,10" loot_prob_template="medLow"/> <!-- WW Mod -->
 	<item name="resourceGoldNugget" count="1,4" loot_prob_template="medLow"/>
 	<item name="resourceRawDiamond" count="1,3" loot_prob_template="veryLow"/>
 </lootgroup>
@@ -5614,7 +5814,7 @@
 <lootgroup name="groupCupboard02">
 	<item group="groupCookingTools" loot_prob_template="low"/>
 	<item group="groupIngredientsCommon" loot_prob_template="high"/>
-	<item name="foodSkillMagazine" loot_prob_template="low"/>
+	<item name="foodSkillMagazine" loot_prob_template="veryLow"/>
 	<item group="seeds" loot_prob_template="veryLow"/>
 </lootgroup>
 
@@ -5752,7 +5952,7 @@
 	</item>
 	<item group="groupTreasureHunter5" count="1">
 		<requirement class="Progression" name="perkTreasureHunter" operation="Equals" value="5"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** BURIED_SUPPLIES_T1 -->
@@ -8345,12 +8545,12 @@
 </lootgroup>
 
 <lootgroup name="groupLaundry03">
-	<item group="groupAllClothing" loot_prob_template="low"/>
+	<item group="groupAllClothing"/>
 </lootgroup>
 
 <lootgroup name="groupLaundry" count="all">
 	<item group="groupLaundry01" count="1"/>
-	<item group="groupLaundry03" loot_prob_template="low" force_prob="true"/>
+	<item group="groupLaundry03" loot_prob_template="med" force_prob="true"/>
 	<item group="groupLaundry02" loot_prob_template="veryLow" force_prob="true"/>
 </lootgroup>
 
@@ -10337,7 +10537,7 @@
 </lootcontainer>
 
 <!-- laundry basket (Helper) -->
-<lootcontainer name="laundryBasket" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
+<lootcontainer name="laundryBasket" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="q6Template" destroy_on_close="empty">
 	<item group="groupLaundry"/>
 </lootcontainer>
 
@@ -10387,7 +10587,7 @@
 </lootcontainer>
 
 <!-- washing machine, clothes in good condition -->
-<lootcontainer name="laundry" count="1" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template" destroy_on_close="empty">
+<lootcontainer name="laundry" count="1" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="q6Template" destroy_on_close="empty">
 	<item group="groupLaundry"/>
 </lootcontainer>
 
@@ -10562,7 +10762,7 @@
 </lootcontainer>
 
 <!-- cntNightstandClosed -->
-<lootcontainer name="nightstand" count="1" size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
+<lootcontainer name="nightstand" count="1" size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="q6Template" destroy_on_close="empty">
 	<item group="groupNightstand"/>
 </lootcontainer>
 
@@ -10835,7 +11035,7 @@
 </lootcontainer>
 
 <!-- all clothes racks -->
-<lootcontainer name="clothesRacks" count="1" size="7,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
+<lootcontainer name="clothesRacks" count="1" size="7,2" sound_open="open_clothes_rack" sound_close="close_clothes_rack" loot_quality_template="q6Template" destroy_on_close="empty">
 	<item group="groupArmorParts"/>
 </lootcontainer>
 
@@ -11099,7 +11299,7 @@
 </lootcontainer>
 
 <!-- cntShoesPileSneakers etc. -->
-<lootcontainer name="shoes" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
+<lootcontainer name="shoes" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="silencefiller" loot_quality_template="q6Template" destroy_on_close="empty">
 	<item group="groupArmorParts"/>
 </lootcontainer>
 
@@ -11138,7 +11338,7 @@
 </lootcontainer>
 
 <!-- clothes shelves -->
-<lootcontainer name="clothesShelves" count="1" size="7,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
+<lootcontainer name="clothesShelves" count="1" size="7,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="q6Template" destroy_on_close="empty">
 	<item group="groupArmorParts"/>
 </lootcontainer>
 

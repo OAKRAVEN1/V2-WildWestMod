@@ -158,6 +158,8 @@
     <!-- Machete replace -->
     <set xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Meshfile']/@value">#@modfolder:Resources/WestKnifes.unity3d?Knife3</set><!-- Replacing Fire Axe for older variant -->
 	<remove xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='TintColor']"/>
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/effect_group/passive_effect[@name='AttacksPerMinute'][@operation='base_set']/@value">80</set><!-- 55 to 65 Default from previous versions -->
+	<set xpath="/items/item[@name='meleeWpnBladeT3Machete']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss'][@operation='base_set']/@value">29.4</set><!-- 10% reduction of 32.7 Default  -->
 
     <!-- Cosh Spitter -->
 	<set xpath="/items/item[@name='meleeWpnBatonT2StunBaton']/property[@name='Meshfile']/@value">#@modfolder:Resources/CoshSpitter.unity3d?EletricBat2</set>
@@ -699,8 +701,8 @@
 		<property name="SwingAngle" value="90"/>
 	</property>
 	<effect_group name="meleeToolPickT2SteelPickaxe">
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkMiner69r"/> <!-- Default 55 -->
-		<passive_effect name="StaminaLoss" operation="base_set" value="23.8" tags="primary"/> <!-- Default 26.4 -->
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="70" tags="perkMiner69r"/> <!-- Default 55 -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="22.8" tags="primary"/> <!-- Default 26.4 -->
 		<passive_effect name="DegradationMax" operation="base_set" value="1100,2200" tier="1,6" tags="perkMiner69r"/> <!-- Default 1000,2000 -->
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
 		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
@@ -711,7 +713,7 @@
 		<passive_effect name="EntityDamage" operation="base_set" value="25.5" tags="perkMiner69r"/> <!-- Default 23.2 -->
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random EntityDmg -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
-		<passive_effect name="BlockDamage" operation="base_set" value="94" tags="perkMiner69r,miningTool"/> <!-- tier bonus --> <!-- Default 85 -->
+		<passive_effect name="BlockDamage" operation="base_set" value="100" tags="perkMiner69r,miningTool"/> <!-- tier bonus --> <!-- Default 85 -->
 		<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random BlockDmg -->
 		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
 		<passive_effect name="PlayerExpGain" operation="perc_add" value="-.1" tags="Harvesting"/>
@@ -724,10 +726,10 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="terrGravel"/>
 	</effect_group>
 	<effect_group name="Power Attack">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="1.35" tags="secondary"/> <!-- Default 1.25 -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="1.35" tags="secondary"/> <!-- Default 1.25 -->
 		<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/> -->
-		<passive_effect name="StaminaLoss" operation="base_set" value="47.4" tags="secondary"/> <!-- Default 52.7 -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="45.4" tags="secondary"/> <!-- Default 52.7 -->
 	</effect_group>
 
 	<effect_group>
@@ -806,8 +808,8 @@
 		<property name="SwingAngle" value="90"/>
 	</property>
 	<effect_group name="meleeToolPickT2SteelPickaxe">
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="perkMiner69r"/> <!-- Default 55 -->
-		<passive_effect name="StaminaLoss" operation="base_set" value="23.8" tags="primary"/> <!-- Default 26.4 -->
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="70" tags="perkMiner69r"/> <!-- Default 55 -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="22.8" tags="primary"/> <!-- Default 26.4 -->
 		<passive_effect name="DegradationMax" operation="base_set" value="1100,2200" tier="1,6" tags="perkMiner69r"/> <!-- Default 1000,2000 -->
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
 		<passive_effect name="MaxRange" operation="base_set" value="2.6" tags="perkMiner69r"/>
@@ -818,7 +820,7 @@
 		<passive_effect name="EntityDamage" operation="base_set" value="25.5" tags="perkMiner69r"/> <!-- Default 23.2 -->
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random EntityDmg -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
-		<passive_effect name="BlockDamage" operation="base_set" value="94" tags="perkMiner69r,miningTool"/> <!-- tier bonus --> <!-- Default 85 -->
+		<passive_effect name="BlockDamage" operation="base_set" value="100" tags="perkMiner69r,miningTool"/> <!-- tier bonus --> <!-- Default 85 -->
 		<passive_effect name="BlockDamage" operation="perc_add" value="-.04,.04" tags="perkMiner69r"/> <!-- random BlockDmg -->
 		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
 		<passive_effect name="PlayerExpGain" operation="perc_add" value="-.1" tags="Harvesting"/>
@@ -831,10 +833,10 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="terrGravel"/>
 	</effect_group>
 	<effect_group name="Power Attack">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="1.35" tags="secondary"/> <!-- Default 1.25 -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="1.35" tags="secondary"/> <!-- Default 1.25 -->
 		<!-- <passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/> -->
-		<passive_effect name="StaminaLoss" operation="base_set" value="47.4" tags="secondary"/> <!-- Default 52.7 -->
+		<passive_effect name="StaminaLoss" operation="base_set" value="45.4" tags="secondary"/> <!-- Default 52.7 -->
 	</effect_group>
 
 	<effect_group>
@@ -1365,7 +1367,7 @@
 		<property name="HarvestLength" value="1.6"/>
 	</property>
 	<effect_group name="meleeWpnBladeT3SteelCleaver">
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="75" tags="perkDeepCuts,perkFlurryOfAgility"/> <!-- Default 65 -->
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="80" tags="perkDeepCuts,perkFlurryOfAgility"/> <!-- Default 65 -->
 		<passive_effect name="StaminaLoss" operation="base_set" value="14.4" tags="primary"/> <!-- Default 16 -->
 		<passive_effect name="DegradationMax" operation="base_set" value="1000,2000" tier="1,6" tags="perkDeepCuts"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
@@ -1468,7 +1470,7 @@
 		<property name="HarvestLength" value="1.6"/>
 	</property>
 	<effect_group name="meleeWpnBladeT3MacheteMini">
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="75" tags="perkDeepCuts,perkFlurryOfAgility"/> <!-- Default 65 -->
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="80" tags="perkDeepCuts,perkFlurryOfAgility"/> <!-- Default 65 -->
 		<passive_effect name="StaminaLoss" operation="base_set" value="14.4" tags="primary"/> <!-- Default 16 -->
 		<passive_effect name="DegradationMax" operation="base_set" value="1000,2000" tier="1,6" tags="perkDeepCuts"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
@@ -3734,7 +3736,6 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="30"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="15"/>			
 			<display_value name="dStaminaRegen" value=".15"/>
-			<display_value name="dHyperthermalResist" value="30"/>
 			<display_value name="dDuration" value="900"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceCoolerDuration" operation="add" value="903"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceCoolerDuration" operation="set" value="2703">
@@ -4145,7 +4146,7 @@
 	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
 	<effect_group tiered="false" name="Food Tier 0">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="55"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="25">
 			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
@@ -4397,23 +4398,13 @@
 	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
 	<effect_group tiered="false" name="Food Tier 2">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="60"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="65"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="25">
 			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-	</effect_group>
-
-	<effect_group tiered="false" name="Crawfish Gumbo Vitamin">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffFatiguedTrigger"/><display_value name="dStopsWeakness" value="1"/>
-		<display_value name="dDiseaseResist" value="1"/>
-		<display_value name="dDuration" value="720"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="add" value="723"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="set" value="2163">
-			<requirement name="CVarCompare" cvar="$buffDrugVitaminsDuration" operation="GT" value="2163"/></triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugVitamins"/>
 		<display_value name="dSmellUse" value="50"/>
 	</effect_group>
 </item>
@@ -4442,7 +4433,7 @@
 	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
 	<effect_group tiered="false" name="Food Tier 2">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="60"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="65"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="25">
 			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
@@ -4450,15 +4441,6 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		<display_value name="dSmellUse" value="50"/>
-	</effect_group>
-	
-	<effect_group tiered="false" name="Yucca Smoothie Warmth">
-			<display_value name="dHypothermalResist" value="30"/>
-			<display_value name="dDuration" value="900"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="add" value="903"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="2703">
-			<requirement name="CVarCompare" cvar="$buffYuccaJuiceSmoothieDuration" operation="GT" value="2703"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffYuccaJuiceSmoothie"/>
 	</effect_group>
 </item>
 
@@ -4481,7 +4463,7 @@
 	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
 	<effect_group tiered="false" name="Food Tier 2">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="60"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthFarmer" operation="set" value="25">
 			<requirement name="HasBuff" buff="buffFarmerSetBonus"/></triggered_effect>
@@ -4489,16 +4471,6 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		<display_value name="dSmellUse" value="50"/>
-	</effect_group>
-	
-	<effect_group tiered="false" name="Mega Crush Speed">
-			<display_value name="dStaminaRegen" value=".15"/>
-			<display_value name="dRunSpeed" value=".5"/>
-			<display_value name="dDuration" value="120"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="123"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="363">
-				<requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="363"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMegaCrush"/>
 	</effect_group>
 </item>
 
