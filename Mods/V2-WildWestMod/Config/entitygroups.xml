@@ -779,11 +779,13 @@
 	
  <!-- First Crispy Family-->	
 	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS40']">
-		guppyVultureBurnt	
+		guppyVultureBurnt
+		zombieBurnt, .05
 	</set>	
 	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS80']">
 		guppyVultureBurnt
 		guppyMommaVultureBurnt, .1
+		zombieBurnt, .05
 		zombieTheRat, .025
 	</set>
  <!-- First Grin Bomber - Military-->
@@ -807,7 +809,9 @@
 	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']">
 		guppyVultureBurnt
 		guppyMommaVultureBurnt, .2
-		zombieTheRat, .05
+		zombieBurnt, .1
+		zombieBurntFeral, .05
+		zombieTheRat, .025
 		zombieTheRatFeral, .025
 	</set>
 	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']">
@@ -834,6 +838,9 @@
 		guppyMommaVultureBurnt, .3
 		guppyRadiatedMommaVultureBurnt, .2
 		guppyRadiatedFireMommaVultureBurnt, .1
+		zombieBurnt, .075
+		zombieBurntFeral, .05
+		zombieBurntRadiated, .025
 		zombieTheRat, .075
 		zombieTheRatFeral, .05
 		zombieTheRatRadiated, .025
@@ -872,6 +879,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -900,6 +912,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -928,6 +945,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -956,6 +978,14 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
+		zombieTheRat, .1
+		zombieTheRatFeral, .075
+		zombieTheRatRadiated, .05
 	</set>
 	
 	<set xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']">
@@ -982,6 +1012,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1011,6 +1046,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1040,6 +1080,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1069,6 +1114,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1098,6 +1148,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1127,6 +1182,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1156,6 +1216,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1185,6 +1250,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1214,6 +1284,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1243,6 +1318,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1272,6 +1352,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1301,6 +1386,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1330,6 +1420,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1359,6 +1454,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1388,6 +1488,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1417,6 +1522,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1446,6 +1556,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1475,6 +1590,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1504,6 +1624,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1530,6 +1655,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1556,6 +1686,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1582,6 +1717,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
@@ -1608,6 +1748,11 @@
 		guppyMommaVultureBurnt, .4
 		guppyRadiatedMommaVultureBurnt, .3
 		guppyRadiatedFireMommaVultureBurnt, .2
+		zombieBurnt, .1
+		zombieBurntFeral, .075
+		zombieBurntRadiated, .05
+		zombieBurntCharged, .025
+		zombieBurntInfernal, .025
 		zombieTheRat, .1
 		zombieTheRatFeral, .075
 		zombieTheRatRadiated, .05
