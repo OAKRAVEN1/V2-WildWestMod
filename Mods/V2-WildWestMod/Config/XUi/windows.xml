@@ -99,7 +99,7 @@
 		
 		<texture depth="8" texture="@:Textures/UI/Compass/overlay-{compass_language}.png" pos="50, -16" width="360" height="27" color="[iconColor]" name="compassTexture3" rect_size="0.25,1" rect_offset="{#compass_rotation / 360 + 0.0625 - 0.125},0" />
 		<texture depth="10" pos="239,0" width="35" height="35" pivot="center" texture="@modfolder:Textures/compass_pointer.png"/>
-		<texture pos="234,-25" depth="1" width="440" height="80" pivot="center" texture="@modfolder:Textures/wwmcompass.png"/>
+		<texture pos="234,-36" depth="1" width="440" height="80" pivot="center" texture="@modfolder:Textures/wwmcompass.png"/>
 		
 		<sprite pos="236,-60" sprite="" color="255,255,255,255" globalopacitymod="1.8" visible="{showtime}">
 			<label depth="2" width="300" height="30" text="{daytitle}: [{daycolor}]{day}[-]     {timetitle}: {time}     [{outsidetempcolor}]{outsidetemp}[-]" font_size="28" pivot="center" effect="outline" upper_case="true" justify="center"/>

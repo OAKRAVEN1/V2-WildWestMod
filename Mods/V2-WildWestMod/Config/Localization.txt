@@ -1315,7 +1315,7 @@ resourceClayLumpBundle,items,Item,,,Stack of Clay Soil (6000),,Stapel Lehmboden 
 resourceClayLumpBundleDesc,items,Item,,,This is a compact stack of clay soil. Use this item to open and unpack it.,,"Ein kompakter Stapel Lehmboden. Benutze diesen Gegenstand, um ihn zu öffnen und zu entladen.",Pila compacta de terreno de arcilla. Usa este objeto para abrirla y descargarla.,C'est une pile compacte de sol en argile. Utilisez cet objet pour l'ouvrir et le déballer.,Un mucchio compatto di argilla. Usa questo oggetto per la sua apertura.,大量の粘土がコンパクトにまとめられています。このアイテムを使用すると開封や内容品の取り出しが可能です。,식토 압축되어 있는 더미입니다. 이 아이템을 사용하면 낱개로 풀립니다.,"Zbity stos gleba gliniasta. Użyj tego przedmiotu, aby go otworzyć i rozpakować.",Uma pilha compacta de solo argiloso. Use este item para abrir e descompactar.,"Компактный запас Глинистый грунт. Используйте, чтобы распаковать его.",Killi toprakn oluşan yığın. Açmak ve içindekileri çıkarmak için bu öğeyi kullan.,这是足足一堆粘土。使用此道具打开。,這是一堆排列緊密黏土堆。用這個物品打開並取出。
 
 Ammobench,blocks,Workstation,,,Ammo Press,,,,,,,,,,,,,
-AmmobenchDesc,blocks,Block,,,"The Ammo Press allows players to press ammunition in a compact standalone device.",,,,,,,,,,,,,
+AmmobenchDesc,blocks,Block,,,"The Ammo Press allows players to press ammunition in a compact standalone device. Ammo bundles craft in half the time.",,,,,,,,,,,,,
 workstationsT3-2OAB,progression,Attribute,,,Tier 3: Ammo Press,,,,,,,,,,,,,
 lblCategoryAmmoPress,UI,Tooltip,,,Ammo,,Munition,Munición,Munitions,Munizioni,弾薬,탄약,Amunicja,Munição,Боеприпасы,Mühimmat,弹药
 lblCategoryAmmoPressRegularAmmo,UI,Tooltip,,,Regular Ammo,,,,,,,,,,,,,
