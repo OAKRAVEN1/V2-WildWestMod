@@ -567,8 +567,8 @@
 		short_description_key="challengeGathererPreciousShort" description_key="challengeGathererPreciousDesc"
 		reward_text_key="challenge_reward_10000xp" reward_event="challenge_reward_10000">
 		<objective type="Harvest" item="resourceSilverNugget" count="20" block_tag="ore"/>
-		<objective type="Harvest" item="resourceGoldNugget" count="20" block_tag="ore"/>
-		<objective type="Harvest" item="resourceRawDiamond" count="20" block_tag="ore"/>
+		<objective type="Harvest" item="resourceGoldNugget" count="15" block_tag="ore"/>
+		<objective type="Harvest" item="resourceRawDiamond" count="10" block_tag="ore"/>
 	</challenge>
 
 
@@ -650,50 +650,50 @@
 	<challenge name="healerBleeding" title_key="challengeHealerBleeding" icon="ui_game_symbol_medical" group="Healer"
 		short_description_key="challengeHealerBleedingShort" description_key="challengeHealerBleedingDesc"
 		reward_text_key="challenge_reward_2000xp" reward_event="challenge_reward_2000">
-		<objective type="CureDebuff" debuff="buffInjuryBleeding" item="medicalBandage,medicalFirstAidBandage,medicalFirstAidKit,resourceSewingKit" count="25"/>
+		<objective type="CureDebuff" debuff="buffInjuryBleeding" item="medicalBandage,medicalFirstAidBandage,medicalFirstAidKit,resourceSewingKit" count="5"/>
 	</challenge>
 
 	<challenge name="healerInfection" title_key="challengeHealerInfection" icon="ui_game_symbol_medical" group="Healer"
 		short_description_key="challengeHealerInfectionShort" description_key="challengeHealerInfectionDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
 		<objective type="CureDebuff" debuff="buffInfection01Untreated,buffInfection02Untreated,buffInfection03Untreated,buffInfection04"
-		item="foodHoney,drugHerbalAntibiotics,drugAntibiotics" count="10"/>
+		item="foodHoney,drugHerbalAntibiotics,drugAntibiotics" count="5"/>
 	</challenge>
 
 	<challenge name="healerDysentery" title_key="challengeHealerDysentery" icon="ui_game_symbol_medical" group="Healer"
 		short_description_key="challengeHealerDysenteryShort" description_key="challengeHealerDysenteryDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="CureDebuff" debuff="buffDysenteryMain" item="drinkJarGoldenRodTea,drinkJarPureMineralWater" count="10"/>
+		<objective type="CureDebuff" debuff="buffDysenteryMain" item="drinkJarGoldenRodTea,drinkJarPureMineralWater" count="1"/>
 	</challenge>
 
 	<challenge name="healerBrokenLeg" title_key="challengeHealerBrokenLeg" icon="ui_game_symbol_medical" group="Healer"
 		short_description_key="challengeHealerBrokenLegShort" description_key="challengeHealerBrokenLegDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="CureDebuff" debuff="buffLegBroken" item="medicalSplint,medicalPlasterCast" count="10"/>
+		<objective type="CureDebuff" debuff="buffLegBroken" item="medicalSplint,medicalPlasterCast" count="5"/>
 	</challenge>
 
 	<challenge name="healerBrokenArm" title_key="challengeHealerBrokenArm" icon="ui_game_symbol_medical" group="Healer"
 		short_description_key="challengeHealerBrokenArmShort" description_key="challengeHealerBrokenArmDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="CureDebuff" debuff="buffArmBroken" item="medicalSplint,medicalPlasterCast" count="10"/>
+		<objective type="CureDebuff" debuff="buffArmBroken" item="medicalSplint,medicalPlasterCast" count="5"/>
 	</challenge>
 
 	<challenge name="healerConcussion" title_key="challengeHealerConcussion" icon="ui_game_symbol_medical" group="Healer"
 		short_description_key="challengeHealerConcussionShort" description_key="challengeHealerConcussionDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="CureDebuff" debuff="buffInjuryConcussion" item="drugPainkillers" count="10"/>
+		<objective type="CureDebuff" debuff="buffInjuryConcussion" item="drugPainkillers" count="1"/>
 	</challenge>
 
 	<challenge name="healerFatigued" title_key="challengeHealerFatigued" icon="ui_game_symbol_medical" group="Healer"
 		short_description_key="challengeHealerFatiguedShort" description_key="challengeHealerFatiguedDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="CureDebuff" debuff="buffFatigued" item="drugVitamins" count="10"/>
+		<objective type="CureDebuff" debuff="buffFatigued" item="drugVitamins" count="5"/>
 	</challenge>
 
 	<challenge name="healerLaceration" title_key="challengeHealerLaceration" icon="ui_game_symbol_medical" group="Healer"
 		short_description_key="challengeHealerLacerationShort" description_key="challengeHealerLacerationDesc"
 		reward_text_key="challenge_reward_5000xp" reward_event="challenge_reward_5000">
-		<objective type="CureDebuff" debuff="buffLaceration" item="medicalFirstAidKit,resourceSewingKit" count="10"/>
+		<objective type="CureDebuff" debuff="buffLaceration" item="medicalFirstAidKit,resourceSewingKit" count="5"/>
 	</challenge>
 
 

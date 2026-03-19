@@ -166,7 +166,7 @@
 		<!-- *** ZOMBIE_SCREAMER -->
 <entity_class name="zombieScreamer" extends="zombieTemplateShort">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome"/>
 	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse1"/>
 	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	<property name="SoundRandom" value="zombiefemalescoutroam"/>
@@ -193,7 +193,7 @@
 		<!-- *** ZOMBIE_SCREAMER_FERAL -->
 <entity_class name="zombieScreamerFeral" extends="zombieScreamer">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
 	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse3"/>
 
 	<!-- Gameplay zombieScreamerFeral -->
@@ -213,7 +213,7 @@
 		<!-- *** ZOMBIE_SCREAMER_RADIATED -->
 <entity_class name="zombieScreamerRadiated" extends="zombieScreamerFeral">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse2"/>
 	<!--property name="MatColor" value="radiated"/-->
 	<!--<property name="ParticleOnSpawn" value="@:ParticleEffects/RadiatedParticlesOnMesh.prefab" param1="SetShapeToMesh0"/>-->
@@ -236,7 +236,7 @@
 		<!-- *** ZOMBIE_SCREAMER_CHARGED -->
 <entity_class name="zombieScreamerCharged" extends="zombieScreamerRadiated">
 	<!--property name="MatColor" value="charged"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,charged"/>
 	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?MeduseBlue"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Slim Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
@@ -254,7 +254,7 @@
 <entity_class name="zombieBiker" extends="zombieTemplateMale">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="SizeScale" value="1.08"/>
-	<property name="Tags" value="entity,zombie,walker"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?OaksCowboyBiker"/>
 	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	<property name="Mass" value="230"/>
@@ -278,7 +278,7 @@
 
 <entity_class name="zombieBikerFeral" extends="zombieBiker">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?OaksCowboyBikerFed"/>
 
 	<!-- Gameplay zombieBikerFeral -->
@@ -300,7 +300,7 @@
 	
 <entity_class name="zombieBikerRadiated" extends="zombieBikerFeral">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?OaksCowboyBikerRad"/>
 	<!--property name="MatColor" value="radiated"/-->
 
@@ -323,7 +323,7 @@
 <entity_class name="zombieBikerInfernal" extends="zombieBikerRadiated">
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?OaksCowboyBikerOrenge"/>
 	<!--property name="MatColor" value="infernal"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Sturdy Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
 	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
@@ -340,7 +340,7 @@
 
  <entity_class name="animalSpider" extends="animalTemplateHostile">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,animal,hostile"/>
+	<property name="Tags" value="entity,animal,hostile,spider,perkAT02,perkAT03,perkAT04,perkAT05"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_bear"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_bear"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -411,6 +411,7 @@
 <!-- Daddy Spider -->
 
 	<entity_class name="animalDaddySpider" extends="animalSpider">
+	<property name="Tags" value="entity,animal,hostile,spider,perkAT02,perkAT03,perkAT04,perkAT05"/>
 	<property name="Mesh" value="#@modfolder:Resources/OakSpider.unity3d?OakSpiderSmall2"/>	
 	<property name="SizeScale" value="1.4"/>
 	
@@ -440,6 +441,7 @@
 <!-- Mummy Spider -->
 
  <entity_class name="animalMummySpider" extends="animalSpider">
+ 	<property name="Tags" value="entity,animal,hostile,spider,perkAT02,perkAT03,perkAT04,perkAT05"/>
 	<property name="Mesh" value="#@modfolder:Resources/OakSpider.unity3d?OakSpiderSmall3"/>	
 	<property name="SizeScale" value="1.8"/>
 	
@@ -483,7 +485,7 @@
 <entity_class name="zombieFatCop" extends="zombieTemplateMale">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityZombieCop"/>
-	<property name="Tags" value="entity,zombie,walker,zombieCop"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,zombieCop"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?SheriffOak"/>
 	<property name="WalkType" value="1"/>
 	<property name="RightHandJointName" value="Jaw"/>
@@ -546,7 +548,7 @@
 		<!-- NEW ZOMBIE_FAT_COP_FERAL -->
 <entity_class name="zombieFatCopFeral" extends="zombieFatCop">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,zombieCop"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,zombieCop"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?SheriffOakfed"/>
 	<!-- Gameplay zombieFatCopFeral -->
 	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
@@ -578,7 +580,7 @@
 		<!-- NEW ZOMBIE_FAT_COP_RADIATED -->
 <entity_class name="zombieFatCopRadiated" extends="zombieFatCopFeral">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated,zombieCop"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated,zombieCop"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?SheriffOakRad"/>
 	<!--property name="MatColor" value="radiated"/-->
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
@@ -605,7 +607,7 @@
 		<!-- *** ZOMBIE_FAT_COP_INFERNAL -->
 <entity_class name="zombieFatCopInfernal" extends="zombieFatCopRadiated">
 	<!--property name="MatColor" value="infernal"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,infernal,zombieCop"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal,zombieCop"/>
 	<property name="Mesh" value="#@modfolder:Resources/SheriffOak.unity3d?SheriffOakBlue"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Strong Infernal -->
 	<property name="PainResistPerHit" value="3, .5, .5"/><!-- normal, at low health, health% -->
@@ -625,7 +627,7 @@
 
 <entity_class name="zombieMutated" extends="zombieFatCop">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral"/> <!-- added feral -->
+	<property name="Tags" value="entity,zombie,walker,feral,wasteland"/>
 	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutant"/>
 	<property name="SizeScale" value="1"/>
 	<property name="ModelType" value="Standard"/>
@@ -667,7 +669,7 @@
 		<!-- *** ZOMBIE_MUTATED_FERAL -->
 <entity_class name="zombieMutatedFeral" extends="zombieMutated">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Tags" value="entity,zombie,walker,wasteland,feral"/>
 	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantfed"/>
 	<property name="SizeScale" value="1.1"/>
 
@@ -688,7 +690,7 @@
 		<!-- *** ZOMBIE_MUTATED_RADIATED -->
 <entity_class name="zombieMutatedRadiated" extends="zombieMutatedFeral">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Tags" value="entity,zombie,walker,wasteland,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantrad"/>
 	<!--property name="MatColor" value="radiated"/-->
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
@@ -712,7 +714,7 @@
 		<!-- *** ZOMBIE_MUTATED_CHARGED -->
 <entity_class name="zombieMutatedCharged" extends="zombieMutatedRadiated">
 	<!--property name="MatColor" value="charged"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Tags" value="entity,zombie,walker,wasteland,feral,charged"/>
 	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantBlue"/>
 	<property name="ExperienceGain" value="1700"/><!-- XP Sturdy Charged -->
 	<property name="HandItem" value="meleeHandzombieMutatedCharged"/>
@@ -728,7 +730,7 @@
 		<!-- *** ZOMBIE_MUTATED_INFERNAL -->
 <entity_class name="zombieMutatedInfernal" extends="zombieMutatedRadiated">
 	<!--property name="MatColor" value="infernal"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Tags" value="entity,zombie,walker,wasteland,feral,infernal"/>
 	<property name="Mesh" value="#@modfolder:Resources/mutantoak.unity3d?mutantOrenge"/>
 	<property name="ExperienceGain" value="1900"/><!-- XP Sturdy Infernal -->
 	<property name="HandItem" value="meleeHandzombieMutatedInfernal"/>
@@ -746,7 +748,7 @@
 
  <entity_class name="Grin" extends="zombieTemplateShort">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,walker"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,zombieSoldier"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?Grin"/>
 			<property name="SoundRandom" value="Grinroam"/>
 			<property name="SoundAlert" value="Grinalert"/>
@@ -782,7 +784,7 @@
 	  <!-- zombieSoldier -->
 	  <entity_class name="zombieSoldier" extends="zombieTemplateMale">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,zombieSoldier"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,zombieSoldier"/>
 	<property name="SoundRandom" value="zombiemale2roam"/>
 	<property name="SoundAlert" value="zombiemale2alert"/>
 	<property name="SoundAttack" value="zombiemale2attack"/>
@@ -814,7 +816,7 @@
 		<!-- *** ZOMBIE_SOLDIER_FERAL -->
 <entity_class name="zombieSoldierFeral" extends="zombieSoldier">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,zombieSoldier"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,zombieSoldier"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinKillerFeral"/>
 	<!-- Gameplay zombieSoldierFeral -->
 	<property name="PainResistPerHit" value=".7"/><!-- Feral -->
@@ -835,7 +837,7 @@
 		<!-- *** ZOMBIE_SOLDIER_RADIATED -->
 <entity_class name="zombieSoldierRadiated" extends="zombieSoldierFeral">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated,zombieSoldier"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated,zombieSoldier"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinKillerRadiated"/>
 	<!--property name="MatColor" value="radiated"/-->
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
@@ -858,7 +860,7 @@
 		<!-- *** ZOMBIE_SOLDIER_INFERNAL -->
 <entity_class name="zombieSoldierInfernal" extends="zombieSoldierRadiated">
 	<!--property name="MatColor" value="infernal"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinInfernal"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Fit Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
@@ -876,7 +878,7 @@
 	  
 	  <entity_class name="zombieMaleHazmat" extends="Grin">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,walker"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmat"/>
 			<property name="SoundRandom" value="zombie_hazmat_roam"/>
 			<property name="SoundAlert" value="zombie_hazmat_alert"/>
@@ -902,7 +904,7 @@
 	  
 	  <entity_class name="zombieMaleHazmatFeral" extends="Grin">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,walker"/>
+	        <property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatFeral"/>
 			<property name="SoundRandom" value="zombie_hazmat_roam"/>
 			<property name="SoundAlert" value="zombie_hazmat_alert"/>
@@ -939,7 +941,7 @@
 	  
 	  <entity_class name="zombieMaleHazmatRadiated" extends="Grin">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,walker"/>
+	        <property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatRadiated"/>
 			<!--property name="MatColor" value="radiated"/-->
 			<property name="SoundRandom" value="zombie_hazmat_roam"/>
@@ -978,7 +980,7 @@
 		<!-- *** ZOMBIE_HAZMAT_CHARGED -->
 <entity_class name="zombieMaleHazmatCharged" extends="zombieMaleHazmatRadiated">
 	<!--property name="MatColor" value="charged"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,charged"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatCharged"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Normal Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
@@ -994,7 +996,7 @@
 		<!-- *** ZOMBIE_HAZMAT_INFERNAL -->
 <entity_class name="zombieMaleHazmatInfernal" extends="zombieMaleHazmatRadiated">
 	<!--property name="MatColor" value="infernal"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinHazmatInfernal"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Normal Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
@@ -1016,7 +1018,7 @@
 	<entity_class name="zombieGrinBomb" extends="zombieFatCop">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityZombieCop"/>
-	<property name="Tags" value="entity,zombie,feral,zombieGrinBomb"/> <!-- swapped walker for feral -->
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal,zombieGrinBomb"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?GrinBomb"/>
 	<property name="WalkType" value="1"/>
 	<property name="RightHandJointName" value="Jaw"/>
@@ -1102,7 +1104,7 @@
 	
 	<entity_class name="animalHorseKiller" extends="animalTemplateHostile">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,animal,hostile,boar,perkAT02,perkAT03,radiated"/>
+	<property name="Tags" value="entity,animal,zombie,zombieAnimal,hostile,boar,perkAT02,perkAT03,perkAT04,perkAT05,radiated"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_pig"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_pig"/>
 	<property name="IsEnemyEntity" value="false"/><!-- override hostile template setting so he can spawn in safe zones -->
@@ -1175,7 +1177,7 @@
 <entity_class name="zombieDemolition" extends="zombieTemplateMale">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Class" value="EntityZombieCop"/>
-	<property name="Tags" value="entity,zombie,walker,boss"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,boss"/>
 	<property name="Mesh" value="#@modfolder:Resources/windigo2.unity3d?WendigoOld5"/>
 	<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	<property name="ModelType" value="Standard"/>
@@ -1245,7 +1247,7 @@
 
 <entity_class name="SnowWendigo" extends="zombieTemplateMale">
             <property name="UserSpawnType" value="Menu"/>
-            <property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+            <property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
             <property name="Mesh" value="#@modfolder:Resources/windigo.unity3d?WendigoOld4"/>
 			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
             <property name="ModelType" value="Standard"/>
@@ -1294,7 +1296,7 @@
 
 <entity_class name="zombieTheRat" extends="zombieTemplateMale">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,spider"/>
+	        <property name="Tags" value="entity,zombie,spider,allbiome"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3"/>
 			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="ModelType" value="Standard"/>
@@ -1352,7 +1354,7 @@
 
 <entity_class name="zombieTheRatFeral" extends="zombieTemplateMale">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,feral,spider"/>
+	        <property name="Tags" value="entity,zombie,spider,allbiome,feral"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3Fad"/>   <!-- yes, Rat3Fad -->
 			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="ModelType" value="Standard"/>
@@ -1411,7 +1413,7 @@
 
 <entity_class name="zombieTheRatRadiated" extends="zombieTemplateMale">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,feral,spider,radiated"/>
+	        <property name="Tags" value="entity,zombie,spider,allbiome,feral,radiated"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3Rad"/>
 			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="ModelType" value="Standard"/>
@@ -1474,7 +1476,7 @@
 
 <entity_class name="zombieUtilityWorker" extends="zombieTemplateMale">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,walker"/>
+	        <property name="Tags" value="entity,zombie,walker,allbiome"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak"/>
 			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 	        <property name="ModelType" value="Standard"/>
@@ -1503,7 +1505,7 @@
 <!-- Gambler Feral -->  
 <entity_class name="zombieUtilityWorkerFeral" extends="zombieUtilityWorker">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
 	<property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak2"/>
 
 	<!-- Gameplay zombieUtilityWorkerFeral -->
@@ -1523,7 +1525,7 @@
 		<!-- *** ZOMBIE_UTILITY_WORKER_RADIATED -->
 <entity_class name="zombieUtilityWorkerRadiated" extends="zombieUtilityWorkerFeral">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak3"/>
 	<!--property name="MatColor" value="radiated"/-->
 
@@ -1542,7 +1544,7 @@
 		<!-- *** ZOMBIE_UTILITY_WORKER_CHARGED -->
 <entity_class name="zombieUtilityWorkerCharged" extends="zombieUtilityWorkerRadiated">
 	<!--property name="MatColor" value="charged"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,charged"/>
 	<property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak3"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Utility Worker Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
@@ -1558,7 +1560,7 @@
 		<!-- *** ZOMBIE_UTILITY_WORKER_INFERNAL -->
 <entity_class name="zombieUtilityWorkerInfernal" extends="zombieUtilityWorkerRadiated">
 	<!--property name="MatColor" value="infernal"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal"/>
 	<property name="Mesh" value="#@modfolder:Resources/Oak.unity3d?Oak3"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Utility Worker Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
@@ -1577,7 +1579,7 @@
 
 <entity_class name="zombieNurse" extends="zombieTemplateShort">
 	        <property name="UserSpawnType" value="Menu"/>
-	        <property name="Tags" value="entity,zombie,walker"/>
+	        <property name="Tags" value="entity,zombie,walker,allbiome"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?Nurse"/>
 			<property name="PhysicsBody" value="mixamoOakWWMConvertedStandardZombie"/>
 			<property name="SoundRandom" value="zombiefemaleroam"/>
@@ -1603,7 +1605,7 @@
 <!-- Michaela Feral -->  
 <entity_class name="zombieNurseFeral" extends="zombieNurse">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
 	<property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?Nurse2"/>
 
 	<!-- Gameplay michaelaFeral -->
@@ -1624,7 +1626,7 @@
 
 <entity_class name="zombieNurseRadiated" extends="zombieNurseFeral">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?Nurse3"/>
 	<!--property name="MatColor" value="radiated"/-->
 
@@ -1643,7 +1645,7 @@
 		<!-- *** ZOMBIE_NURSE_CHARGED -->
 <entity_class name="zombieNurseCharged" extends="zombieNurseRadiated">
 	<!--property name="MatColor" value="charged"/-->
-	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,charged"/>
 	<property name="Mesh" value="#@modfolder:Resources/Nurse.unity3d?NurseBlue"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Slim Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
@@ -1688,7 +1690,7 @@
 				<!-- *** ZOMBIE_LAB_FERAL -->	  
 	  <entity_class name="zombieLabFeral" extends="zombieLab">
 	        <property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,zombie,walker,allbiome"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
 	        <property name="Mesh" value="#@modfolder:Resources/CowGirlMedusa.unity3d?cowgirlMedusaFed"/>
 	
 			<!-- Gameplay zombieLabFeral -->
@@ -1915,7 +1917,9 @@
 		<!-- Custom Vulture - Large Mutated Vulture -->
 		
 <entity_class name="animalZombieLargeVulture" extends="animalZombieVulture">
-	<property name="Tags" value="entity,animal,zombie,hostile,vulture"/>
+	<property name="EntityFlags" value="animal,zombie"/>
+	<property name="EntityType" value="Zombie"/>
+	<property name="Tags" value="entity,animal,zombie,zombieAnimal,hostile,vulture"/>
 	<property name="Class" value="EntityVulture"/>
 	<property name="EntityType" value="Zombie"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -1957,7 +1961,8 @@
 <entity_class name="animalWildWestSnowBear" extends="zombieTemplateMale"> <!-- required setting -->
 			<property name="UserSpawnType" value="Menu"/>    
             <property name="SizeScale" value="1"/> 
-			<property name="Tags" value="entity,animal,zombie,hostile,bear,animalWildWestSnowBear,UMA2"/>
+			<property name="EntityFlags" value="animal,zombie"/>
+			<property name="Tags" value="entity,animal,zombie,zombieAnimal,hostile,bear,perkAT05"/>
             <property name="HasRagdoll" value="false"/>
             <property name="HasDeathAnim" value="true"/>
             <property name="RootMotion" value="true"/>
@@ -2030,7 +2035,7 @@
 	<entity_class name="animalSnowHare" extends="animalTemplateTimid">
 	<property name="Class" value="EntityAnimalRabbit"/>
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,animal,rabbit,perkAT01,perkAT02,perkAT03"/>
+	<property name="Tags" value="entity,animal,rabbit,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -2089,7 +2094,7 @@
 	<entity_class name="animalDesertHare" extends="animalTemplateTimid">
 	<property name="Class" value="EntityAnimalRabbit"/>
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,animal,rabbit,perkAT01,perkAT02,perkAT03"/>
+	<property name="Tags" value="entity,animal,rabbit,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -2145,7 +2150,7 @@
 		<!-- CUSTOM Zombie Wasteland Crater Bear -->	
 	
 	<entity_class name="animalZombieWastelandCraterBear" extends="animalZombieBear">
-	<property name="Tags" value="entity,animal,zombie,hostile,bear"/>
+	<property name="Tags" value="entity,animal,hostile,bear,perkAT04,perkAT05"/>
 
 	<property name="Prefab" value="@:Entities/Animals/Bear/animalBearZombiePrefab.prefab"/>
 	<property name="AIFeralSense" value="1.2"/>
@@ -2191,7 +2196,7 @@
 		
 		<entity_class name="animalZombieFeralChicken" extends="animalTemplateHostile">
 			<property name="UserSpawnType" value="Menu"/>
-			<property name="Tags" value="entity,animal,hostile,zombie,chicken,perkAT01,perkAT02,perkAT03"/>
+			<property name="Tags" value="entity,animal,hostile,zombie,chicken,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
 			<property name="ExperienceGain" value="1000"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_chicken"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_chicken"/>
@@ -2268,7 +2273,7 @@
 
 <entity_class name="animalBisonBoar" extends="animalTemplateHostile">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,animal,hostile,boar,perkAT02,perkAT03,radiated"/>
+	<property name="Tags" value="entity,animal,hostile,boar,perkAT02,perkAT03,perkAT04,perkAT05,radiated"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_pig"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_pig"/>
 	<property name="IsEnemyEntity" value="false"/><!-- override hostile template setting so he can spawn in safe zones -->
@@ -2329,7 +2334,7 @@
 		
 <entity_class name="animalBisonBear" extends="animalTemplateHostile">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,animal,hostile,bear,perkAT03"/>
+	<property name="Tags" value="entity,animal,hostile,boar,perkAT02,perkAT03,perkAT04,perkAT05,radiated"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_bear"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_bear"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -2391,7 +2396,8 @@
 <!-- Bison Zombie -->
 
 <entity_class name="animalBisonZombieBear" extends="animalBisonBear">
-	<property name="Tags" value="entity,animal,zombie,hostile,bear"/>
+	<property name="EntityFlags" value="animal,zombie"/>
+	<property name="Tags" value="entity,animal,zombie,zombieAnimal,hostile,bear,perkAT05"/>
     <property name="Mesh" value="#@modfolder:Resources/BisonNew.unity3d?BisonZed"/>
 	<property name="AIFeralSense" value="1.2"/>
 	<property name="AITask-1" value="BreakBlock"/>
@@ -2435,7 +2441,7 @@
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="EntityFlags" value="animal,zombie"/>
 	<property name="EntityType" value="Zombie"/>
-	<property name="Tags" value="entity,animal,zombie,hostile,vulture"/>
+	<property name="Tags" value="entity,animal,zombie,zombieAnimal,hostile,vulture"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="HasRagdoll" value="false"/>
@@ -2486,7 +2492,7 @@
 <!-- Animal Small Scorpion -->
 <entity_class name="animalScorpion" extends="animalTemplateHostile">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,animal,hostile,bear,perkAT03"/>
+	<property name="Tags" value="entity,animal,hostile,bear,perkAT03,perkAT04,perkAT05"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_bear"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_bear"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -2544,7 +2550,7 @@
 		<!-- CUSTOM Mama Barker -->
 		
 	<entity_class name="zombieFemaleFatBarker" extends="zombieFemaleFatFeral"> <!-- Radiated Conversion -->
-		<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+		<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 		<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 		<!-- Gameplay zombieFemaleFatRadiated -->
@@ -2585,7 +2591,7 @@
 	</entity_class>
 	
 	<entity_class name="zombieFemaleBigFatBarker" extends="zombieFemaleFatFeral"> <!-- Radiated Conversion -->
-		<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+		<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 		<property name="Mesh" value="@:Entities/Zombies/BigMama/ZBigMamaRadiated.prefab"/>
 		<property name="AltMats" value="@:Entities/Zombies/BigMama/Materials/HD_BigMomma_Radiated2.mat,@:Entities/Zombies/BigMama/Materials/HD_BigMomma_Radiated3.mat"/>
 		<property name="MatColor" value="radiated"/>
@@ -2632,7 +2638,7 @@
 		
 		<!-- Feral Gunslinger Wight -->
 	<entity_class name="zombieWightFeralGunslinger" extends="zombieWightFeral">
-		<property name="Tags" value="entity,zombie,walker,feral"/>
+		<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 		<property name="Class" value="EntityZombieCop"/> <!-- Required to activate melee audio for gunfire -->
 		<property name="ExplodeHealthThreshold" value="0"/>
 
@@ -2675,7 +2681,7 @@
 
 		<!-- Radiated Gunslinger Wight -->	
 	<entity_class name="zombieWightRadiatedGunslinger" extends="zombieWightFeralGunslinger">
-		<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+		<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 		<property name="Mesh" value="@:Entities/Zombies/Wight/ZWightRadiated.prefab"/>
 		<property name="MatColor" value="radiated"/>
 		<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
@@ -2737,7 +2743,7 @@
 		<!-- *** ZOMBIE_WIGHT_CHARGED -->
 <entity_class name="zombieWightChargedGunslinger" extends="zombieWightRadiatedGunslinger">
 	<property name="MatColor" value="charged"/>
-	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,charged"/>
 	<property name="ExperienceGain" value="2200"/><!-- XP Fit Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
 	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
@@ -2763,7 +2769,7 @@
 		<!-- *** ZOMBIE_WIGHT_INFERNAL -->
 <entity_class name="zombieWightInfernalGunslinger" extends="zombieWightRadiatedGunslinger">
 	<property name="MatColor" value="infernal"/>
-	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal"/>
 	<property name="ExperienceGain" value="2400"/><!-- XP Fit Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
 	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
@@ -2790,7 +2796,7 @@
 		<!-- Business Bandit - Monsignor -->	
 <entity_class name="zombieBusinessManRadiatedGunslinger" extends="zombieBusinessManRadiated">
 	<property name="HideInSpawnMenu" value="false"/>
-	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	<!-- <property name="Buffs" value="buffLegendaryBoss"/> -->
 	<property name="Mesh" value="@:Entities/Zombies/Suit/ZSuitFeral.prefab"/>
 	<property name="AltMats" value="@:Entities/Zombies/Suit/Materials/HD_SuitZ2.mat,@:Entities/Zombies/Suit/Materials/HD_SuitZ3.mat"/>
@@ -2828,7 +2834,7 @@
 
 	<effect_group name="Base Effects">
 		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="zombieBusinessManRadiatedGunslingerDeco"/>	
-		<passive_effect name="HealthMax" operation="base_set" value="1350"/>
+		<passive_effect name="HealthMax" operation="base_set" value="1500"/>
 		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>-->
 		<!-- Feral damage -->
 		<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4"/>
@@ -2839,7 +2845,7 @@
 		<!-- *** ZOMBIE_BUSINESSMAN_CHARGED -->
 <entity_class name="zombieBusinessManChargedGunslinger" extends="zombieBusinessManRadiatedGunslinger">
 	<property name="MatColor" value="charged"/>
-	<property name="Tags" value="entity,zombie,walker,feral,charged"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,charged"/>
 	<property name="ExperienceGain" value="1400"/><!-- XP Businessman Charged -->
 	<property name="HandItem" value="meleeHandZombieCharged"/>
 	<property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern"/>
@@ -2857,14 +2863,14 @@
 		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="^healthBusinessManCharged"/>
+		<passive_effect name="HealthMax" operation="base_set" value="1800"/>
 	</effect_group>
 </entity_class>
 
 		<!-- *** ZOMBIE_BUSINESSMAN_INFERNAL -->
 <entity_class name="zombieBusinessManInfernalGunslinger" extends="zombieBusinessManRadiatedGunslinger">
 	<property name="MatColor" value="infernal"/>
-	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Businessman Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
 	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
@@ -2882,14 +2888,14 @@
 		<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,2" tag="WasteTreasuresCompleteHarvest"/>
 
 	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="^healthBusinessManInfernal"/>
+		<passive_effect name="HealthMax" operation="base_set" value="2000"/>
 		<passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02"/>
 	</effect_group>
 </entity_class>
 
 		<!-- Texas Red -->
 <entity_class name="zombieLumberjackRadiatedAxe" extends="zombieLumberjackFeral">
-	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	<!--<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>-->
 
 	<!-- Gameplay zombieLumberjackRadiated -->
@@ -2921,7 +2927,7 @@
 		<!-- *** ZOMBIE_LUMBERJACK_INFERNAL -->
 <entity_class name="zombieLumberjackInfernalAxe" extends="zombieLumberjackRadiatedAxe">
 	<property name="MatColor" value="infernal"/>
-	<property name="Tags" value="entity,zombie,walker,feral,infernal"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,infernal"/>
 	<property name="ExperienceGain" value="1600"/><!-- XP Strong Infernal -->
 	<property name="HandItem" value="meleeHandZombieInfernal"/>
 	<property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern"/>
@@ -2947,7 +2953,7 @@
 <!-- Molotov Soldier -->
 
 <entity_class name="zombieMolotovSoldierFeral" extends="zombieSoldier">
-	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,zombieSoldier"/>
 	<property name="Mesh" value="#@modfolder:Resources/Grin.unity3d?Grinmolotov"/>
 	<!-- Gameplay zombieSoldierFeral -->
 	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
@@ -2989,7 +2995,7 @@
 <!-- Fire Spider Glider -->
 
 		<entity_class name="zombieSpiderFeralFireGlider" extends="zombieSpiderFeral">
-			<property name="Tags" value="entity,zombie,walker,feral,radiated,hostile,vulture"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated,hostile,vulture"/>
 			<property name="Class" value="EntityVulture"/>
 			<property name="Mesh" value="@:Entities/Zombies/Spider/ZSpiderFeral.prefab"/>
 			<property name="Mass" value="50"/>
@@ -3052,7 +3058,7 @@
 		<entity_class name="guppyVultureBurnt" extends="zombieTemplateMale">
 			<property name="UserSpawnType" value="Menu"/>    
             <property name="SizeScale" value=".5"/> 
-			<property name="Tags" value="entity,animal,zombie,hostile,vulture,UMA2"/>
+			<property name="Tags" value="entity,animal,zombie,hostile,allbiome,vulture,UMA2"/>
             <property name="HasRagdoll" value="false"/>
             <property name="HasDeathAnim" value="true"/>
             <property name="RootMotion" value="true"/>
@@ -3098,7 +3104,7 @@
 		<entity_class name="guppyMommaVultureBurnt" extends="zombieTemplateMale">
             <property name="UserSpawnType" value="Menu"/>    
             <property name="SizeScale" value="1"/> 
-			<property name="Tags" value="entity,animal,zombie,hostile,vulture,UMA2,feral"/>
+			<property name="Tags" value="entity,animal,zombie,hostile,allbiome,vulture,UMA2,feral"/>
             <property name="HasRagdoll" value="false"/>
             <property name="HasDeathAnim" value="true"/>
             <property name="RootMotion" value="true"/>
@@ -3146,7 +3152,7 @@
 		<entity_class name="guppyRadiatedMommaVultureBurnt" extends="zombieTemplateMale">
             <property name="UserSpawnType" value="Menu"/>    
             <property name="SizeScale" value="1"/> 
-			<property name="Tags" value="entity,animal,zombie,hostile,vulture,UMA2,feral,radiated"/>
+			<property name="Tags" value="entity,animal,zombie,hostile,allbiome,vulture,UMA2,feral,radiated"/>
             <property name="HasRagdoll" value="false"/>
             <property name="HasDeathAnim" value="true"/>
             <property name="RootMotion" value="true"/>
@@ -3201,7 +3207,7 @@
 		<entity_class name="guppyRadiatedFireMommaVultureBurnt" extends="zombieTemplateMale">
             <property name="UserSpawnType" value="Menu"/>   
             <property name="SizeScale" value="1.1"/> 
-			<property name="Tags" value="entity,animal,zombie,hostile,vulture,UMA2,feral,radiated"/>
+			<property name="Tags" value="entity,animal,zombie,hostile,allbiome,vulture,UMA2,feral,radiated"/>
             <property name="HasRagdoll" value="false"/>
             <property name="HasDeathAnim" value="true"/>
             <property name="RootMotion" value="true"/>
@@ -3267,7 +3273,7 @@
 	<entity_class name="zombieRatPet" extends="zombieTemplateMale">
 	        <property name="UserSpawnType" value="Menu"/>
 			<property name="SizeScale" value="1"/>
-	        <property name="Tags" value="entity,zombie,feral,spider,animal"/>
+	        <property name="Tags" value="entity,zombie,allbiome,feral,spider,animal"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3Screamer"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
@@ -3331,7 +3337,7 @@
 	<entity_class name="zombieRatPetFeral" extends="zombieTemplateMale">
 	        <property name="UserSpawnType" value="Menu"/>
 			<property name="SizeScale" value="1"/>
-	        <property name="Tags" value="entity,zombie,feral,spider,animal"/>
+	        <property name="Tags" value="entity,zombie,allbiome,feral,spider,animal"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3ScreamerFed"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
@@ -3395,7 +3401,7 @@
 	<entity_class name="zombieRatPetRadiated" extends="zombieTemplateMale">
 	        <property name="UserSpawnType" value="Menu"/>
 			<property name="SizeScale" value="1"/>
-	        <property name="Tags" value="entity,zombie,feral,spider,animal"/>
+	        <property name="Tags" value="entity,zombie,allbiome,feral,spider,animal"/>
 	        <property name="Mesh" value="#@modfolder:Resources/Rat3.unity3d?Rat3ScreamerRad"/>
 	        <property name="ModelType" value="Standard"/>
 	        <property name="WalkType" value="22"/>
@@ -3461,7 +3467,7 @@
 		<!-- *** ZOMBIE_SKATEBOARDER_UNDERTAKER_RADIATED -->
 <entity_class name="zombieSkateboarderUndertakerRadiated" extends="zombieSkateboarderRadiated">
 	<property name="UserSpawnType" value="Menu"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	<property name="Mesh" value="@:Entities/Zombies/Thug/ZThugFeral.prefab"/>
 	<property name="AltMats" value="@:Entities/Zombies/Thug/Materials/HD_Thug2.mat,@:Entities/Zombies/Thug/Materials/HD_Thug3.mat"/>
 	<property name="Class" value="EntityZombieCop"/> <!-- Required to activate melee audio for gunfire -->
@@ -3514,7 +3520,7 @@
 <entity_class name="zombieOakBigFoot" extends="zombieFatCop">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="Censor" value="1,2"/>
-	<property name="Tags" value="entity,zombie,walker,feral"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral"/>
 	<property name="Mesh" value="#@modfolder:Resources/bigfoot.unity3d?bigfoot.prefab"/>
 	<property name="SoundStepType" value="barehvystep"/>
 	<property name="SizeScale" value="1"/>
@@ -3578,7 +3584,7 @@
 
 <entity_class name="zombieOakBigFootSnow" extends="zombieOakBigFoot">
     <property name="UserSpawnType" value="Menu"/>
-    <property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+    <property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
     <property name="Mesh" value="#@modfolder:Resources/bigfoot.unity3d?bigfootsnow"/>
     <property name="SoundRandom" value="zombielumberjack_roam"/>
     <property name="SoundAlert" value="zombielumberjack_alert"/>
@@ -3607,7 +3613,7 @@
 
 <entity_class name="zombieOakBigFootCharged" extends="zombieOakBigFoot">
     <property name="UserSpawnType" value="Menu"/>
-    <property name="Tags" value="entity,zombie,walker,charged"/>
+    <property name="Tags" value="entity,zombie,walker,allbiome,charged"/>
     <property name="Mesh" value="#@modfolder:Resources/bigfoot.unity3d?bigfootblue"/>
     <property name="SoundRandom" value="zombielumberjack_roam"/>
     <property name="SoundAlert" value="zombielumberjack_alert"/>
@@ -3637,7 +3643,7 @@
 
 <entity_class name="zombieOakBigFootInfernal" extends="zombieOakBigFoot">
     <property name="UserSpawnType" value="Menu"/>
-    <property name="Tags" value="entity,zombie,walker,infernal"/>
+    <property name="Tags" value="entity,zombie,walker,allbiome,infernal"/>
     <property name="Mesh" value="#@modfolder:Resources/bigfoot.unity3d?bigfootorenge"/>
     <property name="SoundRandom" value="zombielumberjack_roam"/>
     <property name="SoundAlert" value="zombielumberjack_alert"/>
@@ -3890,7 +3896,9 @@
 <!-- Mini Plasma Vulture -->
 		
 <entity_class name="animalZombieMiniPlasmaVulture" extends="animalZombieVulture">
-	<property name="Tags" value="entity,animal,zombie,hostile,vulture"/>
+	<property name="EntityFlags" value="animal,zombie"/>
+	<property name="EntityType" value="Zombie"/>
+	<property name="Tags" value="entity,animal,zombie,zombieAnimal,hostile,vulture"/>
 	<property name="Class" value="EntityVulture"/>
 	<property name="EntityType" value="Zombie"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -3994,7 +4002,7 @@
 <!-- Mini Fire Spider Glider -->
 
 		<entity_class name="zombieMiniSpiderFeralFireGlider" extends="zombieSpiderFeral">
-			<property name="Tags" value="entity,zombie,walker,feral,radiated,hostile,vulture"/>
+			<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated,hostile,vulture"/>
 			<property name="Class" value="EntityVulture"/>
 			<property name="Mesh" value="@:Entities/Zombies/Spider/ZSpiderFeral.prefab"/>
             <property name="SizeScale" value=".5"/> 
@@ -4118,7 +4126,7 @@
 <entity_class name="zombieScreamerBossRadiatedSpitter" extends="zombieTemplateMale">
 	<property name="UserSpawnType" value="Menu"/>
 	<property name="SizeScale" value="1.65"/>
-	<property name="Tags" value="entity,zombie,walker,feral,radiated"/>
+	<property name="Tags" value="entity,zombie,walker,allbiome,feral,radiated"/>
 	<property name="Mesh" value="#@modfolder:Resources/Meduse.unity3d?Meduse2"/>
 
 	<!-- Gameplay zombieScreamerRadiated -->

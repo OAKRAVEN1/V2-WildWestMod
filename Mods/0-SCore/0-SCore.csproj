@@ -311,6 +311,7 @@
     <Compile Include="Harmony\EntityAlive\EntityTraderRektMute.cs" />
     <Compile Include="Harmony\EntityAlive\ReplicateSpeed.cs" />
     <Compile Include="Harmony\EntityDrone\EntityDronePatches.cs" />
+    <Compile Include="Harmony\EntityGroups\EntityGroupsGetRandomFromGroup.cs" />
     <Compile Include="Harmony\EntityMoveHelper\DigStart.cs" />
     <Compile Include="Harmony\EntityMoveHelper\StartJump.cs" />
     <Compile Include="Harmony\EntityMoveHelper\Stop.cs" />

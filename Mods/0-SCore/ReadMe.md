@@ -32,6 +32,20 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 
 [ Change Log ]
+
+Version: 2.6.4.713  [ Experimental ]
+	[ Fire Manager ]
+		- Fixed an issue where fire wasn't restarted on relog when enabled.
+
+	[ Challenges ]
+		- Removed an unneccesary safety check that was causing problems with null reference
+
+	[ Farming ]
+		- Refactored the Manage method for planting crops, and added a catch if inventory is full
+
+	[ NPCs ]
+		- Fixed an issue where NPCs could be duplicated when the player dies.
+
 Version: 2.5.53.911
 	[ NPCs ]
 		- Fixed an issue where an NPC would get run over while you were driving, and you'd pay the price.

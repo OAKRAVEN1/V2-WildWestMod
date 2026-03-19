@@ -7956,10 +7956,10 @@
 		<if cond="event('christmas')">
 			<item group="groupHolidayGear" loot_prob_template="low" force_prob="true"/>
 		</if>
-	</conditional>	   
+	</conditional>
 	<item group="booksAllScaled" count="1" buffs="buffPerkBookwormSuccess">
 		<requirement class="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$perkBookwormChance"/>
-	</item>	
+	</item>
 </lootgroup>
 
 <!-- *** Buried_Treasure_Map -->
@@ -10858,9 +10858,9 @@
 </lootcontainer>
 
 <!-- beer cooler -->
-<lootcontainer name="beerCooler" count="1,2" size="6,5" sound_open="UseActions/coolermini_open" sound_close="UseActions/coolermini_close" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="beerCooler" count="1,2" size="8,6" sound_open="UseActions/coolermini_open" sound_close="UseActions/coolermini_close" loot_quality_template="qualBaseTemplate">
 	<item group="groupBeerCooler"/>
-</lootcontainer> <!-- Upgraded from 6,3 since these are player rewards and functional -->
+</lootcontainer> <!-- Upgraded from 6,3 since these are player craftable and functional -->
 
 <!-- working stiffs -->
 <lootcontainer name="workingStiffsCrate" count="1" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
@@ -11050,7 +11050,7 @@
 </lootcontainer>
 
 <!-- construction supplies shipping crate -->
-<lootcontainer name="constructionCrate" count="1" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+<lootcontainer name="constructionCrate" count="1" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 	<item group="groupConstructionCrate"/>
 </lootcontainer>
 
@@ -11090,7 +11090,7 @@
 </lootcontainer>
 
 <!-- cntLootCrateHero, Hero / Hidden Stash Cardboard Loot-->
-<lootcontainer name="hiddenStash" count="1" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualPlus1Template">
+<lootcontainer name="hiddenStash" count="1" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualPlus1Template" ignore_loot_abundance="true">
 	<item group="groupHiddenStash"/>
 </lootcontainer>
 
@@ -11135,7 +11135,7 @@
 </lootcontainer>
 
 <!-- cntBuriedLootStashChest, treasure_taylor etc -->
-<lootcontainer name="buriedTreasure" count="1" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template" destroy_on_close="empty">
+<lootcontainer name="buriedTreasure" count="1" size="8,9" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template" destroy_on_close="empty" ignore_loot_abundance="true">
 	<item group="groupBuriedTreasure"/>
 </lootcontainer>
 

@@ -267,7 +267,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="ammoGasCan" count="800"/>	
 </recipe> <!-- Wild West Mod Values -->
 
-<recipe name="ammoJunkTurretShell" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+<recipe name="ammoJunkTurretShell" count="1" tags="learnable">
 	<ingredient name="resourceScrapIron" count="1"/>
 	<ingredient name="resourceBuckshot" count="1"/>
 	<ingredient name="ammoGasCan" count="1"/>	
@@ -279,7 +279,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="ammoGasCan" count="800"/>
 </recipe> <!-- Wild West Mod Values -->
 
-<recipe name="ammoJunkTurretAP" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+<recipe name="ammoJunkTurretAP" count="1" tags="learnable">
 	<ingredient name="resourceScrapIron" count="4"/>
 	<ingredient name="ammoGasCan" count="1"/>
 </recipe> <!-- Wild West Mod Values -->
@@ -1503,7 +1503,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="resourceScrapLead,resourceAcid,resourceScrapPolymers"/>
 		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
 	</effect_group>
-</recipe--> <!-- perkGreaseMonkey -->
+</recipe-->
 
 <!--recipe name="batterybank" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="10"/>
@@ -1532,7 +1532,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedIron,resourceForgedSteel,resourceMechanicalParts,resourceElectricParts,resourceOil"/>
 	</effect_group>
-</recipe--> <!-- trap -->
+</recipe-->
 
 <recipe name="bucketEmpty" count="1" tags="packMuleCrafting">
 	<ingredient name="resourceForgedIron" count="7"/>
@@ -1734,7 +1734,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<effect_group>
 		<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedIron,resourceMechanicalParts,resourceElectricParts,resourceOil"/>
 	</effect_group>
-</recipe--> <!-- trap -->
+</recipe-->
 
 <!--recipe name="cntApiary" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 	<ingredient name="resourceBeeswax" count="5"/>
@@ -1765,7 +1765,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceDuctTape" count="4"/>
 </recipe> <!-- Bundled cntDewCollector into Variant Helper -->
 
-<recipe name="drinkJarEmpty" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" tags="perkAdvancedEngineering">
+<recipe name="drinkJarEmpty" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
 	<ingredient name="unit_glass" count="25"/>
 	<ingredient name="unit_clay" count="5"/>
 	<effect_group>
