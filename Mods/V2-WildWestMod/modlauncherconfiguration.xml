@@ -1,9 +1,10 @@
 <Servers>
-  <ServerGroup Name="Wild West Mod (V2)">
-    <Server Name="Wild West Mod (V2)" Logo="https://i.imgur.com/xdyD6Wq.png">
+  <ServerGroup Name="Wild West Mod">
+    <Server Name="Wild West Mod" Logo="https://i.imgur.com/xdyD6Wq.png">
       <Description>The Wild West Mod takes you back to the mid 19th Century American Wild West.
 	  
 Features Include:
+- Updated to current V2 Stable
 - Unique Hand Crafted World by Tallman Brad
 - Exclusive Wild West POIs by Medusa, arramus, chaz916, and other creators
 - Custom Weapons, Tools, and props by Oakraven
@@ -18,7 +19,7 @@ Features Include:
 - Custom Horde Night additions and waves, including Guppy's crispies
 - and a great deal more...
 	  </Description>
-        <Version>2.0</Version>
+        <Version>Latest</Version>
 		<RSS/>
         <Excludes></Excludes>
         <ReleaseNotes></ReleaseNotes>

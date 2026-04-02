@@ -14,6 +14,7 @@ public class SCoreModEvents {
         ModletChecks();
         ModEvents.GameStartDone.RegisterHandler(CheckExternalParticles);
         ModEvents.GameStartDone.RegisterHandler(EntityPool);
+        ModEvents.GameStartDone.RegisterHandler(HarvestManager.Load);
 
         VersionCheck.LoadConfig();
         ModEvents.GameStartDone.RegisterHandler(VersionCheck.OnGameStartDone);
