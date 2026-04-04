@@ -2480,6 +2480,7 @@
 	<item name="clothingOutfitT1"/>
 	<item name="clothingHandsT1"/>
 	<item name="clothingFeetT1"/>
+	<item name="clothingSkillMagazine" count="1" loot_prob_template="med"/>
 </lootgroup>
 
 <lootgroup name="groupT2Clothing">
@@ -2487,6 +2488,7 @@
 	<item name="clothingOutfitT2"/>
 	<item name="clothingHandsT2"/>
 	<item name="clothingFeetT2"/>
+	<item name="clothingSkillMagazine" count="1" loot_prob_template="medLow"/>
 </lootgroup>
 
 <lootgroup name="groupT3Clothing">
@@ -2494,6 +2496,7 @@
 	<item name="clothingOutfitT3"/>
 	<item name="clothingHandsT3"/>
 	<item name="clothingFeetT3"/>
+	<item name="clothingSkillMagazine" count="1" loot_prob_template="medLow"/>
 </lootgroup>
 
 <lootgroup name="groupAllClothing" loot_quality_template="q6Template">
