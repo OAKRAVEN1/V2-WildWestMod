@@ -796,16 +796,21 @@ public class EntityAliveSDX : EntityTrader, IEntityOrderReceiverSDX, IEntityAliv
         _bw.Write(holdingItemName);
 
         // 7. Loot Container (The "Backpack" Storage)
-        // This is unique to SDX, so we must save it manually.
-        // We do NOT save 'inventory' or 'bag' here because base.Write already did it.
-        if (lootContainer != null)
+        // For EntityTrader-based entities the player-accessible bag lives in HarvestManager.
+        // Prefer that when present; fall back to lootContainer for any non-trader subclass.
+        if (HarvestManager.Has(entityId))
         {
-            _bw.Write(true); // Flag: Has Container
+            _bw.Write(true);
+            GameUtils.WriteItemStack(_bw, HarvestManager.GetOrCreate(entityId).GetItems());
+        }
+        else if (lootContainer != null)
+        {
+            _bw.Write(true);
             GameUtils.WriteItemStack(_bw, lootContainer.GetItems());
         }
         else
         {
-            _bw.Write(false); // Flag: No Container
+            _bw.Write(false);
         }
     }
 
@@ -852,25 +857,17 @@ public class EntityAliveSDX : EntityTrader, IEntityOrderReceiverSDX, IEntityAliv
         }
 
         // 7. Loot Container
-        // Read the flag first
+        // Items are restored into HarvestManager so that OpenInventory finds them under
+        // the entity's ID.  PostInit will set up lootContainer separately.
         bool hasLootContainer = _br.ReadBoolean();
         if (hasLootContainer)
         {
             ItemStack[] lootItems = GameUtils.ReadItemStack(_br);
-            
-            // Ensure container exists
-            if (lootContainer == null)
-            {
-                Chunk chunk= null;
-                lootContainer = new TileEntityLootContainer(chunk);
-                lootContainer.entityId = this.entityId;
-                // Default size if we can't find the class-specific one yet
-                lootContainer.SetContainerSize(new Vector2i(8, 6)); 
-            }
-            
             if (lootItems != null)
             {
-                lootContainer.items = lootItems;
+                var hc = HarvestManager.GetOrCreate(entityId);
+                for (int i = 0; i < lootItems.Length && i < hc.items.Length; i++)
+                    hc.items[i] = lootItems[i];
             }
         }
     }
@@ -1982,6 +1979,19 @@ public class EntityAliveSDX : EntityTrader, IEntityOrderReceiverSDX, IEntityAliv
 
     public bool FindWeapon(string weapon)
     {
+        // Check starting items first — items like meleeNPCEmptyHand have no CompatibleWeapon property
+        // but are always available because they're part of the NPC's base kit.
+        for (var i = 0; i < itemsOnEnterGame.Count; i++)
+        {
+            if (itemsOnEnterGame[i].itemValue.ItemClass.GetItemName()
+                .Equals(weapon, StringComparison.InvariantCultureIgnoreCase)) return true;
+        }
+
+        if (GetHandItem().ItemClass.GetItemName().Equals(weapon, StringComparison.InvariantCultureIgnoreCase))
+            return true;
+
+        // For NPC weapons that map to a player-held counterpart (via CompatibleWeapon property),
+        // verify the player version is present in the accessible inventory.
         var currentWeapon = ItemClass.GetItem(weapon);
         if (currentWeapon == null) return false;
         if (!currentWeapon.ItemClass.Properties.Contains("CompatibleWeapon")) return false;
@@ -1989,28 +1999,27 @@ public class EntityAliveSDX : EntityTrader, IEntityOrderReceiverSDX, IEntityAliv
         if (string.IsNullOrEmpty(playerWeapon)) return false;
         var playerWeaponItem = ItemClass.GetItem(playerWeapon);
         if (playerWeaponItem == null) return false;
-        if (lootContainer != null)
-        {
-            if (lootContainer.HasItem(playerWeaponItem))
-                return true;
-        }
 
-        // If we don't have it in our loot container, check to see if we had it when we first spawned in.
-        for (var i = 0; i < itemsOnEnterGame.Count; i++)
-        {
-            var itemStack = itemsOnEnterGame[i];
-            if (itemStack.itemValue.ItemClass.GetItemName()
-                .Equals(weapon, StringComparison.InvariantCultureIgnoreCase)) return true;
-        }
+        // EntityTrader-based NPCs store their accessible inventory in HarvestManager.
+        if (this is EntityTrader && HarvestManager.Has(entityId))
+            return HarvestManager.GetOrCreate(entityId).HasItem(playerWeaponItem);
 
-        if (GetHandItem().ItemClass.GetItemName().Equals(weapon, StringComparison.InvariantCultureIgnoreCase))
-            return true;
-        return false;
+        return lootContainer != null && lootContainer.HasItem(playerWeaponItem);
     }
 
 
     public override void SetupStartingItems()
     {
+        // If InitialInventory is already set, this is a restored NPC (picked up and re-placed).
+        // Skip overwriting their inventory with the default XML starting items, but still set
+        // _defaultWeapon so UpdateWeapon has a fallback when FindWeapon fails.
+        if (Buffs.GetCustomVar("InitialInventory") > 0)
+        {
+            if (itemsOnEnterGame.Count > 0 && string.IsNullOrEmpty(_defaultWeapon))
+                _defaultWeapon = ItemClass.GetForId(itemsOnEnterGame[0].itemValue.type).GetItemName();
+            return;
+        }
+
         for (var i = 0; i < this.itemsOnEnterGame.Count; i++)
         {
             var itemStack = this.itemsOnEnterGame[i];

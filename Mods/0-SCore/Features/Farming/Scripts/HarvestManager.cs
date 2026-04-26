@@ -163,6 +163,9 @@ public static class HarvestManager
         }
     }
 
+    /// <summary>GameShutdown event handler — delegates to <see cref="Save()"/>.</summary>
+    public static void Save(ref ModEvents.SGameShutdownData data) => Save();
+
     /// <summary>
     /// Loads harvest containers from disk. Registered as a GameStartDone handler so it
     /// runs after the world is ready. Only executes on the server.
@@ -211,4 +214,6 @@ public static class HarvestManager
             }
         }
     }
+
+  
 }

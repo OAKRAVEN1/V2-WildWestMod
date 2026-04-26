@@ -33,6 +33,210 @@ This release of 0-SCore introduces significant enhancements across several core 
 
 [ Change Log ]
 
+Version: 2.6.35.1852
+	[ Repair - Quality Loss ]
+		- Added ItemActionEntryRepairQualityLoss patch: replaces vanilla's flat −1 quality-per-repair
+		  with a configurable percentage-based reduction. When no configuration is present the vanilla
+		  behaviour is preserved unchanged.
+		- Quality loss is resolved from three sources in priority order (highest wins):
+		    1. Player cvar  RepairQualityLoss  — stored as a decimal fraction (0.05 = 5%, 0.10 = 10%).
+		       A value of 0 is treated as unset (falls through to item/global config).
+		       A negative value (e.g. −1) means no quality loss; useful for a "master craftsman" perk.
+		    2. Per-item XML property  RepairQualityLoss  in items.xml — whole-number percentage (e.g. "5").
+		    3. Global default  RepairQualityLoss  in AdvancedItemFeatures (blocks.xml) — same format.
+		- Loss is calculated as  Ceil(qualityBeforeRepair × lossPercent / 100)  and the result is
+		  clamped to QualityUtils.GetMinQuality() so items can never be repaired below the configured
+		  minimum quality.
+
+		Configuration examples:
+
+		Global default (blocks.xml AdvancedItemFeatures — applies to all items):
+		    <property name="RepairQualityLoss" value="10"/>   <!-- 10% loss per repair -->
+
+		Per-item override (items.xml — takes priority over the global default):
+		    <property name="RepairQualityLoss" value="5"/>    <!-- this item loses only 5% per repair -->
+		    <property name="RepairQualityLoss" value="0"/>    <!-- this item never loses quality -->
+
+		Perk / buff cvar (highest priority — set dynamically via buffs.xml):
+		    <set_cvar name="RepairQualityLoss" value="0.05"/> <!-- 5% loss while buff is active -->
+		    <set_cvar name="RepairQualityLoss" value="-1"/>   <!-- no quality loss (master craftsman) -->
+
+	[ Harvest Challenge - traderPlaceable Blocks ]
+		- Fixed harvest challenge objectives (type="Harvest, SCore") not counting block harvests when
+		  the harvested block also carried the  traderPlaceable  tag
+		  (e.g. <property name="Tags" value="AdvancedCrops,traderPlaceable"/>).
+		- Root cause: vanilla's DamageBlock removes the block (position becomes air) before calling
+		  NotifyDestroyedBlock. That subsequent call re-checks IsWithinTraderArea for the now-air
+		  position; the prior patch only bypassed the check for positions that currently held a
+		  traderPlaceable block, so the air position fell through to vanilla, which returned true
+		  (inside trader area) and suppressed the HarvestItem event.
+		- Fix: WorldIsWithinTraderArea now records the last position where the traderPlaceable bypass
+		  fired (_lastBypassedPos). If the very next call for the same position finds air (the block
+		  was just destroyed), the patch continues to return false so the harvest and destroy events
+		  are not suppressed.
+
+Version: 2.6.32.1643
+	[ Powered Workstations - Offline Catch-Up ]
+		- Fixed powered workstations (RequirePower = true) stalling when the chunk was unloaded and
+		  then reloaded. Previously the prefix always set currentBurnTimeLeft to a fixed 15f when
+		  power was detected, which was insufficient for the vanilla workstation's offline catch-up
+		  loop: on chunk reload the loop attempts to apply all ticks elapsed since the last save in
+		  a single UpdateTick call, consuming burn time at 1:1. With only 15 units available, the
+		  workstation would run dry mid-catch-up and stop crafting.
+		- Added a static _lastPowerTick dictionary (Vector3i → ulong) on the PoweredWorkstations
+		  class that records the game tick at which power was last successfully applied to each
+		  workstation position.
+		- On each UpdateTick where power is detected, elapsed = now - lastPowerTick. The patch sets
+		  currentBurnTimeLeft to max(current, elapsed + 15f), supplying exactly enough burn time for
+		  the catch-up loop to complete plus a 15-tick buffer for the next normal tick. During normal
+		  loaded operation elapsed ≈ 1, so behaviour is identical to before.
+		- When power is lost the position is removed from the dictionary so there is no stale elapsed
+		  time if power is restored later.
+		- Note: the dictionary is in-memory only. On the first UpdateTick after a game restart,
+		  elapsed = 0 and the workstation receives the standard 15f buffer (same as the original
+		  behaviour), which is acceptable since vanilla workstations handle their own persistency.
+		- Also fixed a pre-existing typo in the Prefix method signature (___Let's pfuel → ___fuel).
+
+	[ NPC Farming - Water Range Fix ]
+		- FarmPlotData.HasWater() now includes the same 4-block horizontal fallback scan used by
+		  vanilla crops, plus a one-block-down check for each position. Previously only immediate
+		  neighbors (±1) were checked, causing outer farm plots that were valid for vanilla crop
+		  growth to be ignored by the farmer AI until the player manually interacted with them.
+		  After breaking a plant on an outer plot, the farmer would also stop tending it for the
+		  same reason — both issues are resolved by the wider scan.
+
+	[ NPC Farming - Double Water Consumption Fix ]
+		- BlockPlantGrowingSDX.UpdateTick and CheckPlantAlive now guard water checks and
+		  consumption behind a new IsRootBlock() helper. IsRootBlock() returns true only when the
+		  block directly below is NOT also a BlockPlantGrowingSDX, identifying the lowest block of
+		  a multi-block-tall plant stack. Two-block plants (e.g. coffee) were previously consuming
+		  water twice per growth tick because each block registered independently in CropManager
+		  and both ran the full water logic.
+
+	[ NPC Farming - FarmHere / RecallFarmer Commands ]
+		- Added FarmHere ExecuteCommandSDX action: removes the NPC from the player's active party
+		  (zeroes Leader and Owner cvars, removes hired_X stamp, evicts from SphereCache) but
+		  stores the player's entity ID in a new FarmOwnerEntityId cvar. The NPC is set to Stay
+		  order at its current position and no longer teleports to the player.
+		- Added RecallFarmer ExecuteCommandSDX action: restores the NPC to the player's active
+		  party via SetLeaderAndOwner. Only the player whose entity ID matches FarmOwnerEntityId
+		  can execute the recall; all others are silently blocked at both the dialog-requirement
+		  and code layers.
+		- FollowMe now includes an ownership guard: if an NPC is in farm mode (FarmOwnerEntityId
+		  > 0), only the registered owner can issue a FollowMe command.
+		- UAITaskFarmingV4.Start() now falls back to FarmOwnerEntityId when Leader/Owner are both
+		  zero, resolving the hiring player's PersistentPlayerData so land-claim restrictions
+		  continue to apply even after the NPC leaves the active party.
+		XML example:
+			<!-- Assign NPC to farm without following. Leader only, not already in farm mode. -->
+			<response id="farm_here" text="farm_here_key" nextstatementid="farm_mode_active">
+			    <requirement type="Leader, SCore" requirementtype="Hide" />
+			    <requirement type="IsFarmOwner, SCore" requirementtype="Hide" value="not" />
+			    <action type="ExecuteCommandSDX, SCore" id="FarmHere" />
+			</response>
+			<!-- Recall NPC. Visible only to the registered farm owner. -->
+			<response id="recall_farmer" text="recall_farmer_key" nextstatementid="recalled">
+			    <requirement type="IsFarmOwner, SCore" requirementtype="Hide" />
+			    <action type="ExecuteCommandSDX, SCore" id="RecallFarmer" />
+			</response>
+
+	[ Dialog - IsFarmOwner Requirement ]
+		- Added DialogRequirementIsFarmOwner: passes when the talking player's entity ID matches
+		  FarmOwnerEntityId on the current NPC (i.e., player is the registered farm owner). With
+		  value="not", passes when the NPC is NOT in farm mode. Used to gate FarmHere/Recall
+		  dialog options and prevent NPC theft by other players.
+		XML:
+			<requirement type="IsFarmOwner, SCore" requirementtype="Hide" />
+			<requirement type="IsFarmOwner, SCore" requirementtype="Hide" value="not" />
+
+	[ Dialog - HiredSDX Requirement Update ]
+		- DialogRequirementHiredSDX now also returns true when FarmOwnerEntityId > 0, treating
+		  farm mode as a hired state. This prevents the Hire button from re-appearing on NPCs
+		  that have been assigned to farm mode.
+
+	[ Farming Debug - scorefarming / scf Console Command ]
+		- Added ConsoleCmdFarming with commands: scf count, scf validate, scf listplots [range],
+		  scf listcrops [range]. All output is mirrored to both the console and the log file via
+		  Log.Out.
+		- scf validate: prunes stale FarmPlotManager and CropManager entries whose blocks no
+		  longer exist in the world, and reports how many were removed.
+		- scf listplots: reports each registered farm plot position, its HasWater status, and the
+		  name of any crop block found in the 4 blocks above it.
+		- scf listcrops: reports each registered crop plant position, its block name, and the name
+		  of the farm plot block found in the 4 blocks below it (if any).
+
+Version: 2.6.29.1709
+	[ Quality - Custom Quality Levels ]
+		- Added XUiMItemStackGetCustomDisplayValueForItem patch: fixes item tooltip display_value tier
+		  lookups when using extended quality ranges (1-600). Vanilla passes raw quality as an array
+		  index, causing out-of-bounds reads on 6-element value arrays. The patch converts raw quality
+		  to a tier (1-6) via QualityUtils.CalculateTier() before calling GetValue(), mirroring what
+		  MinEventModifyCVar already does for triggered effects.
+		- Fixed crash/lockup: added null guards for null/empty ItemValue, null ItemClass, non-quality
+		  items (tier == 0), and null GetTriggeredEffects() return values in the new patch.
+	[ Quality - Workstation Crafting ]
+		- Refactored XUiCWorkstationWindowGroupSyncTEFromUI: replaced per-call packing of all items
+		  with a persistent QualityCache (keyed by tile entity position + queue slot) that only stores
+		  items with quality > 255. Phase 2 re-asserts cached packed values on every syncTEfromUI call,
+		  including window teardown, so the quality is preserved even after the player closes the
+		  workstation.
+		- TileEntityWorkstationAddCraftComplete now captures the __instance parameter so it can evict
+		  the completed craft's entry from QualityCache when the item is finished.
+	[ NPC Farming - Land Claim Restriction ]
+		- UAITaskFarmingV4 now resolves the hiring player's PersistentPlayerData once in Start() and
+		  passes it to a new IsAllowed() check in FindTargetFarmPlot(). Hired NPCs (those with a player
+		  leader) are restricted to farm plots inside their leader's active land claim; un-hired NPCs
+		  can farm any plot as before.
+		- Added UAIConsiderationFarmPlotInLandClaimV4 and UAIConsiderationNotFarmPlotInLandClaimV4:
+		  UAI considerations that score 1f / 0f based on whether any unvisited farm plot within a
+		  configurable distance lies inside an active land claim.
+		  XML: <consideration class="FarmPlotInLandClaim, SCore" distance="50" />
+		- Added FarmLandClaimUtils.IsPlotInLandClaim(): shared helper that checks PersistentPlayerList
+		  .m_lpBlockMap using the same axis-aligned distance logic as World.IsLandProtectedBlock.
+		  Accepts an optional ownerFilter to restrict the check to a specific player's claims.
+		- Fixed potential NRE: all land-claim checks now guard against null PersistentPlayerList,
+		  null m_lpBlockMap, and null FarmPlotManager.Instance.
+
+Version: 2.6.21.1949
+	[ NPC Weapon Swapping / Dialog ]
+		- Fixed weapon swap dialog options (e.g. "Use Knife") never appearing for EntityTrader-based
+		  NPCs (EntityAliveSDX, EntityAliveSDXV4) even when the NPC had the required item.
+		- Root cause: DialogRequirementNPCHasItemSDX checked lootContainer for the player weapon,
+		  but EntityTrader NPCs store their accessible inventory in HarvestManager. The dialog
+		  option was always hidden because HasItem found nothing.
+		- DialogRequirementNPCHasItemSDX now checks HarvestManager first for EntityTrader entities,
+		  falling back to lootContainer for non-trader entities.
+		- Fixed FindWeapon() in both EntityAliveSDX and EntityAliveSDXV4 performing the same wrong
+		  lookup on the CompatibleWeapon path — now checks HarvestManager for EntityTrader entities.
+		- Fixed "Use Bare Hands" (meleeNPCEmptyHand) and other starting-kit weapons never equipping:
+		  FindWeapon() gated all lookups behind a CompatibleWeapon property check, so items that
+		  lack that property (like meleeNPCEmptyHand) always returned false. itemsOnEnterGame and
+		  the current hand-item are now checked before the CompatibleWeapon gate.
+		- Fixed UAITaskFarmingV4.CheckHasSeed() checking lootContainer instead of HarvestManager,
+		  causing farmer NPCs to never detect seeds they were carrying and skip all empty farm plots.
+
+Version: 2.6.21.1125
+	[ NPC Pickup / PickUpNPC ]
+		- Fixed NPC inventory being lost when picked up via DialogActionPickUpNPC and placed back
+		  down with ItemActionDeployNPCSDX.
+		- Fixed NPC inventory not persisting across game restarts for both EntityAliveSDX and
+		  EntityAliveSDXV4.
+		- Root cause: both entity classes extend EntityTrader, so the OpenInventory dialog command
+		  always routes the player-accessible bag through HarvestManager — but GetNPCItemValue was
+		  serializing npc.lootContainer.items (a different, empty object) instead.
+		- GetNPCItemValue now reads from the HarvestManager container when one exists for the entity,
+		  falling back to lootContainer for non-trader entities.
+		- SetNPCItemValue now restores bag items into HarvestManager.GetOrCreate(entityId) for
+		  EntityTrader-based entities, so the new entity's inventory is populated before the player
+		  opens it.
+		- EntityAliveSDX and EntityAliveSDXV4 Write() now saves the HarvestManager container (when
+		  present) into the entity's own binary stream instead of lootContainer, and Read() restores
+		  it back into HarvestManager — tying inventory to the entity save data rather than a
+		  separate file keyed by entity ID.
+		- HarvestManager.Save() is now called on GameShutdown as an additional safety net.
+		- Fixed SetupStartingItems() not checking the InitialInventory guard, causing the NPC's
+		  hand-inventory slots to be overwritten with default XML items on every spawn/re-place.
+
 Version: 2.6.14.638  [ Experimental ]
 	[ Remote Crafting ]
 		- Fixed a bug where `disablesender` with `Invertdisable` set to `true` would stop scanning containers

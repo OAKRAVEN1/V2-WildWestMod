@@ -57,6 +57,19 @@ public class FarmPlotData
                 return true;
         }
 
+        // Vanilla-style fallback: scan for a direct water source within 4 blocks horizontally
+        // at the plot's Y level (and one below), matching the vanilla game's farm-plot water
+        // check. This ensures farm plots that are within vanilla watering range of a trough or
+        // lake — but not immediately adjacent — are still recognised as watered by NPC farmers.
+        for (var dx = -4; dx <= 4; dx++)
+        {
+            for (var dz = -4; dz <= 4; dz++)
+            {
+                if (WaterPipeManager.Instance.IsDirectWaterSource(new Vector3i(_blockPos.x + dx, _blockPos.y, _blockPos.z + dz))) return true;
+                if (WaterPipeManager.Instance.IsDirectWaterSource(new Vector3i(_blockPos.x + dx, _blockPos.y - 1, _blockPos.z + dz))) return true;
+            }
+        }
+
         return false;
     }
 
@@ -205,20 +218,37 @@ public List<Block.SItemDropProb> Manage(EntityAlive entityAlive)
         // Modifying a stack's count in-place is safe for both TileEntityLootContainer and
         // TileEntityTrader — it doesn't replace the items[] array reference, so it cannot
         // trigger the TileEntityTrader setter that would corrupt TraderData.PrimaryInventory.
-        if (string.IsNullOrEmpty(seedToPlant) && entityAlive.lootContainer != null)
+        if (string.IsNullOrEmpty(seedToPlant))
         {
-            foreach (var stack in entityAlive.lootContainer.items)
+            ItemStack[] inventoryItems = null;
+            TileEntityLootContainer containerToMark = null;
+
+            if (entityAlive is EntityTrader && HarvestManager.Has(entityAlive.entityId))
             {
-                if (!stack.IsEmpty())
+                containerToMark = HarvestManager.GetOrCreate(entityAlive.entityId);
+                inventoryItems = containerToMark.items;
+            }
+            else if (entityAlive.lootContainer != null)
+            {
+                containerToMark = entityAlive.lootContainer;
+                inventoryItems = containerToMark.items;
+            }
+
+            if (inventoryItems != null)
+            {
+                foreach (var stack in inventoryItems)
                 {
-                    var itemClass = ItemClass.GetForId(stack.itemValue.type);
-                    if (itemClass.Name.StartsWith("planted") && itemClass.Name.EndsWith("1"))
+                    if (!stack.IsEmpty())
                     {
-                        seedToPlant = itemClass.Name;
-                        stack.count--;
-                        if (stack.count <= 0) stack.Clear();
-                        entityAlive.lootContainer.SetModified();
-                        break;
+                        var itemClass = ItemClass.GetForId(stack.itemValue.type);
+                        if (itemClass.Name.StartsWith("planted") && itemClass.Name.EndsWith("1"))
+                        {
+                            seedToPlant = itemClass.Name;
+                            stack.count--;
+                            if (stack.count <= 0) stack.Clear();
+                            containerToMark.SetModified();
+                            break;
+                        }
                     }
                 }
             }

@@ -1,6 +1,4 @@
-﻿using System;
 using HarmonyLib;
-using UnityEngine;
 
 namespace SCore.Features.Quality.Harmony
 {
@@ -11,39 +9,58 @@ namespace SCore.Features.Quality.Harmony
         private static readonly string AdvFeatureClass = "AdvancedItemFeatures";
         private static readonly string Feature = "CustomQualityLevels";
 
-        // We use 'ref int crafterEntityID' so we can modify the ID before the original method runs.
-        public static bool Prefix(ref int crafterEntityID, ItemValue itemCrafted)
+        public static bool Prefix(TileEntityWorkstation __instance, ref int crafterEntityID, ItemValue itemCrafted)
         {
             if (!Configuration.CheckFeatureStatus(AdvFeatureClass, Feature)) return true;
 
-            // 1. Check if the ID is "Packed" (Top 16 bits are not zero)
-            // If the top bits are 0, it's just a normal player ID (e.g., 171), so we do nothing.
+            // Check if the ID is packed (top 16 bits are non-zero).
+            // Plain player entity IDs never exceed 65535, so any value in the top 16 bits
+            // means we encoded quality there via XUiCWorkstationWindowGroupSyncTEFromUI.
             if (((crafterEntityID >> 16) & 0xFFFF) != 0)
             {
-                int packedValue = crafterEntityID;
+                int realQuality  = (crafterEntityID >> 16) & 0xFFFF;
+                int realPlayerID =  crafterEntityID        & 0xFFFF;
 
-                // 2. Unpack the Quality (Top 16 bits)
-                int realQuality = (packedValue >> 16) & 0xFFFF;
-
-                // 3. Unpack the Real Player ID (Bottom 16 bits)
-                int realPlayerID = packedValue & 0xFFFF;
-
-                // 4. Fix the data
                 if (itemCrafted != null)
                 {
-                    // Update the item's quality to the real value (e.g., 600)
-                    // Since itemCrafted is a reference type, this updates the object directly.
                     itemCrafted.Quality = (ushort)realQuality;
+
+                    // The ItemValue constructor sizes Modifications based on the random quality it
+                    // generated during construction.  Now that we've set the real quality we need
+                    // to resize the array so the item has the correct number of mod slots.
+                    int correctSlots = UnityEngine.Mathf.Clamp(
+                        (int)EffectManager.GetValue(
+                            PassiveEffects.ModSlots, itemCrafted,
+                            (float)Utils.FastMax(0, realQuality - 1),
+                            null, null,
+                            default(FastTags<TagGroup.Global>),
+                            true, true, true, true, true, 1, true, false),
+                        0, 255);
+
+                    if (itemCrafted.Modifications.Length != correctSlots)
+                    {
+                        var resized = new ItemValue[correctSlots];
+                        // Preserve any mods that already fit (e.g. default mod items from recipe).
+                        for (int i = 0; i < UnityEngine.Mathf.Min(itemCrafted.Modifications.Length, correctSlots); i++)
+                            resized[i] = itemCrafted.Modifications[i];
+                        // Fill any new empty slots.
+                        for (int i = itemCrafted.Modifications.Length; i < correctSlots; i++)
+                            resized[i] = ItemValue.None.Clone();
+                        itemCrafted.Modifications = resized;
+                    }
                 }
 
-                // Update the argument so the original method sees the correct Player ID (e.g., 171)
                 crafterEntityID = realPlayerID;
-
-                // Log it for verification
-                // Log.Out($"[SCore] AddCraftComplete Fixed: Unpacked Quality {realQuality} from EntityID. Real PlayerID: {realPlayerID}");
             }
 
-            return true; // Return true to let the original method run with our fixed arguments
+            // Drop the cache entry for this tile entity — the craft is done.
+            if (__instance != null)
+            {
+                var tePos = __instance.ToWorldPos();
+                XUiCWorkstationWindowGroupSyncTEFromUI.QualityCache.Remove(tePos);
+            }
+
+            return true;
         }
     }
 }

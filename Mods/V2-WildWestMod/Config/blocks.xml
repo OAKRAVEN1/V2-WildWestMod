@@ -11,6 +11,7 @@
 <!-- 0-Score Tweaks for Tabby -->
 	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='ReadFromContainers']/@value">true</set>
 	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='Distance']/@value">20</set>
+	<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedZombieFeatures']/property[@name='EnemyActiveMax']/@value">150</set>
 
 <!-- remove UnlockedBy from Electrician and Traps to match progression deletion -->
 	<remove xpath="/blocks/block/property[@name='UnlockedBy'][@value='craftingElectrician']" />
