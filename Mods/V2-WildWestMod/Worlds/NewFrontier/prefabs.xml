@@ -833,7 +833,6 @@
   <decoration type="model" name="wildwest_station_02_arramus" position="1836,37,-266" rotation="3" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_business_11" position="1803,37,-266" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="rwg_tile_oldwest_corner" position="1603,37,-287" rotation="0" y_is_groundlevel="true" />
-  <decoration type="model" name="wildwest_market_01_arramus" position="1665,37,-204" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_bony_xpress_01_arramus" position="1649,37,-262" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_business_01" position="1640,37,-204" rotation="0" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_picturehouse_Medusa" position="1649,37,-287" rotation="1" y_is_groundlevel="true" />
@@ -2122,4 +2121,10 @@
   <decoration type="model" name="wildwest_townclock_saloon_01_arramus" position="-2188,90,-2316" rotation="1" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_townclock_saloon_01_arramus" position="-382,38,-690" rotation="2" y_is_groundlevel="true" />
   <decoration type="model" name="wildwest_townclock_saloon_01_arramus" position="2037,35,585" rotation="2" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_house_burnt_02" position="-2040,37,686" rotation="0" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_house_burnt_02" position="-1646,37,-1184" rotation="0" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_house_burnt_02" position="-997,37,2356" rotation="1" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_house_burnt_02" position="556,37,2074" rotation="0" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_house_burnt_02" position="1665,37,-204" rotation="0" y_is_groundlevel="true" />
+  <decoration type="model" name="wildwest_house_burnt_02" position="248,37,735" rotation="0" y_is_groundlevel="true" />
 </prefabs>
